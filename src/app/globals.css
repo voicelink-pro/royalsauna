@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-sand-100 text-bark-700 font-sans;
+  }
+
+  /* Respect users who prefer reduced motion across the whole site. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Consistent, visible focus ring for keyboard users. */
+  :focus-visible {
+    outline-color: theme("colors.brass.DEFAULT");
+  }
+
+  ::selection {
+    background-color: theme("colors.brass.light");
+    color: theme("colors.bark.800");
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Skip link, visible only on focus. */
+  .skip-link {
+    @apply sr-only;
+  }
+  .skip-link:focus {
+    @apply not-sr-only fixed left-4 top-4 z-50 rounded-full bg-bark-700 px-5 py-2.5 text-sm text-ivory;
+  }
+}

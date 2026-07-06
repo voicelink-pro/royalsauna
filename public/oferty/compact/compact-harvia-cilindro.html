@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<title>RoyalSauna Regenerum Compact — Harvia Cilindro PC 90 XW — Oferta sauny ogrodowej</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a1a1a;
+    --graphite:#2b2b2b;
+    --charcoal:#3a3a3a;
+    --line:#e6e1d8;
+    --paper:#fbf8f3;
+    --cream:#f4ede1;
+    --wood:#b8865a;
+    --wood-dark:#7a4f2c;
+    --gold:#a8884f;
+    --muted:#7a7468;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#ddd;color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+
+  /* A4 page */
+  .page{
+    width:210mm;
+    height:297mm;
+    margin:10mm auto;
+    background:var(--paper);
+    position:relative;
+    overflow:hidden;
+    page-break-after:always;
+    box-shadow:0 8px 30px rgba(0,0,0,.15);
+  }
+  .pad{padding:22mm 20mm}
+
+  h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--ink);letter-spacing:.3px}
+  h1{font-size:54pt;line-height:1.05}
+  h2{font-size:30pt;line-height:1.1}
+  h3{font-size:18pt;line-height:1.2}
+  h4{font-size:11pt;letter-spacing:1.4px;text-transform:uppercase;font-family:'Inter',sans-serif;font-weight:500;color:var(--muted)}
+  p{font-size:10.5pt;line-height:1.7;color:var(--charcoal)}
+  small{font-size:8.5pt;color:var(--muted);letter-spacing:.5px}
+
+  .eyebrow{
+    font-family:'Inter',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:9pt;
+    color:var(--gold);
+    font-weight:500;
+  }
+  .rule{height:1px;background:var(--line);margin:18px 0}
+  .rule-gold{height:1px;width:60px;background:var(--gold);margin:14px 0}
+
+  /* ============ COVER ============ */
+  .cover{
+    background:
+      linear-gradient(180deg, rgba(20,20,20,.55) 0%, rgba(20,20,20,.15) 40%, rgba(20,20,20,.85) 100%),
+      url('../../images/cubus-2/hero.jpg') center/cover no-repeat,
+      #2b2b2b;
+    color:#f5efe4;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:22mm 20mm;
+  }
+  .cover h1{color:#fff;font-size:54pt;font-weight:300;line-height:1.05}
+  .cover .eyebrow{color:#d8b97a}
+  .cover .brand{display:flex;align-items:center;gap:14px}
+  .cover .logo-mark{
+    width:42px;height:42px;border:1px solid #d8b97a;display:flex;
+    align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#d8b97a;font-size:20pt
+  }
+  .cover .logo-text{font-family:'Cormorant Garamond',serif;font-size:16pt;color:#fff;letter-spacing:4px}
+  .cover .meta{display:flex;justify-content:space-between;align-items:flex-end;color:#e8e0d0}
+  .cover .meta small{color:#cbbfa6}
+
+  /* ============ INTRO ============ */
+  .intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14mm;align-items:start}
+  .intro-grid img{height:100%;object-fit:cover;border-radius:2px}
+  .lead{font-family:'Cormorant Garamond',serif;font-size:18pt;line-height:1.45;color:var(--graphite);font-weight:300}
+  .values{display:grid;grid-template-columns:repeat(3,1fr);gap:8mm;margin-top:10mm}
+  .value{border-top:1px solid var(--line);padding-top:8px}
+  .value h4{margin-bottom:6px}
+  .value p{font-size:9.5pt}
+
+  /* ============ MODEL HERO ============ */
+  .hero{
+    height:120mm;
+    background-size:cover;background-position:center;
+    position:relative;
+  }
+  .hero .overlay{
+    position:absolute;left:0;right:0;bottom:0;padding:14mm 20mm;
+    background:linear-gradient(0deg, rgba(0,0,0,.75), rgba(0,0,0,0));
+    color:#fff;
+  }
+  .hero .overlay h2{color:#fff;font-size:42pt}
+  .hero .overlay .eyebrow{color:#d8b97a}
+
+  .model-body{padding:14mm 20mm}
+  .two-col{display:grid;grid-template-columns:1.1fr .9fr;gap:12mm;align-items:start}
+  .features{list-style:none;margin-top:8px}
+  .features li{
+    font-size:10pt;line-height:1.6;color:var(--charcoal);
+    padding:8px 0;border-bottom:1px dashed var(--line);
+    display:flex;gap:10px;align-items:flex-start
+  }
+  .features li::before{content:"";width:6px;height:6px;background:var(--gold);border-radius:50%;margin-top:8px;flex:none}
+
+  /* spec table */
+  table.spec{width:100%;border-collapse:collapse;margin-top:10px}
+  table.spec td{
+    padding:9px 0;font-size:10pt;color:var(--charcoal);
+    border-bottom:1px solid var(--line)
+  }
+  table.spec td:first-child{color:var(--muted);width:46%;letter-spacing:.4px}
+  table.spec td:last-child{text-align:right;font-weight:500;color:var(--ink)}
+
+  /* enlarged gallery — single big image + 2 below */
+  .gallery-big{margin-top:10mm}
+  .gallery-big .lead-img{
+    width:100%;height:130mm;object-fit:cover;border-radius:2px;
+    box-shadow:0 4px 18px rgba(0,0,0,.08)
+  }
+  .gallery-big .row{display:grid;grid-template-columns:1fr 1fr;gap:6mm;margin-top:6mm}
+  .gallery-big .row img{width:100%;height:78mm;object-fit:cover;border-radius:2px}
+
+  /* price card */
+  .price-card{
+    margin-top:10mm;
+    border:1px solid var(--line);
+    background:#fff;
+    padding:18px 22px;
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  .price-card .from{font-family:'Inter',sans-serif;font-size:9pt;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
+  .price-card .amount{font-family:'Cormorant Garamond',serif;font-size:34pt;color:var(--ink);line-height:1}
+  .price-card .vat{font-size:9pt;color:var(--muted);margin-top:4px}
+  .price-card .badge{
+    background:var(--ink);color:#f5efe4;padding:8px 16px;
+    font-size:9pt;letter-spacing:3px;text-transform:uppercase
+  }
+
+  /* page header / footer */
+  .page-head{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:10mm 20mm 0;color:var(--muted)
+  }
+  .page-head .brand{font-family:'Cormorant Garamond',serif;letter-spacing:6px;font-size:11pt;color:var(--ink)}
+  .page-foot{
+    position:absolute;left:20mm;right:20mm;bottom:10mm;
+    display:flex;justify-content:space-between;align-items:center;
+    color:var(--muted);font-size:8.5pt;letter-spacing:1px
+  }
+  .page-foot .num{font-family:'Cormorant Garamond',serif;font-size:14pt;color:var(--ink)}
+
+  /* finishing spec table */
+  table.finish{width:100%;border-collapse:collapse;margin-top:6mm;background:#fff}
+  table.finish td{
+    padding:14px 18px;font-size:10pt;color:var(--charcoal);
+    border-bottom:1px solid var(--line);vertical-align:top;line-height:1.55
+  }
+  table.finish td:first-child{
+    width:30%;background:var(--cream);
+    font-family:'Inter',sans-serif;font-weight:500;font-size:9pt;
+    text-transform:uppercase;letter-spacing:2px;color:var(--ink)
+  }
+  table.finish tr:last-child td{border-bottom:0}
+
+  /* drawing placeholder for required surface */
+  .drawing-block{
+    margin-top:8mm;
+    background:#fff;
+    border:1px solid var(--line);
+    padding:10mm 12mm;
+    display:flex;flex-direction:column;align-items:center;
+  }
+  .drawing-block .header{
+    width:100%;display:flex;justify-content:space-between;align-items:flex-end;
+    border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:8mm
+  }
+  .drawing-block .header h3{font-size:16pt}
+  .drawing-block .placeholder{
+    width:100%;
+    height:95mm;
+    border:1.5px dashed #c7bfae;
+    background:
+      repeating-linear-gradient(45deg, #fbf8f3 0 12px, #f4ede1 12px 24px);
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    color:var(--muted);
+  }
+  .drawing-block .placeholder .ph-inner{
+    background:#fff;border:1px solid var(--line);padding:14px 20px;
+    font-family:'Inter',sans-serif;font-size:10pt;letter-spacing:2px;
+    text-transform:uppercase;color:var(--ink)
+  }
+  .drawing-block .caption{
+    margin-top:6mm;font-size:9pt;color:var(--muted);text-align:center;
+    letter-spacing:.4px;line-height:1.6
+  }
+
+  /* enlarged composite image (3-views) */
+  .composite-block{
+    margin-top:8mm;
+    background:#fff;border:1px solid var(--line);
+    padding:8mm;
+  }
+  .composite-block .header{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:8mm
+  }
+  .composite-block img{
+    width:100%;height:auto;max-height:170mm;object-fit:contain;
+  }
+
+  /* order summary table */
+  table.order{width:100%;border-collapse:collapse;margin-top:6mm;background:#fff}
+  table.order th, table.order td{
+    padding:10px 14px;font-size:9.8pt;border-bottom:1px solid var(--line);text-align:left
+  }
+  table.order th{
+    background:var(--ink);color:#efe6d3;
+    font-family:'Inter',sans-serif;font-weight:500;font-size:9pt;
+    letter-spacing:2px;text-transform:uppercase
+  }
+  table.order td.cat{
+    background:var(--cream);font-family:'Inter',sans-serif;font-weight:600;
+    font-size:9pt;letter-spacing:2px;text-transform:uppercase;color:var(--ink)
+  }
+  table.order td.amount{text-align:right;font-weight:500;color:var(--ink)}
+  table.order tr.total td{
+    background:var(--ink);color:#fff;font-family:'Cormorant Garamond',serif;
+    font-size:18pt;border-bottom:0;padding:18px 14px
+  }
+  table.order tr.total td.amount{text-align:right;color:#d8b97a}
+
+  /* customer/order info */
+  .order-info{display:grid;grid-template-columns:1fr 1fr;gap:10mm;margin-top:8mm}
+  .info-card{border:1px solid var(--line);padding:18px 20px;background:#fff}
+  .info-card h4{margin-bottom:10px;color:var(--muted)}
+  .info-card .row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--line);font-size:9.5pt;color:var(--charcoal)}
+  .info-card .row:last-child{border-bottom:0}
+  .info-card .row .k{color:var(--muted)}
+  .field{border-bottom:1px solid var(--charcoal);min-height:14px;margin-top:2px}
+
+  .note{
+    border-left:3px solid var(--gold);padding:10px 16px;
+    background:#fff;margin-top:6mm;font-size:9.5pt;color:var(--charcoal);line-height:1.6
+  }
+  .note strong{color:var(--ink);letter-spacing:.5px}
+
+  /* heater cards */
+  .heaters{display:grid;grid-template-columns:repeat(4,1fr);gap:5mm;margin-top:8mm}
+  .heater{
+    background:#fff;border:1px solid var(--line);
+    padding:14px 12px;text-align:center
+  }
+  .heater img{width:100%;height:38mm;object-fit:contain;margin-bottom:8px}
+  .heater .name{font-family:'Cormorant Garamond',serif;font-size:14pt;color:var(--ink)}
+  .heater .meta{font-size:8.5pt;color:var(--muted);margin-top:3px;letter-spacing:.5px}
+
+  .heater-list{margin-top:6mm}
+  .heater-list .item{
+    border-bottom:1px solid var(--line);padding:8px 0;
+    display:grid;grid-template-columns:140px 1fr 110px;gap:14px;align-items:baseline
+  }
+  .heater-list .item:last-child{border-bottom:0}
+  .heater-list .nm{font-family:'Cormorant Garamond',serif;font-size:13pt;color:var(--ink)}
+  .heater-list .desc{font-size:9.5pt;color:var(--charcoal);line-height:1.55}
+  .heater-list .pwr{text-align:right;font-size:9pt;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+
+  /* compare table (heaters) */
+  table.compare{width:100%;border-collapse:collapse;margin-top:8mm;background:#fff}
+  table.compare th, table.compare td{
+    padding:10px 14px;font-size:10pt;text-align:left;border-bottom:1px solid var(--line)
+  }
+  table.compare th{
+    font-family:'Inter',sans-serif;font-weight:500;font-size:9pt;
+    text-transform:uppercase;letter-spacing:2px;color:var(--muted);background:var(--cream)
+  }
+  table.compare td.model{font-family:'Cormorant Garamond',serif;font-size:14pt;color:var(--ink)}
+  table.compare tr:last-child td{border-bottom:0}
+
+  /* contact */
+  .contact{
+    background:var(--ink);color:#efe6d3;
+    padding:22mm 20mm;
+    display:flex;flex-direction:column;justify-content:space-between
+  }
+  .contact h2{color:#fff;font-size:46pt}
+  .contact .eyebrow{color:#d8b97a}
+  .contact .info{display:grid;grid-template-columns:1fr 1fr;gap:14mm;margin-top:14mm}
+  .contact .info h4{color:#cbbfa6}
+  .contact .info p{color:#efe6d3}
+  .contact .sign{font-family:'Cormorant Garamond',serif;font-size:18pt;color:#fff;border-top:1px solid #4a4a4a;padding-top:14px}
+
+  /* print */
+  @media print{
+    html,body{background:#fff}
+    .page{box-shadow:none;margin:0;page-break-after:always}
+    @page{size:A4;margin:0}
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== 1. COVER ========== -->
+<section class="page cover">
+  <div class="brand">
+    <div class="logo-mark">R</div>
+    <div class="logo-text">ROYALSAUNA</div>
+  </div>
+
+  <div>
+    <div class="eyebrow">Kolekcja 2026 · Sauna ogrodowa</div>
+    <h1>Regenerum<br/><em style="font-style:italic;color:#d8b97a;font-weight:300">Compact</em></h1>
+    <p style="color:#e8e0d0;max-width:120mm;margin-top:14px;font-size:11.5pt;line-height:1.7">
+      Kompaktowa, intymna forma dla pary. Architektoniczna bryła,
+      naturalne drewno świerkowe i ciche, ponadczasowe wzornictwo.
+    </p>
+  </div>
+
+  <div class="meta">
+    <small>OFERTA HANDLOWA · 2026</small>
+    <small>WWW.ROYALSAUNA.PL</small>
+  </div>
+</section>
+
+
+<!-- ========== 2. INTRO ========== -->
+<section class="page">
+  <div class="page-head">
+    <span class="brand">ROYALSAUNA</span>
+    <small>WPROWADZENIE</small>
+  </div>
+
+  <div class="pad">
+    <div class="eyebrow">O kolekcji</div>
+    <div class="rule-gold"></div>
+    <h2>Sauna jako element architektury ogrodu.</h2>
+
+    <div class="intro-grid" style="margin-top:14mm">
+      <img src="../../images/intro/intro.jpg" alt="" style="height:110mm" />
+      <div>
+        <p class="lead">
+          Regenerum to seria zamkniętych, miękko zaokrąglonych brył,
+          które łączą skandynawską prostotę z ciepłem litego drewna.
+          Każdy model dostarczamy gotowy do użytku — wystarczy podłączyć
+          prąd i rozpocząć rytuał.
+        </p>
+        <div class="rule"></div>
+        <p>
+          Konstrukcja oparta jest na masywnym drewnie świerkowym, pokrytym
+          kompozytową, matową powłoką w kolorze grafitowym.
+          Panoramiczne przeszklenia frontowe otwierają wnętrze na ogród,
+          a wewnętrzne ławy z osiki zapewniają przyjemne ciepło bez przegrzewania
+          skóry oraz znakomitą izolację.
+        </p>
+      </div>
+    </div>
+
+    <div class="values">
+      <div class="value">
+        <h4>Materiał</h4>
+        <p>Drewno świerkowe, ławy z osiki, kompozyt elewacyjny.</p>
+      </div>
+      <div class="value">
+        <h4>Wykonanie</h4>
+        <p>Ręczny montaż, ukryte łączenia, stolarka klasy premium.</p>
+      </div>
+      <div class="value">
+        <h4>Gwarancja</h4>
+        <p>5 lat na konstrukcję, 2 lata na wyposażenie elektryczne.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-foot">
+    <span>RoyalSauna · Regenerum Compact</span>
+    <span class="num">02</span>
+  </div>
+</section>
+
+
+<!-- ========== 3. MODEL — HERO + CHARAKTERYSTYKA + SPEC ========== -->
+<section class="page" style="padding:0">
+  <div class="hero" style="background-image:url('../../images/cubus-2/hero.jpg')">
+    <div class="overlay">
+      <div class="eyebrow">Model 01 · 2 osoby</div>
+      <h2>Regenerum Compact</h2>
+      <p style="color:#e8e0d0;max-width:130mm;margin-top:6px">
+        Kompaktowa, intymna forma dla pary. Idealna na małe tarasy i ogrody miejskie.
+      </p>
+    </div>
+  </div>
+
+  <div class="model-body">
+    <div class="two-col">
+      <div>
+        <div class="eyebrow">Charakterystyka</div>
+        <div class="rule-gold"></div>
+        <p>
+          Regenerum Compact to najmniejszy model z kolekcji — zaprojektowany jako prywatne
+          schronienie dla dwóch osób. Mimo niewielkich gabarytów oferuje pełnowartościowy
+          rytuał sauny: panoramiczną szybę, ławy z osiki i piec elektryczny 6 kW.
+        </p>
+
+        <ul class="features" style="margin-top:14px">
+          <li>Konstrukcja monokokowa z drewna świerkowego</li>
+          <li>Front panoramiczny — szyba hartowana 8 mm</li>
+          <li>Ławy z osiki — bezsęczne, profil 28 × 90 mm</li>
+          <li>Piec elektryczny Harvia 6 kW ze sterownikiem</li>
+          <li>Oświetlenie LED 2700K, dimmer</li>
+          <li>Dostawa, rozładunek, montaż w cenie</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="eyebrow">Specyfikacja</div>
+        <div class="rule-gold"></div>
+        <table class="spec">
+          <tr><td>Wymiary zewnętrzne</td><td>2400 × 2200 × 2300 mm</td></tr>
+          <tr><td>Powierzchnia użytkowa</td><td>5,3 m²</td></tr>
+          <tr><td>Pojemność</td><td>2 osoby</td></tr>
+          <tr><td>Materiał ścian</td><td>Świerk / kompozyt grafit</td></tr>
+          <tr><td>Grubość ściany</td><td>42 mm</td></tr>
+          <tr><td>Ławy</td><td>Osika, bezsęczna</td></tr>
+          <tr><td>Piec</td><td>Harvia Cilindro PC 90 XW 9 kW</td></tr>
+          <tr><td>Zasilanie</td><td>400 V / 16 A</td></tr>
+          <tr><td>Waga</td><td>ok. 720 kg</td></tr>
+          <tr><td>Czas montażu</td><td>1 dzień</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-foot">
+    <span>RoyalSauna · Regenerum Compact</span>
+    <span class="num">03</span>
+  </div>
+</section>
+
+
+<!-- ========== 4. RYSUNEK TECHNICZNY ========== -->
+<section class="page">
+  <div class="page-head">
+    <span class="brand">ROYALSAUNA</span>
+    <small>REGENERUM COMPACT · POWIERZCHNIA POTRZEBNA POD SAUNĘ</small>
+  </div>
+
+  <div class="pad">
+    <div class="eyebrow">Rysunek techniczny</div>
+    <div class="rule-gold"></div>
+    <h2>Powierzchnia potrzebna pod saunę.</h2>
+    <p style="margin-top:8mm;max-width:160mm">
+      Poniżej miejsce na rysunek techniczny prezentujący wymagane gabaryty
+      podstawy oraz strefy montażowe wokół sauny Regenerum Compact.
+    </p>
+
+    <div class="drawing-block" style="margin-top:6mm">
+      <div class="header">
+        <div>
+          <div class="eyebrow">Regenerum Compact</div>
+          <h3>Zalecane miejsce posadowienia</h3>
+        </div>
+        <small>Wymiary i strefa serwisowa</small>
+      </div>
+      <div class="drawing-img">
+        <img src="../../images/cubus-2/cubus2-technic.jpg" alt="Regenerum Compact — wymiary i powierzchnia potrzebna pod saunę" />
+      </div>
+      <div class="caption">
+        Dokładny rzut z wymiarami przesyłamy indywidualnie wraz z wytycznymi przygotowania
+        utwardzonego, wypoziomowanego podłoża oraz zasilania 400 V / 16 A.
+      </div>
+    </div>
+  </div>
+
+  <div class="page-foot">
+    <span>RoyalSauna · Regenerum Compact · Rysunek techniczny</span>
+    <span class="num">04</span>
+  </div>
+</section>
+
+
+<!-- ========== 5. WYKOŃCZENIA ========== -->
+<section class="page">
+  <div class="page-head">
+    <span class="brand">ROYALSAUNA</span>
+    <small>REGENERUM COMPACT · MATERIAŁY I KONSTRUKCJA</small>
+  </div>
+
+  <div class="pad">
+    <div class="eyebrow">Wykończenia</div>
+    <div class="rule-gold"></div>
+    <h2>Materiały i konstrukcja.</h2>
+
+    <table class="finish">
+      <tr><td>Ściany</td><td>42 mm drewno <strong>świerkowe</strong> — impregnowana rama podstawy, izolacja PIR 60 mm.</td></tr>
+      <tr><td>Dach</td><td>Gonty bitumiczne <strong>Premium XL Black Icopal Plano</strong> z podwójną membraną.</td></tr>
+      <tr><td>Podłoga</td><td>Maty podłogowe z tworzywa <strong>NEROSTEP</strong> — antypoślizgowe, łatwe w czyszczeniu.</td></tr>
+      <tr><td>Drzwi</td><td>Drzwi z antabą zewnętrzną i wewnętrzną (690 × 1870 mm), szkło brązowe, hartowane 8 mm.</td></tr>
+      <tr><td>Okno</td><td>Rama drewniana, panoramiczne szkło hartowane 8 mm w kolorze brąz.</td></tr>
+      <tr><td>Ławy</td><td>Dwa poziomy wysokiej klasy ławek z bezsęcznej <strong>osiki</strong>, profil 28 × 90 mm.</td></tr>
+    </table>
+  </div>
+
+  <div class="page-foot">
+    <span>RoyalSauna · Regenerum Compact · Specyfikacja techniczna</span>
+    <span class="num">05</span>
+  </div>
+</section>
+
+
+<!-- ========== 6. GALERIA POWIĘKSZONA ========== -->
+<section class="page">
+  <div class="page-head">
+    <span class="brand">ROYALSAUNA</span>
+    <small>REGENERUM COMPACT · WIDOK ZEWNĘTRZNY I WNĘTRZE</small>
+  </div>
+
+  <div class="pad" style="padding-top:12mm">
+    <div class="eyebrow">Galeria</div>
+    <div class="rule-gold"></div>
+    <h2 style="margin-bottom:6mm">Widok zewnętrzny, wnętrze i przekrój.</h2>
+
+    <div class="gallery-big">
+      <img class="lead-img" src="../../images/cubus-2/exterior-1.jpg" alt="Regenerum Compact — widok zewnętrzny" />
+      <div class="row">
+        <img src="../../images/cubus-2/interior.jpg" alt="Regenerum Compact — wnętrze" />
+        <img src="../../images/cubus-2/cutout.jpg" alt="Regenerum Compact — przekrój" />
+      </div>
+    </div>
+  </div>
+
+  <div class="page-foot">
+    <span>RoyalSauna · Regenerum Compact · Galeria</span>
+    <span class="num">06</span>
+  </div>
+</section>
+
+
+<!-- ========== 7. PIECE HUUM ========== -->
+<section class="page">
+  <div class="page-head">
+    <span class="brand">ROYALSAUNA</span>
+    <small>PIECE ELEKTRYCZNE · HUUM</small>
+  </div>
+
+  <div class="pad">
+    <div class="eyebrow">Serce sauny</div>
+    <div class="rule-gold"></div>
+    <h2>Piece elektryczne <em style="font-style:italic;color:var(--gold)">HUUM</em>.</h2>
+
+    <p style="max-width:160mm;margin-top:8mm">
+      Piece HUUM łączą najlepsze cechy sauny nordyckiej z nowoczesnym wzornictwem
+      i innowacyjnymi rozwiązaniami technologicznymi. Minimalistyczny, organiczny design
+      inspirowany naturą wyróżnia naturalne piękno kamieni.
+    </p>
+
+    <div class="heaters">
+      <div class="heater">
+        <img src="../../images/heaters/huum-drop.jpg" alt="" />
+        <div class="name">DROP</div>
+        <div class="meta">9 kW · 55 kg kamieni</div>
+      </div>
+      <div class="heater">
+        <img src="../../images/heaters/huum-hive.jpg" alt="" />
+        <div class="name">HIVE Mini</div>
+        <div class="meta">9 kW · 150 kg kamieni</div>
+      </div>
+      <div class="heater">
+        <img src="../../images/heaters/huum-steel.jpg" alt="" />
+        <div class="name">STEEL</div>
+        <div class="meta">9 kW · 150 kg kamieni</div>
+      </div>
+      <div class="heater">
+        <img src="../../images/heaters/huum-core.jpg" alt="" />
+        <div class="name">CORE Black</div>
+        <div class="meta">9 kW · 30 kg kamieni</div>
+      </div>
+    </div>
+
+    <div class="heater-list">
+      <div class="item">
+        <div class="nm">HUUM DROP</div>
+        <div class="desc">Piec ścienny inspirowany kroplą wody. Mieści do 55 kg kamieni — więcej niż większość pieców opalanych drewnem.</div>
+        <div class="pwr">400 V · 5×2,5 mm</div>
+      </div>
+      <div class="item">
+        <div class="nm">HUUM HIVE</div>
+        <div class="desc">Eleganckie rozwiązanie dla większych saun. Smuklejszy HIVE Mini mieści do 150 kg kamieni.</div>
+        <div class="pwr">400 V · 5×2,5 mm</div>
+      </div>
+      <div class="item">
+        <div class="nm">HUUM STEEL</div>
+        <div class="desc">Kompaktowy piec ze stali nierdzewnej, oszczędzający miejsce. Dla małych i średnich saun (9–15 m³).</div>
+        <div class="pwr">400 V · 5×2,5 mm</div>
+      </div>
+      <div class="item">
+        <div class="nm">HUUM CORE Black</div>
+        <div class="desc">Stylowy piec w eleganckiej, czarnej metalowej obudowie. Możliwość dostosowania do projektu sauny.</div>
+        <div class="pwr">400 V · 5×2,5 mm</div>
+      </div>
+    </div>
+
+    <p class="note">
+      <strong>Sterownik UKU LOCAL</strong> w standardzie. <strong>UKU Wi-Fi</strong> lub <strong>GSM</strong> dostępne opcjonalnie — pełna kontrola pieca z poziomu aplikacji mobilnej.
+    </p>
+  </div>
+
+  <div class="page-foot">
+    <span>RoyalSauna · Piece HUUM</span>
+    <span class="num">07</span>
+  </div>
+</section>
+
+
+<!-- ========== 8. PIECE HARVIA ========== -->
+<section class="page">
+  <div class="page-head">
+    <span class="brand">ROYALSAUNA</span>
+    <small>PIECE ELEKTRYCZNE · HARVIA</small>
+  </div>
+
+  <div class="pad">
+    <div class="eyebrow">Klasyka i niezawodność</div>
+    <div class="rule-gold"></div>
+    <h2>Piece elektryczne <em style="font-style:italic;color:var(--gold)">HARVIA</em>.</h2>
+
+    <p style="max-width:160mm;margin-top:8mm">
+      Fińska marka HARVIA od dekad wyznacza standardy w branży saun. Piece łączą trwałość,
+      doskonały stosunek jakości do ceny i klasyczne wzornictwo z nowoczesnym sterowaniem.
+    </p>
+
+    <div class="heaters" style="grid-template-columns:repeat(3,1fr)">
+      <div class="heater">
+        <img src="../../images/heaters/harvia-legend.jpg" alt="" />
+        <div class="name">LEGEND 110 XW</div>
+        <div class="meta">11 kW · 40 kg kamieni</div>
+      </div>
+      <div class="heater">
+        <img src="../../images/heaters/harvia-kip.jpg" alt="" />
+        <div class="name">KIP 90 Black</div>
+        <div class="meta">9 kW · 40 kg kamieni</div>
+      </div>
+      <div class="heater">
+        <img src="../../images/heaters/harvia-cilindro.jpg" alt="" />
+        <div class="name">CILINDRO PC 90 XW</div>
+        <div class="meta">9 kW · 40 kg kamieni</div>
+      </div>
+    </div>
+
+    <div class="heater-list">
+      <div class="item">
+        <div class="nm">HARVIA Legend</div>
+        <div class="desc">Rustykalna stalowa rama mieszcząca dużą ilość kamieni — pozwala uzyskać delikatną parę.</div>
+        <div class="pwr">11 kW · 400 V 3N</div>
+      </div>
+      <div class="item">
+        <div class="nm">HARVIA KIP</div>
+        <div class="desc">Tradycyjny piec montowany na ścianie. Niska temperatura obudowy zapewnia bezpieczną kąpiel.</div>
+        <div class="pwr">9 kW · 400 V 3N</div>
+      </div>
+      <div class="item">
+        <div class="nm">HARVIA Cilindro</div>
+        <div class="desc">Stojący piec z dużą ilością kamieni. Ażurowa osłona pozwala regulować parametry pary.</div>
+        <div class="pwr">9 kW · 400 V 3N</div>
+      </div>
+    </div>
+
+    <table class="compare">
+      <tr><th>Model</th><th>Moc</th><th>Zasilanie</th><th>Kamienie</th><th>Sterownik Wi-Fi</th></tr>
+      <tr><td class="model">Legend 110 XW</td><td>11 kW</td><td>400 V 3N</td><td>40 kg</td><td>W zestawie</td></tr>
+      <tr><td class="model">KIP 90 Black</td><td>9 kW</td><td>400 V 3N</td><td>40 kg</td><td>brak</td></tr>
+      <tr><td class="model">Cilindro PC 90 XW</td><td>9 kW</td><td>400 V 3N</td><td>40 kg</td><td>W zestawie</td></tr>
+    </table>
+  </div>
+
+  <div class="page-foot">
+    <span>RoyalSauna · Piece HARVIA</span>
+    <span class="num">08</span>
+  </div>
+</section>
+
+
+<!-- ========== 9. CENNIK – TABELA ========== -->
+<section class="page">
+  <div class="page-head">
+    <span class="brand">ROYALSAUNA</span>
+    <small>CENNIK · PODSUMOWANIE ZAMÓWIENIA</small>
+  </div>
+
+  <div class="pad">
+    <div class="eyebrow">Konfiguracja</div>
+    <div class="rule-gold"></div>
+    <h2>Podsumowanie zamówienia.</h2>
+
+    <div class="price-card" style="margin-top:6mm">
+      <div>
+        <div class="from">Cena modelu od</div>
+        <div class="amount">38 900 zł</div>
+        <div class="vat">brutto · z dostawą i montażem na terenie RP</div>
+      </div>
+      <div class="badge">Regenerum Compact</div>
+    </div>
+
+    <p class="note" style="margin-top:6mm"><strong>Wybrana konfiguracja pieca:</strong> Harvia Cilindro PC 90 XW — 9 kW · 40 kg kamieni (marka HARVIA). Cena pieca do indywidualnej wyceny.</p>
+
+    <table class="order">
+      <tr>
+        <th style="width:62%">Pozycja</th>
+        <th>Kategoria</th>
+        <th style="text-align:right">Cena brutto</th>
+      </tr>
+      <tr><td colspan="3" class="cat">Sauna</td></tr>
+      <tr>
+        <td>RoyalSauna Regenerum Compact — świerk, panoramiczne szkło 8 mm, ławy z osiki</td>
+        <td>Konstrukcja</td>
+        <td class="amount">38 900 zł</td>
+      </tr>
+      <tr><td colspan="3" class="cat">Dodatkowe wyposażenie</td></tr>
+      <tr><td>Piec elektryczny Harvia Cilindro PC 90 XW 9 kW</td><td>Ogrzewanie</td><td class="amount" style="color:var(--muted);font-style:italic">do uzupełnienia</td></tr>
+      <tr><td>Moduł sterujący do pieca + sterownik</td><td>Automatyka</td><td class="amount">2 600 zł</td></tr>
+      <tr><td>Skrzynka elektryczna</td><td>Instalacja</td><td class="amount">55 zł</td></tr>
+      <tr><td>Osprzęt do skrzynki elektrycznej</td><td>Instalacja</td><td class="amount">100 zł</td></tr>
+      <tr><td>Oświetlenie LED do saun (2 × 10 m)</td><td>Oświetlenie</td><td class="amount">950 zł</td></tr>
+      <tr><td>Zestaw termometr / higrometr</td><td>Akcesoria</td><td class="amount">249 zł</td></tr>
+      <tr><td>Kilt do sauny biały (2 szt.)</td><td>Akcesoria</td><td class="amount">240 zł</td></tr>
+      <tr><td colspan="3" class="cat">Usługa</td></tr>
+      <tr><td>Transport oraz montaż sauny na terenie RP</td><td>Realizacja</td><td class="amount">5 500 zł</td></tr>
+      <tr class="total">
+        <td colspan="2">RAZEM</td>
+        <td class="amount">48 594 zł + piec</td>
+      </tr>
+    </table>
+
+    <p style="font-size:8.5pt;color:var(--muted);margin-top:6mm;letter-spacing:.4px">
+      Ceny brutto. Ostateczna wycena zależy od wybranej konfiguracji oraz lokalizacji montażu.
+    </p>
+  </div>
+
+  <div class="page-foot">
+    <span>RoyalSauna · Regenerum Compact · Cennik</span>
+    <span class="num">09</span>
+  </div>
+</section>
+
+
+<!-- ========== 10. DANE KLIENTA · REALIZACJA ========== -->
+<section class="page">
+  <div class="page-head">
+    <span class="brand">ROYALSAUNA</span>
+    <small>DANE KLIENTA · REALIZACJA</small>
+  </div>
+
+  <div class="pad">
+    <div class="eyebrow">Formularz</div>
+    <div class="rule-gold"></div>
+    <h2>Dane do realizacji zamówienia.</h2>
+
+    <div class="order-info" style="margin-top:10mm">
+      <div class="info-card">
+        <div class="eyebrow">Dane klienta</div>
+        <div class="rule-gold"></div>
+        <h4 style="font-family:'Cormorant Garamond',serif;font-size:14pt;color:var(--ink);text-transform:none;letter-spacing:.3px">Wypełnia kupujący</h4>
+
+        <div class="row"><span class="k">Imię i nazwisko</span><span class="field" style="width:55%"></span></div>
+        <div class="row"><span class="k">Adres</span><span class="field" style="width:55%"></span></div>
+        <div class="row"><span class="k">E-mail</span><span class="field" style="width:55%"></span></div>
+        <div class="row"><span class="k">Telefon</span><span class="field" style="width:55%"></span></div>
+        <div class="row"><span class="k">NIP (opcjonalnie)</span><span class="field" style="width:55%"></span></div>
+      </div>
+
+      <div class="info-card">
+        <div class="eyebrow">Realizacja</div>
+        <div class="rule-gold"></div>
+        <h4 style="font-family:'Cormorant Garamond',serif;font-size:14pt;color:var(--ink);text-transform:none;letter-spacing:.3px">Termin i forma płatności</h4>
+
+        <div class="row"><span class="k">Termin realizacji</span><span style="color:var(--ink);font-weight:500">8–10 tyg. od zaliczki</span></div>
+        <div class="row"><span class="k">I zaliczka (60%)</span><span style="color:var(--ink);font-weight:500">w dniu zamówienia</span></div>
+        <div class="row"><span class="k">II zaliczka (30%)</span><span style="color:var(--ink);font-weight:500">w dniu wysyłki</span></div>
+        <div class="row"><span class="k">III rata (10%)</span><span style="color:var(--ink);font-weight:500">w dniu montażu</span></div>
+      </div>
+    </div>
+
+    <p class="note" style="margin-top:10mm">
+      <strong>WAŻNE.</strong> Ze względu na duży gabaryt przesyłki Klient powinien zapewnić odpowiednią
+      możliwość dojazdu do miejsca montażu. Podłoże musi być wypoziomowane i utwardzone zgodnie
+      z wytycznymi dostawcy. W dniu uruchomienia sauny Klient powinien zapewnić wsparcie techniczne (elektryk).
+    </p>
+    <p style="font-size:8.5pt;color:var(--muted);margin-top:8px;font-style:italic;letter-spacing:.3px">
+      Składając zamówienie Klient oświadcza, że zapoznał się z regulaminem oraz Ogólnymi Warunkami
+      Sprzedaży dostępnymi na stronie www.royalsauna.pl i akceptuje powyższe warunki.
+    </p>
+  </div>
+
+  <div class="page-foot">
+    <span>RoyalSauna · Regenerum Compact · Dane klienta</span>
+    <span class="num">10</span>
+  </div>
+</section>
+
+
+<!-- ========== 11. KONTAKT ========== -->
+<section class="page contact">
+  <div>
+    <div class="brand" style="display:flex;align-items:center;gap:14px">
+      <div style="width:42px;height:42px;border:1px solid #d8b97a;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:#d8b97a;font-size:20pt">R</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:16pt;color:#fff;letter-spacing:4px">ROYALSAUNA</div>
+    </div>
+  </div>
+
+  <div>
+    <div class="eyebrow">Zapraszamy</div>
+    <div class="rule-gold"></div>
+    <h2>Porozmawiajmy o Twojej saunie.</h2>
+    <p style="color:#cbbfa6;max-width:130mm;margin-top:10px">
+      Każde zamówienie traktujemy indywidualnie — od doradztwa w doborze modelu,
+      przez wizję lokalną, po montaż „pod klucz”. Skontaktuj się z nami, aby umówić
+      bezpłatną konsultację lub odwiedzić nasze studio pokazowe.
+    </p>
+
+    <div class="info">
+      <div>
+        <h4>Kontakt</h4>
+        <p style="margin-top:6px">+48 600 359 180<br/>biuro@royalsauna.pl<br/>www.royalsauna.pl</p>
+      </div>
+      <div>
+        <h4>Studio pokazowe</h4>
+        <p style="margin-top:6px">Łysomice<br/>87-148, Polska<br/>pn–pt 10:00–18:00 · sob 10:00–14:00</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sign">
+    <div style="display:flex;justify-content:space-between;align-items:end">
+      <div>
+        <em style="font-style:italic">„Ciepło, które zostaje z Tobą na długo.”</em>
+      </div>
+      <small style="color:#cbbfa6;letter-spacing:2px">© 2026 ROYALSAUNA</small>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
