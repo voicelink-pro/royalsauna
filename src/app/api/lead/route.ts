@@ -1,16 +1,34 @@
 import { NextResponse } from "next/server";
-import { readFile } from "fs/promises";
-import path from "path";
 import type { LeadPayload } from "@/types";
 import { buildOfferData } from "@/lib/offer";
 import { sendOfferEmail } from "@/lib/email/send-offer";
 
 /**
- * Path to the pre-designed offer PDF that gets attached to every lead e-mail.
- * Override with OFFER_PDF_PATH (relative to the project root) if needed.
+ * Path to the pre-designed offer PDF that gets attached to every lead e-mail,
+ * relative to `public/`. Override with OFFER_PDF_PATH if needed.
  */
 const OFFER_PDF_PATH =
   process.env.OFFER_PDF_PATH || "public/documents/oferta.pdf";
+
+/**
+ * Fetches the offer PDF over HTTP from the site's own `public/` folder
+ * instead of reading it from disk. Serverless functions on Vercel don't
+ * bundle the full `public/` directory into their filesystem, but it's
+ * always reachable via the CDN — so this works identically in local dev
+ * and in every deployment (preview, production, custom domain) without
+ * any extra build configuration.
+ */
+async function fetchOfferPdf(request: Request): Promise<Buffer> {
+  const publicPath = OFFER_PDF_PATH.replace(/^\.?\/?public\//, "");
+  const { protocol, host } = new URL(request.url);
+  const pdfUrl = `${protocol}//${host}/${publicPath}`;
+
+  const res = await fetch(pdfUrl);
+  if (!res.ok) {
+    throw new Error(`Failed to fetch offer PDF from ${pdfUrl}: ${res.status}`);
+  }
+  return Buffer.from(await res.arrayBuffer());
+}
 
 export async function POST(request: Request) {
   try {
@@ -38,9 +56,7 @@ export async function POST(request: Request) {
     if (process.env.RESEND_API_KEY) {
       try {
         const offerData = buildOfferData(payload);
-        const pdfBuffer = await readFile(
-          path.join(process.cwd(), OFFER_PDF_PATH),
-        );
+        const pdfBuffer = await fetchOfferPdf(request);
 
         const result = await sendOfferEmail({
           to: payload.email,
