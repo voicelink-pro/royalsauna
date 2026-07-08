@@ -5,7 +5,6 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileStickyCTA } from "@/components/layout/MobileStickyCTA";
 import { ChatWidgetPlaceholder } from "@/components/widgets/ChatWidgetPlaceholder";
 import { VoiceAgentPlaceholder } from "@/components/widgets/VoiceAgentPlaceholder";
-import { CookieBanner } from "@/components/layout/CookieBanner";
 
 /**
  * Shared site chrome (header, footer, sticky CTA, future AI widgets) wrapped
@@ -31,7 +30,6 @@ export function SiteShell({
       <MobileStickyCTA locale={locale} dict={dict} />
       <ChatWidgetPlaceholder dict={dict} />
       <VoiceAgentPlaceholder dict={dict} />
-      <CookieBanner locale={locale} dict={dict} />
     </>
   );
 }

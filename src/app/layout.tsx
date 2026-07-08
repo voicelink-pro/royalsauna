@@ -4,6 +4,7 @@ import "./globals.css";
 import { GTMProvider, GTMNoScript } from "@/components/analytics/GTMProvider";
 import { MetaPixelProvider } from "@/components/analytics/MetaPixelProvider";
 import { ClarityProvider } from "@/components/analytics/ClarityProvider";
+import { CookiebotProvider } from "@/components/analytics/CookiebotProvider";
 import { getSiteUrl } from "@/lib/site";
 
 const serif = Cormorant_Garamond({
@@ -38,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="pl" className={`${serif.variable} ${sans.variable}`}>
       <head>
+        <CookiebotProvider />
         <GTMProvider />
         <MetaPixelProvider />
         <ClarityProvider />

@@ -135,8 +135,6 @@ export interface FoundationType {
     {
       name: string;
       description: string;
-      /** Short, ordered how-to steps for preparing this foundation correctly. */
-      steps: string[];
       /** Short comparison values shown in the foundation comparison table. */
       compare: {
         cost: string;

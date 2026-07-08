@@ -110,27 +110,45 @@ export function PodlozePage({ locale }: { locale: Locale }) {
                     <p className="mt-2 text-sm leading-relaxed text-bark-500">
                       {copy.description}
                     </p>
-                    <p className="mt-5 text-xs font-medium uppercase tracking-widest text-clay-500">
-                      {p.typesSection.stepsLabel}
-                    </p>
-                    <ol className="mt-3 space-y-3">
-                      {copy.steps.map((step, idx) => (
-                        <li key={idx} className="flex gap-3">
-                          <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brass text-[11px] font-semibold text-ivory">
-                            {idx + 1}
-                          </span>
-                          <span className="text-sm leading-snug text-bark-600">
-                            {step}
-                          </span>
-                        </li>
-                      ))}
-                    </ol>
                   </div>
                 </div>
               </Reveal>
             );
           })}
         </div>
+
+        <Reveal delay={300}>
+          <div className="mx-auto mt-10 flex max-w-2xl items-start gap-4 rounded-2xl border border-brass/30 bg-sand-100 p-5 sm:p-6">
+            <span
+              aria-hidden="true"
+              className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brass/15 text-brass-dark"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={1.75}
+                className="h-5 w-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 19.5V6.5A2.5 2.5 0 0 1 6.5 4H15l4 4v11.5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Z"
+                />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M14 4v4h4" />
+                <path strokeLinecap="round" d="M8 13h7M8 16.5h5" />
+              </svg>
+            </span>
+            <div>
+              <p className="font-serif text-lg text-bark-700">
+                {p.typesSection.instructionsNote.title}
+              </p>
+              <p className="mt-1.5 text-sm leading-relaxed text-bark-500">
+                {p.typesSection.instructionsNote.description}
+              </p>
+            </div>
+          </div>
+        </Reveal>
       </Section>
 
       {/* General requirements */}

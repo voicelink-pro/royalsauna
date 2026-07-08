@@ -508,7 +508,11 @@ export const en: Dictionary = {
       title: "Three foundations we recommend",
       description:
         "Each one gives the sauna a stable, level base with good drainage. Choose the option that best fits your site and budget.",
-      stepsLabel: "How to prepare it correctly",
+      instructionsNote: {
+        title: "Detailed instructions in your offer",
+        description:
+          "The step-by-step guide for preparing your chosen foundation is included in the personalised offer we'll send you after you submit the form.",
+      },
     },
     requirementsSection: {
       eyebrow: "Before you start",
@@ -754,13 +758,6 @@ export const en: Dictionary = {
     privacy: "Privacy policy",
     cookies: "Cookie policy",
     rights: "All rights reserved.",
-  },
-  cookies: {
-    message:
-      "We use cookies to improve the site and analyse traffic. Details are in our cookie policy.",
-    accept: "Accept",
-    reject: "Essential only",
-    settings: "Cookie policy",
   },
   widgets: {
     chatLabel: "Chat with us",

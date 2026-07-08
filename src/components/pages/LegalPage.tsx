@@ -1,3 +1,4 @@
+import Script from "next/script";
 import type { Locale } from "@/types";
 import { getDictionary } from "@/lib/i18n";
 import { routeMap } from "@/lib/site";
@@ -50,8 +51,31 @@ export function LegalPage({
               </section>
             ))}
           </div>
+
+          {doc === "cookies" && <CookiebotDeclaration />}
         </div>
       </Section>
     </>
+  );
+}
+
+/**
+ * Cookiebot's own auto-generated, always-up-to-date list of cookies actually
+ * detected on the site — more trustworthy than a hand-written list. Renders
+ * nothing if Cookiebot isn't configured for this environment.
+ */
+function CookiebotDeclaration() {
+  const cbid = process.env.NEXT_PUBLIC_COOKIEBOT_ID;
+  if (!cbid) return null;
+
+  return (
+    <section className="mt-10">
+      <div id="CookieDeclaration" />
+      <Script
+        id="CookieDeclaration"
+        src={`https://consent.cookiebot.com/${cbid}/cd.js`}
+        strategy="lazyOnload"
+      />
+    </section>
   );
 }

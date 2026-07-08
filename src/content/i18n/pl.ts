@@ -507,7 +507,11 @@ export const pl = {
       title: "Trzy podłoża, które polecamy",
       description:
         "Każde z nich zapewnia stabilne, równe i dobrze odprowadzające wodę oparcie dla sauny. Wybierz wariant najlepiej dopasowany do terenu i budżetu.",
-      stepsLabel: "Jak przygotować poprawnie",
+      instructionsNote: {
+        title: "Szczegółowa instrukcja w Twojej ofercie",
+        description:
+          "Krok po kroku, jak poprawnie przygotować wybrane podłoże, znajdziesz w indywidualnej ofercie, którą przygotujemy i wyślemy po wypełnieniu formularza.",
+      },
     },
     requirementsSection: {
       eyebrow: "Zanim zaczniesz",
@@ -754,13 +758,6 @@ export const pl = {
     privacy: "Polityka prywatności",
     cookies: "Polityka cookies",
     rights: "Wszelkie prawa zastrzeżone.",
-  },
-  cookies: {
-    message:
-      "Używamy plików cookies, aby ulepszać stronę i analizować ruch. Szczegóły znajdziesz w polityce cookies.",
-    accept: "Akceptuję",
-    reject: "Tylko niezbędne",
-    settings: "Polityka cookies",
   },
   widgets: {
     chatLabel: "Napisz do nas",
