@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Mulish } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
-import { GTMProvider, GTMNoScript } from "@/components/analytics/GTMProvider";
 import { MetaPixelProvider } from "@/components/analytics/MetaPixelProvider";
 import { ClarityProvider } from "@/components/analytics/ClarityProvider";
 import { CookiebotProvider } from "@/components/analytics/CookiebotProvider";
 import { getSiteUrl } from "@/lib/site";
+
+/** GTM-KMWKNDBD — GA4 is configured inside the GTM container, not hardcoded here. */
+const GTM_ID = "GTM-KMWKNDBD";
 
 const serif = Cormorant_Garamond({
   subsets: ["latin", "latin-ext"],
@@ -40,13 +43,22 @@ export default function RootLayout({
     <html lang="pl" className={`${serif.variable} ${sans.variable}`}>
       <head>
         <CookiebotProvider />
-        <GTMProvider />
         <MetaPixelProvider />
         <ClarityProvider />
       </head>
       <body className="min-h-screen antialiased">
-        <GTMNoScript />
+        {/* Google Tag Manager (noscript) — fallback for visitors with JS disabled */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="gtm"
+          />
+        </noscript>
         {children}
+        <GoogleTagManager gtmId={GTM_ID} />
       </body>
     </html>
   );

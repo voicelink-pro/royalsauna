@@ -1,8 +1,11 @@
 import Script from "next/script";
 
 /**
- * Cookiebot CMP + Google Consent Mode v2 defaults. Must render before
- * GTMProvider/MetaPixelProvider/ClarityProvider in <head> so that:
+ * Cookiebot CMP + Google Consent Mode v2 defaults. Both scripts use
+ * `beforeInteractive`, so they always execute before the GTM component
+ * (`@next/third-parties`, `afterInteractive`) and MetaPixelProvider/
+ * ClarityProvider in <head> — regardless of where those are placed in the
+ * tree — so that:
  *  1. Google tags see a "denied" consent default the instant they load.
  *  2. Cookiebot's auto-blocking script is active before GTM/Pixel/Clarity
  *     inject their own third-party <script> tags, so it can intercept them.

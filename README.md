@@ -40,14 +40,14 @@ npm run type-check  # sprawdzenie typów TypeScript
 
 ## Zmienne środowiskowe
 
-Wszystkie ID trackingowe są wstrzykiwane przez zmienne środowiskowe — **nic nie jest zahardkodowane**. Jeśli zmienna nie jest ustawiona, dany skrypt po prostu się nie ładuje.
+Większość ID trackingowych jest wstrzykiwana przez zmienne środowiskowe — jeśli zmienna nie jest ustawiona, dany skrypt po prostu się nie ładuje. Wyjątkiem jest Google Tag Manager: jego ID jest zahardkodowane jako stała `GTM_ID` w `src/app/layout.tsx` (ładowany przez oficjalny `@next/third-parties/google`), a GA4 jest skonfigurowany wewnątrz kontenera GTM, nie w kodzie.
 
 | Zmienna | Opis |
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Pełny adres produkcyjny (bez końcowego `/`), np. `https://royalsauna.pl`. Używany do canonical, hreflang, sitemap, JSON-LD. |
-| `NEXT_PUBLIC_GTM_ID` | Google Tag Manager, np. `GTM-XXXXXXX`. |
 | `NEXT_PUBLIC_META_PIXEL_ID` | Meta (Facebook) Pixel ID. |
 | `NEXT_PUBLIC_CLARITY_ID` | Microsoft Clarity Project ID. |
+| `NEXT_PUBLIC_COOKIEBOT_ID` | Cookiebot Domain Group ID — steruje banerem zgody i auto-blokadą GTM/Pixel/Clarity. |
 | `NEXT_PUBLIC_ENABLE_AI_AGENT` | `true`/`false` — włącza placeholdery AI voice agent / chat widget. |
 
 ---
@@ -77,7 +77,7 @@ src/
 │   ├── product/                # ProductHero, ProductSpecs, ProductGallery, ProductIncluded, ProductOptions
 │   ├── forms/                  # LeadForm, MultiStepOfferForm
 │   ├── seo/                    # JsonLd, Breadcrumbs
-│   ├── analytics/              # GTMProvider, MetaPixelProvider, ClarityProvider
+│   ├── analytics/              # CookiebotProvider, MetaPixelProvider, ClarityProvider (GTM: @next/third-parties w layout.tsx)
 │   ├── widgets/                # VoiceAgentPlaceholder, ChatWidgetPlaceholder
 │   ├── pages/                  # widoki stron (re-używane przez PL i EN)
 │   └── ui/                     # Container, Section, SectionHeading, CtaButton, Reveal, FeatureGrid, ContactLink
