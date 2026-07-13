@@ -11,21 +11,19 @@ import type { Product, ModelId } from "@/types";
 /** Shared product line name. */
 export const LINE_NAME = "Regenerum";
 
-/** Standardowe wyposażenie wspólne dla całej linii Regenerum. */
-const INCLUDED_PL = [
-        "Piec saunowy dobrany do kubatury",
-        "Profilowane ławy z drewna premium",
-        "Osikowe zagłówki",
-        "Cebrzyk i czerpak",
-        "Komplet kamieni saunowych",
-        "Oświetlenie nastrojowe LED",
-        "Termometr i higrometr",
-        "Klepsydra saunowa",
-        "Ręczniki",
-        "Klapki",
+/** Standardowe wyposażenie wspólne dla całej linii Regenerum (bez ręczników – ich liczba różni się per model). */
+const INCLUDED_PL_BASE = [
+  "Piec saunowy dobrany do kubatury",
+  "Profilowane ławy z drewna premium",
+  "Osikowe zagłówki",
+  "Cebrzyk i czerpak",
+  "Komplet kamieni saunowych",
+  "Oświetlenie nastrojowe LED",
+  "Termometr i higrometr",
+  "Klepsydra saunowa",
 ];
 
-const INCLUDED_EN = [
+const INCLUDED_EN_BASE = [
   "Sauna heater matched to the cabin volume",
   "Contoured premium-wood benches",
   "Headrests and footrests",
@@ -34,10 +32,23 @@ const INCLUDED_EN = [
   "Ambient LED lighting",
   "Thermometer and hygrometer",
   "Sauna hourglass",
-  "Towels",
-  "Slippers",
-  "Bucket and scoop",
 ];
+
+/** Liczba ręczników w zestawie powitalnym rośnie z pojemnością modelu. */
+const TOWELS_PL: Record<ModelId, string> = {
+  compact: "Ręczniki (2 szt.)",
+  comfort: "Ręczniki (4 szt.)",
+  premium: "Ręczniki (6 szt.)",
+};
+
+const TOWELS_EN: Record<ModelId, string> = {
+  compact: "Towels (2 pcs.)",
+  comfort: "Towels (4 pcs.)",
+  premium: "Towels (6 pcs.)",
+};
+
+const includedPl = (id: ModelId) => [...INCLUDED_PL_BASE, TOWELS_PL[id]];
+const includedEn = (id: ModelId) => [...INCLUDED_EN_BASE, TOWELS_EN[id]];
 
 export const products: Product[] = [
   {
@@ -55,7 +66,7 @@ export const products: Product[] = [
       },
       {
         src: "/images/cubus2-interior.jpg",
-        alt: "Wnętrze sauny Compact z estońskiego świerka",
+        alt: "Wnętrze sauny Compact ze świerku skandynawskiego",
       },
       {
         src: "/images/cubus2-cutout.jpg",
@@ -78,7 +89,7 @@ export const products: Product[] = [
         shortDescription:
           "Najbardziej kompaktowy model linii Regenerum. Pełnowartościowa sauna dla dwojga, która zmieści się nawet w niewielkim ogrodzie.",
         longDescription:
-          "Compact to dowód na to, że luksus nie potrzebuje wielu metrów. W zwartej, designerskiej bryle z estońskiego świerka mieści się wszystko, czego potrzebujesz do prawdziwego seansu: dopracowana komora cieplna, panoramiczna szyba otwierająca wnętrze na ogród i piec dobrany do kubatury, który szybko osiąga temperaturę. To sauna, która staje się Twoim prywatnym zakątkiem regeneracji – kameralnym, ciepłym i gotowym na codzienny rytuał.",
+          "Compact to dowód na to, że luksus nie potrzebuje wielu metrów. W zwartej, designerskiej bryle ze świerku skandynawskiego mieści się wszystko, czego potrzebujesz do prawdziwego seansu: dopracowana komora cieplna, panoramiczna szyba otwierająca wnętrze na ogród i piec dobrany do kubatury, który szybko osiąga temperaturę. To sauna, która staje się Twoim prywatnym zakątkiem regeneracji – kameralnym, ciepłym i gotowym na codzienny rytuał.",
         features: [
           {
             title: "Kompaktowa, dopracowana bryła",
@@ -93,7 +104,7 @@ export const products: Product[] = [
           {
             title: "Szybkie nagrzewanie",
             description:
-              "Mniejsza kubatura oznacza krótszy czas dochodzenia do temperatury – sauna jest gotowa, gdy Ty jesteś.",
+              "Mniejsza kubatura oznacza krótszy czas nagrzewania – sauna jest gotowa, gdy Ty jesteś.",
           },
           {
             title: "Panoramiczna szyba",
@@ -103,14 +114,15 @@ export const products: Product[] = [
         ],
         specs: [
           { label: "Liczba osób", value: "1–2" },
-          { label: "Wymiary zewnętrzne", value: "ok. 2,0 × 2,0 m" },
-          { label: "Wysokość", value: "ok. 2,2 m" },
-          { label: "Materiał", value: "Estoński świerk premium" },
+          { label: "Wymiary zewnętrzne", value: "2,0 × 2,0 m" },
+          { label: "Wysokość", value: "2,2 m" },
+          { label: "Materiał", value: "Świerk skandynawski premium" },
           { label: "Piec", value: "Elektryczny lub na drewno" },
           { label: "Moc pieca", value: "od 6 kW" },
+          { label: "Przyłącze elektryczne", value: "Po stronie Klienta" },
           { label: "Czas nagrzewania", value: "ok. 30–40 min" },
         ],
-        included: INCLUDED_PL,
+        included: includedPl("compact"),
         options: [
           {
             title: "Wybór pieca",
@@ -135,11 +147,6 @@ export const products: Product[] = [
         ],
         faq: [
           {
-            question: "Czy Compact wymaga pozwolenia na budowę?",
-            answer:
-              "W większości przypadków sauna ogrodowa tej wielkości nie wymaga pozwolenia, a jedynie zgłoszenia – zależy to jednak od lokalnych przepisów i usytuowania na działce. Doradzimy Ci na etapie wyceny.",
-          },
-          {
             question: "Jakie przygotowanie podłoża jest potrzebne?",
             answer:
               "Wystarczy równe, stabilne i nośne podłoże – np. płyta betonowa, bloczki lub utwardzona nawierzchnia. Szczegółowe wytyczne przekazujemy przed dostawą.",
@@ -158,7 +165,7 @@ export const products: Product[] = [
         shortDescription:
           "The most compact model in the Regenerum line. A full-value sauna for two that fits even a small garden.",
         longDescription:
-          "Compact proves that luxury doesn't need a lot of space. Its compact, design-led cube of Estonian spruce holds everything you need for a true session: a refined heat chamber, a panoramic glass front that opens the interior to the garden, and a heater matched to the volume that reaches temperature quickly. It's a sauna that becomes your private corner of recovery – intimate, warm and ready for a daily ritual.",
+          "Compact proves that luxury doesn't need a lot of space. Its compact, design-led cube of Scandinavian spruce holds everything you need for a true session: a refined heat chamber, a panoramic glass front that opens the interior to the garden, and a heater matched to the volume that reaches temperature quickly. It's a sauna that becomes your private corner of recovery – intimate, warm and ready for a daily ritual.",
         features: [
           {
             title: "Compact, refined form",
@@ -173,7 +180,7 @@ export const products: Product[] = [
           {
             title: "Fast heat-up",
             description:
-              "A smaller volume means a shorter time to temperature – the sauna is ready when you are.",
+              "A smaller volume means a shorter heat-up time – the sauna is ready when you are.",
           },
           {
             title: "Panoramic glass",
@@ -183,14 +190,15 @@ export const products: Product[] = [
         ],
         specs: [
           { label: "People", value: "1–2" },
-          { label: "Exterior dimensions", value: "approx. 2.0 × 2.0 m" },
-          { label: "Height", value: "approx. 2.2 m" },
-          { label: "Material", value: "Premium Estonian spruce" },
+          { label: "Exterior dimensions", value: "2.0 × 2.0 m" },
+          { label: "Height", value: "2.2 m" },
+          { label: "Material", value: "Premium Scandinavian spruce" },
           { label: "Heater", value: "Electric or wood-burning" },
           { label: "Heater power", value: "from 6 kW" },
+          { label: "Electrical connection", value: "Provided by the client" },
           { label: "Heat-up time", value: "approx. 30–40 min" },
         ],
-        included: INCLUDED_EN,
+        included: includedEn("compact"),
         options: [
           {
             title: "Heater choice",
@@ -214,11 +222,6 @@ export const products: Product[] = [
           },
         ],
         faq: [
-          {
-            question: "Does Compact require a building permit?",
-            answer:
-              "In most cases a garden sauna of this size only requires a notification rather than a permit – but this depends on local regulations and placement on the plot. We'll advise you during the quote stage.",
-          },
           {
             question: "What ground preparation is needed?",
             answer:
@@ -291,19 +294,20 @@ export const products: Product[] = [
           {
             title: "Premium w detalu",
             description:
-              "Estoński świerk, dopracowane okucia i panoramiczna szyba w standardzie.",
+              "Świerk skandynawski, dopracowane okucia i panoramiczna szyba w standardzie.",
           },
         ],
         specs: [
           { label: "Liczba osób", value: "3–4" },
-          { label: "Wymiary zewnętrzne", value: "ok. 2,4 × 2,0 m" },
-          { label: "Wysokość", value: "ok. 2,2 m" },
-          { label: "Materiał", value: "Estoński świerk premium" },
+          { label: "Wymiary zewnętrzne", value: "2,4 × 2,0 m" },
+          { label: "Wysokość", value: "2,2 m" },
+          { label: "Materiał", value: "Świerk skandynawski premium" },
           { label: "Piec", value: "Elektryczny lub na drewno" },
           { label: "Moc pieca", value: "od 8 kW" },
+          { label: "Przyłącze elektryczne", value: "Po stronie Klienta" },
           { label: "Czas nagrzewania", value: "ok. 40–50 min" },
         ],
-        included: INCLUDED_PL,
+        included: includedPl("comfort"),
         options: [
           {
             title: "Wybór pieca",
@@ -371,19 +375,20 @@ export const products: Product[] = [
           {
             title: "Premium in the detail",
             description:
-              "Estonian spruce, refined fittings and a panoramic glass front as standard.",
+              "Scandinavian spruce, refined fittings and a panoramic glass front as standard.",
           },
         ],
         specs: [
           { label: "People", value: "3–4" },
-          { label: "Exterior dimensions", value: "approx. 2.4 × 2.0 m" },
-          { label: "Height", value: "approx. 2.2 m" },
-          { label: "Material", value: "Premium Estonian spruce" },
+          { label: "Exterior dimensions", value: "2.4 × 2.0 m" },
+          { label: "Height", value: "2.2 m" },
+          { label: "Material", value: "Premium Scandinavian spruce" },
           { label: "Heater", value: "Electric or wood-burning" },
           { label: "Heater power", value: "from 8 kW" },
+          { label: "Electrical connection", value: "Provided by the client" },
           { label: "Heat-up time", value: "approx. 40–50 min" },
         ],
-        included: INCLUDED_EN,
+        included: includedEn("comfort"),
         options: [
           {
             title: "Heater choice",
@@ -464,7 +469,7 @@ export const products: Product[] = [
         shortDescription:
           "Najbardziej przestronny model linii Regenerum. Przestronne wnętrze dla ośmiu osób i pełne doświadczenie domowego spa.",
         longDescription:
-          "Premium to nasza najbardziej okazała sauna – przestrzeń, w której rytuał staje się wydarzeniem. Wielopoziomowe ławy pozwalają wybrać intensywność seansu, a przestronne wnętrze z estońskiego świerka komfortowo mieści pięć osób. Duże przeszklenie i nastrojowe światło budują atmosferę prawdziwego, prywatnego spa. To model dla tych, którzy lubią dzielić ciepło – z rodziną i przyjaciółmi, w wieczory, które zostają w pamięci.",
+          "Premium to nasza najbardziej okazała sauna – przestrzeń, w której rytuał staje się wydarzeniem. Wielopoziomowe ławy pozwalają wybrać intensywność seansu, a przestronne wnętrze ze świerku skandynawskiego komfortowo mieści pięć osób. Duże przeszklenie i nastrojowe światło budują atmosferę prawdziwego, prywatnego spa. To model dla tych, którzy lubią dzielić ciepło – z rodziną i przyjaciółmi, w wieczory, które zostają w pamięci.",
         features: [
           {
             title: "Maksimum przestrzeni",
@@ -484,19 +489,20 @@ export const products: Product[] = [
           {
             title: "Najwyższa jakość wykonania",
             description:
-              "Estoński świerk premium, solidna konstrukcja i dopracowany każdy detal.",
+              "Świerk skandynawski premium, solidna konstrukcja i dopracowany każdy detal.",
           },
         ],
         specs: [
           { label: "Liczba osób", value: "5" },
-          { label: "Wymiary zewnętrzne", value: "ok. 3,0 × 2,2 m" },
-          { label: "Wysokość", value: "ok. 2,3 m" },
-          { label: "Materiał", value: "Estoński świerk premium" },
+          { label: "Wymiary zewnętrzne", value: "3,0 × 2,2 m" },
+          { label: "Wysokość", value: "2,3 m" },
+          { label: "Materiał", value: "Świerk skandynawski premium" },
           { label: "Piec", value: "Elektryczny lub na drewno" },
           { label: "Moc pieca", value: "od 9 kW" },
+          { label: "Przyłącze elektryczne", value: "Po stronie Klienta" },
           { label: "Czas nagrzewania", value: "ok. 50–60 min" },
         ],
-        included: INCLUDED_PL,
+        included: includedPl("premium"),
         options: [
           {
             title: "Wybór pieca",
@@ -544,7 +550,7 @@ export const products: Product[] = [
         shortDescription:
           "The largest model in the Regenerum line. A spacious interior for five and a complete home-spa experience.",
         longDescription:
-          "Premium is our most generous sauna – a space where the ritual becomes an occasion. Multi-level benches let you choose the intensity of your session, while the spacious Estonian-spruce interior comfortably seats five. A large glazed front and ambient lighting build the atmosphere of a true, private spa. It's the model for those who love to share warmth – with family and friends, on evenings worth remembering.",
+          "Premium is our most generous sauna – a space where the ritual becomes an occasion. Multi-level benches let you choose the intensity of your session, while the spacious Scandinavian-spruce interior comfortably seats five. A large glazed front and ambient lighting build the atmosphere of a true, private spa. It's the model for those who love to share warmth – with family and friends, on evenings worth remembering.",
         features: [
           {
             title: "Maximum space",
@@ -564,19 +570,20 @@ export const products: Product[] = [
           {
             title: "Top-tier craftsmanship",
             description:
-              "Premium Estonian spruce, a solid structure and every detail refined.",
+              "Premium Scandinavian spruce, a solid structure and every detail refined.",
           },
         ],
         specs: [
           { label: "People", value: "5" },
-          { label: "Exterior dimensions", value: "approx. 3.0 × 2.2 m" },
-          { label: "Height", value: "approx. 2.3 m" },
-          { label: "Material", value: "Premium Estonian spruce" },
+          { label: "Exterior dimensions", value: "3.0 × 2.2 m" },
+          { label: "Height", value: "2.3 m" },
+          { label: "Material", value: "Premium Scandinavian spruce" },
           { label: "Heater", value: "Electric or wood-burning" },
           { label: "Heater power", value: "from 9 kW" },
+          { label: "Electrical connection", value: "Provided by the client" },
           { label: "Heat-up time", value: "approx. 50–60 min" },
         ],
-        included: INCLUDED_EN,
+        included: includedEn("premium"),
         options: [
           {
             title: "Heater choice",

@@ -8,37 +8,37 @@ import type { BlogPost, Locale } from "@/types";
  */
 export const blogPosts: BlogPost[] = [
   {
-    slug: "estonski-swierk-dlaczego-najlepszy",
-    enSlug: "estonian-spruce-why-the-best",
+    slug: "swierk-skandynawski-dlaczego-najlepszy",
+    enSlug: "scandinavian-spruce-why-the-best",
     date: "2026-05-12",
     readingTime: 9,
     cover: {
       src: "/images/blog/estonski-swierk.jpg",
-      alt: "Estoński las świerkowy",
+      alt: "Skandynawski las świerkowy",
     },
     i18n: {
       pl: {
-        title: "Estoński świerk – dlaczego to najlepsze drewno na saunę?",
+        title: "Świerk skandynawski – dlaczego to najlepsze drewno na saunę?",
         excerpt:
-          "Sprawdzamy, dlaczego świerk z Estonii to jeden z najlepszych materiałów na saunę – i dlaczego wybraliśmy go do całej linii Regenerum.",
+          "Sprawdzamy, dlaczego świerk skandynawski to jeden z najlepszych materiałów na saunę – i dlaczego wybraliśmy go do całej linii Regenerum.",
         category: "Jakość",
         body: [
           {
             type: "p",
-            text: "Wybór odpowiedniego drewna jest jednym z najważniejszych elementów wpływających na jakość, trwałość oraz komfort korzystania z sauny. Nawet najlepszy projekt i nowoczesne wyposażenie nie zapewnią odpowiednich warunków, jeśli konstrukcja zostanie wykonana z materiału o słabych właściwościach. Z tego powodu w RoyalSauna stawiamy na drewno, które od lat uznawane jest za jeden z najlepszych surowców do budowy saun. Jest nim świerk estoński.",
+            text: "Wybór odpowiedniego drewna jest jednym z najważniejszych elementów wpływających na jakość, trwałość oraz komfort korzystania z sauny. Nawet najlepszy projekt i nowoczesne wyposażenie nie zapewnią odpowiednich warunków, jeśli konstrukcja zostanie wykonana z materiału o słabych właściwościach. Z tego powodu w RoyalSauna stawiamy na drewno, które od lat uznawane jest za jeden z najlepszych surowców do budowy saun. Jest nim świerk skandynawski.",
           },
           {
             type: "p",
             text: "To właśnie z tego drewna powstają nasze modele Compact, Comfort oraz Premium z linii Regenerum. Nie jest to przypadek. Za tym wyborem stoją zarówno właściwości techniczne drewna, jak i wieloletnie doświadczenie producentów saun z Europy Północnej.",
           },
-          { type: "h2", text: "Dlaczego właśnie świerk estoński?" },
+          { type: "h2", text: "Dlaczego właśnie świerk skandynawski?" },
           {
             type: "p",
-            text: "Estonia od lat słynie z doskonałych warunków do wzrostu drzew iglastych. Chłodny klimat, krótkie okresy wegetacyjne oraz powolny wzrost sprawiają, że drewno osiąga wyjątkową gęstość i stabilność.",
+            text: "Skandynawia od lat słynie z doskonałych warunków do wzrostu drzew iglastych. Chłodny klimat, krótkie okresy wegetacyjne oraz powolny wzrost sprawiają, że drewno osiąga wyjątkową gęstość i stabilność.",
           },
           {
             type: "p",
-            text: "Słoje roczne są znacznie ciaśniejsze niż w przypadku drzew rosnących w cieplejszych regionach Europy. To właśnie dzięki temu świerk estoński charakteryzuje się bardzo dobrą wytrzymałością mechaniczną oraz wysoką odpornością na odkształcenia.",
+            text: "Słoje roczne są znacznie ciaśniejsze niż w przypadku drzew rosnących w cieplejszych regionach Europy. To właśnie dzięki temu świerk skandynawski charakteryzuje się bardzo dobrą wytrzymałością mechaniczną oraz wysoką odpornością na odkształcenia.",
           },
           {
             type: "p",
@@ -51,7 +51,7 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "p",
-            text: "Świerk estoński wyróżnia się bardzo dobrą stabilnością wymiarową. Oznacza to, że znacznie mniej pracuje pod wpływem zmian temperatury i wilgotności. Dzięki temu ograniczone zostaje ryzyko powstawania szczelin, wypaczeń czy deformacji elementów konstrukcyjnych.",
+            text: "Świerk skandynawski wyróżnia się bardzo dobrą stabilnością wymiarową. Oznacza to, że znacznie mniej pracuje pod wpływem zmian temperatury i wilgotności. Dzięki temu ograniczone zostaje ryzyko powstawania szczelin, wypaczeń czy deformacji elementów konstrukcyjnych.",
           },
           {
             type: "p",
@@ -60,7 +60,7 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "Doskonała izolacja cieplna" },
           {
             type: "p",
-            text: "Naturalne właściwości świerku sprawiają, że drewno bardzo dobrze izoluje ciepło. Ściany wykonane ze świerku estońskiego skutecznie zatrzymują temperaturę wewnątrz kabiny, dzięki czemu sauna szybciej osiąga odpowiednie warunki i dłużej utrzymuje nagromadzone ciepło.",
+            text: "Naturalne właściwości świerku sprawiają, że drewno bardzo dobrze izoluje ciepło. Ściany wykonane ze świerku skandynawskiego skutecznie zatrzymują temperaturę wewnątrz kabiny, dzięki czemu sauna szybciej osiąga odpowiednie warunki i dłużej utrzymuje nagromadzone ciepło.",
           },
           {
             type: "p",
@@ -69,7 +69,7 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "Piękny wygląd przez wiele lat" },
           {
             type: "p",
-            text: "Naturalny wygląd drewna jest jednym z powodów, dla których wiele osób wybiera właśnie świerk estoński. Jasna kolorystyka optycznie powiększa wnętrze sauny, a subtelny rysunek słojów tworzy spokojną i elegancką przestrzeń sprzyjającą relaksowi.",
+            text: "Naturalny wygląd drewna jest jednym z powodów, dla których wiele osób wybiera właśnie świerk skandynawski. Jasna kolorystyka optycznie powiększa wnętrze sauny, a subtelny rysunek słojów tworzy spokojną i elegancką przestrzeń sprzyjającą relaksowi.",
           },
           {
             type: "p",
@@ -78,25 +78,25 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "Komfort podczas codziennego użytkowania" },
           {
             type: "p",
-            text: "Drewno wykorzystywane w saunie powinno być przyjemne w kontakcie z ciałem. Świerk estoński nie nagrzewa się tak intensywnie jak wiele innych materiałów konstrukcyjnych, dzięki czemu korzystanie z ławek oraz oparć jest wyjątkowo komfortowe.",
+            text: "Drewno wykorzystywane w saunie powinno być przyjemne w kontakcie z ciałem. Świerk skandynawski nie nagrzewa się tak intensywnie jak wiele innych materiałów konstrukcyjnych, dzięki czemu korzystanie z ławek oraz oparć jest wyjątkowo komfortowe.",
           },
           {
             type: "p",
             text: "Naturalna struktura drewna sprawia również, że wnętrze sauny zachowuje przyjazny mikroklimat, który pozytywnie wpływa na odbiór całej sesji saunowej.",
           },
-          { type: "h2", text: "Trwałość potwierdzona przez skandynawskie doświadczenie" },
+          { type: "h2", text: "Trwałość potwierdzona wieloletnią tradycją" },
           {
             type: "p",
             text: "Kraje północnej Europy od dziesięcioleci należą do światowych liderów w budowie saun. To właśnie tam świerk wykorzystywany jest jako podstawowy materiał konstrukcyjny.",
           },
           {
             type: "p",
-            text: "Wieloletnie doświadczenia producentów pokazują, że odpowiednio wyselekcjonowane drewno pochodzące z Estonii doskonale sprawdza się nawet po wielu latach intensywnego użytkowania. Nie bez powodu materiał ten wybierają producenci stawiający na najwyższą jakość wykonania.",
+            text: "Wieloletnie doświadczenia producentów pokazują, że odpowiednio wyselekcjonowane drewno skandynawskie doskonale sprawdza się nawet po wielu latach intensywnego użytkowania. Nie bez powodu materiał ten wybierają producenci stawiający na najwyższą jakość wykonania.",
           },
           { type: "h2", text: "Drewno przyjazne środowisku" },
           {
             type: "p",
-            text: "Świerk estoński pochodzi z odpowiedzialnie zarządzanych lasów, w których gospodarka leśna prowadzona jest z poszanowaniem natury.",
+            text: "Świerk skandynawski pochodzi z odpowiedzialnie zarządzanych lasów, w których gospodarka leśna prowadzona jest z poszanowaniem natury.",
           },
           {
             type: "p",
@@ -106,14 +106,14 @@ export const blogPosts: BlogPost[] = [
             type: "p",
             text: "Wybierając saunę wykonaną z wysokiej jakości drewna, inwestujemy nie tylko w trwałość produktu, ale również w rozwiązanie bardziej przyjazne środowisku.",
           },
-          { type: "h2", text: "Dlaczego RoyalSauna wybrała świerk estoński?" },
+          { type: "h2", text: "Dlaczego RoyalSauna wybrała świerk skandynawski?" },
           {
             type: "p",
             text: "W RoyalSauna każdy materiał przechodzi bardzo dokładną selekcję. Naszym celem jest tworzenie saun, które będą służyły przez długie lata, zachowując swój wygląd, trwałość oraz najwyższy komfort użytkowania.",
           },
           {
             type: "p",
-            text: "Dlatego modele Compact, Comfort oraz Premium z linii Regenerum wykonujemy właśnie ze świerku estońskiego. To drewno łączy wyjątkową estetykę, wysoką stabilność konstrukcyjną, doskonałe właściwości izolacyjne oraz odporność na wymagające warunki panujące wewnątrz sauny.",
+            text: "Dlatego modele Compact, Comfort oraz Premium z linii Regenerum wykonujemy właśnie ze świerku skandynawskiego. To drewno łączy wyjątkową estetykę, wysoką stabilność konstrukcyjną, doskonałe właściwości izolacyjne oraz odporność na wymagające warunki panujące wewnątrz sauny.",
           },
           {
             type: "p",
@@ -122,11 +122,11 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "Podsumowanie" },
           {
             type: "p",
-            text: "Świerk estoński od wielu lat uznawany jest za jeden z najlepszych materiałów do budowy saun. Powolny wzrost drzew w chłodnym klimacie zapewnia wysoką gęstość drewna, doskonałą stabilność oraz wyjątkową trwałość. Materiał skutecznie izoluje ciepło, zachwyca naturalnym wyglądem i doskonale sprawdza się w wymagających warunkach wysokiej temperatury oraz zmiennej wilgotności.",
+            text: "Świerk skandynawski od wielu lat uznawany jest za jeden z najlepszych materiałów do budowy saun. Powolny wzrost drzew w chłodnym klimacie zapewnia wysoką gęstość drewna, doskonałą stabilność oraz wyjątkową trwałość. Materiał skutecznie izoluje ciepło, zachwyca naturalnym wyglądem i doskonale sprawdza się w wymagających warunkach wysokiej temperatury oraz zmiennej wilgotności.",
           },
           {
             type: "p",
-            text: "To właśnie dlatego w RoyalSauna wykorzystujemy świerk estoński w modelach Compact, Comfort oraz Premium z linii Regenerum. Jest to świadomy wybór oparty na jakości i doświadczeniu.",
+            text: "To właśnie dlatego w RoyalSauna wykorzystujemy świerk skandynawski w modelach Compact, Comfort oraz Premium z linii Regenerum. Jest to świadomy wybór oparty na jakości i doświadczeniu.",
           },
           {
             type: "quote",
@@ -135,27 +135,27 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       en: {
-        title: "Estonian spruce – why it's the best wood for a sauna",
+        title: "Scandinavian spruce – why it's the best wood for a sauna",
         excerpt:
-          "A closer look at why spruce from Estonia is one of the best materials for a sauna – and why we chose it for the entire Regenerum line.",
+          "A closer look at why Scandinavian spruce is one of the best materials for a sauna – and why we chose it for the entire Regenerum line.",
         category: "Quality",
         body: [
           {
             type: "p",
-            text: "Choosing the right wood is one of the most important factors behind a sauna's quality, durability and comfort. Even the best design and modern fittings can't make up for a structure built from a material with poor properties. That's why at RoyalSauna we rely on wood that has been regarded for years as one of the finest materials for sauna building: Estonian spruce.",
+            text: "Choosing the right wood is one of the most important factors behind a sauna's quality, durability and comfort. Even the best design and modern fittings can't make up for a structure built from a material with poor properties. That's why at RoyalSauna we rely on wood that has been regarded for years as one of the finest materials for sauna building: Scandinavian spruce.",
           },
           {
             type: "p",
             text: "It's this wood that our Compact, Comfort and Premium models from the Regenerum line are built from. That's no accident – the choice is backed by both the technical properties of the wood and decades of experience among Northern European sauna makers.",
           },
-          { type: "h2", text: "Why Estonian spruce?" },
+          { type: "h2", text: "Why Scandinavian spruce?" },
           {
             type: "p",
-            text: "Estonia has long been known for excellent growing conditions for conifers. A cool climate, short growing seasons and slow growth give the wood exceptional density and stability.",
+            text: "Scandinavia has long been known for excellent growing conditions for conifers. A cool climate, short growing seasons and slow growth give the wood exceptional density and stability.",
           },
           {
             type: "p",
-            text: "Its growth rings are noticeably tighter than those of trees grown in warmer parts of Europe. That's exactly why Estonian spruce offers very good mechanical strength and high resistance to warping.",
+            text: "Its growth rings are noticeably tighter than those of trees grown in warmer parts of Europe. That's exactly why Scandinavian spruce offers very good mechanical strength and high resistance to warping.",
           },
           {
             type: "p",
@@ -168,7 +168,7 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "p",
-            text: "Estonian spruce stands out for its very good dimensional stability. It moves far less under changes in temperature and humidity, which limits the risk of gaps, warping or deformation in structural elements.",
+            text: "Scandinavian spruce stands out for its very good dimensional stability. It moves far less under changes in temperature and humidity, which limits the risk of gaps, warping or deformation in structural elements.",
           },
           {
             type: "p",
@@ -177,7 +177,7 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "Excellent thermal insulation" },
           {
             type: "p",
-            text: "The natural properties of spruce make it a very good heat insulator. Walls built from Estonian spruce effectively keep heat inside the cabin, so the sauna reaches the right temperature faster and holds it for longer.",
+            text: "The natural properties of spruce make it a very good heat insulator. Walls built from Scandinavian spruce effectively keep heat inside the cabin, so the sauna reaches the right temperature faster and holds it for longer.",
           },
           {
             type: "p",
@@ -186,7 +186,7 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "A beautiful look for years to come" },
           {
             type: "p",
-            text: "The natural appearance of the wood is one of the reasons so many people choose Estonian spruce. Its light colour visually enlarges the sauna's interior, and the subtle grain creates a calm, elegant space that invites relaxation.",
+            text: "The natural appearance of the wood is one of the reasons so many people choose Scandinavian spruce. Its light colour visually enlarges the sauna's interior, and the subtle grain creates a calm, elegant space that invites relaxation.",
           },
           {
             type: "p",
@@ -195,25 +195,25 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "Comfort in everyday use" },
           {
             type: "p",
-            text: "Wood used inside a sauna should feel pleasant against the skin. Estonian spruce doesn't heat up as intensely as many other building materials, which makes sitting on the benches and backrests especially comfortable.",
+            text: "Wood used inside a sauna should feel pleasant against the skin. Scandinavian spruce doesn't heat up as intensely as many other building materials, which makes sitting on the benches and backrests especially comfortable.",
           },
           {
             type: "p",
             text: "The wood's natural structure also helps the sauna's interior keep a pleasant microclimate, which has a positive effect on the whole session.",
           },
-          { type: "h2", text: "Durability proven by Scandinavian experience" },
+          { type: "h2", text: "Durability proven by decades of tradition" },
           {
             type: "p",
             text: "Northern European countries have been world leaders in sauna building for decades, and it's there that spruce is used as the primary building material.",
           },
           {
             type: "p",
-            text: "Years of experience among manufacturers show that well-selected Estonian wood performs beautifully even after many years of heavy use – which is exactly why producers focused on the highest build quality choose this material.",
+            text: "Years of experience among manufacturers show that well-selected Scandinavian wood performs beautifully even after many years of heavy use – which is exactly why producers focused on the highest build quality choose this material.",
           },
           { type: "h2", text: "Wood that's kind to the environment" },
           {
             type: "p",
-            text: "Estonian spruce comes from responsibly managed forests where forestry is carried out with respect for nature.",
+            text: "Scandinavian spruce comes from responsibly managed forests where forestry is carried out with respect for nature.",
           },
           {
             type: "p",
@@ -223,14 +223,14 @@ export const blogPosts: BlogPost[] = [
             type: "p",
             text: "Choosing a sauna built from high-quality wood means investing not only in the product's durability, but also in a more environmentally friendly solution.",
           },
-          { type: "h2", text: "Why did RoyalSauna choose Estonian spruce?" },
+          { type: "h2", text: "Why did RoyalSauna choose Scandinavian spruce?" },
           {
             type: "p",
             text: "At RoyalSauna, every material goes through very careful selection. Our goal is to build saunas that last for years, keeping their looks, durability and top level of comfort.",
           },
           {
             type: "p",
-            text: "That's why we build our Compact, Comfort and Premium models from the Regenerum line using Estonian spruce. This wood combines outstanding looks, high structural stability, excellent insulating properties and resistance to the demanding conditions inside a sauna.",
+            text: "That's why we build our Compact, Comfort and Premium models from the Regenerum line using Scandinavian spruce. This wood combines outstanding looks, high structural stability, excellent insulating properties and resistance to the demanding conditions inside a sauna.",
           },
           {
             type: "p",
@@ -239,11 +239,11 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "Summary" },
           {
             type: "p",
-            text: "Estonian spruce has been regarded for years as one of the best materials for sauna building. The slow growth of trees in a cool climate gives the wood high density, excellent stability and outstanding durability. It insulates heat effectively, delights with its natural look, and performs beautifully under the demanding conditions of high temperature and changing humidity.",
+            text: "Scandinavian spruce has been regarded for years as one of the best materials for sauna building. The slow growth of trees in a cool climate gives the wood high density, excellent stability and outstanding durability. It insulates heat effectively, delights with its natural look, and performs beautifully under the demanding conditions of high temperature and changing humidity.",
           },
           {
             type: "p",
-            text: "That's exactly why RoyalSauna uses Estonian spruce in the Compact, Comfort and Premium models from the Regenerum line. It's a deliberate choice built on quality and experience.",
+            text: "That's exactly why RoyalSauna uses Scandinavian spruce in the Compact, Comfort and Premium models from the Regenerum line. It's a deliberate choice built on quality and experience.",
           },
           {
             type: "quote",
@@ -314,9 +314,9 @@ export const blogPosts: BlogPost[] = [
           {
             type: "list",
             items: [
-              "Compact – około 2,0 × 2,0 metra",
-              "Comfort – około 2,4 × 2,0 metra",
-              "Premium – około 3,0 × 2,2 metra",
+              "Compact – 2,0 × 2,0 metra",
+              "Comfort – 2,4 × 2,0 metra",
+              "Premium – 3,0 × 2,2 metra",
             ],
           },
           {
@@ -433,9 +433,9 @@ export const blogPosts: BlogPost[] = [
           {
             type: "list",
             items: [
-              "Compact – approx. 2.0 × 2.0 m",
-              "Comfort – approx. 2.4 × 2.0 m",
-              "Premium – approx. 3.0 × 2.2 m",
+              "Compact – 2.0 × 2.0 m",
+              "Comfort – 2.4 × 2.0 m",
+              "Premium – 3.0 × 2.2 m",
             ],
           },
           {

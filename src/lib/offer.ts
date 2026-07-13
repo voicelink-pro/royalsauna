@@ -132,7 +132,7 @@ export function buildOfferData(payload: LeadPayload): OfferData {
       locale === "en"
         ? s.label.toLowerCase().includes("material")
         : s.label.toLowerCase().includes("materiał"),
-    )?.value ?? (locale === "en" ? "Premium Estonian spruce" : "Estoński świerk premium");
+    )?.value ?? (locale === "en" ? "Premium Scandinavian spruce" : "Świerk skandynawski premium");
 
   const v = PREF_VALUE_LABELS[locale];
   const preferences: { label: string; value: string }[] = [];

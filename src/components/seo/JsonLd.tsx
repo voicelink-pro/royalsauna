@@ -23,7 +23,7 @@ export function organizationSchema(): Record<string, unknown> {
     url: getSiteUrl(),
     logo: `${getSiteUrl()}/logo.png`,
     description:
-      "Sauny ogrodowe premium z estońskiego świerka. Jeden model w trzech rozmiarach.",
+      "Sauny ogrodowe premium ze świerku skandynawskiego. Jeden model w trzech wariantach.",
     sameAs: [],
     address: {
       "@type": "PostalAddress",

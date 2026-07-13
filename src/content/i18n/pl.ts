@@ -32,8 +32,8 @@ export const pl = {
     specHeaters: "Piece",
     specWood: "Drewno",
     specFoundation: "Podłoże",
-    requestOffer: "Poproś o ofertę",
-    seeSizes: "Zobacz rozmiary",
+    requestOffer: "Otrzymaj ofertę",
+    seeSizes: "Zobacz warianty",
     menu: "Menu",
     close: "Zamknij",
   },
@@ -45,7 +45,7 @@ export const pl = {
     seeModel: "Zobacz model",
     backToBlog: "Wróć do bloga",
     readingTime: "min czytania",
-    requestOfferFor: "Poproś o ofertę dla tego modelu",
+    requestOfferFor: "Otrzymaj ofertę dla tego modelu",
     forWhom: "Dla kogo",
     keyFeatures: "Najważniejsze cechy",
     specification: "Specyfikacja",
@@ -67,9 +67,9 @@ export const pl = {
       eyebrow: "Sauny ogrodowe premium",
       h1: "RoyalSauna – prywatne domowe spa w Twoim ogrodzie",
       subtitle:
-        "Luksusowe sauny ogrodowe z estońskiego świerka. Jeden dopracowany model w trzech rozmiarach – gotowy, by stać się sercem Twojego domowego rytuału wellness.",
-      ctaPrimary: "Poproś o ofertę",
-      ctaSecondary: "Zobacz rozmiary",
+        "Luksusowe sauny ogrodowe ze świerku skandynawskiego. Jeden dopracowany model w trzech wariantach – gotowy, by stać się sercem Twojego domowego rytuału wellness.",
+      ctaPrimary: "Otrzymaj ofertę",
+      ctaSecondary: "Zobacz warianty",
       videoCaption: "Zarezerwowane miejsce na film prezentujący RoyalSauna",
       nightToggle: {
         toNight: "Zobacz saunę po zmroku",
@@ -80,7 +80,7 @@ export const pl = {
       eyebrow: "Linia Regenerum",
       title: "Linia Regenerum – modele Compact, Comfort i Premium",
       description:
-        "Nasza linia Regenerum to trzy modele saun, różniące się rozmiarem i pojemnością. Wybierz ten, który najlepiej wpisze się w Twój ogród i sposób, w jaki odpoczywasz.",
+        "Nasza linia Regenerum to trzy warianty jednej sauny, różniące się wielkością i pojemnością. Wybierz ten, który najlepiej wpisze się w Twój ogród i sposób, w jaki odpoczywasz.",
     },
     why: {
       eyebrow: "Dlaczego RoyalSauna?",
@@ -88,9 +88,9 @@ export const pl = {
       lead: "Dla nas luksus to nie ozdobnik, lecz konsekwencja jakości. Każdą saunę projektujemy i wykonujemy tak, by zachwycała detalem i służyła przez dekady. RoyalSauna to inwestycja, którą czuć od pierwszego dotyku drewna.",
       items: [
         {
-          title: "Świerk estoński",
+          title: "Świerk skandynawski",
           description:
-            "Bryła naszej sauny stworzona jest z wysokiej jakości estońskiego świerka. Drewno pozyskiwane jest z północnych lasów, dzięki czemu jest gęste i stabilne. To podstawa trwałości i zapachu prawdziwej sauny. ",
+            "Bryła naszej sauny stworzona jest z wysokiej jakości świerku skandynawskiego. Drewno pozyskiwane jest z północnych lasów, dzięki czemu jest gęste i stabilne. To podstawa trwałości i zapachu prawdziwej sauny. ",
         },
         {
           title: "Dopracowane wykonanie",
@@ -128,7 +128,7 @@ export const pl = {
         walls: {
           title: "Ściany z litego drewna",
           description:
-            "Estoński świerk – stabilny, pięknie pachnący i odporny na wilgoć.",
+            "Świerk skandynawski – stabilny, pięknie pachnący i odporny na wilgoć.",
         },
         floor: {
           title: "Podłoga i wykończenie",
@@ -151,8 +151,7 @@ export const pl = {
         "Oświetlenie nastrojowe LED",
         "Termometr i higrometr",
         "Klepsydra saunowa",
-        "Ręczniki",
-        "Klapki",
+        "Ręczniki (liczba zależna od modelu)",
       ],
       groups: [
         {
@@ -182,7 +181,7 @@ export const pl = {
         {
           title: "Zestaw powitalny",
           description:
-            "Cebrzyk, czerpak, termometr, higrometr, klepsydra, ręczniki i klapki – gotowe na start.",
+            "Cebrzyk, czerpak, termometr, higrometr, klepsydra i ręczniki – gotowe na start.",
           image: "/images/included-accessories.jpg",
           alt: "Zestaw powitalny: cebrzyk, czerpak, termometr, ręcznik",
           shape: "square" as const,
@@ -255,12 +254,12 @@ export const pl = {
       eyebrow: "Linia Regenerum",
       h1: "Sauny ogrodowe – linia Regenerum",
       description:
-        "Trzy modele – Compact, Comfort i Premium – różniące się rozmiarem i pojemnością. Wszystkie zbudowane z estońskiego świerka premium, z kompletnym wyposażeniem w standardzie.",
+        "Trzy warianty – Compact, Comfort i Premium – różniące się wielkością i pojemnością. Wszystkie zbudowane ze skandynawskiego świerka premium, z kompletnym wyposażeniem w standardzie.",
     },
     oneModel: {
       title: "Linia Regenerum – trzy modele",
       description:
-        "Linia Regenerum to trzy modele saun. Różni je rozmiar i pojemność – jakość materiałów, wykonanie i wyposażenie pozostają niezmiennie premium.",
+        "Linia Regenerum to trzy warianty jednej sauny. Różni je wielkość i pojemność – jakość materiałów, wykonanie i wyposażenie pozostają niezmiennie premium.",
     },
     comparison: {
       title: "Porównanie modeli",
@@ -295,7 +294,7 @@ export const pl = {
       title: "Co wpływa na cenę?",
       items: [
         {
-          title: "Rozmiar i kubatura",
+          title: "Wariant i kubatura",
           description:
             "Większa sauna to więcej drewna premium i mocniejszy piec dobrany do kubatury.",
         },
@@ -320,13 +319,13 @@ export const pl = {
   quality: {
     hero: {
       eyebrow: "Jakość i materiały",
-      h1: "Estoński świerk i obsesja na punkcie detalu",
+      h1: "Świerk skandynawski i obsesja na punkcie detalu",
       description:
         "Wierzymy, że luksus zaczyna się od materiału. Dlatego budujemy RoyalSauna z drewna, które starzeje się pięknie i służy przez dekady.",
     },
     sections: [
       {
-        title: "Dlaczego estoński świerk",
+        title: "Dlaczego świerk skandynawski",
         body: "Drewno z chłodnego, północnego klimatu rośnie wolniej, dzięki czemu jest gęstsze i bardziej stabilne. Mniej się odkształca, lepiej znosi zmiany temperatury i wilgotności, a do tego pięknie pachnie i z czasem nabiera głębszego koloru.",
       },
       {
@@ -345,7 +344,7 @@ export const pl = {
     cta: {
       title: "Poczuj różnicę jakości",
       description:
-        "Chętnie opowiemy więcej o materiałach i wykonaniu. Poproś o ofertę, a dobierzemy konfigurację do Twojego ogrodu.",
+        "Chętnie opowiemy więcej o materiałach i wykonaniu. Otrzymaj ofertę, a dobierzemy konfigurację do Twojego ogrodu.",
     },
   },
   heatersPage: {
@@ -448,7 +447,7 @@ export const pl = {
     meta: {
       title: "Drewno służące na lata – materiały saun Regenerum",
       description:
-        "Poznaj drewno i materiały, z których budujemy sauny ogrodowe linii Regenerum – estoński świerk i dopracowane detale na dekady.",
+        "Poznaj drewno i materiały, z których budujemy sauny ogrodowe linii Regenerum – świerk skandynawski i dopracowane detale na dekady.",
     },
     materialsSection: {
       eyebrow: "Materiały",
@@ -466,12 +465,12 @@ export const pl = {
         shell: {
           label: "Bryła sauny",
           description:
-            "Świerk estoński – gięte, wielowarstwowe łuki nadające saunie charakterystyczny, zaokrąglony kształt.",
+            "Świerk skandynawski – gięte, wielowarstwowe łuki nadające saunie charakterystyczny, zaokrąglony kształt.",
         },
         walls: {
           label: "Ściany",
           description:
-            "Świerk estoński – lite ściany o podwyższonej odporności na wilgoć i wahania temperatury.",
+            "Świerk skandynawski – lite ściany o podwyższonej odporności na wilgoć i wahania temperatury.",
         },
         benches: {
           label: "Ławy",
@@ -539,6 +538,11 @@ export const pl = {
           description:
             "Zapewnij wolny przejazd i dojście do miejsca montażu – elementy sauny są duże i transportowane w całości lub dużych modułach.",
         },
+        {
+          title: "Dojście prądu",
+          description:
+            "Przyłącze elektryczne do miejsca montażu przygotowuje Klient – zgodnie z mocą pieca podaną w specyfikacji wybranego modelu.",
+        },
       ],
     },
     dimensionsSection: {
@@ -571,12 +575,6 @@ export const pl = {
           question: "Czy mogę postawić saunę bezpośrednio na trawie lub gruncie?",
           answer:
             "Nie polecamy tego – bez odpowiedniego podłoża konstrukcja z czasem osiądzie nierównomiernie, drewno będzie wchłaniać wilgoć z ziemi, a sauna szybciej się zniszczy. Zawsze zalecamy jeden z trzech opisanych wariantów podłoża.",
-        },
-        {
-          question:
-            "Czy budowa podłoża pod saunę wymaga zgłoszenia lub pozwolenia na budowę?",
-          answer:
-            "W większości przypadków niewielkie podłoże pod ogrodową saunę nie wymaga pozwolenia, ale przepisy różnią się w zależności od gminy i wielkości działki – warto to sprawdzić lokalnie przed rozpoczęciem prac, najlepiej w wydziale architektury urzędu.",
         },
         {
           question:
@@ -613,7 +611,7 @@ export const pl = {
       questions: {
         people: {
           title: "Ile osób będzie korzystać z sauny?",
-          description: "Dobierzemy odpowiedni rozmiar kabiny.",
+          description: "Dobierzemy odpowiedni wariant kabiny.",
           options: [
             { value: "2", label: "1–2 osoby", hint: "Kameralnie, dla pary" },
             { value: "3", label: "3–4 osoby", hint: "Idealnie dla rodziny" },
@@ -622,7 +620,7 @@ export const pl = {
         },
         garden: {
           title: "Ile masz miejsca w ogrodzie?",
-          description: "Pomoże nam to dopasować rozmiar do przestrzeni.",
+          description: "Pomoże nam to dopasować wariant do przestrzeni.",
           options: [
             { value: "small", label: "Niewiele", hint: "Kompaktowy zakątek" },
             { value: "medium", label: "Średnio", hint: "Standardowy ogród" },
@@ -650,7 +648,7 @@ export const pl = {
         adjust: "Zmień odpowiedzi",
         cta: "Otrzymaj ofertę na ten zestaw",
         reasons: {
-          peopleModel: "Rozmiar dobrany do liczby osób",
+          peopleModel: "Wariant dobrany do liczby osób",
           smallGarden: "Kompaktowa bryła pasująca do mniejszego ogrodu",
         },
       },
@@ -679,7 +677,7 @@ export const pl = {
       eyebrow: "Kontakt",
       h1: "Porozmawiajmy o Twoim domowym spa",
       description:
-        "Jesteśmy do Twojej dyspozycji. Napisz lub zadzwoń – odpowiemy i pomożemy dobrać rozmiar oraz konfigurację.",
+        "Jesteśmy do Twojej dyspozycji. Napisz lub zadzwoń – odpowiemy i pomożemy dobrać wariant oraz konfigurację.",
     },
     phoneTitle: "Telefon",
     emailTitle: "E-mail",
@@ -687,7 +685,7 @@ export const pl = {
     formTitle: "Napisz do nas",
   },
   form: {
-    title: "Poproś o ofertę",
+    title: "Otrzymaj ofertę",
     description:
       "Wypełnij formularz, a my przygotujemy spersonalizowaną ofertę dopasowaną do Twoich potrzeb.",
     fields: {
@@ -722,7 +720,7 @@ export const pl = {
     invalidEmail: "Podaj poprawny adres e-mail",
     consentRequired: "Zgoda jest niezbędna do przygotowania oferty",
     steps: {
-      model: "Rozmiar",
+      model: "Wariant",
       details: "Szczegóły",
       contact: "Kontakt",
       next: "Dalej",
@@ -731,7 +729,7 @@ export const pl = {
       of: "z",
     },
     stepQuestions: {
-      modelTitle: "Który rozmiar Cię interesuje?",
+      modelTitle: "Który wariant Cię interesuje?",
       modelDescription: "Nie szkodzi, jeśli jeszcze nie wiesz – pomożemy wybrać.",
       detailsTitle: "Opowiedz o swoim ogrodzie",
       detailsDescription: "Te informacje pomogą nam trafniej wycenić.",
@@ -744,7 +742,7 @@ export const pl = {
     description: "Zebraliśmy odpowiedzi na pytania, które słyszymy najczęściej.",
   },
   footer: {
-    tagline: "Sauny ogrodowe premium z estońskiego świerka.",
+    tagline: "Sauny ogrodowe premium ze świerku skandynawskiego.",
     explore: "Strona",
     products: "Sauny",
     company: "Informacje",

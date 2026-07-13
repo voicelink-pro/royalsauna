@@ -32,8 +32,8 @@ export const en: Dictionary = {
     specHeaters: "Heaters",
     specWood: "Wood",
     specFoundation: "Foundation",
-    requestOffer: "Request an offer",
-    seeSizes: "See the sizes",
+    requestOffer: "Get your offer",
+    seeSizes: "See the variants",
     menu: "Menu",
     close: "Close",
   },
@@ -45,7 +45,7 @@ export const en: Dictionary = {
     seeModel: "View model",
     backToBlog: "Back to blog",
     readingTime: "min read",
-    requestOfferFor: "Request an offer for this model",
+    requestOfferFor: "Get an offer for this model",
     forWhom: "Who it's for",
     keyFeatures: "Key features",
     specification: "Specification",
@@ -67,9 +67,9 @@ export const en: Dictionary = {
       eyebrow: "Premium garden saunas",
       h1: "RoyalSauna – your private home spa in the garden",
       subtitle:
-        "We craft luxury garden saunas from Estonian spruce. One refined model in three sizes – ready to become the heart of your home wellness ritual.",
-      ctaPrimary: "Request an offer",
-      ctaSecondary: "See the sizes",
+        "We craft luxury garden saunas from Scandinavian spruce. One refined model in three variants – ready to become the heart of your home wellness ritual.",
+      ctaPrimary: "Get your offer",
+      ctaSecondary: "See the variants",
       videoCaption: "Placeholder reserved for the RoyalSauna feature film",
       nightToggle: {
         toNight: "See the sauna after dark",
@@ -80,7 +80,7 @@ export const en: Dictionary = {
       eyebrow: "The Regenerum line",
       title: "The Regenerum line – Compact, Comfort and Premium",
       description:
-        "Our Regenerum line is three sauna models that differ in size and capacity. Choose the one that best fits your garden and the way you unwind.",
+        "Our Regenerum line comes in three variants that differ in size and capacity. Choose the one that best fits your garden and the way you unwind.",
     },
     why: {
       eyebrow: "Why RoyalSauna",
@@ -88,7 +88,7 @@ export const en: Dictionary = {
       lead: "For us, luxury isn't an ornament – it's the consequence of quality. We design and craft every sauna to delight in the detail and to serve for decades – an investment you feel from the first touch of the wood.",
       items: [
         {
-          title: "Premium Estonian spruce",
+          title: "Premium Scandinavian spruce",
           description:
             "We choose wood from northern forests – dense, stable and ageing beautifully. The foundation of durability and a true sauna scent.",
         },
@@ -128,7 +128,7 @@ export const en: Dictionary = {
         walls: {
           title: "Solid-wood walls",
           description:
-            "Estonian spruce – stable, beautifully scented and moisture-resistant.",
+            "Scandinavian spruce – stable, beautifully scented and moisture-resistant.",
         },
         floor: {
           title: "Floor & finish",
@@ -151,9 +151,7 @@ export const en: Dictionary = {
         "Ambient LED lighting",
         "Thermometer and hygrometer",
         "Sauna sand timer",
-        "Towels",
-        "Sauna slippers",
-        "Bucket and spoon",
+        "Towels (number depends on the model)",
       ],
       groups: [
         {
@@ -183,7 +181,7 @@ export const en: Dictionary = {
         {
           title: "Welcome set",
           description:
-            "Bucket, ladle, thermometer, hygrometer, hourglass, towels and slippers – ready from day one.",
+            "Bucket, ladle, thermometer, hygrometer, hourglass and towels – ready from day one.",
           image: "/images/included-accessories.jpg",
           alt: "Welcome set: bucket, ladle, thermometer, towel",
           shape: "square" as const,
@@ -207,7 +205,7 @@ export const en: Dictionary = {
         {
           title: "Production & preparation",
           description:
-            "We build your sauna from Estonian spruce and assemble all the equipment.",
+            "We build your sauna from Scandinavian spruce and assemble all the equipment.",
         },
         {
           title: "Delivery & installation",
@@ -256,12 +254,12 @@ export const en: Dictionary = {
       eyebrow: "The Regenerum line",
       h1: "Garden saunas – the Regenerum line",
       description:
-        "Three models – Compact, Comfort and Premium – differing in size and capacity. All built from premium Estonian spruce, with complete standard equipment.",
+        "Three variants – Compact, Comfort and Premium – differing in size and capacity. All built from premium Scandinavian spruce, with complete standard equipment.",
     },
     oneModel: {
       title: "The Regenerum line – three models",
       description:
-        "The Regenerum line is three sauna models. They differ in size and capacity – the material quality, craftsmanship and equipment stay consistently premium.",
+        "The Regenerum line comes in three variants. They differ in size and capacity – the material quality, craftsmanship and equipment stay consistently premium.",
     },
     comparison: {
       title: "Model comparison",
@@ -296,7 +294,7 @@ export const en: Dictionary = {
       title: "What affects the price?",
       items: [
         {
-          title: "Size and volume",
+          title: "Variant and volume",
           description:
             "A larger sauna means more premium wood and a stronger heater matched to the volume.",
         },
@@ -321,13 +319,13 @@ export const en: Dictionary = {
   quality: {
     hero: {
       eyebrow: "Quality & materials",
-      h1: "Estonian spruce and an obsession with detail",
+      h1: "Scandinavian spruce and an obsession with detail",
       description:
         "We believe luxury starts with the material. That's why we build RoyalSauna from wood that ages beautifully and serves for decades.",
     },
     sections: [
       {
-        title: "Why Estonian spruce",
+        title: "Why Scandinavian spruce",
         body: "Wood from a cool, northern climate grows more slowly, making it denser and more stable. It warps less, handles temperature and humidity changes better, smells wonderful and deepens in colour over time.",
       },
       {
@@ -346,7 +344,7 @@ export const en: Dictionary = {
     cta: {
       title: "Feel the difference in quality",
       description:
-        "We'd be glad to tell you more about materials and craftsmanship. Request an offer and we'll match the configuration to your garden.",
+        "We'd be glad to tell you more about materials and craftsmanship. Get your offer and we'll match the configuration to your garden.",
     },
   },
   heatersPage: {
@@ -449,7 +447,7 @@ export const en: Dictionary = {
     meta: {
       title: "Wood built to last – materials of the Regenerum saunas",
       description:
-        "Discover the wood and materials we build the Regenerum garden sauna line from – Estonian spruce and details refined for decades.",
+        "Discover the wood and materials we build the Regenerum garden sauna line from – Scandinavian spruce and details refined for decades.",
     },
     materialsSection: {
       eyebrow: "Materials",
@@ -467,12 +465,12 @@ export const en: Dictionary = {
         shell: {
           label: "Sauna shell",
           description:
-            "Estonian spruce – bent, multi-layer arches that give the sauna its signature rounded shape.",
+            "Scandinavian spruce – bent, multi-layer arches that give the sauna its signature rounded shape.",
         },
         walls: {
           label: "Walls",
           description:
-            "Estonian spruce – solid walls with enhanced resistance to moisture and temperature swings.",
+            "Scandinavian spruce – solid walls with enhanced resistance to moisture and temperature swings.",
         },
         benches: {
           label: "Benches",
@@ -540,6 +538,11 @@ export const en: Dictionary = {
           description:
             "Make sure there's clear passage and access to the installation site – the sauna's elements are large and delivered whole or in large modules.",
         },
+        {
+          title: "Power supply access",
+          description:
+            "The client is responsible for the electrical connection at the installation site, matched to the heater power listed in the chosen model's specification.",
+        },
       ],
     },
     dimensionsSection: {
@@ -572,12 +575,6 @@ export const en: Dictionary = {
           question: "Can I place the sauna directly on grass or bare ground?",
           answer:
             "We don't recommend it – without a proper foundation the structure settles unevenly over time, the wood absorbs moisture from the ground, and the sauna wears out faster. We always recommend one of the three foundation types described above.",
-        },
-        {
-          question:
-            "Does building a foundation for the sauna require a permit?",
-          answer:
-            "In most cases a small foundation for a garden sauna doesn't require a building permit, but rules vary by municipality and plot size – it's worth checking locally before starting work, ideally with your local building authority.",
         },
         {
           question:
@@ -614,7 +611,7 @@ export const en: Dictionary = {
       questions: {
         people: {
           title: "How many people will use the sauna?",
-          description: "We'll match the right cabin size.",
+          description: "We'll match the right cabin variant.",
           options: [
             { value: "2", label: "1–2 people", hint: "Intimate, for couples" },
             { value: "3", label: "3–4 people", hint: "Ideal for a family" },
@@ -623,7 +620,7 @@ export const en: Dictionary = {
         },
         garden: {
           title: "How much space do you have in the garden?",
-          description: "This helps us fit the size to your space.",
+          description: "This helps us fit the variant to your space.",
           options: [
             { value: "small", label: "Not much", hint: "A compact nook" },
             { value: "medium", label: "Medium", hint: "A standard garden" },
@@ -651,7 +648,7 @@ export const en: Dictionary = {
         adjust: "Change answers",
         cta: "Get an offer for this set",
         reasons: {
-          peopleModel: "Size matched to the number of people",
+          peopleModel: "Variant matched to the number of people",
           smallGarden: "A compact body that fits a smaller garden",
         },
       },
@@ -680,7 +677,7 @@ export const en: Dictionary = {
       eyebrow: "Contact",
       h1: "Let's talk about your home spa",
       description:
-        "We're at your disposal. Write or call – we'll respond and help you choose the right size and configuration.",
+        "We're at your disposal. Write or call – we'll respond and help you choose the right variant and configuration.",
     },
     phoneTitle: "Phone",
     emailTitle: "Email",
@@ -688,7 +685,7 @@ export const en: Dictionary = {
     formTitle: "Write to us",
   },
   form: {
-    title: "Request an offer",
+    title: "Get your offer",
     description:
       "Fill in the form and we'll prepare a personalised offer matched to your needs.",
     fields: {
@@ -723,7 +720,7 @@ export const en: Dictionary = {
     invalidEmail: "Please enter a valid email address",
     consentRequired: "Consent is required to prepare an offer",
     steps: {
-      model: "Size",
+      model: "Variant",
       details: "Details",
       contact: "Contact",
       next: "Next",
@@ -732,7 +729,7 @@ export const en: Dictionary = {
       of: "of",
     },
     stepQuestions: {
-      modelTitle: "Which size are you interested in?",
+      modelTitle: "Which variant are you interested in?",
       modelDescription: "No problem if you're not sure yet – we'll help you choose.",
       detailsTitle: "Tell us about your garden",
       detailsDescription: "This information helps us quote more accurately.",
@@ -745,7 +742,7 @@ export const en: Dictionary = {
     description: "We've gathered answers to the questions we hear most often.",
   },
   footer: {
-    tagline: "Premium garden saunas crafted from Estonian spruce.",
+    tagline: "Premium garden saunas crafted from Scandinavian spruce.",
     explore: "Site",
     products: "Saunas",
     company: "Information",

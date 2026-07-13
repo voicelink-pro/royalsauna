@@ -37,8 +37,8 @@ export function QualityPage({ locale }: { locale: Locale }) {
               src="/images/spec/spec-hero.jpg"
               alt={
                 locale === "pl"
-                  ? "Estoński las świerkowy"
-                  : "Estonian spruce forest"
+                  ? "Skandynawski las świerkowy"
+                  : "Scandinavian spruce forest"
               }
               fill
               priority

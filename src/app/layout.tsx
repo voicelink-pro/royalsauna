@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s · RoyalSauna",
   },
   description:
-    "RoyalSauna – sauny ogrodowe premium z estońskiego świerka. Jeden model w trzech rozmiarach. Prywatne domowe spa w Twoim ogrodzie.",
+    "RoyalSauna – sauny ogrodowe premium ze świerku skandynawskiego. Jeden model w trzech wariantach. Prywatne domowe spa w Twoim ogrodzie.",
   icons: { icon: "/favicon.ico" },
 };
 

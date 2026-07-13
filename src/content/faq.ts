@@ -7,14 +7,14 @@ import type { FaqItem, Locale } from "@/types";
 export const generalFaq: Record<Locale, FaqItem[]> = {
   pl: [
     {
-      question: "Czym różnią się rozmiary S, M i L?",
+      question: "Czym różnią się warianty Compact, Comfort i Premium?",
       answer:
-        "To jeden, dopracowany model w trzech rozmiarach. Różni je wyłącznie pojemność i gabaryty – jakość estońskiego świerka, wykonanie i zakres wyposażenia w standardzie pozostają takie same. S jest idealna dla par, M to najpopularniejszy wybór dla rodzin, a L sprawdza się przy większym gronie.",
+        "To jeden, dopracowany model w trzech wariantach. Różni je wyłącznie pojemność i gabaryty – jakość świerku skandynawskiego, wykonanie i zakres wyposażenia w standardzie pozostają takie same. Compact jest idealny dla par, Comfort to najpopularniejszy wybór dla rodzin, a Premium sprawdza się przy większym gronie.",
     },
     {
       question: "Ile kosztuje RoyalSauna?",
       answer:
-        "Ceny zaczynają się od 32 000 zł za rozmiar S. Finalna cena zależy od konfiguracji: rodzaju pieca, przeszkleń, tarasu, oświetlenia oraz kosztów dostawy i montażu. Po wypełnieniu formularza przygotujemy spersonalizowaną ofertę.",
+        "Ceny zaczynają się od 32 000 zł za wariant Compact. Finalna cena zależy od konfiguracji: rodzaju pieca, przeszkleń, tarasu, oświetlenia oraz kosztów dostawy i montażu. Po wypełnieniu formularza przygotujemy spersonalizowaną ofertę.",
     },
     {
       question: "Co wchodzi w skład sauny w standardzie?",
@@ -34,19 +34,19 @@ export const generalFaq: Record<Locale, FaqItem[]> = {
     {
       question: "Jak długo trwa realizacja zamówienia?",
       answer:
-        "Czas realizacji zależy od wybranego rozmiaru i konfiguracji. Dokładny termin podajemy w ofercie – zależy nam, by każda RoyalSauna była wykonana bez pośpiechu, z dbałością o detale.",
+        "Czas realizacji zależy od wybranego wariantu i konfiguracji. Dokładny termin podajemy w ofercie – zależy nam, by każda RoyalSauna była wykonana bez pośpiechu, z dbałością o detale.",
     },
   ],
   en: [
     {
-      question: "How do sizes S, M and L differ?",
+      question: "How do the Compact, Comfort and Premium variants differ?",
       answer:
-        "It's one refined model in three sizes. Only capacity and dimensions differ – the quality of Estonian spruce, the craftsmanship and the standard equipment stay the same. S is ideal for couples, M is the most popular choice for families, and L works well for larger groups.",
+        "It's one refined model in three variants. Only capacity and dimensions differ – the quality of Scandinavian spruce, the craftsmanship and the standard equipment stay the same. Compact is ideal for couples, Comfort is the most popular choice for families, and Premium works well for larger groups.",
     },
     {
       question: "How much does a RoyalSauna cost?",
       answer:
-        "Prices start from PLN 32,000 for size S. The final price depends on configuration: heater type, glazing, terrace, lighting and delivery and installation costs. Once you complete the form, we'll prepare a personalised offer.",
+        "Prices start from PLN 32,000 for the Compact variant. The final price depends on configuration: heater type, glazing, terrace, lighting and delivery and installation costs. Once you complete the form, we'll prepare a personalised offer.",
     },
     {
       question: "What's included as standard?",
@@ -66,7 +66,7 @@ export const generalFaq: Record<Locale, FaqItem[]> = {
     {
       question: "How long does an order take?",
       answer:
-        "Lead time depends on the chosen size and configuration. We provide the exact date in the offer – we want every RoyalSauna built without haste, with care for detail.",
+        "Lead time depends on the chosen variant and configuration. We provide the exact date in the offer – we want every RoyalSauna built without haste, with care for detail.",
     },
   ],
 };

@@ -10,21 +10,21 @@ export const woodMaterials: WoodMaterial[] = [
     id: "spruce",
     image: {
       src: "/images/swierk-quality.jpg",
-      alt: "Bryła sauny wykonana z estońskiego świerku",
+      alt: "Bryła sauny wykonana ze świerku skandynawskiego",
     },
     elements: [],
     i18n: {
       pl: {
-        name: "Świerk estoński",
+        name: "Świerk skandynawski",
         usageTag: "Bryła sauny",
         description:
-          "Z estońskiego świerka budujemy całą bryłę sauny – ściany, dach i konstrukcję. To drewno z chłodnego, północnego klimatu rośnie wolniej niż w cieplejszych szerokościach geograficznych, dzięki czemu jest gęstsze, bardziej stabilne i lepiej znosi wilgoć oraz zmiany temperatury. Z czasem nabiera głębszego, ciepłego koloru i przyjemnie pachnie żywicą.",
+          "Ze świerku skandynawskiego budujemy całą bryłę sauny – ściany, dach i konstrukcję. To drewno z chłodnego, północnego klimatu rośnie wolniej niż w cieplejszych szerokościach geograficznych, dzięki czemu jest gęstsze, bardziej stabilne i lepiej znosi wilgoć oraz zmiany temperatury. Z czasem nabiera głębszego, ciepłego koloru i przyjemnie pachnie żywicą.",
       },
       en: {
-        name: "Estonian spruce",
+        name: "Scandinavian spruce",
         usageTag: "Sauna shell",
         description:
-          "We build the entire sauna shell – walls, roof and structure – from Estonian spruce. Grown slowly in a cool, northern climate, it's denser and more stable, and copes better with moisture and temperature swings. Over time it takes on a deeper, warm colour and a pleasant scent of resin.",
+          "We build the entire sauna shell – walls, roof and structure – from Scandinavian spruce. Grown slowly in a cool, northern climate, it's denser and more stable, and copes better with moisture and temperature swings. Over time it takes on a deeper, warm colour and a pleasant scent of resin.",
       },
     },
   },
