@@ -35,6 +35,7 @@ export function HeatersPage({ locale }: { locale: Locale }) {
 
       <PageHeroBanner
         image="/images/heaters-banner.jpg"
+        mobileImage="/images/heaters-banner-mobile.jpg"
         alt={h.banner.caption}
         eyebrow={h.banner.eyebrow}
         caption={h.banner.caption}

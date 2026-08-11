@@ -39,6 +39,17 @@ export function ProductPage({
   const interiorImg = product.images[1] ?? product.images[0];
   const cutoutImg = product.images[2] ?? product.images[0];
   const technicImg = product.images[3];
+
+  // The cutout render's subject isn't perfectly centred in every source photo,
+  // so the "Bryła i wyposażenie" showcase needs a per-model nudge/zoom.
+  const cutoutImagePosition: Record<SaunaSize, string> = {
+    compact: "38% 50%",
+    comfort: "38% 50%",
+    premium: "50% 50%",
+  };
+  const cutoutImageZoom: Partial<Record<SaunaSize, number>> = {
+    premium: 0.88,
+  };
   // Gallery shows everything except the technical drawing (it gets its own section).
   const galleryImages = product.images.filter((img) => img !== technicImg);
 
@@ -76,38 +87,43 @@ export function ProductPage({
         />
       </Section>
 
+      {/* Exterior / equipment editorial */}
+      <Section tone="sand" id="design" className="scroll-mt-28">
+        <ProductShowcase
+          image={cutoutImg}
+          eyebrow={dict.common.exteriorEyebrow}
+          title={dict.common.exteriorTitle}
+          description={copy.shortDescription}
+          imageSide="left"
+          imagePosition={cutoutImagePosition[size]}
+          imageZoom={cutoutImageZoom[size]}
+        >
+          <div className="mt-8">
+            <ProductIncluded
+              items={copy.included}
+              title={dict.common.standardEquipment}
+              ctaHref={routeMap.welcomePackage[locale]}
+              ctaLabel={dict.common.seeWelcomePackage}
+              ctaLocation={`product_${product.id}_welcome_package`}
+            />
+          </div>
+        </ProductShowcase>
+      </Section>
+
       {/* Interior editorial */}
-      <Section tone="sand" id="wnetrze" className="scroll-mt-28">
+      <Section tone="ivory" id="wnetrze" className="scroll-mt-28">
         <ProductShowcase
           image={interiorImg}
           eyebrow={dict.common.interiorEyebrow}
           title={dict.common.interiorTitle}
           description={copy.audience}
-          imageSide="left"
+          imageSide="right"
         >
           <div className="mt-8">
             <h3 className="font-serif text-xl text-bark-700">
               {dict.common.keyFeatures}
             </h3>
             <KeyFeatureList items={copy.features} />
-          </div>
-        </ProductShowcase>
-      </Section>
-
-      {/* Exterior / design editorial */}
-      <Section tone="ivory" id="design" className="scroll-mt-28">
-        <ProductShowcase
-          image={cutoutImg}
-          eyebrow={dict.common.exteriorEyebrow}
-          title={dict.common.exteriorTitle}
-          description={copy.shortDescription}
-          imageSide="right"
-        >
-          <div className="mt-8">
-            <ProductIncluded
-              items={copy.included}
-              title={dict.common.standardEquipment}
-            />
           </div>
         </ProductShowcase>
       </Section>

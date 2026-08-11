@@ -63,6 +63,16 @@ export function HomePage({ locale }: { locale: Locale }) {
           className="mx-auto mb-14 max-w-2xl"
         />
         <IncludedShowcase groups={dict.home.included.groups} />
+        <div className="mt-12 flex justify-center">
+          <CtaButton
+            href={routeMap.welcomePackage[locale]}
+            location="home_included_welcome_package"
+            variant="secondary"
+            className="px-6 py-3"
+          >
+            {dict.common.seeWelcomePackage}
+          </CtaButton>
+        </div>
       </Section>
 
       {/* Process */}

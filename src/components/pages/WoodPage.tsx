@@ -8,14 +8,14 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { PageHeroBanner } from "@/components/sections/PageHeroBanner";
+import { ThermoWoodSection } from "@/components/sections/ThermoWoodSection";
 import { WoodConstructionDiagram } from "@/components/sections/WoodConstructionDiagram";
 import { ProductShowcase } from "@/components/product/ProductShowcase";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
 /**
- * /specyfikacja/drewno — built incrementally, page-by-page. So far: the
- * full-bleed banner and the "three woods" materials section. Further
- * sections (finishes, construction detail…) will follow the same pattern.
+ * /specyfikacja/drewno — materials overview, ThermoWood deep-dive
+ * and exploded construction diagram.
  */
 export function WoodPage({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
@@ -25,6 +25,7 @@ export function WoodPage({ locale }: { locale: Locale }) {
     <>
       <PageHeroBanner
         image="/images/drewno-banner.jpg"
+        mobileImage="/images/drewno-banner-mobile.jpg"
         alt={w.banner.caption}
         eyebrow={w.banner.eyebrow}
         caption={w.banner.caption}
@@ -40,8 +41,7 @@ export function WoodPage({ locale }: { locale: Locale }) {
         />
       </Container>
 
-      {/* The three woods */}
-      <Section tone="ivory" id="materialy" className="pt-10 scroll-mt-28">
+      <Section tone="ivory" id="materialy" className="scroll-mt-28 pt-10">
         <SectionHeading
           eyebrow={w.materialsSection.eyebrow}
           title={w.materialsSection.title}
@@ -97,11 +97,12 @@ export function WoodPage({ locale }: { locale: Locale }) {
         </div>
       </Section>
 
-      {/* Exploded construction diagram */}
+      <ThermoWoodSection copy={w.thermoWoodSection} />
+
       <Section
         tone="ivory"
         id="konstrukcja"
-        className="scroll-mt-28 pt-0 lg:pt-0"
+        className="scroll-mt-28"
       >
         <SectionHeading
           eyebrow={w.diagramSection.eyebrow}

@@ -6,7 +6,7 @@ import type { ModelId } from "@/types";
  * context for the lead e-mail only.
  */
 export interface ConfiguratorAnswers {
-  people: "2" | "3" | "5";
+  people: "2" | "4" | "6";
   garden: "small" | "medium" | "large";
   frequency: "occasional" | "regular" | "daily";
 }
@@ -23,10 +23,10 @@ export interface Recommendation {
 export function recommend(answers: Partial<ConfiguratorAnswers>): Recommendation {
   const peopleToModel: Record<string, ModelId> = {
     "2": "compact",
-    "3": "comfort",
-    "5": "premium",
+    "4": "comfort",
+    "6": "premium",
   };
-  let model: ModelId = peopleToModel[answers.people ?? "3"] ?? "comfort";
+  let model: ModelId = peopleToModel[answers.people ?? "4"] ?? "comfort";
 
   // A small garden caps the footprint one size down (but never below compact).
   if (answers.garden === "small" && model === "premium") model = "comfort";

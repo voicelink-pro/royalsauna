@@ -15,6 +15,8 @@ export function ProductShowcase({
   imageSide = "left",
   children,
   priority = false,
+  imagePosition,
+  imageZoom,
 }: {
   image: ProductImage;
   eyebrow: string;
@@ -23,6 +25,10 @@ export function ProductShowcase({
   imageSide?: "left" | "right";
   children?: React.ReactNode;
   priority?: boolean;
+  /** CSS `object-position` value, e.g. "38% 50%", to re-centre a cropped image. */
+  imagePosition?: string;
+  /** Scale factor (< 1 zooms out, revealing more breathing room around the subject). */
+  imageZoom?: number;
 }) {
   return (
     <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
@@ -31,7 +37,12 @@ export function ProductShowcase({
           imageSide === "right" ? "lg:order-2" : "lg:order-1",
         )}
       >
-        <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-soft sm:aspect-[4/3] lg:aspect-[4/5]">
+        <div
+          className={cn(
+            "relative aspect-[4/5] overflow-hidden rounded-3xl shadow-soft sm:aspect-[4/3] lg:aspect-[4/5]",
+            imageZoom && "bg-white",
+          )}
+        >
           <Image
             src={image.src}
             alt={image.alt}
@@ -39,6 +50,10 @@ export function ProductShowcase({
             priority={priority}
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
+            style={{
+              objectPosition: imagePosition,
+              transform: imageZoom ? `scale(${imageZoom})` : undefined,
+            }}
           />
         </div>
       </Reveal>

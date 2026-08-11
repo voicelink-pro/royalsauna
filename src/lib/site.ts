@@ -31,12 +31,25 @@ export const routeMap: Record<string, Record<Locale, string>> = {
   heaters: { pl: "/specyfikacja/piece", en: "/en/quality/heaters" },
   wood: { pl: "/specyfikacja/drewno", en: "/en/quality/wood" },
   foundation: { pl: "/specyfikacja/podloze", en: "/en/quality/foundation" },
+  welcomePackage: {
+    pl: "/specyfikacja/pakiet-powitalny",
+    en: "/en/quality/welcome-package",
+  },
   configurator: { pl: "/konfigurator-oferty", en: "/en/offer-configurator" },
   blog: { pl: "/blog", en: "/en/blog" },
   contact: { pl: "/kontakt", en: "/en/contact" },
   privacy: { pl: "/polityka-prywatnosci", en: "/en/privacy-policy" },
   cookies: { pl: "/polityka-cookies", en: "/en/cookie-policy" },
 };
+
+/**
+ * Physical QR landing pages — linked only from stickers, not from site nav.
+ * Kept out of {@link routeMap} so they are excluded from the sitemap.
+ */
+export const qrRouteMap = {
+  offer: { pl: "/ofertakodqr", en: "/en/qr-offer" },
+  welcomePackage: { pl: "/pakietkodqr", en: "/en/qr-welcome-package" },
+} as const;
 
 export function getAlternates(plPath: string, enPath: string) {
   return {

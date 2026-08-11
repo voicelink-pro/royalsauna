@@ -1,30 +1,51 @@
 import type { WoodMaterial } from "@/types";
 
 /**
- * Catalogue of the three woods used across the Regenerum line, shown on
- * /specyfikacja/drewno. Each material lists the finished sauna elements it's
- * used for, with a photo slot for each.
+ * Catalogue of woods used across the Regenerum line, shown on
+ * /specyfikacja/drewno. ThermoWood forms the shell and floor; aspen is used
+ * for benches and headrests.
  */
 export const woodMaterials: WoodMaterial[] = [
   {
-    id: "spruce",
+    id: "thermowood",
     image: {
       src: "/images/swierk-quality.jpg",
-      alt: "Bryła sauny wykonana ze świerku skandynawskiego",
+      alt: "Bryła sauny wykonana z termowanego świerku ThermoWood",
     },
-    elements: [],
+    elements: [
+      {
+        image: {
+          src: "/images/swierk-quality.jpg",
+          alt: "Bryła sauny wykonana z ThermoWood",
+        },
+        i18n: {
+          pl: { label: "Bryła sauny" },
+          en: { label: "Sauna shell" },
+        },
+      },
+      {
+        image: {
+          src: "/images/termowood-podloga.jpg",
+          alt: "Podłoga sauny wykonana z ThermoWood",
+        },
+        i18n: {
+          pl: { label: "Podłoga" },
+          en: { label: "Floor" },
+        },
+      },
+    ],
     i18n: {
       pl: {
-        name: "Świerk skandynawski",
-        usageTag: "Bryła sauny",
+        name: "ThermoWood",
+        usageTag: "Bryła i podłoga",
         description:
-          "Ze świerku skandynawskiego budujemy całą bryłę sauny – ściany, dach i konstrukcję. To drewno z chłodnego, północnego klimatu rośnie wolniej niż w cieplejszych szerokościach geograficznych, dzięki czemu jest gęstsze, bardziej stabilne i lepiej znosi wilgoć oraz zmiany temperatury. Z czasem nabiera głębszego, ciepłego koloru i przyjemnie pachnie żywicą.",
+          "Z ThermoWood, czyli termowanego świerku budujemy bryłę sauny oraz podłogę. To ten sam szlachetny świerk, poddany obróbce termicznej w temperaturze 180–230°C z użyciem wyłącznie pary wodnej, bez chemii. Dzięki temu jest wyjątkowo odporny na wilgoć, stabilny wymiarowo i gotowy na wymagające warunki sauny przez długie lata.",
       },
       en: {
-        name: "Scandinavian spruce",
-        usageTag: "Sauna shell",
+        name: "ThermoWood",
+        usageTag: "Shell & floor",
         description:
-          "We build the entire sauna shell – walls, roof and structure – from Scandinavian spruce. Grown slowly in a cool, northern climate, it's denser and more stable, and copes better with moisture and temperature swings. Over time it takes on a deeper, warm colour and a pleasant scent of resin.",
+          "We build the sauna shell and floor from ThermoWood – thermally modified spruce. It is the same fine spruce, heat-treated at 180–230°C using only steam, with no chemicals. The result is outstanding moisture resistance, dimensional stability and a material made for the demanding conditions inside a sauna for many years.",
       },
     },
   },
@@ -58,28 +79,6 @@ export const woodMaterials: WoodMaterial[] = [
         usageTag: "Benches & headrests",
         description:
           "We make the benches and headrests from aspen – a gentle wood that's remarkably pleasant to the touch and stays cool enough not to burn skin even at high temperatures. Aspen has a smooth, even grain with little resin, so it won't mark your skin and sheds moisture well, staying fresh for years.",
-      },
-    },
-  },
-  {
-    id: "thermowood",
-    image: {
-      src: "/images/termowood-podloga.jpg",
-      alt: "Podłoga sauny wykonana z termowood",
-    },
-    elements: [],
-    i18n: {
-      pl: {
-        name: "Termowood",
-        usageTag: "Podłoga",
-        description:
-          "Podłogę wykonujemy z termowood – drewna poddanego obróbce termicznej w wysokiej temperaturze, bez użycia chemii. Proces ten zwiększa jego odporność na wilgoć i grzyby, a przede wszystkim ogranicza nagrzewanie powierzchni, dzięki czemu stopy przez cały seans czują komfortową temperaturę.",
-      },
-      en: {
-        name: "Thermowood",
-        usageTag: "Floor",
-        description:
-          "We make the floor from thermowood – wood heat-treated at high temperature with no chemicals involved. The process boosts its resistance to moisture and fungus, and above all keeps the surface from heating up too much, so your feet stay comfortable through the whole session.",
       },
     },
   },

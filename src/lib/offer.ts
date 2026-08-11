@@ -88,9 +88,9 @@ function offerLabels(locale: Locale) {
 
 const PREF_VALUE_LABELS: Record<Locale, Record<string, string>> = {
   pl: {
-    "2": "1–2 osoby",
-    "3": "3–4 osoby",
-    "5": "5 i więcej",
+    "2": "2 osoby",
+    "4": "4 osoby",
+    "6": "6 osób",
     small: "Niewiele miejsca",
     medium: "Średnio miejsca",
     large: "Dużo miejsca",
@@ -99,9 +99,9 @@ const PREF_VALUE_LABELS: Record<Locale, Record<string, string>> = {
     daily: "Codziennie",
   },
   en: {
-    "2": "1–2 people",
-    "3": "3–4 people",
-    "5": "5 or more",
+    "2": "2 people",
+    "4": "4 people",
+    "6": "6 people",
     small: "Little space",
     medium: "Medium space",
     large: "Plenty of space",

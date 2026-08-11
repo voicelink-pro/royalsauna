@@ -32,6 +32,7 @@ export const en: Dictionary = {
     specHeaters: "Heaters",
     specWood: "Wood",
     specFoundation: "Foundation",
+    specWelcomePackage: "Welcome package",
     requestOffer: "Get your offer",
     seeSizes: "See the variants",
     menu: "Menu",
@@ -40,7 +41,7 @@ export const en: Dictionary = {
   common: {
     priceFrom: "From",
     currency: "PLN",
-    priceNote: "Final price depends on configuration",
+    priceNote: "Final price depends on the choice of heater",
     learnMore: "Learn more",
     seeModel: "View model",
     backToBlog: "Back to blog",
@@ -50,11 +51,12 @@ export const en: Dictionary = {
     keyFeatures: "Key features",
     specification: "Specification",
     standardEquipment: "Standard equipment",
+    seeWelcomePackage: "See the welcome package",
     configOptions: "Configuration options",
     skipToContent: "Skip to content",
     interiorEyebrow: "Interior",
     interiorTitle: "Refined in every detail",
-    exteriorEyebrow: "Form & design",
+    exteriorEyebrow: "Form & equipment",
     exteriorTitle: "A form that pleases the eye",
     dimensionsEyebrow: "Dimensions",
     dimensionsTitle: "Dimensions & specification",
@@ -143,29 +145,29 @@ export const en: Dictionary = {
       description:
         "Every RoyalSauna size ships with a thoughtful standard set. What others charge extra for is part of the experience here.",
       items: [
-        "Sauna heater matched to the cabin volume",
-        "Profiled premium-wood benches",
-        "Headrests and footrests",
+        "Sauna heater with Wi-Fi controller",
+        "Contoured premium-wood benches",
+        "Aspen headrests – cool and pleasant to the touch",
         "Bucket and ladle",
         "A full set of sauna stones",
         "Ambient LED lighting",
         "Thermometer and hygrometer",
         "Sauna sand timer",
-        "Towels (number depends on the model)",
+        "Premium towels with the RoyalSauna logo",
       ],
       groups: [
         {
-          title: "Benches, headrests & LED",
+          title: "Benches, aspen headrests & LED",
           description:
-            "Contoured premium-wood benches, aspen headrests and LED lighting built right into the structure.",
+            "Contoured benches and ergonomic aspen headrests – wood that stays gentle on the skin even at high heat. Plus ambient LED lighting built into the structure.",
           image: "/images/included-benches.jpg",
           alt: "Contoured bench with LED lighting and a headrest",
           shape: "wide" as const,
         },
         {
-          title: "Heater & full stone set",
+          title: "Heater, stones & Wi-Fi",
           description:
-            "A powerful sauna heater matched to the cabin volume, complete with a full set of stones – ready for your first session.",
+            "A heater matched to the cabin volume, a full stone set and a Wi-Fi controller – start the sauna from your phone before you get home.",
           image: "/images/included-heater.jpg",
           alt: "Sauna heater with a full set of stones",
           shape: "portrait" as const,
@@ -173,15 +175,15 @@ export const en: Dictionary = {
         {
           title: "A home-spa atmosphere",
           description:
-            "Ambient LED light and the warmth of wood create the mood of a true, private spa.",
+            "Ambient LED light and the warmth of ThermoWood create the mood of a true, private spa.",
           image: "/images/included-lighting.jpg",
           alt: "Regenerum sauna at night with a glowing interior",
           shape: "square" as const,
         },
         {
-          title: "Welcome set",
+          title: "Welcome package",
           description:
-            "Bucket, ladle, thermometer, hygrometer, hourglass and towels – ready from day one.",
+            "Bucket, ladle, thermometer, hygrometer, sand timer and premium towels with an embroidered RoyalSauna logo – 2 to 6 towels, depending on the model.",
           image: "/images/included-accessories.jpg",
           alt: "Welcome set: bucket, ladle, thermometer, towel",
           shape: "square" as const,
@@ -276,17 +278,17 @@ export const en: Dictionary = {
         {
           title: "Compact",
           description:
-            "For couples and smaller gardens. An intimate space for a daily ritual for two.",
+            "For 2 people. An intimate space for a daily ritual – ideal for smaller gardens.",
         },
         {
           title: "Comfort",
           description:
-            "The most popular model. Comfort for the family and room for guests, without excess.",
+            "For 4 people. The most popular model – comfort for the family and room for guests.",
         },
         {
           title: "Premium",
           description:
-            "For those who love to share the ritual. A spacious spa for gatherings and larger groups.",
+            "For 6 people. A spacious spa for gatherings and larger groups.",
         },
       ],
     },
@@ -299,19 +301,14 @@ export const en: Dictionary = {
             "A larger sauna means more premium wood and a stronger heater matched to the volume.",
         },
         {
-          title: "Heater type",
+          title: "Heater model",
           description:
-            "Electric or wood-fired – they differ in installation, power and the session experience.",
+            "Harvia Cilindro, Legend or Spirit – they differ in installation, power and the session experience.",
         },
         {
           title: "Configuration options",
           description:
             "Glazing, a terrace, lighting and an audio system all influence the final quote.",
-        },
-        {
-          title: "Delivery and installation",
-          description:
-            "Location and access conditions determine transport and preparation costs.",
         },
       ],
     },
@@ -447,30 +444,85 @@ export const en: Dictionary = {
     meta: {
       title: "Wood built to last – materials of the Regenerum saunas",
       description:
-        "Discover the wood and materials we build the Regenerum garden sauna line from – Scandinavian spruce and details refined for decades.",
+        "Discover the wood we build Regenerum saunas from – ThermoWood (thermally modified spruce) for the shell and floor, and aspen for benches and headrests.",
     },
     materialsSection: {
       eyebrow: "Materials",
-      title: "Three woods, one sauna",
+      title: "Two woods, one sauna",
       description:
-        "We choose a different wood for every part of the sauna – so the structure lasts, the benches feel good to the touch, and the floor stays comfortable underfoot.",
+        "We build the shell and floor from ThermoWood – thermally modified spruce of exceptional durability. Benches and headrests are aspen – pleasant against the skin even at high temperatures.",
       madeFrom: "Made from this wood",
+    },
+    thermoWoodSection: {
+      eyebrow: "ThermoWood",
+      title: "ThermoWood – thermally modified spruce made for premium saunas",
+      lead:
+        "In RoyalSauna Regenerum saunas we use the highest-quality ThermoWood – spruce refined through advanced thermal modification. It combines the natural beauty of spruce with exceptional durability. Treatment uses only high temperature (180–230°C) and steam – with no chemicals whatsoever. The result is a material with far better performance, ideally suited to the demanding conditions inside a sauna.",
+      beautyTitle: "Natural beauty and outstanding durability",
+      beautyBody:
+        "The ThermoWood process significantly increases resistance to moisture, temperature swings and the elements. With reduced absorbency the material stays stable for years, resists warping and is far less prone to cracking or twisting. High heat also removes resin, so the surface stays attractive and comfortable in use.",
+      whyTitle: "Why ThermoWood?",
+      benefits: [
+        {
+          title: "100% natural",
+          description:
+            "No chemical impregnants or additives – only wood treated with heat and steam.",
+        },
+        {
+          title: "Exceptionally durable",
+          description:
+            "Resistant to moisture, fungi, mould and changing weather conditions.",
+        },
+        {
+          title: "Dimensionally stable",
+          description:
+            "Up to 90% less prone to twisting and deformation than traditional timber.",
+        },
+        {
+          title: "Better insulation",
+          description:
+            "Up to 25% better thermal insulation – greater energy efficiency and heat that lasts longer.",
+        },
+        {
+          title: "Insect resistant",
+          description:
+            "Low moisture content effectively limits the risk of pests.",
+        },
+        {
+          title: "Beautiful, even colour",
+          description:
+            "Thermal treatment gives the wood a deep, refined tone and improves the durability of protective finishes.",
+        },
+        {
+          title: "Ecological",
+          description:
+            "Sourced from renewable forests and fully environmentally friendly.",
+        },
+        {
+          title: "Safer",
+          description:
+            "The altered structure increases fire resistance compared with traditional timber.",
+        },
+      ],
+      closingTitle: "A material built to last",
+      closingBody:
+        "Choosing ThermoWood means investing in timber made for long-term use. It is valued in premium construction for durability, elegant looks and resistance to demanding conditions. In RoyalSauna Regenerum saunas it preserves not only exceptional aesthetics, but above all comfort, safety and reliability through years of everyday use.",
     },
     diagramSection: {
       eyebrow: "Construction",
       title: "What a sauna is built from",
       description:
-        "We break the sauna down into its parts – each element of the shell is a different wood, matched to its job.",
+        "We break the sauna down into its parts – each element is timber matched to its role.",
       hotspots: {
         shell: {
           label: "Sauna shell",
           description:
-            "Scandinavian spruce – bent, multi-layer arches that give the sauna its signature rounded shape.",
+            "ThermoWood (thermally modified spruce) – bent, multi-layer arches that give the sauna its signature rounded shape.",
         },
         walls: {
           label: "Walls",
           description:
-            "Scandinavian spruce – solid walls with enhanced resistance to moisture and temperature swings.",
+            "ThermoWood (thermally modified spruce) – solid walls with enhanced resistance to moisture and temperature swings.",
         },
         benches: {
           label: "Benches",
@@ -480,7 +532,7 @@ export const en: Dictionary = {
         floor: {
           label: "Floor",
           description:
-            "Thermowood – heat-treated flooring timber that won't burn your feet.",
+            "ThermoWood (thermally modified spruce) – flooring timber that won't burn your feet.",
         },
       },
     },
@@ -595,6 +647,189 @@ export const en: Dictionary = {
       ],
     },
   },
+  welcomePackagePage: {
+    banner: {
+      eyebrow: "Specification",
+      caption: "Welcome package",
+    },
+    meta: {
+      title: "Welcome package – accessories included with RoyalSauna",
+      description:
+        "Discover the welcome package included with every Regenerum sauna – accessories for your first session.",
+    },
+    showcase: {
+      eyebrow: "Included as standard",
+      title: "Everything you need for your first session",
+      description:
+        "Every Regenerum sauna arrives ready for the ritual. We chose the details that shape a true spa atmosphere – from the warmth of the heater to the softness of the towel. Nothing left to buy. Just step in, breathe, and feel that this is already your home ritual.",
+      items: {
+        towels: {
+          title: "Towels",
+          paragraphs: [
+            "Every RoyalSauna Regenerum sauna is delivered with an exclusive set of towels that forms an integral part of the welcome package. Made from 100% fine cotton, they offer exceptional softness, excellent absorbency and lasting comfort even during longer sauna sessions.",
+            "Each towel is finished with an elegant embroidered RoyalSauna logo, underlining its premium character and attention to every detail. The generous bath size is comfortable both during the session and afterwards.",
+          ],
+          listLabel: "Your set includes:",
+          list: [
+            "Regenerum Compact – 2 premium towels",
+            "Regenerum Comfort – 4 premium towels",
+            "Regenerum Premium – 6 premium towels",
+          ],
+          closing:
+            "This is not an ordinary add-on – it is what lets you enjoy the sauna to the highest standard from day one, with nothing left to buy. At RoyalSauna we believe true luxury lives in the details, which is why every piece of the welcome package is chosen to deliver maximum comfort and an exceptional experience in every session.",
+        },
+        bucketLadle: {
+          title: "Bucket & ladle",
+          paragraphs: [
+            "An essential part of a true sauna ritual is pouring water over the hot stones to raise humidity and fill the cabin with a pleasant wave of steam. That is why every RoyalSauna Regenerum sauna comes with an elegant set of a wooden bucket and a matching ladle.",
+            "Crafted from high-quality natural wood, they combine a classic look with careful finishing. The ergonomic ladle makes it easy to dose water onto the heater stones, while the generous bucket holds enough for the whole session.",
+            "These are not only practical accessories – they also underline the authentic character of the sauna and its atmosphere of calm. With a coherent design language they sit beautifully in the cabin, creating an elegant space where every detail is refined for the highest comfort of use.",
+          ],
+          listLabel: "",
+          list: [],
+          closing: "",
+        },
+        headrests: {
+          title: "Headrests",
+          paragraphs: [
+            "True sauna comfort is shaped by carefully refined details. That is why every RoyalSauna Regenerum sauna includes two ergonomic headrests made from natural aspen wood, designed to support the head and neck comfortably while you rest.",
+            "Aspen is especially valued in sauna interiors for its soft, smooth grain and low thermal conductivity. It does not heat up as intensely as many other woods and stays pleasant against the skin even in high temperatures. Its light, subtle colour also complements the elegant cabin, underlining a natural and harmonious look.",
+            "The carefully contoured shape follows the natural position of the head and neck, helping muscles relax and letting you settle into a comfortable posture. The finely sanded surface feels exceptional to the touch and makes every moment of rest even more enjoyable.",
+            "As standard, every RoyalSauna model includes two aspen headrests, so recovery feels equally pleasant whether you are alone or sharing the session. It is the combination of natural material, ergonomic form and timeless aesthetics that lets you fully sink into the ritual of unwinding.",
+          ],
+          listLabel: "",
+          list: [],
+          closing: "",
+        },
+        thermoHygro: {
+          title: "Thermometer & hygrometer",
+          paragraphs: [
+            "The right temperature and humidity are the foundation of an effective, comfortable sauna session. That is why every RoyalSauna Regenerum sauna is equipped with an elegant thermometer and hygrometer set crafted from natural aspen wood.",
+            "The thermometer lets you monitor the temperature inside the cabin in real time, while the hygrometer shows the humidity level. Together they make it easy to create ideal conditions for relaxation and to tune the climate to your preferences.",
+            "Natural aspen performs excellently in the demanding sauna environment, and the classic design means the set sits harmoniously in the wooden interior. Functionality, durability and timeless aesthetics – a combination that underlines the premium character of every RoyalSauna.",
+          ],
+          listLabel: "",
+          list: [],
+          closing: "",
+        },
+        timer: {
+          title: "Sand timer",
+          paragraphs: [
+            "Precise timing is one of the key elements of comfortable and safe sauna use. That is why every RoyalSauna Regenerum sauna includes an elegant sand timer made from natural aspen wood, which performs excellently in high heat and humidity.",
+            "The timer conveniently measures 5, 10 and 15 minutes, helping you match session length to your preferences and experience. A clear scale lets you keep track of time without electronic devices, preserving the natural, relaxing character of sauna bathing.",
+            "Carefully made with attention to every detail, it harmonises with the cabin interior and underlines its elegant, premium character. A practical piece of equipment that not only makes sauna use easier, but also completes the space aesthetically.",
+          ],
+          listLabel: "",
+          list: [],
+          closing: "",
+        },
+        heaterStones: {
+          title: "Heater & stones",
+          paragraphs: [
+            "At the heart of every RoyalSauna Regenerum sauna is a modern premium electric heater, supplied with a full set of dedicated sauna stones that store and release heat evenly for optimal conditions in every session. High performance means the heater reaches the set temperature quickly, so you can start relaxing shortly after switching on.",
+            "The heater’s contemporary design complements the elegant cabin interior and gives it a distinctive, luxurious character. Timeless aesthetics, top-tier craftsmanship and reliable technology – a combination that guarantees comfort of use for years to come.",
+            "The set also includes a smart controller with a Wi-Fi module, making operation simple and convenient. You can choose one of three heating modes to match the heater’s work to your preferences and the kind of session you have planned. On the clear display you can always check the current temperature and the estimated time left until the sauna is fully heated.",
+            "With Wi-Fi connectivity you can control the sauna from your smartphone – start heating before you get home, change settings or check the heater status from anywhere. Maximum convenience, so your sauna is ready exactly when you need it.",
+          ],
+          listLabel: "",
+          list: [],
+          closing: "",
+        },
+      },
+    },
+    includedValue: {
+      eyebrow: "Included",
+      title: "What you don't need to buy separately",
+      description:
+        "What others often treat as a paid extra is, at RoyalSauna, a natural part of the experience – from day one.",
+      items: [
+        {
+          title: "Electric heater with a full stone set",
+          description: "Matched to your model, with sauna stones included as standard.",
+        },
+        {
+          title: "Wi-Fi controller",
+          description: "Start the sauna from your phone before you get home.",
+        },
+        {
+          title: "Premium towels with the RoyalSauna logo",
+          description: "2, 4 or 6 towels – depending on the model you choose.",
+        },
+        {
+          title: "Bucket and ladle",
+          description: "Ready for pouring water on the stones from the first session.",
+        },
+        {
+          title: "Two aspen headrests",
+          description: "Ergonomic support for head and neck, included as standard.",
+        },
+        {
+          title: "Thermometer, hygrometer and sand timer",
+          description: "Full control of climate and time – without gadgets in the cabin.",
+        },
+      ],
+    },
+    faq: {
+      items: [
+        {
+          question: "Are the stones and Wi-Fi controller included in the price?",
+          answer:
+            "Yes. Every Regenerum sauna is delivered with a heater, a full set of sauna stones and a smart controller with a Wi-Fi module. You don't buy them separately – they are part of the welcome package and standard equipment.",
+        },
+        {
+          question: "How many towels will I receive with my sauna?",
+          answer:
+            "The number of towels depends on the model: Regenerum Compact – 2, Comfort – 4, Premium – 6. All are made from 100% cotton and finished with an embroidered RoyalSauna logo.",
+        },
+        {
+          question: "Can I buy extra towels or accessories?",
+          answer:
+            "Yes. If you'd like to expand the set – for example with extra towels for guests – get in touch when placing your order or later. We'll gladly match pieces that fit your sauna.",
+        },
+        {
+          question: "How should I care for the wooden accessories?",
+          answer:
+            "After a session, simply dry the bucket, ladle, headrests, sand timer and thermometer/hygrometer set, and keep them in a dry, airy place inside or near the sauna. Avoid prolonged soaking and harsh detergents – natural aspen responds best to gentle care.",
+        },
+      ],
+    },
+  },
+  qrPages: {
+    offer: {
+      metaTitle: "Get an offer – RoyalSauna",
+      metaDescription:
+        "You scanned the QR code on our display. Fill in a short form and we'll prepare a personalised Regenerum sauna quote.",
+      eyebrow: "RoyalSauna display",
+      title: "Get an offer",
+      description:
+        "Thanks for stopping by our sauna. Leave your details – we'll get back with a quote and answers to your questions.",
+      formTitle: "Offer form",
+      packageLink: "See what's in the welcome package",
+    },
+    welcomePackage: {
+      metaTitle: "Welcome package – RoyalSauna",
+      metaDescription:
+        "Discover the welcome package included with every Regenerum sauna – towels, heater with Wi-Fi, headrests and more.",
+      eyebrow: "Included as standard",
+      title: "Welcome package",
+      description:
+        "Every Regenerum sauna arrives ready for the first session. Here's what you get in the price – nothing left to buy.",
+      offerCta: "Get an offer",
+      items: {
+        towels:
+          "Premium towels with an embroidered logo – 2, 4 or 6 depending on the model.",
+        bucketLadle:
+          "Wooden bucket and ladle – ready for pouring water on the stones.",
+        headrests:
+          "Two ergonomic aspen headrests – pleasant to the touch, they don't burn.",
+        thermoHygro:
+          "Aspen thermometer and hygrometer – climate control at the heart of the sauna.",
+        timer: "5 / 10 / 15 min sand timer – a natural way to time your session.",
+        heaterStones:
+          "Heater with a full stone set and Wi-Fi controller – start the sauna from your phone.",
+      },
+    },
+  },
   configurator: {
     hero: {
       eyebrow: "Offer configurator",
@@ -613,9 +848,9 @@ export const en: Dictionary = {
           title: "How many people will use the sauna?",
           description: "We'll match the right cabin variant.",
           options: [
-            { value: "2", label: "1–2 people", hint: "Intimate, for couples" },
-            { value: "3", label: "3–4 people", hint: "Ideal for a family" },
-            { value: "5", label: "5 or more", hint: "Gatherings with friends" },
+            { value: "2", label: "2 people", hint: "Compact – intimate, for two people" },
+            { value: "4", label: "4 people", hint: "Comfort – ideal for a family" },
+            { value: "6", label: "6 people", hint: "Premium – gatherings with friends" },
           ],
         },
         garden: {

@@ -5,6 +5,7 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FeatureGrid } from "@/components/ui/FeatureGrid";
+import { PageHeroBanner } from "@/components/sections/PageHeroBanner";
 import { ProductCards } from "@/components/sections/ProductCards";
 import { ProductComparison } from "@/components/sections/ProductComparison";
 import { CTASection } from "@/components/sections/CTASection";
@@ -16,7 +17,15 @@ export function SaunasPage({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <Container className="pt-28">
+      <PageHeroBanner
+        image="/images/blog/jaki-rozmiar-sauny.jpg"
+        mobileImage="/images/blog/jaki-rozmiar-sauny-mobile.jpg"
+        alt={s.hero.h1}
+        eyebrow={s.hero.eyebrow}
+        caption={s.hero.h1}
+      />
+
+      <Container className="pt-16">
         <Breadcrumbs
           items={[
             { name: dict.nav.home, href: routeMap.home[locale] },
@@ -37,11 +46,14 @@ export function SaunasPage({ locale }: { locale: Locale }) {
       </Section>
 
       <Section tone="sand">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <SectionHeading title={s.oneModel.title} description={s.oneModel.description} />
-          <div className="rounded-2xl border border-sand-300 bg-ivory p-8">
-            <ProductComparison locale={locale} dict={dict} />
-          </div>
+        <SectionHeading
+          title={s.oneModel.title}
+          description={s.oneModel.description}
+          align="center"
+          className="mx-auto mb-10 max-w-2xl"
+        />
+        <div className="rounded-2xl border border-sand-300 bg-ivory p-4 sm:p-8">
+          <ProductComparison locale={locale} dict={dict} />
         </div>
       </Section>
 
@@ -52,7 +64,7 @@ export function SaunasPage({ locale }: { locale: Locale }) {
 
       <Section tone="sand" ariaLabel={s.priceFactors.title}>
         <SectionHeading title={s.priceFactors.title} align="center" className="mb-14" />
-        <FeatureGrid items={s.priceFactors.items} columns={4} />
+        <FeatureGrid items={s.priceFactors.items} columns={3} />
       </Section>
 
       <CTASection locale={locale} dict={dict} withForm location="saunas_cta" />

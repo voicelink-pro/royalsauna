@@ -53,7 +53,7 @@ export function BlogIndexPage({ locale }: { locale: Locale }) {
                   href={href}
                   className="group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass"
                 >
-                  <div className="relative aspect-[3/2] overflow-hidden rounded-2xl">
+                  <div className="relative aspect-[16/9] overflow-hidden rounded-2xl">
                     <Image
                       src={post.cover.src}
                       alt={post.cover.alt}

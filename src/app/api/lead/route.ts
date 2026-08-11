@@ -1,25 +1,36 @@
 import { NextResponse } from "next/server";
-import type { LeadPayload } from "@/types";
+import type { LeadPayload, ModelId } from "@/types";
 import { buildOfferData } from "@/lib/offer";
 import { sendOfferEmail } from "@/lib/email/send-offer";
 
 /**
- * Path to the pre-designed offer PDF that gets attached to every lead e-mail,
- * relative to `public/`. Override with OFFER_PDF_PATH if needed.
+ * Default path (relative to `public/`) of the model-specific offer PDF.
+ * Override per model with `OFFER_PDF_PATH_COMPACT` / `_COMFORT` / `_PREMIUM`.
  */
-const OFFER_PDF_PATH =
+const DEFAULT_OFFER_PDF_PATHS: Record<ModelId, string> = {
+  compact: "public/documents/oferta-compact.pdf",
+  comfort: "public/documents/oferta-comfort.pdf",
+  premium: "public/documents/oferta-premium.pdf",
+};
+
+/** Legacy single-file fallback, used if a model-specific PDF isn't uploaded yet. */
+const FALLBACK_OFFER_PDF_PATH =
   process.env.OFFER_PDF_PATH || "public/documents/oferta.pdf";
 
+function getOfferPdfPath(modelId: ModelId): string {
+  const envVar = `OFFER_PDF_PATH_${modelId.toUpperCase()}`;
+  return process.env[envVar] || DEFAULT_OFFER_PDF_PATHS[modelId];
+}
+
 /**
- * Fetches the offer PDF over HTTP from the site's own `public/` folder
- * instead of reading it from disk. Serverless functions on Vercel don't
- * bundle the full `public/` directory into their filesystem, but it's
- * always reachable via the CDN — so this works identically in local dev
- * and in every deployment (preview, production, custom domain) without
- * any extra build configuration.
+ * Fetches a PDF over HTTP from the site's own `public/` folder instead of
+ * reading it from disk. Serverless functions on Vercel don't bundle the full
+ * `public/` directory into their filesystem, but it's always reachable via
+ * the CDN — so this works identically in local dev and in every deployment
+ * (preview, production, custom domain) without any extra build configuration.
  */
-async function fetchOfferPdf(request: Request): Promise<Buffer> {
-  const publicPath = OFFER_PDF_PATH.replace(/^\.?\/?public\//, "");
+async function fetchPdfFromPublic(request: Request, relativePath: string): Promise<Buffer> {
+  const publicPath = relativePath.replace(/^\.?\/?public\//, "");
   const { protocol, host } = new URL(request.url);
   const pdfUrl = `${protocol}//${host}/${publicPath}`;
 
@@ -28,6 +39,20 @@ async function fetchOfferPdf(request: Request): Promise<Buffer> {
     throw new Error(`Failed to fetch offer PDF from ${pdfUrl}: ${res.status}`);
   }
   return Buffer.from(await res.arrayBuffer());
+}
+
+/** Fetches the offer PDF matching the recommended model, falling back to the legacy single file. */
+async function fetchOfferPdf(request: Request, modelId: ModelId): Promise<Buffer> {
+  try {
+    return await fetchPdfFromPublic(request, getOfferPdfPath(modelId));
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.warn(
+      `[lead] offer PDF for model "${modelId}" not found, falling back to ${FALLBACK_OFFER_PDF_PATH}`,
+      err,
+    );
+    return fetchPdfFromPublic(request, FALLBACK_OFFER_PDF_PATH);
+  }
 }
 
 export async function POST(request: Request) {
@@ -56,7 +81,7 @@ export async function POST(request: Request) {
     if (process.env.RESEND_API_KEY) {
       try {
         const offerData = buildOfferData(payload);
-        const pdfBuffer = await fetchOfferPdf(request);
+        const pdfBuffer = await fetchOfferPdf(request, offerData.model.id);
 
         const result = await sendOfferEmail({
           to: payload.email,
@@ -67,6 +92,7 @@ export async function POST(request: Request) {
         // eslint-disable-next-line no-console
         console.info("[lead] offer email sent", {
           to: payload.email,
+          model: offerData.model.id,
           id: result?.data?.id,
         });
       } catch (emailErr) {

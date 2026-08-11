@@ -32,6 +32,7 @@ export const pl = {
     specHeaters: "Piece",
     specWood: "Drewno",
     specFoundation: "Podłoże",
+    specWelcomePackage: "Pakiet powitalny",
     requestOffer: "Otrzymaj ofertę",
     seeSizes: "Zobacz warianty",
     menu: "Menu",
@@ -40,7 +41,7 @@ export const pl = {
   common: {
     priceFrom: "Cena od",
     currency: "zł",
-    priceNote: "Finalna cena zależy od konfiguracji",
+    priceNote: "Finalna cena zależy od wyboru pieca",
     learnMore: "Dowiedz się więcej",
     seeModel: "Zobacz model",
     backToBlog: "Wróć do bloga",
@@ -50,11 +51,12 @@ export const pl = {
     keyFeatures: "Najważniejsze cechy",
     specification: "Specyfikacja",
     standardEquipment: "Wyposażenie w standardzie",
+    seeWelcomePackage: "Zobacz pakiet powitalny",
     configOptions: "Dostępne opcje konfiguracji",
     skipToContent: "Przejdź do treści",
     interiorEyebrow: "Wnętrze",
     interiorTitle: "Dopracowane w każdym detalu",
-    exteriorEyebrow: "Bryła i design",
+    exteriorEyebrow: "Bryła i wyposażenie",
     exteriorTitle: "Forma, która cieszy oko",
     dimensionsEyebrow: "Wymiary",
     dimensionsTitle: "Wymiary i specyfikacja",
@@ -100,7 +102,7 @@ export const pl = {
         {
           title: "Kompletne domowe spa",
           description:
-            "Nie otrzymujesz od nas jedynie samej konstrukcji. Dostarczamy saunę wraz z kompletnym zestawem powitalnym, dzięki czemu po zakończeniu prac nie musisz martwić się o dodatki tylko od razu cieszyć się pierwszym seansem w saunie z linii Regenerum.",
+            "Nie otrzymujesz od nas jedynie samej konstrukcji. Dostarczamy saunę wraz z pakietem wyposażenia w standardzie, dzięki czemu po zakończeniu prac nie musisz martwić się o dodatki tylko od razu cieszyć się pierwszym seansem w saunie z linii Regenerum.",
         },
         {
           title: "Uczciwa cena za jakość",
@@ -118,22 +120,22 @@ export const pl = {
         heater: {
           title: "Piec saunowy",
           description:
-            "Wydajny piec dobrany do kubatury – serce każdego seansu.",
+            "Wydajny piec precyzyjnie dobrany do kubatury sauny. Zapewnia szybkie nagrzewanie, równomierną temperaturę i idealne warunki do każdego seansu.",
         },
         benches: {
-          title: "Profilowane ławy",
+          title: "Profilowane ławy z osiki",
           description:
-            "Ergonomiczne ławy z premium drewna, przyjemne w dotyku i trwałe.",
+            "Ergonomicznie profilowane ławy z osiki. Delikatne i przyjemne w dotyku drewno nie nagrzewa się nadmiernie, zapewniając wyjątkowy komfort podczas każdego seansu.",
         },
         walls: {
           title: "Ściany z litego drewna",
           description:
-            "Świerk skandynawski – stabilny, pięknie pachnący i odporny na wilgoć.",
+            "Lity świerk skandynawski starannie wyselekcjonowany pod kątem trwałości i estetyki. Naturalna struktura drewna tworzy ciepłe, eleganckie wnętrze i wyjątkowy klimat sauny.",
         },
         floor: {
           title: "Podłoga i wykończenie",
           description:
-            "Starannie dobrane materiały, które znoszą wysoką temperaturę.",
+            "Podłoga wykonana z wysokiej jakości drewna Thermowood. Przyjemna dla bosych stóp, odporna na wysoką temperaturę i wilgoć, a przy tym doskonale komponuje się z wnętrzem sauny.",
         },
       },
     },
@@ -143,29 +145,29 @@ export const pl = {
       description:
         "Każdą saunę z linii Regenerum dostarczamy z przemyślanym zestawem powitalnym w standardzie. Znajdziesz w nim akcesoria potrzebne do pierwszego seansu, dzięki czemu od razu po zakończeniu montażu możesz cieszyć się pełnym doświadczeniem RoyalSauna. To, co inni często traktują jako dodatek, u nas jest naturalną częścią doświadczenia.",
       items: [
-        "Piec saunowy dobrany do kubatury",
+        "Piec saunowy ze sterownikiem Wi-Fi",
         "Profilowane ławy z drewna premium",
-        "Osikowe zagłówki",
+        "Osikowe zagłówki – chłodne i przyjemne w dotyku",
         "Cebrzyk i czerpak",
         "Komplet kamieni saunowych",
         "Oświetlenie nastrojowe LED",
         "Termometr i higrometr",
         "Klepsydra saunowa",
-        "Ręczniki (liczba zależna od modelu)",
+        "Ręczniki premium z logo RoyalSauna",
       ],
       groups: [
         {
-          title: "Ławy, zagłówki i LED",
+          title: "Ławy, osikowe zagłówki i LED",
           description:
-            "Profilowane ławy z drewna premium, osikowe zagłówki i podświetlenie LED wbudowane w konstrukcję.",
+            "Profilowane ławy oraz ergonomiczne zagłówki z osiki – drewna, które nie parzy skóry nawet w wysokiej temperaturze. Do tego nastrojowe LED wbudowane w konstrukcję.",
           image: "/images/included-benches.jpg",
           alt: "Profilowane ławy z podświetleniem LED i zagłówkiem",
           shape: "wide" as const,
         },
         {
-          title: "Piec i komplet kamieni",
+          title: "Piec, kamienie i Wi-Fi",
           description:
-            "Wydajny piec saunowy dobrany do kubatury wraz z pełnym kompletem kamieni – gotowy na pierwszy seans.",
+            "Piec dobrany do kubatury, komplet kamieni oraz sterownik z Wi-Fi, dzięki czemu uruchomisz saunę z telefonu, zanim wrócisz do domu.",
           image: "/images/included-heater.jpg",
           alt: "Piec saunowy z kompletem kamieni",
           shape: "portrait" as const,
@@ -173,15 +175,15 @@ export const pl = {
         {
           title: "Atmosfera domowego spa",
           description:
-            "Nastrojowe oświetlenie LED i ciepło drewna budują klimat prawdziwego, prywatnego spa.",
+            "Nastrojowe oświetlenie LED i ciepło ThermoWood budują klimat prawdziwego, prywatnego spa.",
           image: "/images/included-lighting.jpg",
           alt: "Sauna Regenerum nocą z podświetlonym wnętrzem",
           shape: "square" as const,
         },
         {
-          title: "Zestaw powitalny",
+          title: "Pakiet powitalny",
           description:
-            "Cebrzyk, czerpak, termometr, higrometr, klepsydra i ręczniki – gotowe na start.",
+            "Cebrzyk, czerpak, termometr, higrometr, klepsydra oraz ręczniki premium z haftowanym logo RoyalSauna – od 2 do 6 sztuk w zależności od modelu.",
           image: "/images/included-accessories.jpg",
           alt: "Zestaw powitalny: cebrzyk, czerpak, termometr, ręcznik",
           shape: "square" as const,
@@ -200,17 +202,17 @@ export const pl = {
         {
           title: "Otrzymanie wyceny",
           description:
-            "Po paru minutach otrzymujesz przejrzysty dokument z wyceną dla wybranej konfiguracji i szczegółami zamówienia.",
+            "Po paru minutach otrzymujesz przejrzysty dokument z wyceną i opisem wybranego modelu.",
         },
         {
           title: "Przygotowanie specyfikacji",
           description:
-            "Na podstawie dokumenty przygotowujemy specyfikację zamówienia i przygotowujemy saunę do transportu wraz z piecem i zestawem powitalnym.  .",
+            "Na podstawie Twojej konfiguracji przygotowujemy specyfikację zamówienia i przygotowujemy saunę do transportu wraz z piecem i pakietem wyposażenia w standardzie.",
         },
         {
           title: "Dostawa i montaż",
           description:
-            "Dostarczamy i przygotowujemy saunę w Twoim ogrodzie, abyś mógł/mogła jak najszybciej cieszyć się pierwszym seansem w nowej saunie.",
+            "Dostarczamy i przygotowujemy saunę w Twoim ogrodzie, abyś mógł jak najszybciej cieszyć się pierwszym seansem.",
         },
       ],
     },
@@ -276,17 +278,17 @@ export const pl = {
         {
           title: "Compact",
           description:
-            "Dla par i mniejszych ogrodów. Kameralna, intymna przestrzeń na codzienny rytuał we dwoje.",
+            "Dla 2 osób. Kameralna przestrzeń na codzienny rytuał – idealna do mniejszych ogrodów.",
         },
         {
           title: "Comfort",
           description:
-            "Najczęściej wybierany model. Komfort dla rodziny i miejsce dla gości, bez nadmiaru.",
+            "Dla 4 osób. Najczęściej wybierany model – komfort dla rodziny i miejsce dla gości.",
         },
         {
           title: "Premium",
           description:
-            "Dla tych, którzy lubią dzielić się rytuałem. Przestronne spa na spotkania i większe grono.",
+            "Dla 6 osób. Przestronne spa na spotkania i większe grono.",
         },
       ],
     },
@@ -299,19 +301,14 @@ export const pl = {
             "Większa sauna to więcej drewna premium i mocniejszy piec dobrany do kubatury.",
         },
         {
-          title: "Rodzaj pieca",
+          title: "Model pieca",
           description:
-            "Piec elektryczny lub opalany drewnem – różnią się instalacją, mocą i doświadczeniem seansu.",
+            "Harvia Cilindro, Legend lub Spirit – różnią się instalacją, mocą i doświadczeniem seansu.",
         },
         {
           title: "Opcje konfiguracji",
           description:
             "Przeszklenia, taras, oświetlenie i system audio wpływają na ostateczną wycenę.",
-        },
-        {
-          title: "Dostawa i montaż",
-          description:
-            "Lokalizacja i warunki dojazdu decydują o koszcie transportu oraz przygotowania.",
         },
       ],
     },
@@ -447,30 +444,85 @@ export const pl = {
     meta: {
       title: "Drewno służące na lata – materiały saun Regenerum",
       description:
-        "Poznaj drewno i materiały, z których budujemy sauny ogrodowe linii Regenerum – świerk skandynawski i dopracowane detale na dekady.",
+        "Poznaj drewno, z którego budujemy sauny Regenerum – ThermoWood (termowany świerk) na bryłę i podłogę oraz osikę na ławy i zagłówki.",
     },
     materialsSection: {
       eyebrow: "Materiały",
-      title: "Trzy drewna, jedna sauna",
+      title: "Dwa drewna, jedna sauna",
       description:
-        "Do każdego elementu sauny dobieramy inne drewno – tak, by konstrukcja była trwała, ławy przyjemne w dotyku, a podłoga bezpieczna dla stóp.",
+        "Bryłę i podłogę wykonujemy z ThermoWood – termowanego świerku o wyjątkowej trwałości. Ławy i zagłówki z osiki – przyjemnej w kontakcie ze skórą nawet w wysokiej temperaturze.",
       madeFrom: "Wykonane z tego drewna",
+    },
+    thermoWoodSection: {
+      eyebrow: "ThermoWood",
+      title: "ThermoWood – termowany świerk stworzony z myślą o saunach premium",
+      lead:
+        "W saunach RoyalSauna Regenerum wykorzystujemy najwyższej jakości ThermoWood – czyli świerk poddany zaawansowanej modyfikacji termicznej. Dzięki temu łączy naturalne piękno świerku z wyjątkową trwałością. Obróbka odbywa się wyłącznie z wykorzystaniem wysokiej temperatury (180–230°C) oraz pary wodnej – bez użycia jakichkolwiek środków chemicznych. Efektem jest materiał o znacznie lepszych właściwościach użytkowych, idealnie przystosowany do wymagających warunków panujących w saunie.",
+      beautyTitle: "Naturalne piękno i najwyższa trwałość",
+      beautyBody:
+        "Proces ThermoWood znacząco zwiększa odporność drewna na wilgoć, zmiany temperatury oraz działanie czynników atmosferycznych. Dzięki ograniczonej nasiąkliwości materiał zachowuje stabilność przez długie lata, nie ulega łatwym odkształceniom i jest znacznie mniej podatny na pęknięcia czy skręcanie. Jednocześnie wysoka temperatura usuwa z drewna żywicę, dzięki czemu jego powierzchnia pozostaje estetyczna i komfortowa w użytkowaniu.",
+      whyTitle: "Dlaczego ThermoWood?",
+      benefits: [
+        {
+          title: "100% naturalne",
+          description:
+            "Bez chemicznych impregnatów i dodatków – wyłącznie drewno poddane działaniu temperatury oraz pary wodnej.",
+        },
+        {
+          title: "Wyjątkowo trwałe",
+          description:
+            "Odporne na wilgoć, grzyby, pleśń oraz zmienne warunki atmosferyczne.",
+        },
+        {
+          title: "Stabilne wymiarowo",
+          description:
+            "Nawet do 90% mniejsza podatność na skręcanie i odkształcenia w porównaniu z tradycyjnym drewnem.",
+        },
+        {
+          title: "Lepsza izolacja",
+          description:
+            "Nawet o 25% lepsza izolacja cieplna – większa efektywność energetyczna i dłuższe utrzymywanie ciepła.",
+        },
+        {
+          title: "Odporne na owady",
+          description:
+            "Niska zawartość wilgoci skutecznie ogranicza możliwość rozwoju szkodników.",
+        },
+        {
+          title: "Piękny, jednolity kolor",
+          description:
+            "Proces termiczny nadaje drewnu głęboki, szlachetny odcień i zwiększa trwałość powłok ochronnych.",
+        },
+        {
+          title: "Ekologiczne",
+          description:
+            "Pozyskiwane z odnawialnych lasów i w pełni przyjazne dla środowiska.",
+        },
+        {
+          title: "Bezpieczne",
+          description:
+            "Zmieniona struktura zwiększa odporność na działanie ognia w porównaniu z tradycyjnym drewnem.",
+        },
+      ],
+      closingTitle: "Materiał, który przetrwa lata",
+      closingBody:
+        "Wybierając ThermoWood, inwestujesz w drewno stworzone z myślą o wieloletnim użytkowaniu. To materiał ceniony w budownictwie premium za trwałość, elegancki wygląd oraz odporność na wymagające warunki. W saunach RoyalSauna Regenerum pozwala zachować nie tylko wyjątkową estetykę, ale przede wszystkim najwyższy komfort, bezpieczeństwo i niezawodność przez wiele lat codziennego użytkowania.",
     },
     diagramSection: {
       eyebrow: "Konstrukcja",
       title: "Z czego zbudowana jest sauna",
       description:
-        "Rozkładamy saunę na czynniki pierwsze – każdy element bryły to inne drewno, dobrane do jego roli.",
+        "Rozkładamy saunę na czynniki pierwsze – każdy element to drewno dobrane do swojej roli.",
       hotspots: {
         shell: {
           label: "Bryła sauny",
           description:
-            "Świerk skandynawski – gięte, wielowarstwowe łuki nadające saunie charakterystyczny, zaokrąglony kształt.",
+            "ThermoWood (termowany świerk) – gięte, wielowarstwowe łuki nadające saunie charakterystyczny, zaokrąglony kształt.",
         },
         walls: {
           label: "Ściany",
           description:
-            "Świerk skandynawski – lite ściany o podwyższonej odporności na wilgoć i wahania temperatury.",
+            "ThermoWood (termowany świerk) – lite ściany o podwyższonej odporności na wilgoć i wahania temperatury.",
         },
         benches: {
           label: "Ławy",
@@ -480,7 +532,7 @@ export const pl = {
         floor: {
           label: "Podłoga",
           description:
-            "Termowood – termicznie modyfikowane drewno podłogowe, które nie parzy stóp.",
+            "ThermoWood (termowany świerk) – drewno podłogowe, które nie parzy stóp.",
         },
       },
     },
@@ -499,11 +551,11 @@ export const pl = {
     notice: {
       title: "Podłoże przygotowuje Klient",
       description:
-        "Nie zajmujemy się przygotowaniem podłoża – to zakres prac, który Klient wykonuje samodzielnie lub zleca lokalnej firmie budowlanej, przed terminem montażu sauny. Poniżej podpowiadamy, jak zrobić to poprawnie.",
+        "Nie zajmujemy się przygotowaniem podłoża – to zakres prac, który Klient wykonuje samodzielnie, przed terminem montażu sauny. Poniżej podpowiadamy, jak zrobić to poprawnie.",
     },
     typesSection: {
       eyebrow: "Rekomendowane podłoża",
-      title: "Trzy podłoża, które polecamy",
+      title: "Trzy podłoża, które polecamy..",
       description:
         "Każde z nich zapewnia stabilne, równe i dobrze odprowadzające wodę oparcie dla sauny. Wybierz wariant najlepiej dopasowany do terenu i budżetu.",
       instructionsNote: {
@@ -595,6 +647,189 @@ export const pl = {
       ],
     },
   },
+  welcomePackagePage: {
+    banner: {
+      eyebrow: "Specyfikacja",
+      caption: "Pakiet powitalny",
+    },
+    meta: {
+      title: "Pakiet powitalny – akcesoria w standardzie RoyalSauna",
+      description:
+        "Poznaj pakiet powitalny dołączany do każdej sauny linii Regenerum – akcesoria potrzebne do pierwszego seansu.",
+    },
+    showcase: {
+      eyebrow: "W standardzie",
+      title: "Wszystko, czego potrzebujesz do pierwszego seansu",
+      description:
+        "Każda sauna linii Regenerum przyjeżdża gotowa na rytuał. Dobraliśmy detale, które budują atmosferę prawdziwego spa – od ciepła pieca po miękkość ręcznika. Nic nie musisz dokupować. Wystarczy wejść, oddychać i poczuć, że to już Twój domowy rytuał.",
+      items: {
+        towels: {
+          title: "Ręczniki",
+          paragraphs: [
+            "Każda sauna RoyalSauna Regenerum jest dostarczana z ekskluzywnym zestawem ręczników, który stanowi integralną część pakietu powitalnego. Wykonane ze 100% wysokogatunkowej bawełny, zachwycają wyjątkową miękkością, doskonałą chłonnością oraz komfortem użytkowania nawet podczas długich sesji saunowych.",
+            "Każdy ręcznik został wykończony eleganckim, haftowanym logo RoyalSauna, podkreślającym jego premium charakter i dbałość o każdy detal. Duży format kąpielowy zapewnia wygodę zarówno podczas korzystania z sauny, jak i po zakończonym seansie.",
+          ],
+          listLabel: "W zestawie otrzymujesz:",
+          list: [
+            "Regenerum Compact – 2 ręczniki premium",
+            "Regenerum Comfort – 4 ręczniki premium",
+            "Regenerum Premium – 6 ręczników premium",
+          ],
+          closing:
+            "To nie jest zwykły dodatek – to element, który od pierwszego dnia pozwala cieszyć się sauną w najwyższym standardzie, bez konieczności dokupowania jakiegokolwiek wyposażenia. W RoyalSauna wierzymy, że prawdziwy luksus tkwi w detalach, dlatego każdy element pakietu powitalnego został dobrany tak, aby zapewnić maksymalny komfort i wyjątkowe doświadczenie podczas każdego seansu.",
+        },
+        bucketLadle: {
+          title: "Cebrzyk i czerpak",
+          paragraphs: [
+            "Nieodłącznym elementem prawdziwego rytuału saunowego jest możliwość polewania rozgrzanych kamieni wodą, aby zwiększyć wilgotność powietrza i wypełnić wnętrze przyjemną falą gorącej pary. Dlatego każda sauna RoyalSauna Regenerum wyposażona jest w elegancki zestaw składający się z drewnianego cebrzyka oraz dopasowanego czerpaka.",
+            "Wykonane z wysokiej jakości naturalnego drewna, zachwycają klasycznym wyglądem oraz starannym wykończeniem. Ergonomiczny czerpak pozwala wygodnie dozować wodę na kamienie pieca, a pojemny cebrzyk zapewnia jej odpowiedni zapas podczas całego seansu.",
+            "To nie tylko praktyczne akcesoria, ale również element podkreślający autentyczny charakter sauny i wyjątkową atmosferę relaksu. Dzięki spójnemu wzornictwu doskonale komponują się z wnętrzem sauny, tworząc elegancką przestrzeń, w której każdy detal został dopracowany z myślą o najwyższym komforcie użytkowania.",
+          ],
+          listLabel: "",
+          list: [],
+          closing: "",
+        },
+        headrests: {
+          title: "Zagłówki",
+          paragraphs: [
+            "Prawdziwy komfort saunowania tworzą starannie dopracowane detale. Dlatego każda sauna RoyalSauna Regenerum wyposażona jest w dwa ergonomiczne zagłówki wykonane z naturalnego drewna osikowego, które zostały zaprojektowane tak, aby zapewniać wygodne podparcie głowy i karku podczas odpoczynku.",
+            "Drewno osikowe jest szczególnie cenione w wyposażeniu saun ze względu na swoją delikatną, gładką strukturę oraz niską przewodność cieplną. Dzięki temu nie nagrzewa się tak intensywnie jak wiele innych gatunków drewna i pozostaje przyjemne w kontakcie ze skórą nawet podczas seansów w wysokiej temperaturze. Jego jasna, subtelna kolorystyka doskonale komponuje się również z eleganckim wnętrzem sauny, podkreślając jego naturalny i harmonijny charakter.",
+            "Odpowiednio wyprofilowana forma zagłówków dopasowuje się do naturalnego ułożenia głowy i szyi, pozwalając rozluźnić mięśnie oraz przyjąć komfortową pozycję podczas seansu. Starannie wygładzona powierzchnia zapewnia wyjątkową przyjemność w dotyku i sprawia, że każda chwila relaksu staje się jeszcze bardziej komfortowa.",
+            "W standardzie każdego modelu RoyalSauna otrzymujesz dwa zagłówki osikowe, aby odpoczynek i regeneracja mogły być równie przyjemne zarówno podczas samodzielnego seansu, jak i wspólnego saunowania. To połączenie naturalnego materiału, ergonomicznej formy i ponadczasowej estetyki, które pozwala w pełni zanurzyć się w rytuale odprężenia.",
+          ],
+          listLabel: "",
+          list: [],
+          closing: "",
+        },
+        thermoHygro: {
+          title: "Termometr i higrometr",
+          paragraphs: [
+            "Odpowiednia temperatura i wilgotność to podstawa skutecznego oraz komfortowego seansu saunowego. Dlatego każda sauna RoyalSauna Regenerum wyposażona jest w elegancki zestaw składający się z termometru i higrometru, wykonanych z naturalnego drewna osikowego.",
+            "Termometr umożliwia bieżące monitorowanie temperatury wewnątrz sauny, natomiast higrometr pozwala kontrolować poziom wilgotności powietrza. Dzięki temu możesz z łatwością stworzyć idealne warunki do relaksu i dostosować klimat sauny do swoich indywidualnych preferencji.",
+            "Naturalna osika doskonale sprawdza się w wymagającym środowisku sauny, a klasyczne wzornictwo sprawia, że zestaw harmonijnie komponuje się z drewnianym wnętrzem. To połączenie funkcjonalności, trwałości i ponadczasowej estetyki, które podkreśla premium charakter każdej sauny RoyalSauna.",
+          ],
+          listLabel: "",
+          list: [],
+          closing: "",
+        },
+        timer: {
+          title: "Klepsydra",
+          paragraphs: [
+            "Precyzyjne odmierzanie czasu to jeden z kluczowych elementów komfortowego i bezpiecznego saunowania. Dlatego w każdej saunie RoyalSauna Regenerum znajduje się elegancka klepsydra wykonana z naturalnego drewna osikowego, które doskonale sprawdza się w warunkach wysokiej temperatury i wilgotności.",
+            "Klepsydra umożliwia wygodne odmierzanie 5, 10 oraz 15 minut, pomagając dopasować długość seansu do własnych preferencji i poziomu zaawansowania. Czytelna skala pozwala kontrolować czas bez konieczności korzystania z urządzeń elektronicznych, zachowując naturalny i relaksujący charakter saunowania.",
+            "Starannie wykonana z dbałością o każdy detal, harmonijnie komponuje się z wnętrzem sauny, podkreślając jej elegancki i premium charakter. To praktyczny element wyposażenia, który nie tylko ułatwia korzystanie z sauny, ale również stanowi estetyczne dopełnienie całej przestrzeni.",
+          ],
+          listLabel: "",
+          list: [],
+          closing: "",
+        },
+        heaterStones: {
+          title: "Piec i kamienie",
+          paragraphs: [
+            "Sercem każdej sauny RoyalSauna Regenerum jest nowoczesny piec elektryczny klasy premium, wyposażony w komplet dedykowanych kamieni saunowych, które równomiernie magazynują i oddają ciepło, zapewniając optymalne warunki podczas każdego seansu. Dzięki wysokiej wydajności piec szybko osiąga zadaną temperaturę, pozwalając rozpocząć relaks już po krótkim czasie od uruchomienia.",
+            "Nowoczesne wzornictwo pieca doskonale współgra z eleganckim wnętrzem sauny, nadając jej wyjątkowy, luksusowy charakter. To połączenie ponadczasowej estetyki, najwyższej jakości wykonania i niezawodnej technologii, które gwarantuje komfort użytkowania przez długie lata.",
+            "W zestawie znajduje się również inteligentny sterownik z modułem Wi-Fi, dzięki któremu obsługa sauny jest niezwykle prosta i wygodna. Sterownik umożliwia wybór jednego z trzech trybów nagrzewania, pozwalając dopasować pracę pieca do własnych preferencji oraz rodzaju planowanego seansu. Na czytelnym wyświetlaczu w każdej chwili sprawdzisz aktualną temperaturę oraz szacowany czas pozostały do pełnego nagrzania sauny.",
+            "Dzięki łączności Wi-Fi możesz sterować sauną z poziomu smartfona – uruchomić nagrzewanie jeszcze przed powrotem do domu, zmienić ustawienia lub sprawdzić status pracy pieca z dowolnego miejsca. To rozwiązanie, które zapewnia maksymalną wygodę i sprawia, że Twoja sauna jest zawsze gotowa dokładnie wtedy, gdy jej potrzebujesz.",
+          ],
+          listLabel: "",
+          list: [],
+          closing: "",
+        },
+      },
+    },
+    includedValue: {
+      eyebrow: "W cenie",
+      title: "Czego nie musisz dokupywać",
+      description:
+        "To, co u innych bywa dodatkiem płatnym osobno, w RoyalSauna jest naturalną częścią doświadczenia – od pierwszego dnia.",
+      items: [
+        {
+          title: "Piec elektryczny z kompletem kamieni",
+          description: "Dobór do modelu oraz kamienie saunowe w standardzie.",
+        },
+        {
+          title: "Sterownik z Wi-Fi",
+          description: "Uruchomisz saunę z telefonu, zanim wrócisz do domu.",
+        },
+        {
+          title: "Ręczniki premium z logo RoyalSauna",
+          description: "2, 4 lub 6 sztuk – w zależności od wybranego modelu.",
+        },
+        {
+          title: "Cebrzyk i czerpak",
+          description: "Gotowe do polewania kamieni od pierwszego seansu.",
+        },
+        {
+          title: "Dwa zagłówki osikowe",
+          description: "Ergonomiczne podparcie głowy i karku w standardzie.",
+        },
+        {
+          title: "Termometr, higrometr i klepsydra",
+          description: "Pełna kontrola klimatu i czasu – bez elektroniki w kabinie.",
+        },
+      ],
+    },
+    faq: {
+      items: [
+        {
+          question: "Czy kamienie i sterownik Wi-Fi są w cenie sauny?",
+          answer:
+            "Tak. Każda sauna linii Regenerum jest dostarczana z piecem, kompletem kamieni saunowych oraz inteligentnym sterownikiem z modułem Wi-Fi. Nie dokupujesz ich osobno – to część pakietu powitalnego i standardowego wyposażenia.",
+        },
+        {
+          question: "Ile ręczników otrzymam wraz z sauną?",
+          answer:
+            "Liczba ręczników zależy od modelu: Regenerum Compact – 2 szt., Comfort – 4 szt., Premium – 6 szt. Wszystkie są wykonane ze 100% bawełny i wykończone haftowanym logo RoyalSauna.",
+        },
+        {
+          question: "Czy mogę dokupić dodatkowe ręczniki lub akcesoria?",
+          answer:
+            "Tak. Jeśli chcesz uzupełnić zestaw – na przykład o dodatkowe ręczniki na gości – skontaktuj się z nami przy składaniu zamówienia lub później. Chętnie dobierzemy elementy spójne z Twoją sauną.",
+        },
+        {
+          question: "Jak dbać o drewniane akcesoria z pakietu?",
+          answer:
+            "Cebrzyk, czerpak, zagłówki, klepsydrę oraz zestaw termometr/higrometr wystarczy po seansie osuszyć i przechowywać w suchej, przewiewnej przestrzeni wewnątrz sauny lub w jej pobliżu. Unikaj moczenia na dłużej i agresywnych detergentów – naturalne drewno osikowe najlepiej znosi delikatną pielęgnację.",
+        },
+      ],
+    },
+  },
+  qrPages: {
+    offer: {
+      metaTitle: "Otrzymaj ofertę – RoyalSauna",
+      metaDescription:
+        "Zeskanowałeś kod QR na ekspozycji. Wypełnij krótki formularz, a przygotujemy spersonalizowaną ofertę sauny Regenerum.",
+      eyebrow: "Ekspozycja RoyalSauna",
+      title: "Otrzymaj ofertę",
+      description:
+        "Dziękujemy, że jesteś przy naszej saunie. Zostaw dane – odezwiemy się z wyceną i odpowiedziami na Twoje pytania.",
+      formTitle: "Formularz oferty",
+      packageLink: "Zobacz, co jest w pakiecie powitalnym",
+    },
+    welcomePackage: {
+      metaTitle: "Pakiet powitalny – RoyalSauna",
+      metaDescription:
+        "Poznaj pakiet powitalny dołączany do każdej sauny Regenerum – ręczniki, piec ze sterownikiem Wi-Fi, zagłówki i więcej.",
+      eyebrow: "W standardzie",
+      title: "Pakiet powitalny",
+      description:
+        "Każda sauna Regenerum przyjeżdża gotowa na pierwszy seans. Poniżej to, co dostajesz w cenie – bez dokupowania.",
+      offerCta: "Otrzymaj ofertę",
+      items: {
+        towels:
+          "Ręczniki premium z haftowanym logo – 2, 4 lub 6 szt. zależnie od modelu.",
+        bucketLadle:
+          "Drewniany cebrzyk i czerpak – gotowe do polewania kamieni.",
+        headrests:
+          "Dwa ergonomiczne zagłówki z osiki – przyjemne w dotyku, nie parzą.",
+        thermoHygro:
+          "Termometr i higrometr z osiki – kontrola klimatu w sercu sauny.",
+        timer: "Klepsydra 5 / 10 / 15 min – naturalne odmierzanie czasu seansu.",
+        heaterStones:
+          "Piec z kompletem kamieni i sterownikiem Wi-Fi – włączysz saunę z telefonu.",
+      },
+    },
+  },
   configurator: {
     hero: {
       eyebrow: "Konfigurator oferty",
@@ -613,9 +848,9 @@ export const pl = {
           title: "Ile osób będzie korzystać z sauny?",
           description: "Dobierzemy odpowiedni wariant kabiny.",
           options: [
-            { value: "2", label: "1–2 osoby", hint: "Kameralnie, dla pary" },
-            { value: "3", label: "3–4 osoby", hint: "Idealnie dla rodziny" },
-            { value: "5", label: "5 i więcej", hint: "Spotkania ze znajomymi" },
+            { value: "2", label: "2 osoby", hint: "Compact – kameralnie, dla dwóch osób" },
+            { value: "4", label: "4 osoby", hint: "Comfort – idealnie dla rodziny" },
+            { value: "6", label: "6 osób", hint: "Premium – spotkania ze znajomymi" },
           ],
         },
         garden: {

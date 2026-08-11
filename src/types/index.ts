@@ -9,6 +9,8 @@ export type SaunaSize = ModelId;
 export interface ProductImage {
   src: string;
   alt: string;
+  /** Optional portrait crop shown on phones (< sm), where a wide desktop shot gets cropped too tightly. */
+  mobileSrc?: string;
 }
 
 export interface ProductSpec {
@@ -65,6 +67,11 @@ export interface ProductCopy {
 export interface FaqItem {
   question: string;
   answer: string;
+  /** Optional CTA shown below the answer, e.g. linking to a detail page. */
+  link?: {
+    label: string;
+    href: string;
+  };
 }
 
 export interface BlogPost {
@@ -100,7 +107,7 @@ export interface BreadcrumbItem {
 export type HeaterModelId = "cilindro" | "legend" | "spirit";
 
 /** Named wood materials shown on the /specyfikacja/drewno page. */
-export type WoodMaterialId = "spruce" | "aspen" | "thermowood";
+export type WoodMaterialId = "thermowood" | "aspen";
 
 /** A finished sauna element made from a given {@link WoodMaterial}, e.g. benches. */
 export interface WoodMaterialElement {

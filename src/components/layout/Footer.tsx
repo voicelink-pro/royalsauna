@@ -48,11 +48,11 @@ export function Footer({
                 }`;
                 return (
                   <FooterGroup key={product.id} title={product.name} href={href}>
+                    <FooterSubLink href={`${href}#design`}>
+                      {dict.common.exteriorEyebrow}
+                    </FooterSubLink>
                     <FooterSubLink href={`${href}#wnetrze`}>
                       {dict.common.interiorTitle}
-                    </FooterSubLink>
-                    <FooterSubLink href={`${href}#design`}>
-                      {dict.common.exteriorTitle}
                     </FooterSubLink>
                     <FooterSubLink href={`${href}#wymiary`}>
                       {dict.common.dimensionsTitle}

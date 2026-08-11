@@ -46,7 +46,7 @@ export const heaterModels: HeaterModel[] = [
     mounting: "standing",
     color: "black",
     powerKw: 6.8,
-    volumeM3: null,
+    volumeM3: { min: 8, max: 14 },
     controller: "Harvia Fenix WiFi",
     wifiApp: "MyHarvia WiFi",
     requiresControlLicense: true,

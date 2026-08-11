@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 /**
  * Full-bleed, full-screen intro banner for standalone content pages (e.g.
@@ -7,24 +8,40 @@ import Image from "next/image";
  */
 export function PageHeroBanner({
   image,
+  mobileImage,
   alt,
   eyebrow,
   caption,
 }: {
   image: string;
+  /** Optional portrait crop shown on phones (< sm), where the wide desktop shot gets cropped too tightly. */
+  mobileImage?: string;
   alt: string;
   eyebrow: string;
   caption: string;
 }) {
   return (
     <section className="relative isolate flex h-screen w-full items-center justify-center overflow-hidden text-center">
+      {mobileImage && (
+        <Image
+          src={mobileImage}
+          alt={alt}
+          fill
+          priority
+          sizes="100vw"
+          className="animate-zoom-slow object-cover sm:hidden"
+        />
+      )}
       <Image
         src={image}
         alt={alt}
         fill
         priority
         sizes="100vw"
-        className="animate-zoom-slow object-cover"
+        className={cn(
+          "animate-zoom-slow object-cover",
+          mobileImage && "hidden sm:block",
+        )}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-bark-900/50 via-bark-900/25 to-bark-900/60" />
 

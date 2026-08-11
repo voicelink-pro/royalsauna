@@ -21,12 +21,24 @@ export function LeadForm({
   defaultModel = "unknown",
   formLocation = "lead_form",
   compact = false,
+  attributionOverride,
 }: {
   locale: Locale;
   dict: Dictionary;
   defaultModel?: ModelValue;
   formLocation?: string;
   compact?: boolean;
+  /** Forces UTM / source fields (e.g. physical QR landings). */
+  attributionOverride?: Partial<
+    Pick<
+      LeadPayload,
+      | "utm_source"
+      | "utm_medium"
+      | "utm_campaign"
+      | "utm_content"
+      | "utm_term"
+    >
+  >;
 }) {
   const getAttribution = useAttribution();
   const startedRef = useRef(false);
@@ -83,6 +95,7 @@ export function LeadForm({
       selected_model: form.preferredModel,
       locale,
       ...getAttribution(),
+      ...attributionOverride,
     };
 
     try {

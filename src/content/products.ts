@@ -57,7 +57,7 @@ export const products: Product[] = [
     slug: "compact",
     enSlug: "compact",
     name: "Compact",
-    priceFrom: 32000,
+    priceFrom: 37300,
     capacity: 2,
     images: [
       {
@@ -79,15 +79,16 @@ export const products: Product[] = [
     ],
     bannerImage: {
       src: "/images/cubus2-banner.jpg",
+      mobileSrc: "/images/cubus2-banner-mobile.jpg",
       alt: "Sauna Regenerum Compact – zdjęcie w tle",
     },
     i18n: {
       pl: {
-        tagline: "Kameralna sauna dla dwojga",
+        tagline: "Kameralna sauna dla dwóch osób",
         audience:
-          "Dla par i osób, które cenią prywatność oraz mniejszych ogrodów, tarasów i działek, gdzie liczy się każdy metr. Compact to intymny rytuał regeneracji we dwoje – bez kompromisów w jakości.",
+          "Dla osób, które cenią prywatność, oraz mniejszych ogrodów, tarasów i działek, gdzie liczy się każdy metr. Compact to intymny rytuał regeneracji dla dwóch osób – bez kompromisów w jakości.",
         shortDescription:
-          "Najbardziej kompaktowy model linii Regenerum. Pełnowartościowa sauna dla dwojga, która zmieści się nawet w niewielkim ogrodzie.",
+          "Najbardziej kompaktowy model linii Regenerum. Pełnowartościowa sauna dla dwóch osób, która zmieści się nawet w niewielkim ogrodzie.",
         longDescription:
           "Compact to dowód na to, że luksus nie potrzebuje wielu metrów. W zwartej, designerskiej bryle ze świerku skandynawskiego mieści się wszystko, czego potrzebujesz do prawdziwego seansu: dopracowana komora cieplna, panoramiczna szyba otwierająca wnętrze na ogród i piec dobrany do kubatury, który szybko osiąga temperaturę. To sauna, która staje się Twoim prywatnym zakątkiem regeneracji – kameralnym, ciepłym i gotowym na codzienny rytuał.",
         features: [
@@ -97,7 +98,7 @@ export const products: Product[] = [
               "Minimalistyczna forma sześcianu, która elegancko wpisuje się nawet w niewielki ogród czy taras.",
           },
           {
-            title: "Idealna dla pary",
+            title: "Idealna dla dwóch osób",
             description:
               "Komfortowe miejsce dla dwóch osób z profilowanymi ławami i zagłówkami zaprojektowanymi pod pełen relaks.",
           },
@@ -113,21 +114,24 @@ export const products: Product[] = [
           },
         ],
         specs: [
-          { label: "Liczba osób", value: "1–2" },
-          { label: "Wymiary zewnętrzne", value: "2,0 × 2,0 m" },
-          { label: "Wysokość", value: "2,2 m" },
+          { label: "Liczba osób", value: "2" },
+          { label: "Wymiary zewnętrzne", value: "2,10 × 2,15 m" },
+          { label: "Wysokość", value: "2,06 m" },
+          { label: "Powierzchnia użytkowa", value: "4,50 m²" },
+          { label: "Grubość ściany", value: "42 mm" },
           { label: "Materiał", value: "Świerk skandynawski premium" },
-          { label: "Piec", value: "Elektryczny lub na drewno" },
+          { label: "Piec", value: "Harvia Cilindro, Legend lub Spirit" },
           { label: "Moc pieca", value: "od 6 kW" },
           { label: "Przyłącze elektryczne", value: "Po stronie Klienta" },
           { label: "Czas nagrzewania", value: "ok. 30–40 min" },
+          { label: "Czas montażu", value: "1–2 dni" },
         ],
         included: includedPl("compact"),
         options: [
           {
             title: "Wybór pieca",
             description:
-              "Elektryczny dla wygody i szybkości lub na drewno dla tradycyjnego rytuału.",
+              "Piec Harvia Cilindro, Legend lub Spirit – dobierzemy model najlepiej dopasowany do Twojej sauny.",
           },
           {
             title: "Wykończenie elewacji",
@@ -152,16 +156,16 @@ export const products: Product[] = [
               "Wystarczy równe, stabilne i nośne podłoże – np. płyta betonowa, bloczki lub utwardzona nawierzchnia. Szczegółowe wytyczne przekazujemy przed dostawą.",
           },
           {
-            question: "Czy mogę wybrać piec na drewno zamiast elektrycznego?",
+            question: "Który piec Harvia pasuje do Compact?",
             answer:
-              "Tak. Compact dostępny jest z piecem elektrycznym lub na drewno – pomożemy dobrać rozwiązanie do Twoich preferencji i dostępu do instalacji.",
+              "Do modelu Compact dobierzemy piec Harvia Cilindro, Legend lub Spirit – każdy z modułem WiFi i aplikacją MyHarvia. Pomożemy wybrać wariant najlepiej dopasowany do Twojej instalacji.",
           },
         ],
       },
       en: {
         tagline: "An intimate sauna for two",
         audience:
-          "For couples who value privacy and for smaller gardens, terraces and plots where every square metre counts. Compact is an intimate recovery ritual for two – with no compromise on quality.",
+          "For those who value privacy, and for smaller gardens, terraces and plots where every square metre counts. Compact is an intimate recovery ritual for two people – with no compromise on quality.",
         shortDescription:
           "The most compact model in the Regenerum line. A full-value sauna for two that fits even a small garden.",
         longDescription:
@@ -173,7 +177,7 @@ export const products: Product[] = [
               "A minimalist cube that sits elegantly even in a small garden or on a terrace.",
           },
           {
-            title: "Perfect for couples",
+            title: "Perfect for two people",
             description:
               "A comfortable space for two with contoured benches and headrests designed for full relaxation.",
           },
@@ -189,21 +193,24 @@ export const products: Product[] = [
           },
         ],
         specs: [
-          { label: "People", value: "1–2" },
-          { label: "Exterior dimensions", value: "2.0 × 2.0 m" },
-          { label: "Height", value: "2.2 m" },
+          { label: "People", value: "2" },
+          { label: "Exterior dimensions", value: "2.10 × 2.15 m" },
+          { label: "Height", value: "2.06 m" },
+          { label: "Usable floor area", value: "4.50 m²" },
+          { label: "Wall thickness", value: "42 mm" },
           { label: "Material", value: "Premium Scandinavian spruce" },
-          { label: "Heater", value: "Electric or wood-burning" },
+          { label: "Heater", value: "Harvia Cilindro, Legend or Spirit" },
           { label: "Heater power", value: "from 6 kW" },
           { label: "Electrical connection", value: "Provided by the client" },
           { label: "Heat-up time", value: "approx. 30–40 min" },
+          { label: "Installation time", value: "1–2 days" },
         ],
         included: includedEn("compact"),
         options: [
           {
             title: "Heater choice",
             description:
-              "Electric for convenience and speed, or wood-burning for a traditional ritual.",
+              "Harvia Cilindro, Legend or Spirit – we'll match the model best suited to your sauna.",
           },
           {
             title: "Facade finish",
@@ -228,9 +235,9 @@ export const products: Product[] = [
               "A level, stable and load-bearing base is enough – e.g. a concrete slab, blocks or a paved surface. We provide detailed guidelines before delivery.",
           },
           {
-            question: "Can I choose a wood-burning heater instead of electric?",
+            question: "Which Harvia heater suits Compact?",
             answer:
-              "Yes. Compact is available with an electric or a wood-burning heater – we'll help you match the solution to your preferences and power access.",
+              "For Compact we offer the Harvia Cilindro, Legend or Spirit heater – each with WiFi and the MyHarvia app. We'll help you choose the option best suited to your installation.",
           },
         ],
       },
@@ -242,8 +249,8 @@ export const products: Product[] = [
     slug: "comfort",
     enSlug: "comfort",
     name: "Comfort",
-    priceFrom: 42000,
-    capacity: 3,
+    priceFrom: 42100,
+    capacity: 4,
     images: [
       {
         src: "/images/cubus3-hero.jpg",
@@ -264,6 +271,7 @@ export const products: Product[] = [
     ],
     bannerImage: {
       src: "/images/cubus3-banner.jpg",
+      mobileSrc: "/images/cubus3-banner-mobile.jpg",
       alt: "Sauna Regenerum Comfort – zdjęcie w tle",
     },
     i18n: {
@@ -274,12 +282,12 @@ export const products: Product[] = [
         shortDescription:
           "Środkowy, najbardziej uniwersalny model linii Regenerum. Przestrzeń dla rodziny przy zachowaniu zgrabnych proporcji.",
         longDescription:
-          "Comfort to model, który najczęściej polecamy – i nie bez powodu. Łączy komfortową przestrzeń dla trzech, czterech osób ze zgrabną bryłą, która dobrze odnajduje się w typowym ogrodzie. Wnętrze zaprojektowano z myślą o swobodnym seansie w gronie rodziny: szersze ławy, wygodne zagłówki i przemyślana cyrkulacja ciepła. To sauna, wokół której zbiera się dom – na codzienny relaks i wieczory, które chce się przedłużać.",
+          "Comfort to model, który najczęściej polecamy – i nie bez powodu. Łączy komfortową przestrzeń dla czterech osób ze zgrabną bryłą, która dobrze odnajduje się w typowym ogrodzie. Wnętrze zaprojektowano z myślą o swobodnym seansie w gronie rodziny: szersze ławy, wygodne zagłówki i przemyślana cyrkulacja ciepła. To sauna, wokół której zbiera się dom – na codzienny relaks i wieczory, które chce się przedłużać.",
         features: [
           {
             title: "Komfort dla rodziny",
             description:
-              "Przestrzeń dla 3–4 osób z szerszymi ławami i swobodą ruchu podczas seansu.",
+              "Przestrzeń dla 4 osób z szerszymi ławami i swobodą ruchu podczas seansu.",
           },
           {
             title: "Uniwersalne proporcje",
@@ -298,21 +306,24 @@ export const products: Product[] = [
           },
         ],
         specs: [
-          { label: "Liczba osób", value: "3–4" },
-          { label: "Wymiary zewnętrzne", value: "2,4 × 2,0 m" },
-          { label: "Wysokość", value: "2,2 m" },
+          { label: "Liczba osób", value: "4" },
+          { label: "Wymiary zewnętrzne", value: "2,40 × 2,20 m" },
+          { label: "Wysokość", value: "2,26 m" },
+          { label: "Powierzchnia użytkowa", value: "5,3 m²" },
+          { label: "Grubość ściany", value: "42 mm" },
           { label: "Materiał", value: "Świerk skandynawski premium" },
-          { label: "Piec", value: "Elektryczny lub na drewno" },
+          { label: "Piec", value: "Harvia Cilindro, Legend lub Spirit" },
           { label: "Moc pieca", value: "od 8 kW" },
           { label: "Przyłącze elektryczne", value: "Po stronie Klienta" },
           { label: "Czas nagrzewania", value: "ok. 40–50 min" },
+          { label: "Czas montażu", value: "1–2 dni" },
         ],
         included: includedPl("comfort"),
         options: [
           {
             title: "Wybór pieca",
             description:
-              "Elektryczny dla wygody i szybkości lub na drewno dla tradycyjnego rytuału.",
+              "Piec Harvia Cilindro, Legend lub Spirit – dobierzemy model najlepiej dopasowany do Twojej sauny.",
           },
           {
             title: "Wykończenie elewacji",
@@ -334,7 +345,7 @@ export const products: Product[] = [
           {
             question: "Ile osób komfortowo zmieści się w Comfort?",
             answer:
-              "Comfort komfortowo pomieści 4-6 osób. To najbardziej uniwersalny model w linii – sprawdzi się zarówno dla rodziny, jak i dla spotkań w mniejszym gronie.",
+              "Comfort komfortowo pomieści 4 osoby. To najbardziej uniwersalny model w linii – sprawdzi się zarówno dla rodziny, jak i dla spotkań w mniejszym gronie.",
           },
           {
             question: "Czy sauna jest gotowa do użytku zaraz po montażu?",
@@ -355,12 +366,12 @@ export const products: Product[] = [
         shortDescription:
           "The middle, most versatile model in the Regenerum line. Room for the family while keeping neat proportions.",
         longDescription:
-          "Comfort is the model we recommend most often – and for good reason. It combines comfortable space for three or four people with a neat form that fits a typical garden well. The interior is designed for a relaxed session with family: wider benches, comfortable headrests and well-considered heat circulation. It's a sauna the household gathers around – for daily relaxation and evenings you want to stretch out.",
+          "Comfort is the model we recommend most often – and for good reason. It combines comfortable space for four people with a neat form that fits a typical garden well. The interior is designed for a relaxed session with family: wider benches, comfortable headrests and well-considered heat circulation. It's a sauna the household gathers around – for daily relaxation and evenings you want to stretch out.",
         features: [
           {
             title: "Comfort for the family",
             description:
-              "Space for 3–4 people with wider benches and freedom of movement during a session.",
+              "Space for 4 people with wider benches and freedom of movement during a session.",
           },
           {
             title: "Versatile proportions",
@@ -379,21 +390,24 @@ export const products: Product[] = [
           },
         ],
         specs: [
-          { label: "People", value: "3–4" },
-          { label: "Exterior dimensions", value: "2.4 × 2.0 m" },
-          { label: "Height", value: "2.2 m" },
+          { label: "People", value: "4" },
+          { label: "Exterior dimensions", value: "2.40 × 2.20 m" },
+          { label: "Height", value: "2.26 m" },
+          { label: "Usable floor area", value: "5.3 m²" },
+          { label: "Wall thickness", value: "42 mm" },
           { label: "Material", value: "Premium Scandinavian spruce" },
-          { label: "Heater", value: "Electric or wood-burning" },
+          { label: "Heater", value: "Harvia Cilindro, Legend or Spirit" },
           { label: "Heater power", value: "from 8 kW" },
           { label: "Electrical connection", value: "Provided by the client" },
           { label: "Heat-up time", value: "approx. 40–50 min" },
+          { label: "Installation time", value: "1–2 days" },
         ],
         included: includedEn("comfort"),
         options: [
           {
             title: "Heater choice",
             description:
-              "Electric for convenience and speed, or wood-burning for a traditional ritual.",
+              "Harvia Cilindro, Legend or Spirit – we'll match the model best suited to your sauna.",
           },
           {
             title: "Facade finish",
@@ -415,7 +429,7 @@ export const products: Product[] = [
           {
             question: "How many people fit comfortably in Comfort?",
             answer:
-              "Comfort comfortably seats 3–4 people. It's the most versatile model in the line – great for a family as well as smaller gatherings.",
+              "Comfort comfortably seats 4 people. It's the most versatile model in the line – great for a family as well as smaller gatherings.",
           },
           {
             question: "Is the sauna ready to use right after installation?",
@@ -437,8 +451,8 @@ export const products: Product[] = [
     slug: "premium",
     enSlug: "premium",
     name: "Premium",
-    priceFrom: 56000,
-    capacity: 5,
+    priceFrom: 45900,
+    capacity: 6,
     images: [
       {
         src: "/images/cubus5-hero.jpg",
@@ -459,6 +473,7 @@ export const products: Product[] = [
     ],
     bannerImage: {
       src: "/images/cubus5-banner.jpg",
+      mobileSrc: "/images/cubus5-banner-mobile.jpg",
       alt: "Sauna Regenerum Premium – zdjęcie w tle",
     },
     i18n: {
@@ -467,14 +482,14 @@ export const products: Product[] = [
         audience:
           "Dla większych rodzin, miłośników spotkań i tych, którzy traktują saunę jako serce domowego spa. Premium to najbardziej przestronny model linii Regenerum – stworzony, by dzielić ciepło z innymi.",
         shortDescription:
-          "Najbardziej przestronny model linii Regenerum. Przestronne wnętrze dla ośmiu osób i pełne doświadczenie domowego spa.",
+          "Najbardziej przestronny model linii Regenerum. Przestronne wnętrze dla sześciu osób i pełne doświadczenie domowego spa.",
         longDescription:
-          "Premium to nasza najbardziej okazała sauna – przestrzeń, w której rytuał staje się wydarzeniem. Wielopoziomowe ławy pozwalają wybrać intensywność seansu, a przestronne wnętrze ze świerku skandynawskiego komfortowo mieści pięć osób. Duże przeszklenie i nastrojowe światło budują atmosferę prawdziwego, prywatnego spa. To model dla tych, którzy lubią dzielić ciepło – z rodziną i przyjaciółmi, w wieczory, które zostają w pamięci.",
+          "Premium to nasza najbardziej okazała sauna – przestrzeń, w której rytuał staje się wydarzeniem. Wielopoziomowe ławy pozwalają wybrać intensywność seansu, a przestronne wnętrze ze świerku skandynawskiego komfortowo mieści sześć osób. Duże przeszklenie i nastrojowe światło budują atmosferę prawdziwego, prywatnego spa. To model dla tych, którzy lubią dzielić ciepło – z rodziną i przyjaciółmi, w wieczory, które zostają w pamięci.",
         features: [
           {
             title: "Maksimum przestrzeni",
             description:
-              "Komfortowe wnętrze dla 5 osób z wielopoziomowymi ławami do wyboru intensywności seansu.",
+              "Komfortowe wnętrze dla 6 osób z wielopoziomowymi ławami do wyboru intensywności seansu.",
           },
           {
             title: "Stworzona do spotkań",
@@ -493,21 +508,24 @@ export const products: Product[] = [
           },
         ],
         specs: [
-          { label: "Liczba osób", value: "5" },
-          { label: "Wymiary zewnętrzne", value: "3,0 × 2,2 m" },
-          { label: "Wysokość", value: "2,3 m" },
+          { label: "Liczba osób", value: "6" },
+          { label: "Wymiary zewnętrzne", value: "3,00 × 2,40 m" },
+          { label: "Wysokość", value: "2,60 m" },
+          { label: "Powierzchnia użytkowa", value: "7,2 m²" },
+          { label: "Grubość ściany", value: "42 mm" },
           { label: "Materiał", value: "Świerk skandynawski premium" },
-          { label: "Piec", value: "Elektryczny lub na drewno" },
+          { label: "Piec", value: "Harvia Cilindro lub Legend" },
           { label: "Moc pieca", value: "od 9 kW" },
           { label: "Przyłącze elektryczne", value: "Po stronie Klienta" },
           { label: "Czas nagrzewania", value: "ok. 50–60 min" },
+          { label: "Czas montażu", value: "1–2 dni" },
         ],
         included: includedPl("premium"),
         options: [
           {
             title: "Wybór pieca",
             description:
-              "Elektryczny dla wygody i szybkości lub na drewno dla tradycyjnego rytuału.",
+              "Piec Harvia Cilindro lub Legend – dobierzemy model najlepiej dopasowany do Twojej sauny.",
           },
           {
             title: "Wykończenie elewacji",
@@ -529,7 +547,7 @@ export const products: Product[] = [
           {
             question: "Czy Premium potrzebuje instalacji 400V (siły)?",
             answer:
-              "Piec elektryczny o większej mocy zwykle wymaga przyłącza 400V. Jeśli nie masz dostępu do siły, doskonałą alternatywą jest piec na drewno – pomożemy wybrać najlepsze rozwiązanie.",
+              "Piec Cilindro o mocy 9,0 kW wymaga przyłącza 400V. Jeśli nie masz dostępu do siły, doskonałą alternatywą jest piec Legend, który można podłączyć elastyczniej – 230V, 230V 3~ lub 400V 3N~.",
           },
           {
             question: "Jak długo trwa realizacja zamówienia?",
@@ -548,14 +566,14 @@ export const products: Product[] = [
         audience:
           "For larger families, lovers of gatherings and those who treat the sauna as the heart of a home spa. Premium is the most spacious model in the Regenerum line – made to share warmth with others.",
         shortDescription:
-          "The largest model in the Regenerum line. A spacious interior for five and a complete home-spa experience.",
+          "The largest model in the Regenerum line. A spacious interior for six and a complete home-spa experience.",
         longDescription:
-          "Premium is our most generous sauna – a space where the ritual becomes an occasion. Multi-level benches let you choose the intensity of your session, while the spacious Scandinavian-spruce interior comfortably seats five. A large glazed front and ambient lighting build the atmosphere of a true, private spa. It's the model for those who love to share warmth – with family and friends, on evenings worth remembering.",
+          "Premium is our most generous sauna – a space where the ritual becomes an occasion. Multi-level benches let you choose the intensity of your session, while the spacious Scandinavian-spruce interior comfortably seats six. A large glazed front and ambient lighting build the atmosphere of a true, private spa. It's the model for those who love to share warmth – with family and friends, on evenings worth remembering.",
         features: [
           {
             title: "Maximum space",
             description:
-              "A comfortable interior for 5 with multi-level benches to choose your session intensity.",
+              "A comfortable interior for 6 with multi-level benches to choose your session intensity.",
           },
           {
             title: "Made for gatherings",
@@ -574,21 +592,24 @@ export const products: Product[] = [
           },
         ],
         specs: [
-          { label: "People", value: "5" },
-          { label: "Exterior dimensions", value: "3.0 × 2.2 m" },
-          { label: "Height", value: "2.3 m" },
+          { label: "People", value: "6" },
+          { label: "Exterior dimensions", value: "3.00 × 2.40 m" },
+          { label: "Height", value: "2.60 m" },
+          { label: "Usable floor area", value: "7.2 m²" },
+          { label: "Wall thickness", value: "42 mm" },
           { label: "Material", value: "Premium Scandinavian spruce" },
-          { label: "Heater", value: "Electric or wood-burning" },
+          { label: "Heater", value: "Harvia Cilindro or Legend" },
           { label: "Heater power", value: "from 9 kW" },
           { label: "Electrical connection", value: "Provided by the client" },
           { label: "Heat-up time", value: "approx. 50–60 min" },
+          { label: "Installation time", value: "1–2 days" },
         ],
         included: includedEn("premium"),
         options: [
           {
             title: "Heater choice",
             description:
-              "Electric for convenience and speed, or wood-burning for a traditional ritual.",
+              "Harvia Cilindro or Legend – we'll match the model best suited to your sauna.",
           },
           {
             title: "Facade finish",
@@ -610,7 +631,7 @@ export const products: Product[] = [
           {
             question: "Does Premium need 3-phase (400V) power?",
             answer:
-              "A higher-power electric heater usually requires a 400V connection. If you don't have 3-phase access, a wood-burning heater is an excellent alternative – we'll help you choose the best option.",
+              "The 9.0 kW Cilindro heater requires a 400V connection. If you don't have 3-phase access, the Legend heater is an excellent alternative – it can be wired more flexibly at 230V, 230V 3-phase or 400V 3N.",
           },
           {
             question: "How long does an order take to complete?",

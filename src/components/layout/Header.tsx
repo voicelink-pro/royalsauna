@@ -38,8 +38,8 @@ export function Header({
 
   const nav: NavLink[] = [
     { key: "models", label: dict.nav.models, href: routeMap.saunas[locale] },
-    { key: "configurator", label: dict.nav.configurator, href: routeMap.configurator[locale] },
     { key: "specification", label: dict.nav.specification, href: routeMap.quality[locale] },
+    { key: "configurator", label: dict.nav.configurator, href: routeMap.configurator[locale] },
     { key: "blog", label: dict.nav.blog, href: routeMap.blog[locale] },
     { key: "contact", label: dict.nav.contact, href: routeMap.contact[locale] },
   ];
@@ -70,6 +70,12 @@ export function Header({
       label: dict.nav.specFoundation,
       href: routeMap.foundation[locale],
       image: "/images/podloze-banner.jpg",
+    },
+    {
+      key: "welcomePackage",
+      label: dict.nav.specWelcomePackage,
+      href: routeMap.welcomePackage[locale],
+      image: "/images/pakiet-powitalny-banner.jpg",
     },
   ];
 
@@ -119,11 +125,19 @@ export function Header({
   // full-bleed photo banner, so the header stays transparent over it just
   // like on the home page, until scrolled past.
   const isProductPage = modelLinks.some((m) => m.href === pathname);
+  const isSaunasPage = pathname === routeMap.saunas[locale];
   const isHeatersPage = pathname === routeMap.heaters[locale];
   const isWoodPage = pathname === routeMap.wood[locale];
   const isFoundationPage = pathname === routeMap.foundation[locale];
+  const isWelcomePackagePage = pathname === routeMap.welcomePackage[locale];
   const hasTransparentHero =
-    isHomePage || isProductPage || isHeatersPage || isWoodPage || isFoundationPage;
+    isHomePage ||
+    isSaunasPage ||
+    isProductPage ||
+    isHeatersPage ||
+    isWoodPage ||
+    isFoundationPage ||
+    isWelcomePackagePage;
   const overDark = hasTransparentHero && !pastHero && !open;
 
   return (
@@ -135,18 +149,18 @@ export function Header({
           : "bg-sand-100/95 shadow-[0_1px_0_rgba(90,70,50,0.08)] backdrop-blur",
       )}
     >
-      <Container className="flex h-20 items-center justify-between">
+      <Container className="flex h-24 items-center justify-between">
         <Link
           href={homeHref}
           aria-label={dict.brand.name}
-          className="relative block h-11 w-[155px] shrink-0 transition-opacity duration-500 hover:opacity-90 sm:h-12 sm:w-[176px]"
+          className="relative block h-16 w-[224px] shrink-0 transition-opacity duration-500 hover:opacity-90 sm:h-20 sm:w-[280px]"
         >
           <Image
             src="/logo.png"
             alt={dict.brand.name}
             fill
             priority
-            sizes="176px"
+            sizes="280px"
             className={cn(
               "object-contain object-left transition-all duration-500",
               overDark && "brightness-0 invert",

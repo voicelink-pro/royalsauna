@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useState } from "react";
+import Link from "next/link";
 import type { FaqItem } from "@/types";
 import { cn } from "@/lib/utils";
 
@@ -74,6 +75,15 @@ export function FAQSection({ items }: { items: FaqItem[] }) {
               <p className="max-w-prose leading-relaxed text-bark-500">
                 {item.answer}
               </p>
+              {item.link && (
+                <Link
+                  href={item.link.href}
+                  className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-clay-600 transition-colors hover:text-clay-500"
+                >
+                  {item.link.label}
+                  <span aria-hidden="true">→</span>
+                </Link>
+              )}
             </div>
           </div>
         );

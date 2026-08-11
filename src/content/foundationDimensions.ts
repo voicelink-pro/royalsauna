@@ -1,25 +1,26 @@
 import type { FoundationDimensions, Locale } from "@/types";
 
 /**
- * Recommended foundation size = exterior sauna footprint + 20 cm of margin on
- * each side (so 40 cm added to both width and depth). Keep in sync with the
- * "Exterior dimensions" specs in src/content/products.ts.
+ * Recommended foundation size = exterior sauna footprint + 10 cm of margin on
+ * each side (so 20 cm added to both width and depth), per the manufacturer's
+ * technical drawings. Keep in sync with the "Exterior dimensions" specs in
+ * src/content/products.ts.
  */
 export const foundationDimensions: FoundationDimensions[] = [
   {
     modelId: "compact",
-    exteriorM: { width: 2.0, depth: 2.0 },
-    recommendedM: { width: 2.4, depth: 2.4 },
+    exteriorM: { width: 2.1, depth: 2.145 },
+    recommendedM: { width: 2.3, depth: 2.345 },
   },
   {
     modelId: "comfort",
-    exteriorM: { width: 2.4, depth: 2.0 },
-    recommendedM: { width: 2.8, depth: 2.4 },
+    exteriorM: { width: 2.4, depth: 2.2 },
+    recommendedM: { width: 2.6, depth: 2.4 },
   },
   {
     modelId: "premium",
-    exteriorM: { width: 3.0, depth: 2.2 },
-    recommendedM: { width: 3.4, depth: 2.6 },
+    exteriorM: { width: 3.0, depth: 2.4 },
+    recommendedM: { width: 3.2, depth: 2.6 },
   },
 ];
 

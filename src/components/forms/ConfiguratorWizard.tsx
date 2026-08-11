@@ -94,7 +94,7 @@ export function ConfiguratorWizard({
 
   const reasons = useMemo(() => {
     const r: string[] = [W.result.reasons.peopleModel];
-    if (answers.garden === "small" && answers.people === "5") {
+    if (answers.garden === "small" && answers.people === "6") {
       r.push(W.result.reasons.smallGarden);
     }
     return r;

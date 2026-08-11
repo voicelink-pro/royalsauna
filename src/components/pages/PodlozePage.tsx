@@ -35,6 +35,7 @@ export function PodlozePage({ locale }: { locale: Locale }) {
 
       <PageHeroBanner
         image="/images/podloze-banner.jpg"
+        mobileImage="/images/podloze-banner-mobile.jpg"
         alt={p.banner.caption}
         eyebrow={p.banner.eyebrow}
         caption={p.banner.caption}
@@ -94,13 +95,13 @@ export function PodlozePage({ locale }: { locale: Locale }) {
             return (
               <Reveal key={type.id} delay={i * 100} className="h-full">
                 <div className="flex h-full flex-col overflow-hidden rounded-3xl border border-sand-200 bg-ivory shadow-card">
-                  <div className="relative aspect-[4/3]">
+                  <div className="relative aspect-[16/9] bg-sand-100">
                     <Image
                       src={type.image.src}
                       alt={type.image.alt}
                       fill
                       sizes="(min-width: 1024px) 33vw, 100vw"
-                      className="object-cover"
+                      className="object-contain object-center"
                     />
                   </div>
                   <div className="flex flex-1 flex-col p-6">
@@ -254,17 +255,16 @@ export function PodlozePage({ locale }: { locale: Locale }) {
         <div className="space-y-10">
           {foundationTypes.map((type, i) => {
             const copy = type.i18n[locale];
-            const cols = p.compareSection.columns;
             return (
               <Reveal key={type.id} delay={i * 100}>
                 <div className="overflow-hidden rounded-3xl bg-ivory shadow-card">
-                  <div className="relative aspect-[4/3] sm:aspect-[16/9]">
+                  <div className="relative aspect-[16/9] bg-sand-100">
                     <Image
                       src={type.image.src}
                       alt={type.image.alt}
                       fill
                       sizes="(max-width: 1024px) 100vw, 1024px"
-                      className="object-cover"
+                      className="object-contain object-center"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-bark-900/70 via-bark-900/10 to-transparent" />
                     <h3 className="absolute bottom-0 left-0 p-6 font-serif text-2xl text-ivory sm:p-8 sm:text-3xl">
@@ -273,18 +273,6 @@ export function PodlozePage({ locale }: { locale: Locale }) {
                   </div>
                   <div className="p-6 sm:p-8">
                     <p className="text-bark-500">{copy.description}</p>
-                    <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-sand-200 pt-6 sm:grid-cols-4">
-                      <SpecItem label={cols.cost} value={copy.compare.cost} />
-                      <SpecItem label={cols.time} value={copy.compare.time} />
-                      <SpecItem
-                        label={cols.difficulty}
-                        value={copy.compare.difficulty}
-                      />
-                      <SpecItem
-                        label={cols.drainage}
-                        value={copy.compare.drainage}
-                      />
-                    </dl>
                   </div>
                 </div>
               </Reveal>
