@@ -59,26 +59,26 @@ export const woodMaterials: WoodMaterial[] = [
       {
         image: {
           src: "/images/included-benches.jpg",
-          alt: "Ławy i dwa zagłówki wykonane z osiki",
+          alt: "Ławy i 2 zagłówki wykonane z osiki",
         },
         i18n: {
-          pl: { label: "Ławy i dwa zagłówki" },
-          en: { label: "Benches & two headrests" },
+          pl: { label: "Ławy i 2 zagłówki" },
+          en: { label: "Benches & 2 headrests" },
         },
       },
     ],
     i18n: {
       pl: {
         name: "Osika",
-        usageTag: "Ławy i dwa zagłówki",
+        usageTag: "Ławy i 2 zagłówki",
         description:
-          "Ławy wykonujemy z drewna osikowego premium, a w standardzie dołączamy dwa zagłówki z osiki – drewna delikatnego i niezwykle przyjemnego w dotyku, które nawet w wysokiej temperaturze nie parzy skóry. Osika ma jednolitą, gładką strukturę i mało żywicy, dzięki czemu nie plami ciała i skutecznie odprowadza wilgoć, zachowując świeżość przez lata.",
+          "Ławy wykonujemy z drewna osikowego premium, a w standardzie dołączamy 2 zagłówki z osiki – drewna delikatnego i niezwykle przyjemnego w dotyku, które nawet w wysokiej temperaturze nie parzy skóry. Osika ma jednolitą, gładką strukturę i mało żywicy, dzięki czemu nie plami ciała i skutecznie odprowadza wilgoć, zachowując świeżość przez lata.",
       },
       en: {
         name: "Aspen",
-        usageTag: "Benches & two headrests",
+        usageTag: "Benches & 2 headrests",
         description:
-          "We make the benches from premium aspen wood and include two aspen headrests as standard – a gentle wood that's remarkably pleasant to the touch and stays cool enough not to burn skin even at high temperatures. Aspen has a smooth, even grain with little resin, so it won't mark your skin and sheds moisture well, staying fresh for years.",
+          "We make the benches from premium aspen wood and include 2 aspen headrests as standard – a gentle wood that's remarkably pleasant to the touch and stays cool enough not to burn skin even at high temperatures. Aspen has a smooth, even grain with little resin, so it won't mark your skin and sheds moisture well, staying fresh for years.",
       },
     },
   },

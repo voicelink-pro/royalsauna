@@ -15,7 +15,7 @@ export const LINE_NAME = "Regenerum";
 const INCLUDED_PL_BASE = [
   "Piec saunowy dobrany do kubatury",
   "Profilowane ławy z drewna osikowego premium",
-  "Dwa osikowe zagłówki",
+  "2 osikowe zagłówki",
   "Cebrzyk i czerpak",
   "Komplet kamieni saunowych",
   "Oświetlenie nastrojowe LED",
@@ -26,7 +26,7 @@ const INCLUDED_PL_BASE = [
 const INCLUDED_EN_BASE = [
   "Sauna heater matched to the cabin volume",
   "Contoured premium aspen-wood benches",
-  "Two aspen headrests",
+  "2 aspen headrests",
   "Wooden bucket and ladle",
   "Full set of sauna stones",
   "Ambient LED lighting",
@@ -100,7 +100,7 @@ export const products: Product[] = [
           {
             title: "Idealna dla dwóch osób",
             description:
-              "Komfortowe miejsce dla dwóch osób z profilowanymi ławami z drewna osikowego premium i dwoma zagłówkami zaprojektowanymi pod pełen relaks.",
+              "Komfortowe miejsce dla dwóch osób z profilowanymi ławami z drewna osikowego premium i 2 zagłówkami zaprojektowanymi pod pełen relaks.",
           },
           {
             title: "Szybkie nagrzewanie",
@@ -179,7 +179,7 @@ export const products: Product[] = [
           {
             title: "Perfect for two people",
             description:
-              "A comfortable space for two with contoured premium aspen-wood benches and two headrests designed for full relaxation.",
+              "A comfortable space for two with contoured premium aspen-wood benches and 2 headrests designed for full relaxation.",
           },
           {
             title: "Fast heat-up",
@@ -282,7 +282,7 @@ export const products: Product[] = [
         shortDescription:
           "Środkowy, najbardziej uniwersalny model linii Regenerum. Przestrzeń dla rodziny przy zachowaniu zgrabnych proporcji.",
         longDescription:
-          "Comfort to model, który najczęściej polecamy – i nie bez powodu. Łączy komfortową przestrzeń dla czterech osób ze zgrabną bryłą, która dobrze odnajduje się w typowym ogrodzie. Wnętrze zaprojektowano z myślą o swobodnym seansie w gronie rodziny: szersze ławy z drewna osikowego premium, dwa wygodne zagłówki i przemyślana cyrkulacja ciepła. To sauna, wokół której zbiera się dom – na codzienny relaks i wieczory, które chce się przedłużać.",
+          "Comfort to model, który najczęściej polecamy – i nie bez powodu. Łączy komfortową przestrzeń dla czterech osób ze zgrabną bryłą, która dobrze odnajduje się w typowym ogrodzie. Wnętrze zaprojektowano z myślą o swobodnym seansie w gronie rodziny: szersze ławy z drewna osikowego premium, 2 wygodne zagłówki i przemyślana cyrkulacja ciepła. To sauna, wokół której zbiera się dom – na codzienny relaks i wieczory, które chce się przedłużać.",
         features: [
           {
             title: "Komfort dla rodziny",
@@ -366,7 +366,7 @@ export const products: Product[] = [
         shortDescription:
           "The middle, most versatile model in the Regenerum line. Room for the family while keeping neat proportions.",
         longDescription:
-          "Comfort is the model we recommend most often – and for good reason. It combines comfortable space for four people with a neat form that fits a typical garden well. The interior is designed for a relaxed session with family: wider premium aspen-wood benches, two comfortable headrests and well-considered heat circulation. It's a sauna the household gathers around – for daily relaxation and evenings you want to stretch out.",
+          "Comfort is the model we recommend most often – and for good reason. It combines comfortable space for four people with a neat form that fits a typical garden well. The interior is designed for a relaxed session with family: wider premium aspen-wood benches, 2 comfortable headrests and well-considered heat circulation. It's a sauna the household gathers around – for daily relaxation and evenings you want to stretch out.",
         features: [
           {
             title: "Comfort for the family",

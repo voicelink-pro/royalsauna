@@ -147,7 +147,7 @@ export const pl = {
       items: [
         "Piec saunowy ze sterownikiem Wi-Fi",
         "Profilowane ławy z drewna osikowego premium",
-        "Dwa osikowe zagłówki – chłodne i przyjemne w dotyku",
+        "2 osikowe zagłówki – chłodne i przyjemne w dotyku",
         "Cebrzyk i czerpak",
         "Komplet kamieni saunowych",
         "Oświetlenie nastrojowe LED",
@@ -157,11 +157,11 @@ export const pl = {
       ],
       groups: [
         {
-          title: "Ławy, dwa osikowe zagłówki i LED",
+          title: "Ławy, 2 osikowe zagłówki i LED",
           description:
-            "Profilowane ławy z drewna osikowego premium oraz dwa ergonomiczne zagłówki z osiki – drewna, które nie parzy skóry nawet w wysokiej temperaturze. Do tego nastrojowe LED wbudowane w konstrukcję.",
+            "Profilowane ławy z drewna osikowego premium oraz 2 ergonomiczne zagłówki z osiki – drewna, które nie parzy skóry nawet w wysokiej temperaturze. Do tego nastrojowe LED wbudowane w konstrukcję.",
           image: "/images/included-benches.jpg",
-          alt: "Profilowane ławy z podświetleniem LED i dwoma zagłówkami",
+          alt: "Profilowane ławy z podświetleniem LED i 2 zagłówkami",
           shape: "wide" as const,
         },
         {
@@ -444,13 +444,13 @@ export const pl = {
     meta: {
       title: "Drewno służące na lata – materiały saun Regenerum",
       description:
-        "Poznaj drewno, z którego budujemy sauny Regenerum – ThermoWood (termowany świerk) na bryłę i podłogę oraz osikę na ławy i dwa zagłówki.",
+        "Poznaj drewno, z którego budujemy sauny Regenerum – ThermoWood (termowany świerk) na bryłę i podłogę oraz osikę na ławy i 2 zagłówki.",
     },
     materialsSection: {
       eyebrow: "Materiały",
       title: "Dwa drewna, jedna sauna",
       description:
-        "Bryłę i podłogę wykonujemy z ThermoWood – termowanego świerku o wyjątkowej trwałości. Ławy z drewna osikowego premium i dwa zagłówki z osiki – przyjemne w kontakcie ze skórą nawet w wysokiej temperaturze.",
+        "Bryłę i podłogę wykonujemy z ThermoWood – termowanego świerku o wyjątkowej trwałości. Ławy z drewna osikowego premium i 2 zagłówki z osiki – przyjemne w kontakcie ze skórą nawet w wysokiej temperaturze.",
       madeFrom: "Wykonane z tego drewna",
     },
     thermoWoodSection: {
@@ -527,7 +527,7 @@ export const pl = {
         benches: {
           label: "Ławy",
           description:
-            "Drewno osikowe premium – gładkie i chłodne w dotyku, wygodne nawet w wysokiej temperaturze wewnątrz sauny. W standardzie dwa zagłówki z osiki.",
+            "Drewno osikowe premium – gładkie i chłodne w dotyku, wygodne nawet w wysokiej temperaturze wewnątrz sauny. W standardzie 2 zagłówki z osiki.",
         },
         floor: {
           label: "Podłoga",
@@ -661,7 +661,7 @@ export const pl = {
       eyebrow: "W standardzie",
       title: "Wszystko, czego potrzebujesz do pierwszego seansu",
       description:
-        "Każda sauna linii Regenerum przyjeżdża gotowa na rytuał. Dobraliśmy detale, które budują atmosferę prawdziwego spa – od dwóch zagłówków po miękkość ręcznika. Nic nie musisz dokupować. Wystarczy wejść, oddychać i poczuć, że to już Twój domowy rytuał.",
+        "Każda sauna linii Regenerum przyjeżdża gotowa na rytuał. Dobraliśmy detale, które budują atmosferę prawdziwego spa – od 2 zagłówków po miękkość ręcznika. Nic nie musisz dokupować. Wystarczy wejść, oddychać i poczuć, że to już Twój domowy rytuał.",
       items: {
         towels: {
           title: "Ręczniki",
@@ -690,12 +690,12 @@ export const pl = {
           closing: "",
         },
         headrests: {
-          title: "Dwa zagłówki",
+          title: "2 zagłówki",
           paragraphs: [
-            "Prawdziwy komfort saunowania tworzą starannie dopracowane detale. Dlatego każda sauna RoyalSauna Regenerum wyposażona jest w dwa ergonomiczne zagłówki wykonane z naturalnego drewna osikowego, które zostały zaprojektowane tak, aby zapewniać wygodne podparcie głowy i karku podczas odpoczynku.",
+            "Prawdziwy komfort saunowania tworzą starannie dopracowane detale. Dlatego każda sauna RoyalSauna Regenerum wyposażona jest w 2 ergonomiczne zagłówki wykonane z naturalnego drewna osikowego, które zostały zaprojektowane tak, aby zapewniać wygodne podparcie głowy i karku podczas odpoczynku.",
             "Drewno osikowe jest szczególnie cenione w wyposażeniu saun ze względu na swoją delikatną, gładką strukturę oraz niską przewodność cieplną. Dzięki temu nie nagrzewa się tak intensywnie jak wiele innych gatunków drewna i pozostaje przyjemne w kontakcie ze skórą nawet podczas seansów w wysokiej temperaturze. Jego jasna, subtelna kolorystyka doskonale komponuje się również z eleganckim wnętrzem sauny, podkreślając jego naturalny i harmonijny charakter.",
             "Odpowiednio wyprofilowana forma zagłówków dopasowuje się do naturalnego ułożenia głowy i szyi, pozwalając rozluźnić mięśnie oraz przyjąć komfortową pozycję podczas seansu. Starannie wygładzona powierzchnia zapewnia wyjątkową przyjemność w dotyku i sprawia, że każda chwila relaksu staje się jeszcze bardziej komfortowa.",
-            "W standardzie każdego modelu RoyalSauna otrzymujesz dwa zagłówki osikowe, aby odpoczynek i regeneracja mogły być równie przyjemne zarówno podczas samodzielnego seansu, jak i wspólnego saunowania. To połączenie naturalnego materiału, ergonomicznej formy i ponadczasowej estetyki, które pozwala w pełni zanurzyć się w rytuale odprężenia.",
+            "W standardzie każdego modelu RoyalSauna otrzymujesz 2 zagłówki osikowe, aby odpoczynek i regeneracja mogły być równie przyjemne zarówno podczas samodzielnego seansu, jak i wspólnego saunowania. To połączenie naturalnego materiału, ergonomicznej formy i ponadczasowej estetyki, które pozwala w pełni zanurzyć się w rytuale odprężenia.",
           ],
           listLabel: "",
           list: [],
@@ -740,7 +740,7 @@ export const pl = {
           description: "Gotowe do polewania kamieni od pierwszego seansu.",
         },
         {
-          title: "Dwa zagłówki osikowe",
+          title: "2 zagłówki osikowe",
           description: "Ergonomiczne podparcie głowy i karku w standardzie.",
         },
         {
@@ -764,7 +764,7 @@ export const pl = {
         {
           question: "Jak dbać o drewniane akcesoria z pakietu?",
           answer:
-            "Cebrzyk, czerpak, dwa zagłówki, klepsydrę oraz zestaw termometr/higrometr wystarczy po seansie osuszyć i przechowywać w suchej, przewiewnej przestrzeni wewnątrz sauny lub w jej pobliżu. Unikaj moczenia na dłużej i agresywnych detergentów – naturalne drewno osikowe najlepiej znosi delikatną pielęgnację.",
+            "Cebrzyk, czerpak, 2 zagłówki, klepsydrę oraz zestaw termometr/higrometr wystarczy po seansie osuszyć i przechowywać w suchej, przewiewnej przestrzeni wewnątrz sauny lub w jej pobliżu. Unikaj moczenia na dłużej i agresywnych detergentów – naturalne drewno osikowe najlepiej znosi delikatną pielęgnację.",
         },
       ],
     },
@@ -784,7 +784,7 @@ export const pl = {
     welcomePackage: {
       metaTitle: "Pakiet powitalny – RoyalSauna",
       metaDescription:
-        "Poznaj pakiet powitalny dołączany do każdej sauny Regenerum – ręczniki, dwa zagłówki, cebrzyk i więcej.",
+        "Poznaj pakiet powitalny dołączany do każdej sauny Regenerum – ręczniki, 2 zagłówki, cebrzyk i więcej.",
       eyebrow: "W standardzie",
       title: "Pakiet powitalny",
       description:
@@ -796,7 +796,7 @@ export const pl = {
         bucketLadle:
           "Drewniany cebrzyk i czerpak – gotowe do polewania kamieni.",
         headrests:
-          "Dwa ergonomiczne zagłówki z osiki – przyjemne w dotyku, nie parzą.",
+          "2 ergonomiczne zagłówki z osiki – przyjemne w dotyku, nie parzą.",
         thermoHygro:
           "Termometr i higrometr z osiki – kontrola klimatu w sercu sauny.",
         timer: "Klepsydra 5 / 10 / 15 min – naturalne odmierzanie czasu seansu.",

@@ -20,7 +20,7 @@ export const welcomePackageItems = [
   {
     id: "headrests",
     image: "/images/pakiet/zaglowki.jpg",
-    alt: { pl: "Dwa zagłówki saunowe", en: "Two sauna headrests" },
+    alt: { pl: "2 zagłówki saunowe", en: "2 sauna headrests" },
     frame: "standard" as const,
   },
   {

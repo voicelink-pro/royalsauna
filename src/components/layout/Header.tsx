@@ -149,18 +149,18 @@ export function Header({
           : "bg-sand-100/95 shadow-[0_1px_0_rgba(90,70,50,0.08)] backdrop-blur",
       )}
     >
-      <Container className="flex h-24 items-center justify-between">
+      <Container className="flex h-28 items-center justify-between">
         <Link
           href={homeHref}
           aria-label={dict.brand.name}
-          className="relative block h-16 w-[224px] shrink-0 transition-opacity duration-500 hover:opacity-90 sm:h-20 sm:w-[280px]"
+          className="relative block h-20 w-[280px] shrink-0 transition-opacity duration-500 hover:opacity-90 sm:h-24 sm:w-[336px]"
         >
           <Image
             src="/logo.png"
             alt={dict.brand.name}
             fill
             priority
-            sizes="280px"
+            sizes="336px"
             className={cn(
               "object-contain object-left transition-all duration-500",
               overDark && "brightness-0 invert",
