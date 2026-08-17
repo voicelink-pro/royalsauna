@@ -19,6 +19,19 @@ Skrypt wyodrębni klatki do `public/hero-frames/` jako `frame-0001.jpg`, ...
 3. Jeśli liczba klatek się zmieni, zaktualizuj `FRAME_COUNT`
    w `src/components/sections/HeroVideoScroll.tsx` (skrypt wypisze liczbę na końcu).
 
+## Wersja mobilna
+
+Pionowy film dzienny umieść jako `public/videos/hero-mobile-day.mp4`, a następnie
+uruchom:
+
+```bash
+npm run hero:frames:mobile:day
+```
+
+Klatki trafią do `public/hero-frames-mobile-day/` w rozdzielczości 720×1280.
+Na ekranach poniżej 640 px komponent hero ładuje wyłącznie sekwencję mobilną;
+desktop nadal korzysta z `public/hero-frames/`.
+
 ## Zalecenia dotyczące pliku źródłowego
 
 - **Format**: MP4 (H.264), bez dźwięku.

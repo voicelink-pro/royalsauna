@@ -16,6 +16,11 @@ const FRAME_COUNT = 72;
 const framePath = (index: number) =>
   `/hero-frames/frame-${String(index).padStart(4, "0")}.jpg`;
 
+/** Portrait day sequence used on phones. */
+const MOBILE_DAY_FRAME_COUNT = 73;
+const mobileDayFramePath = (index: number) =>
+  `/hero-frames-mobile-day/frame-${String(index).padStart(4, "0")}.jpg`;
+
 /**
  * Night variant of the same shot, for the day/night toggle. Generated the
  * same way — see `npm run hero:frames:night` in scripts/extract-hero-frames.sh.
@@ -86,11 +91,21 @@ export function HeroVideoScroll({
 }) {
   const sectionRef = useRef<HTMLElement>(null);
   const [percentage, setPercentage] = useState(0);
-  const [firstFrame, setFirstFrame] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
+  const [desktopDayReady, setDesktopDayReady] = useState(false);
+  const [mobileDayReady, setMobileDayReady] = useState(false);
 
   const [isNight, setIsNight] = useState(false);
   const [nightMounted, setNightMounted] = useState(false);
   const [nightReady, setNightReady] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 639px)");
+    const updateViewport = () => setIsMobile(media.matches);
+    updateViewport();
+    media.addEventListener("change", updateViewport);
+    return () => media.removeEventListener("change", updateViewport);
+  }, []);
 
   useEffect(() => {
     let raf = 0;
@@ -128,6 +143,12 @@ export function HeroVideoScroll({
   // flashing a blank canvas while the sequence is still loading.
   const showNight = isNight && nightReady;
   const nightLoading = isNight && !nightReady;
+  const dayReady =
+    isMobile === true
+      ? mobileDayReady
+      : isMobile === false
+        ? desktopDayReady
+        : false;
   const W = dict.home.hero;
 
   return (
@@ -139,14 +160,20 @@ export function HeroVideoScroll({
     >
       <div className="sticky top-0 flex h-screen w-full items-center overflow-hidden">
         {/* Poster: instant first paint before frames decode / if JS is slow. */}
-        <img
-          src={framePath(1)}
-          alt=""
-          aria-hidden="true"
-          className={`absolute inset-0 z-0 h-full w-full object-cover transition-opacity duration-500 ${
-            firstFrame ? "opacity-0" : "opacity-100"
-          }`}
-        />
+        <picture>
+          <source
+            media="(max-width: 639px)"
+            srcSet={mobileDayFramePath(1)}
+          />
+          <img
+            src={framePath(1)}
+            alt=""
+            aria-hidden="true"
+            className={`absolute inset-0 z-0 h-full w-full object-cover transition-opacity duration-500 ${
+              dayReady ? "opacity-0" : "opacity-100"
+            }`}
+          />
+        </picture>
 
         {/* Day frame sequence — always mounted. */}
         <div
@@ -155,13 +182,19 @@ export function HeroVideoScroll({
             showNight ? "opacity-0" : "opacity-100",
           )}
         >
-          <FrameSequenceCanvas
-            frameCount={FRAME_COUNT}
-            framePath={framePath}
-            progress={percentage}
-            onFirstFrame={() => setFirstFrame(true)}
-            className="h-full w-full"
-          />
+          {isMobile !== null && (
+            <FrameSequenceCanvas
+              key={isMobile ? "mobile-day" : "desktop-day"}
+              frameCount={isMobile ? MOBILE_DAY_FRAME_COUNT : FRAME_COUNT}
+              framePath={isMobile ? mobileDayFramePath : framePath}
+              progress={percentage}
+              onFirstFrame={() => {
+                if (isMobile) setMobileDayReady(true);
+                else setDesktopDayReady(true);
+              }}
+              className="h-full w-full"
+            />
+          )}
         </div>
 
         {/* Night frame sequence — mounted lazily on first toggle, then kept alive. */}
