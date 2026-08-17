@@ -14,8 +14,8 @@ export const LINE_NAME = "Regenerum";
 /** Standardowe wyposażenie wspólne dla całej linii Regenerum (bez ręczników – ich liczba różni się per model). */
 const INCLUDED_PL_BASE = [
   "Piec saunowy dobrany do kubatury",
-  "Profilowane ławy z drewna premium",
-  "Osikowe zagłówki",
+  "Profilowane ławy z drewna osikowego premium",
+  "Dwa osikowe zagłówki",
   "Cebrzyk i czerpak",
   "Komplet kamieni saunowych",
   "Oświetlenie nastrojowe LED",
@@ -25,8 +25,8 @@ const INCLUDED_PL_BASE = [
 
 const INCLUDED_EN_BASE = [
   "Sauna heater matched to the cabin volume",
-  "Contoured premium-wood benches",
-  "Headrests and footrests",
+  "Contoured premium aspen-wood benches",
+  "Two aspen headrests",
   "Wooden bucket and ladle",
   "Full set of sauna stones",
   "Ambient LED lighting",
@@ -66,7 +66,7 @@ export const products: Product[] = [
       },
       {
         src: "/images/cubus2-interior.jpg",
-        alt: "Wnętrze sauny Compact ze świerku skandynawskiego",
+        alt: "Wnętrze sauny Compact z drewna skandynawskiego",
       },
       {
         src: "/images/cubus2-cutout.jpg",
@@ -90,7 +90,7 @@ export const products: Product[] = [
         shortDescription:
           "Najbardziej kompaktowy model linii Regenerum. Pełnowartościowa sauna dla dwóch osób, która zmieści się nawet w niewielkim ogrodzie.",
         longDescription:
-          "Compact to dowód na to, że luksus nie potrzebuje wielu metrów. W zwartej, designerskiej bryle ze świerku skandynawskiego mieści się wszystko, czego potrzebujesz do prawdziwego seansu: dopracowana komora cieplna, panoramiczna szyba otwierająca wnętrze na ogród i piec dobrany do kubatury, który szybko osiąga temperaturę. To sauna, która staje się Twoim prywatnym zakątkiem regeneracji – kameralnym, ciepłym i gotowym na codzienny rytuał.",
+          "Compact to dowód na to, że luksus nie potrzebuje wielu metrów. W zwartej, designerskiej bryle z drewna skandynawskiego mieści się wszystko, czego potrzebujesz do prawdziwego seansu: dopracowana komora cieplna, panoramiczna szyba otwierająca wnętrze na ogród i piec dobrany do kubatury, który szybko osiąga temperaturę. To sauna, która staje się Twoim prywatnym zakątkiem regeneracji – kameralnym, ciepłym i gotowym na codzienny rytuał.",
         features: [
           {
             title: "Kompaktowa, dopracowana bryła",
@@ -100,12 +100,12 @@ export const products: Product[] = [
           {
             title: "Idealna dla dwóch osób",
             description:
-              "Komfortowe miejsce dla dwóch osób z profilowanymi ławami i zagłówkami zaprojektowanymi pod pełen relaks.",
+              "Komfortowe miejsce dla dwóch osób z profilowanymi ławami z drewna osikowego premium i dwoma zagłówkami zaprojektowanymi pod pełen relaks.",
           },
           {
             title: "Szybkie nagrzewanie",
             description:
-              "Mniejsza kubatura oznacza krótszy czas nagrzewania – sauna jest gotowa, gdy Ty jesteś.",
+              "Mniejsza kubatura oznacza krótszy czas nagrzewania.",
           },
           {
             title: "Panoramiczna szyba",
@@ -115,11 +115,11 @@ export const products: Product[] = [
         ],
         specs: [
           { label: "Liczba osób", value: "2" },
-          { label: "Wymiary zewnętrzne", value: "2,10 × 2,15 m" },
+          { label: "Wymiary zewnętrzne", value: "2,10 × 1,14 m" },
           { label: "Wysokość", value: "2,06 m" },
-          { label: "Powierzchnia użytkowa", value: "4,50 m²" },
+          { label: "Powierzchnia użytkowa", value: "2,39 m²" },
           { label: "Grubość ściany", value: "42 mm" },
-          { label: "Materiał", value: "Świerk skandynawski premium" },
+          { label: "Materiał", value: "Drewno skandynawskie premium" },
           { label: "Piec", value: "Harvia Cilindro, Legend lub Spirit" },
           { label: "Moc pieca", value: "od 6 kW" },
           { label: "Przyłącze elektryczne", value: "Po stronie Klienta" },
@@ -139,9 +139,9 @@ export const products: Product[] = [
               "Naturalny olej, ciemny lakier lub elewacja w kolorze na życzenie.",
           },
           {
-            title: "Oświetlenie i audio",
+            title: "Oświetlenie",
             description:
-              "Sceny świetlne LED oraz opcjonalny system audio odporny na wilgoć.",
+              "Sceny świetlne LED dopasowane do nastroju seansu.",
           },
           {
             title: "Strefa wypoczynku",
@@ -169,7 +169,7 @@ export const products: Product[] = [
         shortDescription:
           "The most compact model in the Regenerum line. A full-value sauna for two that fits even a small garden.",
         longDescription:
-          "Compact proves that luxury doesn't need a lot of space. Its compact, design-led cube of Scandinavian spruce holds everything you need for a true session: a refined heat chamber, a panoramic glass front that opens the interior to the garden, and a heater matched to the volume that reaches temperature quickly. It's a sauna that becomes your private corner of recovery – intimate, warm and ready for a daily ritual.",
+          "Compact proves that luxury doesn't need a lot of space. Its compact, design-led cube of Scandinavian wood holds everything you need for a true session: a refined heat chamber, a panoramic glass front that opens the interior to the garden, and a heater matched to the volume that reaches temperature quickly. It's a sauna that becomes your private corner of recovery – intimate, warm and ready for a daily ritual.",
         features: [
           {
             title: "Compact, refined form",
@@ -179,7 +179,7 @@ export const products: Product[] = [
           {
             title: "Perfect for two people",
             description:
-              "A comfortable space for two with contoured benches and headrests designed for full relaxation.",
+              "A comfortable space for two with contoured premium aspen-wood benches and two headrests designed for full relaxation.",
           },
           {
             title: "Fast heat-up",
@@ -194,11 +194,11 @@ export const products: Product[] = [
         ],
         specs: [
           { label: "People", value: "2" },
-          { label: "Exterior dimensions", value: "2.10 × 2.15 m" },
+          { label: "Exterior dimensions", value: "2.10 × 1.14 m" },
           { label: "Height", value: "2.06 m" },
-          { label: "Usable floor area", value: "4.50 m²" },
+          { label: "Usable floor area", value: "2.39 m²" },
           { label: "Wall thickness", value: "42 mm" },
-          { label: "Material", value: "Premium Scandinavian spruce" },
+          { label: "Material", value: "Premium Scandinavian wood" },
           { label: "Heater", value: "Harvia Cilindro, Legend or Spirit" },
           { label: "Heater power", value: "from 6 kW" },
           { label: "Electrical connection", value: "Provided by the client" },
@@ -218,9 +218,9 @@ export const products: Product[] = [
               "Natural oil, dark lacquer or a custom-coloured facade on request.",
           },
           {
-            title: "Lighting & audio",
+            title: "Lighting",
             description:
-              "LED light scenes and an optional moisture-resistant audio system.",
+              "LED light scenes matched to the mood of the session.",
           },
           {
             title: "Relaxation zone",
@@ -282,7 +282,7 @@ export const products: Product[] = [
         shortDescription:
           "Środkowy, najbardziej uniwersalny model linii Regenerum. Przestrzeń dla rodziny przy zachowaniu zgrabnych proporcji.",
         longDescription:
-          "Comfort to model, który najczęściej polecamy – i nie bez powodu. Łączy komfortową przestrzeń dla czterech osób ze zgrabną bryłą, która dobrze odnajduje się w typowym ogrodzie. Wnętrze zaprojektowano z myślą o swobodnym seansie w gronie rodziny: szersze ławy, wygodne zagłówki i przemyślana cyrkulacja ciepła. To sauna, wokół której zbiera się dom – na codzienny relaks i wieczory, które chce się przedłużać.",
+          "Comfort to model, który najczęściej polecamy – i nie bez powodu. Łączy komfortową przestrzeń dla czterech osób ze zgrabną bryłą, która dobrze odnajduje się w typowym ogrodzie. Wnętrze zaprojektowano z myślą o swobodnym seansie w gronie rodziny: szersze ławy z drewna osikowego premium, dwa wygodne zagłówki i przemyślana cyrkulacja ciepła. To sauna, wokół której zbiera się dom – na codzienny relaks i wieczory, które chce się przedłużać.",
         features: [
           {
             title: "Komfort dla rodziny",
@@ -302,7 +302,7 @@ export const products: Product[] = [
           {
             title: "Premium w detalu",
             description:
-              "Świerk skandynawski, dopracowane okucia i panoramiczna szyba w standardzie.",
+              "Drewno skandynawskie, dopracowane okucia i panoramiczna szyba w standardzie.",
           },
         ],
         specs: [
@@ -311,7 +311,7 @@ export const products: Product[] = [
           { label: "Wysokość", value: "2,26 m" },
           { label: "Powierzchnia użytkowa", value: "5,3 m²" },
           { label: "Grubość ściany", value: "42 mm" },
-          { label: "Materiał", value: "Świerk skandynawski premium" },
+          { label: "Materiał", value: "Drewno skandynawskie premium" },
           { label: "Piec", value: "Harvia Cilindro, Legend lub Spirit" },
           { label: "Moc pieca", value: "od 8 kW" },
           { label: "Przyłącze elektryczne", value: "Po stronie Klienta" },
@@ -331,9 +331,9 @@ export const products: Product[] = [
               "Naturalny olej, ciemny lakier lub elewacja w kolorze na życzenie.",
           },
           {
-            title: "Oświetlenie i audio",
+            title: "Oświetlenie",
             description:
-              "Sceny świetlne LED oraz opcjonalny system audio odporny na wilgoć.",
+              "Sceny świetlne LED dopasowane do nastroju seansu.",
           },
           {
             title: "Strefa wypoczynku",
@@ -366,7 +366,7 @@ export const products: Product[] = [
         shortDescription:
           "The middle, most versatile model in the Regenerum line. Room for the family while keeping neat proportions.",
         longDescription:
-          "Comfort is the model we recommend most often – and for good reason. It combines comfortable space for four people with a neat form that fits a typical garden well. The interior is designed for a relaxed session with family: wider benches, comfortable headrests and well-considered heat circulation. It's a sauna the household gathers around – for daily relaxation and evenings you want to stretch out.",
+          "Comfort is the model we recommend most often – and for good reason. It combines comfortable space for four people with a neat form that fits a typical garden well. The interior is designed for a relaxed session with family: wider premium aspen-wood benches, two comfortable headrests and well-considered heat circulation. It's a sauna the household gathers around – for daily relaxation and evenings you want to stretch out.",
         features: [
           {
             title: "Comfort for the family",
@@ -386,7 +386,7 @@ export const products: Product[] = [
           {
             title: "Premium in the detail",
             description:
-              "Scandinavian spruce, refined fittings and a panoramic glass front as standard.",
+              "Scandinavian wood, refined fittings and a panoramic glass front as standard.",
           },
         ],
         specs: [
@@ -395,7 +395,7 @@ export const products: Product[] = [
           { label: "Height", value: "2.26 m" },
           { label: "Usable floor area", value: "5.3 m²" },
           { label: "Wall thickness", value: "42 mm" },
-          { label: "Material", value: "Premium Scandinavian spruce" },
+          { label: "Material", value: "Premium Scandinavian wood" },
           { label: "Heater", value: "Harvia Cilindro, Legend or Spirit" },
           { label: "Heater power", value: "from 8 kW" },
           { label: "Electrical connection", value: "Provided by the client" },
@@ -415,9 +415,9 @@ export const products: Product[] = [
               "Natural oil, dark lacquer or a custom-coloured facade on request.",
           },
           {
-            title: "Lighting & audio",
+            title: "Lighting",
             description:
-              "LED light scenes and an optional moisture-resistant audio system.",
+              "LED light scenes matched to the mood of the session.",
           },
           {
             title: "Relaxation zone",
@@ -484,7 +484,7 @@ export const products: Product[] = [
         shortDescription:
           "Najbardziej przestronny model linii Regenerum. Przestronne wnętrze dla sześciu osób i pełne doświadczenie domowego spa.",
         longDescription:
-          "Premium to nasza najbardziej okazała sauna – przestrzeń, w której rytuał staje się wydarzeniem. Wielopoziomowe ławy pozwalają wybrać intensywność seansu, a przestronne wnętrze ze świerku skandynawskiego komfortowo mieści sześć osób. Duże przeszklenie i nastrojowe światło budują atmosferę prawdziwego, prywatnego spa. To model dla tych, którzy lubią dzielić ciepło – z rodziną i przyjaciółmi, w wieczory, które zostają w pamięci.",
+          "Premium to nasza najbardziej okazała sauna – przestrzeń, w której rytuał staje się wydarzeniem. Wielopoziomowe ławy pozwalają wybrać intensywność seansu, a przestronne wnętrze z drewna skandynawskiego komfortowo mieści sześć osób. Duże przeszklenie i nastrojowe światło budują atmosferę prawdziwego, prywatnego spa. To model dla tych, którzy lubią dzielić ciepło – z rodziną i przyjaciółmi, w wieczory, które zostają w pamięci.",
         features: [
           {
             title: "Maksimum przestrzeni",
@@ -504,7 +504,7 @@ export const products: Product[] = [
           {
             title: "Najwyższa jakość wykonania",
             description:
-              "Świerk skandynawski premium, solidna konstrukcja i dopracowany każdy detal.",
+              "Drewno skandynawskie premium, solidna konstrukcja i dopracowany każdy detal.",
           },
         ],
         specs: [
@@ -513,7 +513,7 @@ export const products: Product[] = [
           { label: "Wysokość", value: "2,60 m" },
           { label: "Powierzchnia użytkowa", value: "7,2 m²" },
           { label: "Grubość ściany", value: "42 mm" },
-          { label: "Materiał", value: "Świerk skandynawski premium" },
+          { label: "Materiał", value: "Drewno skandynawskie premium" },
           { label: "Piec", value: "Harvia Cilindro lub Legend" },
           { label: "Moc pieca", value: "od 9 kW" },
           { label: "Przyłącze elektryczne", value: "Po stronie Klienta" },
@@ -533,9 +533,9 @@ export const products: Product[] = [
               "Naturalny olej, ciemny lakier lub elewacja w kolorze na życzenie.",
           },
           {
-            title: "Oświetlenie i audio",
+            title: "Oświetlenie",
             description:
-              "Sceny świetlne LED oraz opcjonalny system audio odporny na wilgoć.",
+              "Sceny świetlne LED dopasowane do nastroju seansu.",
           },
           {
             title: "Strefa wypoczynku",
@@ -568,7 +568,7 @@ export const products: Product[] = [
         shortDescription:
           "The largest model in the Regenerum line. A spacious interior for six and a complete home-spa experience.",
         longDescription:
-          "Premium is our most generous sauna – a space where the ritual becomes an occasion. Multi-level benches let you choose the intensity of your session, while the spacious Scandinavian-spruce interior comfortably seats six. A large glazed front and ambient lighting build the atmosphere of a true, private spa. It's the model for those who love to share warmth – with family and friends, on evenings worth remembering.",
+          "Premium is our most generous sauna – a space where the ritual becomes an occasion. Multi-level benches let you choose the intensity of your session, while the spacious Scandinavian-wood interior comfortably seats six. A large glazed front and ambient lighting build the atmosphere of a true, private spa. It's the model for those who love to share warmth – with family and friends, on evenings worth remembering.",
         features: [
           {
             title: "Maximum space",
@@ -588,7 +588,7 @@ export const products: Product[] = [
           {
             title: "Top-tier craftsmanship",
             description:
-              "Premium Scandinavian spruce, a solid structure and every detail refined.",
+              "Premium Scandinavian wood, a solid structure and every detail refined.",
           },
         ],
         specs: [
@@ -597,7 +597,7 @@ export const products: Product[] = [
           { label: "Height", value: "2.60 m" },
           { label: "Usable floor area", value: "7.2 m²" },
           { label: "Wall thickness", value: "42 mm" },
-          { label: "Material", value: "Premium Scandinavian spruce" },
+          { label: "Material", value: "Premium Scandinavian wood" },
           { label: "Heater", value: "Harvia Cilindro or Legend" },
           { label: "Heater power", value: "from 9 kW" },
           { label: "Electrical connection", value: "Provided by the client" },
@@ -617,9 +617,9 @@ export const products: Product[] = [
               "Natural oil, dark lacquer or a custom-coloured facade on request.",
           },
           {
-            title: "Lighting & audio",
+            title: "Lighting",
             description:
-              "LED light scenes and an optional moisture-resistant audio system.",
+              "LED light scenes matched to the mood of the session.",
           },
           {
             title: "Relaxation zone",

@@ -19,11 +19,11 @@ export function organizationSchema(): Record<string, unknown> {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "RoyalSauna",
-    legalName: "B4wood Sp. z o.o.",
+    legalName: "RoyalSauna Polska",
     url: getSiteUrl(),
     logo: `${getSiteUrl()}/logo.png`,
     description:
-      "Sauny ogrodowe premium ze świerku skandynawskiego. Jeden model w trzech wariantach.",
+      "Sauny ogrodowe premium z drewna skandynawskiego. Jeden model w trzech wariantach.",
     sameAs: [],
     address: {
       "@type": "PostalAddress",

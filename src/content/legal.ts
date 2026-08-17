@@ -24,7 +24,7 @@ export const legalContent: Record<
       sections: [
         {
           heading: "Administrator danych",
-          body: "Administratorem danych jest B4wood Sp. z o.o. z siedzibą w Łysomicach (87-148). W sprawach dotyczących danych osobowych można kontaktować się pod adresem biuro@royalsauna.pl.",
+          body: "Administratorem danych jest RoyalSauna Polska z siedzibą w Łysomicach (87-148). W sprawach dotyczących danych osobowych można kontaktować się pod adresem biuro@royalsauna.pl.",
         },
         {
           heading: "Zakres i cel przetwarzania",
@@ -52,7 +52,7 @@ export const legalContent: Record<
       sections: [
         {
           heading: "Data controller",
-          body: "The data controller is B4wood Sp. z o.o., based in Łysomice (87-148), Poland. For matters concerning personal data, contact biuro@royalsauna.pl.",
+          body: "The data controller is RoyalSauna Polska, based in Łysomice (87-148), Poland. For matters concerning personal data, contact biuro@royalsauna.pl.",
         },
         {
           heading: "Scope and purpose of processing",

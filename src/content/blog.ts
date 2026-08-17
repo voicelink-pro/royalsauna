@@ -2486,7 +2486,7 @@ export const blogPosts: BlogPost[] = [
           {
             type: "list",
             items: [
-              "Compact – 2,10 × 2,15 metra",
+              "Compact – 2,10 × 1,14 metra",
               "Comfort – 2,40 × 2,20 metra",
               "Premium – 3,00 × 2,40 metra",
             ],
@@ -2605,7 +2605,7 @@ export const blogPosts: BlogPost[] = [
           {
             type: "list",
             items: [
-              "Compact – 2.10 × 2.15 m",
+              "Compact – 2.10 × 1.14 m",
               "Comfort – 2.40 × 2.20 m",
               "Premium – 3.00 × 2.40 m",
             ],

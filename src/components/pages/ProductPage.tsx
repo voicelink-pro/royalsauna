@@ -83,7 +83,7 @@ export function ProductPage({
           locale={locale}
           dict={dict}
           galleryImages={galleryImages}
-          offerHref={`${routeMap.configurator[locale]}?model=${product.id}`}
+          offerHref="#oferta"
         />
       </Section>
 

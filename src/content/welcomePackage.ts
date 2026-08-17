@@ -20,7 +20,7 @@ export const welcomePackageItems = [
   {
     id: "headrests",
     image: "/images/pakiet/zaglowki.jpg",
-    alt: { pl: "Zagłówki saunowe", en: "Sauna headrests" },
+    alt: { pl: "Dwa zagłówki saunowe", en: "Two sauna headrests" },
     frame: "standard" as const,
   },
   {
@@ -36,12 +36,6 @@ export const welcomePackageItems = [
     id: "timer",
     image: "/images/pakiet/klepsydra.jpg",
     alt: { pl: "Klepsydra saunowa", en: "Sauna sand timer" },
-    frame: "tall" as const,
-  },
-  {
-    id: "heaterStones",
-    image: "/images/pakiet/piec-kamienie.jpg",
-    alt: { pl: "Piec i kamienie saunowe", en: "Heater and sauna stones" },
     frame: "tall" as const,
   },
 ] as const;

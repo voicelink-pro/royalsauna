@@ -9,8 +9,8 @@ import type { FoundationDimensions, Locale } from "@/types";
 export const foundationDimensions: FoundationDimensions[] = [
   {
     modelId: "compact",
-    exteriorM: { width: 2.1, depth: 2.145 },
-    recommendedM: { width: 2.3, depth: 2.345 },
+    exteriorM: { width: 2.1, depth: 1.14 },
+    recommendedM: { width: 2.3, depth: 1.34 },
   },
   {
     modelId: "comfort",
@@ -29,7 +29,10 @@ export function formatFootprint(
   size: { width: number; depth: number },
   locale: Locale,
 ): string {
-  const fmt = (n: number) =>
-    locale === "pl" ? n.toFixed(1).replace(".", ",") : n.toFixed(1);
+  const fmt = (n: number) => {
+    const decimals = Math.round(n * 100) % 10 === 0 ? 1 : 2;
+    const value = n.toFixed(decimals);
+    return locale === "pl" ? value.replace(".", ",") : value;
+  };
   return `${fmt(size.width)} × ${fmt(size.depth)} m`;
 }

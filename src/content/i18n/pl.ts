@@ -18,7 +18,7 @@ export const pl = {
     phoneHref: "tel:+48600359180",
     email: "biuro@royalsauna.pl",
     emailHref: "mailto:biuro@royalsauna.pl",
-    address: "B4wood Sp. z o.o., 87-148 Łysomice",
+    address: "RoyalSauna Polska, 87-148 Łysomice",
   },
   nav: {
     home: "Strona główna",
@@ -69,7 +69,7 @@ export const pl = {
       eyebrow: "Sauny ogrodowe premium",
       h1: "RoyalSauna – prywatne domowe spa w Twoim ogrodzie",
       subtitle:
-        "Luksusowe sauny ogrodowe ze świerku skandynawskiego. Jeden dopracowany model w trzech wariantach – gotowy, by stać się sercem Twojego domowego rytuału wellness.",
+        "Luksusowe sauny ogrodowe z drewna skandynawskiego. Jeden dopracowany model w trzech wariantach – gotowy, by stać się sercem Twojego domowego rytuału wellness.",
       ctaPrimary: "Otrzymaj ofertę",
       ctaSecondary: "Zobacz warianty",
       videoCaption: "Zarezerwowane miejsce na film prezentujący RoyalSauna",
@@ -90,9 +90,9 @@ export const pl = {
       lead: "Dla nas luksus to nie ozdobnik, lecz konsekwencja jakości. Każdą saunę projektujemy i wykonujemy tak, by zachwycała detalem i służyła przez dekady. RoyalSauna to inwestycja, którą czuć od pierwszego dotyku drewna.",
       items: [
         {
-          title: "Świerk skandynawski",
+          title: "Drewno skandynawskie",
           description:
-            "Bryła naszej sauny stworzona jest z wysokiej jakości świerku skandynawskiego. Drewno pozyskiwane jest z północnych lasów, dzięki czemu jest gęste i stabilne. To podstawa trwałości i zapachu prawdziwej sauny. ",
+            "Bryła naszej sauny stworzona jest z wysokiej jakości drewna skandynawskiego. Drewno pozyskiwane jest z północnych lasów, dzięki czemu jest gęste i stabilne. To podstawa trwałości i zapachu prawdziwej sauny. ",
         },
         {
           title: "Dopracowane wykonanie",
@@ -123,14 +123,14 @@ export const pl = {
             "Wydajny piec precyzyjnie dobrany do kubatury sauny. Zapewnia szybkie nagrzewanie, równomierną temperaturę i idealne warunki do każdego seansu.",
         },
         benches: {
-          title: "Profilowane ławy z osiki",
+          title: "Profilowane ławy z drewna osikowego premium",
           description:
-            "Ergonomicznie profilowane ławy z osiki. Delikatne i przyjemne w dotyku drewno nie nagrzewa się nadmiernie, zapewniając wyjątkowy komfort podczas każdego seansu.",
+            "Ergonomicznie profilowane ławy z drewna osikowego premium. Delikatne i przyjemne w dotyku drewno nie nagrzewa się nadmiernie, zapewniając wyjątkowy komfort podczas każdego seansu.",
         },
         walls: {
           title: "Ściany z litego drewna",
           description:
-            "Lity świerk skandynawski starannie wyselekcjonowany pod kątem trwałości i estetyki. Naturalna struktura drewna tworzy ciepłe, eleganckie wnętrze i wyjątkowy klimat sauny.",
+            "Lite drewno skandynawskie starannie wyselekcjonowane pod kątem trwałości i estetyki. Naturalna struktura drewna tworzy ciepłe, eleganckie wnętrze i wyjątkowy klimat sauny.",
         },
         floor: {
           title: "Podłoga i wykończenie",
@@ -146,8 +146,8 @@ export const pl = {
         "Każdą saunę z linii Regenerum dostarczamy z przemyślanym zestawem powitalnym w standardzie. Znajdziesz w nim akcesoria potrzebne do pierwszego seansu, dzięki czemu od razu po zakończeniu montażu możesz cieszyć się pełnym doświadczeniem RoyalSauna. To, co inni często traktują jako dodatek, u nas jest naturalną częścią doświadczenia.",
       items: [
         "Piec saunowy ze sterownikiem Wi-Fi",
-        "Profilowane ławy z drewna premium",
-        "Osikowe zagłówki – chłodne i przyjemne w dotyku",
+        "Profilowane ławy z drewna osikowego premium",
+        "Dwa osikowe zagłówki – chłodne i przyjemne w dotyku",
         "Cebrzyk i czerpak",
         "Komplet kamieni saunowych",
         "Oświetlenie nastrojowe LED",
@@ -157,11 +157,11 @@ export const pl = {
       ],
       groups: [
         {
-          title: "Ławy, osikowe zagłówki i LED",
+          title: "Ławy, dwa osikowe zagłówki i LED",
           description:
-            "Profilowane ławy oraz ergonomiczne zagłówki z osiki – drewna, które nie parzy skóry nawet w wysokiej temperaturze. Do tego nastrojowe LED wbudowane w konstrukcję.",
+            "Profilowane ławy z drewna osikowego premium oraz dwa ergonomiczne zagłówki z osiki – drewna, które nie parzy skóry nawet w wysokiej temperaturze. Do tego nastrojowe LED wbudowane w konstrukcję.",
           image: "/images/included-benches.jpg",
-          alt: "Profilowane ławy z podświetleniem LED i zagłówkiem",
+          alt: "Profilowane ławy z podświetleniem LED i dwoma zagłówkami",
           shape: "wide" as const,
         },
         {
@@ -256,7 +256,7 @@ export const pl = {
       eyebrow: "Linia Regenerum",
       h1: "Sauny ogrodowe – linia Regenerum",
       description:
-        "Trzy warianty – Compact, Comfort i Premium – różniące się wielkością i pojemnością. Wszystkie zbudowane ze skandynawskiego świerka premium, z kompletnym wyposażeniem w standardzie.",
+        "Trzy warianty – Compact, Comfort i Premium – różniące się wielkością i pojemnością. Wszystkie zbudowane z drewna skandynawskiego premium, z kompletnym wyposażeniem w standardzie.",
     },
     oneModel: {
       title: "Linia Regenerum – trzy modele",
@@ -308,7 +308,7 @@ export const pl = {
         {
           title: "Opcje konfiguracji",
           description:
-            "Przeszklenia, taras, oświetlenie i system audio wpływają na ostateczną wycenę.",
+            "Przeszklenia, taras i oświetlenie wpływają na ostateczną wycenę.",
         },
       ],
     },
@@ -444,13 +444,13 @@ export const pl = {
     meta: {
       title: "Drewno służące na lata – materiały saun Regenerum",
       description:
-        "Poznaj drewno, z którego budujemy sauny Regenerum – ThermoWood (termowany świerk) na bryłę i podłogę oraz osikę na ławy i zagłówki.",
+        "Poznaj drewno, z którego budujemy sauny Regenerum – ThermoWood (termowany świerk) na bryłę i podłogę oraz osikę na ławy i dwa zagłówki.",
     },
     materialsSection: {
       eyebrow: "Materiały",
       title: "Dwa drewna, jedna sauna",
       description:
-        "Bryłę i podłogę wykonujemy z ThermoWood – termowanego świerku o wyjątkowej trwałości. Ławy i zagłówki z osiki – przyjemnej w kontakcie ze skórą nawet w wysokiej temperaturze.",
+        "Bryłę i podłogę wykonujemy z ThermoWood – termowanego świerku o wyjątkowej trwałości. Ławy z drewna osikowego premium i dwa zagłówki z osiki – przyjemne w kontakcie ze skórą nawet w wysokiej temperaturze.",
       madeFrom: "Wykonane z tego drewna",
     },
     thermoWoodSection: {
@@ -527,7 +527,7 @@ export const pl = {
         benches: {
           label: "Ławy",
           description:
-            "Osika – gładkie i chłodne w dotyku, wygodne nawet w wysokiej temperaturze wewnątrz sauny.",
+            "Drewno osikowe premium – gładkie i chłodne w dotyku, wygodne nawet w wysokiej temperaturze wewnątrz sauny. W standardzie dwa zagłówki z osiki.",
         },
         floor: {
           label: "Podłoga",
@@ -661,7 +661,7 @@ export const pl = {
       eyebrow: "W standardzie",
       title: "Wszystko, czego potrzebujesz do pierwszego seansu",
       description:
-        "Każda sauna linii Regenerum przyjeżdża gotowa na rytuał. Dobraliśmy detale, które budują atmosferę prawdziwego spa – od ciepła pieca po miękkość ręcznika. Nic nie musisz dokupować. Wystarczy wejść, oddychać i poczuć, że to już Twój domowy rytuał.",
+        "Każda sauna linii Regenerum przyjeżdża gotowa na rytuał. Dobraliśmy detale, które budują atmosferę prawdziwego spa – od dwóch zagłówków po miękkość ręcznika. Nic nie musisz dokupować. Wystarczy wejść, oddychać i poczuć, że to już Twój domowy rytuał.",
       items: {
         towels: {
           title: "Ręczniki",
@@ -690,7 +690,7 @@ export const pl = {
           closing: "",
         },
         headrests: {
-          title: "Zagłówki",
+          title: "Dwa zagłówki",
           paragraphs: [
             "Prawdziwy komfort saunowania tworzą starannie dopracowane detale. Dlatego każda sauna RoyalSauna Regenerum wyposażona jest w dwa ergonomiczne zagłówki wykonane z naturalnego drewna osikowego, które zostały zaprojektowane tak, aby zapewniać wygodne podparcie głowy i karku podczas odpoczynku.",
             "Drewno osikowe jest szczególnie cenione w wyposażeniu saun ze względu na swoją delikatną, gładką strukturę oraz niską przewodność cieplną. Dzięki temu nie nagrzewa się tak intensywnie jak wiele innych gatunków drewna i pozostaje przyjemne w kontakcie ze skórą nawet podczas seansów w wysokiej temperaturze. Jego jasna, subtelna kolorystyka doskonale komponuje się również z eleganckim wnętrzem sauny, podkreślając jego naturalny i harmonijny charakter.",
@@ -723,18 +723,6 @@ export const pl = {
           list: [],
           closing: "",
         },
-        heaterStones: {
-          title: "Piec i kamienie",
-          paragraphs: [
-            "Sercem każdej sauny RoyalSauna Regenerum jest nowoczesny piec elektryczny klasy premium, wyposażony w komplet dedykowanych kamieni saunowych, które równomiernie magazynują i oddają ciepło, zapewniając optymalne warunki podczas każdego seansu. Dzięki wysokiej wydajności piec szybko osiąga zadaną temperaturę, pozwalając rozpocząć relaks już po krótkim czasie od uruchomienia.",
-            "Nowoczesne wzornictwo pieca doskonale współgra z eleganckim wnętrzem sauny, nadając jej wyjątkowy, luksusowy charakter. To połączenie ponadczasowej estetyki, najwyższej jakości wykonania i niezawodnej technologii, które gwarantuje komfort użytkowania przez długie lata.",
-            "W zestawie znajduje się również inteligentny sterownik z modułem Wi-Fi, dzięki któremu obsługa sauny jest niezwykle prosta i wygodna. Sterownik umożliwia wybór jednego z trzech trybów nagrzewania, pozwalając dopasować pracę pieca do własnych preferencji oraz rodzaju planowanego seansu. Na czytelnym wyświetlaczu w każdej chwili sprawdzisz aktualną temperaturę oraz szacowany czas pozostały do pełnego nagrzania sauny.",
-            "Dzięki łączności Wi-Fi możesz sterować sauną z poziomu smartfona – uruchomić nagrzewanie jeszcze przed powrotem do domu, zmienić ustawienia lub sprawdzić status pracy pieca z dowolnego miejsca. To rozwiązanie, które zapewnia maksymalną wygodę i sprawia, że Twoja sauna jest zawsze gotowa dokładnie wtedy, gdy jej potrzebujesz.",
-          ],
-          listLabel: "",
-          list: [],
-          closing: "",
-        },
       },
     },
     includedValue: {
@@ -743,14 +731,6 @@ export const pl = {
       description:
         "To, co u innych bywa dodatkiem płatnym osobno, w RoyalSauna jest naturalną częścią doświadczenia – od pierwszego dnia.",
       items: [
-        {
-          title: "Piec elektryczny z kompletem kamieni",
-          description: "Dobór do modelu oraz kamienie saunowe w standardzie.",
-        },
-        {
-          title: "Sterownik z Wi-Fi",
-          description: "Uruchomisz saunę z telefonu, zanim wrócisz do domu.",
-        },
         {
           title: "Ręczniki premium z logo RoyalSauna",
           description: "2, 4 lub 6 sztuk – w zależności od wybranego modelu.",
@@ -772,11 +752,6 @@ export const pl = {
     faq: {
       items: [
         {
-          question: "Czy kamienie i sterownik Wi-Fi są w cenie sauny?",
-          answer:
-            "Tak. Każda sauna linii Regenerum jest dostarczana z piecem, kompletem kamieni saunowych oraz inteligentnym sterownikiem z modułem Wi-Fi. Nie dokupujesz ich osobno – to część pakietu powitalnego i standardowego wyposażenia.",
-        },
-        {
           question: "Ile ręczników otrzymam wraz z sauną?",
           answer:
             "Liczba ręczników zależy od modelu: Regenerum Compact – 2 szt., Comfort – 4 szt., Premium – 6 szt. Wszystkie są wykonane ze 100% bawełny i wykończone haftowanym logo RoyalSauna.",
@@ -789,7 +764,7 @@ export const pl = {
         {
           question: "Jak dbać o drewniane akcesoria z pakietu?",
           answer:
-            "Cebrzyk, czerpak, zagłówki, klepsydrę oraz zestaw termometr/higrometr wystarczy po seansie osuszyć i przechowywać w suchej, przewiewnej przestrzeni wewnątrz sauny lub w jej pobliżu. Unikaj moczenia na dłużej i agresywnych detergentów – naturalne drewno osikowe najlepiej znosi delikatną pielęgnację.",
+            "Cebrzyk, czerpak, dwa zagłówki, klepsydrę oraz zestaw termometr/higrometr wystarczy po seansie osuszyć i przechowywać w suchej, przewiewnej przestrzeni wewnątrz sauny lub w jej pobliżu. Unikaj moczenia na dłużej i agresywnych detergentów – naturalne drewno osikowe najlepiej znosi delikatną pielęgnację.",
         },
       ],
     },
@@ -809,7 +784,7 @@ export const pl = {
     welcomePackage: {
       metaTitle: "Pakiet powitalny – RoyalSauna",
       metaDescription:
-        "Poznaj pakiet powitalny dołączany do każdej sauny Regenerum – ręczniki, piec ze sterownikiem Wi-Fi, zagłówki i więcej.",
+        "Poznaj pakiet powitalny dołączany do każdej sauny Regenerum – ręczniki, dwa zagłówki, cebrzyk i więcej.",
       eyebrow: "W standardzie",
       title: "Pakiet powitalny",
       description:
@@ -825,8 +800,6 @@ export const pl = {
         thermoHygro:
           "Termometr i higrometr z osiki – kontrola klimatu w sercu sauny.",
         timer: "Klepsydra 5 / 10 / 15 min – naturalne odmierzanie czasu seansu.",
-        heaterStones:
-          "Piec z kompletem kamieni i sterownikiem Wi-Fi – włączysz saunę z telefonu.",
       },
     },
   },
@@ -977,7 +950,7 @@ export const pl = {
     description: "Zebraliśmy odpowiedzi na pytania, które słyszymy najczęściej.",
   },
   footer: {
-    tagline: "Sauny ogrodowe premium ze świerku skandynawskiego.",
+    tagline: "Sauny ogrodowe premium z drewna skandynawskiego.",
     explore: "Strona",
     products: "Sauny",
     company: "Informacje",

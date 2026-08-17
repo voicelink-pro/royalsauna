@@ -59,26 +59,26 @@ export const woodMaterials: WoodMaterial[] = [
       {
         image: {
           src: "/images/included-benches.jpg",
-          alt: "Ławy i zagłówki wykonane z osiki",
+          alt: "Ławy i dwa zagłówki wykonane z osiki",
         },
         i18n: {
-          pl: { label: "Ławy i zagłówki" },
-          en: { label: "Benches & headrests" },
+          pl: { label: "Ławy i dwa zagłówki" },
+          en: { label: "Benches & two headrests" },
         },
       },
     ],
     i18n: {
       pl: {
         name: "Osika",
-        usageTag: "Ławy i zagłówki",
+        usageTag: "Ławy i dwa zagłówki",
         description:
-          "Ławy i zagłówki wykonujemy z osiki – drewna delikatnego i niezwykle przyjemnego w dotyku, które nawet w wysokiej temperaturze nie parzy skóry. Osika ma jednolitą, gładką strukturę i mało żywicy, dzięki czemu nie plami ciała i skutecznie odprowadza wilgoć, zachowując świeżość przez lata.",
+          "Ławy wykonujemy z drewna osikowego premium, a w standardzie dołączamy dwa zagłówki z osiki – drewna delikatnego i niezwykle przyjemnego w dotyku, które nawet w wysokiej temperaturze nie parzy skóry. Osika ma jednolitą, gładką strukturę i mało żywicy, dzięki czemu nie plami ciała i skutecznie odprowadza wilgoć, zachowując świeżość przez lata.",
       },
       en: {
         name: "Aspen",
-        usageTag: "Benches & headrests",
+        usageTag: "Benches & two headrests",
         description:
-          "We make the benches and headrests from aspen – a gentle wood that's remarkably pleasant to the touch and stays cool enough not to burn skin even at high temperatures. Aspen has a smooth, even grain with little resin, so it won't mark your skin and sheds moisture well, staying fresh for years.",
+          "We make the benches from premium aspen wood and include two aspen headrests as standard – a gentle wood that's remarkably pleasant to the touch and stays cool enough not to burn skin even at high temperatures. Aspen has a smooth, even grain with little resin, so it won't mark your skin and sheds moisture well, staying fresh for years.",
       },
     },
   },

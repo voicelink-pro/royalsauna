@@ -56,11 +56,11 @@ export function MobileStickyCTA({
         </a>
         <Button asChild className="h-12 flex-1">
           <Link
-            href={routeMap.configurator[locale]}
+            href={routeMap.contact[locale]}
             onClick={() =>
               trackEvent("cta_click", {
                 cta_location: "sticky_cta",
-                cta_target: routeMap.configurator[locale],
+                cta_target: routeMap.contact[locale],
               })
             }
           >

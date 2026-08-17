@@ -10,7 +10,7 @@ export const generalFaq: Record<Locale, FaqItem[]> = {
     {
       question: "Czym różnią się warianty Compact, Comfort i Premium?",
       answer:
-        "To jeden, dopracowany model w trzech wariantach. Różni je wyłącznie pojemność i gabaryty – jakość świerku skandynawskiego, wykonanie i zakres wyposażenia w standardzie pozostają takie same. Model compact przewiedziany jest dla 2 osób, Comofort dla 4, a największy model Regenerum Premium dla 6 osób.",
+        "To jeden, dopracowany model w trzech wariantach. Różni je wyłącznie pojemność i gabaryty – jakość drewna skandynawskiego, wykonanie i zakres wyposażenia w standardzie pozostają takie same. Model compact przewidziany jest dla 2 osób, Comfort dla 4, a największy model Regenerum Premium dla 6 osób.",
     },
     {
       question: "Ile kosztuje RoyalSauna?",
@@ -20,7 +20,7 @@ export const generalFaq: Record<Locale, FaqItem[]> = {
     {
       question: "Co wchodzi w skład sauny w standardzie?",
       answer:
-        "Każda sauna Regenerum jest dostarczana z kompletnym wyposażeniem potrzebnym do komfortowego korzystania od pierwszego seansu. W standardzie otrzymujesz piec dobrany do kubatury sauny wraz z kamieniami, nastrojowe oświetlenie LED, zagłówki oraz zestaw akcesoriów: termometr, higrometr, klepsydrę, drewniany cebrzyk i czerpak. Do zestawu dołączamy również ręczniki RoyalSauna – 2 dla modelu Compact, 4 dla modelu Comfort oraz 6 dla modelu Premium.",
+        "Każda sauna Regenerum jest dostarczana z kompletnym wyposażeniem potrzebnym do komfortowego korzystania od pierwszego seansu. W standardzie otrzymujesz piec dobrany do kubatury sauny wraz z kamieniami, nastrojowe oświetlenie LED, dwa zagłówki oraz zestaw akcesoriów: termometr, higrometr, klepsydrę, drewniany cebrzyk i czerpak. Do zestawu dołączamy również ręczniki RoyalSauna – 2 dla modelu Compact, 4 dla modelu Comfort oraz 6 dla modelu Premium.",
     },
     {
       question: "Czy zajmujecie się dostawą i montażem?",
@@ -46,7 +46,7 @@ export const generalFaq: Record<Locale, FaqItem[]> = {
     {
       question: "How do the Compact, Comfort and Premium variants differ?",
       answer:
-        "It's one refined model in three variants. Only capacity and dimensions differ – the quality of Scandinavian spruce, the craftsmanship and the standard equipment stay the same. The Compact model is designed for 2 people, Comfort for 4, and the largest model, Regenerum Premium, for 6 people.",
+        "It's one refined model in three variants. Only capacity and dimensions differ – the quality of Scandinavian wood, the craftsmanship and the standard equipment stay the same. The Compact model is designed for 2 people, Comfort for 4, and the largest model, Regenerum Premium, for 6 people.",
     },
     {
       question: "How much does a RoyalSauna cost?",
@@ -56,7 +56,7 @@ export const generalFaq: Record<Locale, FaqItem[]> = {
     {
       question: "What's included as standard?",
       answer:
-        "Every Regenerum sauna is delivered with the complete equipment you need for a comfortable first session. As standard you get a heater matched to the sauna's volume together with stones, ambient LED lighting, headrests and an accessory set: a thermometer, hygrometer, sand timer, and a wooden bucket and ladle. We also include RoyalSauna towels – 2 for the Compact model, 4 for Comfort and 6 for Premium.",
+        "Every Regenerum sauna is delivered with the complete equipment you need for a comfortable first session. As standard you get a heater matched to the sauna's volume together with stones, ambient LED lighting, two headrests and an accessory set: a thermometer, hygrometer, sand timer, and a wooden bucket and ladle. We also include RoyalSauna towels – 2 for the Compact model, 4 for Comfort and 6 for Premium.",
     },
     {
       question: "Do you handle delivery and installation?",

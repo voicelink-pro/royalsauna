@@ -365,7 +365,7 @@ export function Header({
         <div className="hidden items-center gap-5 lg:flex">
           <LanguageSwitcher current={locale} className={overDark ? "[&_a]:text-ivory/80 [&_a[aria-current]]:text-ivory [&_span]:text-ivory/40" : ""} />
           <CtaButton
-            href={routeMap.configurator[locale]}
+            href={routeMap.contact[locale]}
             location="header"
             variant="primary"
             className={cn(
@@ -475,7 +475,7 @@ export function Header({
           <div className="mt-4 flex items-center justify-between border-t border-sand-200 pt-5">
             <LanguageSwitcher current={locale} />
             <CtaButton
-              href={routeMap.configurator[locale]}
+              href={routeMap.contact[locale]}
               location="mobile_menu"
               variant="primary"
               className="px-5 py-2.5"

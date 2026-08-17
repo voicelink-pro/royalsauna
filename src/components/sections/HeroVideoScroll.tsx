@@ -226,7 +226,7 @@ export function HeroVideoScroll({
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <CtaButton
-                href={routeMap.configurator[locale]}
+                href={routeMap.contact[locale]}
                 location="hero"
                 variant="primary"
               >
