@@ -23,7 +23,7 @@ export function LanguageSwitcher({
 
   return (
     <div
-      className={cn("flex items-center gap-1 text-sm", className)}
+      className={cn("flex items-center gap-1 text-base", className)}
       role="group"
       aria-label="Language"
     >
