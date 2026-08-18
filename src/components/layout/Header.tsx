@@ -149,18 +149,17 @@ export function Header({
           : "bg-sand-100/95 shadow-[0_1px_0_rgba(90,70,50,0.08)] backdrop-blur",
       )}
     >
-      <Container className="relative flex h-40 items-center justify-between">
+      <Container className="relative flex h-20 items-center justify-between sm:h-24 lg:h-40">
         <Link
           href={homeHref}
           aria-label={dict.brand.name}
-          className="relative z-10 block h-32 w-[448px] shrink-0 transition-opacity duration-500 hover:opacity-90 sm:h-36 sm:w-[504px]"
+          className="relative z-10 block h-14 w-[min(15.5rem,calc(100%-3.5rem))] shrink-0 transition-opacity duration-500 hover:opacity-90 sm:h-20 sm:w-[min(20rem,calc(100%-3.5rem))] lg:h-32 lg:w-[448px] xl:h-36 xl:w-[504px]"
         >
           <Image
             src="/logo.png"
             alt={dict.brand.name}
             fill
-            priority
-            sizes="504px"
+            sizes="(min-width: 1280px) 504px, (min-width: 1024px) 448px, 248px"
             className={cn(
               "object-contain object-left transition-all duration-500",
               overDark && "brightness-0 invert",
@@ -380,7 +379,7 @@ export function Header({
         <button
           type="button"
           className={cn(
-            "flex h-10 w-10 items-center justify-center lg:hidden transition-colors duration-500",
+            "relative z-20 -mr-1 flex h-11 w-11 shrink-0 items-center justify-center lg:hidden transition-colors duration-500",
             overDark ? "text-ivory" : "text-bark-700",
           )}
           aria-expanded={open}

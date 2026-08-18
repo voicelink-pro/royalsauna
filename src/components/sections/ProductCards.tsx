@@ -7,6 +7,7 @@ import type { Dictionary } from "@/lib/i18n";
 import { products } from "@/content/products";
 import { trackEvent } from "@/lib/analytics";
 import { formatPrice } from "@/lib/utils";
+import { blurSand } from "@/lib/images";
 
 export function ProductCards({
   locale,
@@ -42,6 +43,7 @@ export function ProductCards({
                 sizes="(max-width: 768px) 100vw, 33vw"
                 loading={index === 0 ? "eager" : "lazy"}
                 className="object-cover transition-transform duration-700 ease-calm group-hover:scale-105"
+                {...blurSand}
               />
             </div>
             <div className="flex flex-1 flex-col p-6">

@@ -30,7 +30,6 @@ export function QrShell({
               src="/logo.png"
               alt={dict.brand.name}
               fill
-              priority
               sizes="155px"
               className="object-contain object-left"
             />

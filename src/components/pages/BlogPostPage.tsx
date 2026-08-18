@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { blurSand } from "@/lib/images";
 import type { BlogBlock, Locale } from "@/types";
 import { getDictionary } from "@/lib/i18n";
 import { routeMap } from "@/lib/site";
@@ -124,6 +125,7 @@ export function BlogPostPage({
               priority
               sizes="(max-width: 1024px) 100vw, 56rem"
               className="object-cover"
+              {...blurSand}
             />
           </div>
 

@@ -1,6 +1,5 @@
-import Image from "next/image";
 import type { Locale, Product } from "@/types";
-import { cn } from "@/lib/utils";
+import { HeroBannerImages } from "@/components/media/HeroBannerImages";
 
 /**
  * Full-bleed intro banner shown at the very top of each product page, above
@@ -16,30 +15,13 @@ export function ProductHeroBanner({
   locale: Locale;
 }) {
   const copy = product.i18n[locale];
-  const mobileSrc = product.bannerImage.mobileSrc;
 
   return (
     <section className="relative isolate flex h-screen w-full items-center justify-center overflow-hidden text-center">
-      {mobileSrc && (
-        <Image
-          src={mobileSrc}
-          alt={product.bannerImage.alt}
-          fill
-          priority
-          sizes="100vw"
-          className="animate-zoom-slow object-cover sm:hidden"
-        />
-      )}
-      <Image
-        src={product.bannerImage.src}
+      <HeroBannerImages
+        image={product.bannerImage.src}
+        mobileImage={product.bannerImage.mobileSrc}
         alt={product.bannerImage.alt}
-        fill
-        priority
-        sizes="100vw"
-        className={cn(
-          "animate-zoom-slow object-cover",
-          mobileSrc && "hidden sm:block",
-        )}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-bark-900/50 via-bark-900/25 to-bark-900/60" />
 
@@ -47,9 +29,7 @@ export function ProductHeroBanner({
         <p className="mb-5 animate-fade-up text-xs font-medium uppercase tracking-[0.3em] text-ivory/75">
           {product.line}
         </p>
-        <p
-          className="animate-fade-up font-serif text-6xl leading-none text-ivory sm:text-7xl lg:text-8xl [animation-delay:120ms]"
-        >
+        <p className="animate-fade-up font-serif text-6xl leading-none text-ivory sm:text-7xl lg:text-8xl [animation-delay:120ms]">
           {product.name}
         </p>
         <div

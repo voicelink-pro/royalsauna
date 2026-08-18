@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { ProductImage } from "@/types";
+import { blurSand } from "@/lib/images";
 import { Reveal } from "@/components/ui/Reveal";
 import { cn } from "@/lib/utils";
 
@@ -54,6 +55,7 @@ export function ProductShowcase({
               objectPosition: imagePosition,
               transform: imageZoom ? `scale(${imageZoom})` : undefined,
             }}
+            {...blurSand}
           />
         </div>
       </Reveal>

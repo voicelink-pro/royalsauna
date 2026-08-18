@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Locale } from "@/types";
+import { blurSand } from "@/lib/images";
 import { getDictionary } from "@/lib/i18n";
 import { routeMap } from "@/lib/site";
 import { Section } from "@/components/ui/Section";
@@ -44,6 +45,7 @@ export function QualityPage({ locale }: { locale: Locale }) {
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
+              {...blurSand}
             />
           </Reveal>
         </div>

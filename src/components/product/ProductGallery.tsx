@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import type { ProductImage } from "@/types";
+import { blurSand } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
 /** Image gallery with a large active image and thumbnail selector. */
@@ -23,9 +24,9 @@ export function ProductGallery({
           src={images[active].src}
           alt={images[active].alt}
           fill
-          priority
           sizes="(max-width: 1024px) 100vw, 50vw"
           className="object-cover"
+          {...blurSand}
         />
         {videoCaption && (
           <span className="sr-only">{videoCaption}</span>
@@ -55,6 +56,7 @@ export function ProductGallery({
                 sizes="120px"
                 loading="lazy"
                 className="object-cover"
+                {...blurSand}
               />
             </button>
           ))}
