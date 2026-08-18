@@ -169,7 +169,7 @@ export function Header({
         </Link>
 
         <nav
-          className="absolute left-1/2 top-1/2 z-20 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-8 lg:flex"
+          className="absolute left-1/2 top-1/2 z-20 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-9 lg:flex"
           aria-label={dict.nav.menu}
         >
           {nav.map((item) => {
@@ -190,7 +190,7 @@ export function Header({
                     href={item.href}
                     aria-current={active ? "page" : undefined}
                     className={cn(
-                      "flex items-center gap-1 text-sm tracking-wide transition-colors duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass",
+                      "flex items-center gap-1.5 text-base font-medium tracking-wide transition-colors duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass",
                       overDark
                         ? active
                           ? "text-ivory"
@@ -203,7 +203,7 @@ export function Header({
                     {item.label}
                     <svg
                       className={cn(
-                        "h-3.5 w-3.5 transition-transform duration-300",
+                        "h-4 w-4 transition-transform duration-300",
                         modelsOpen && "rotate-180",
                       )}
                       fill="none"
@@ -277,7 +277,7 @@ export function Header({
                     href={item.href}
                     aria-current={active ? "page" : undefined}
                     className={cn(
-                      "flex items-center gap-1 text-sm tracking-wide transition-colors duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass",
+                      "flex items-center gap-1.5 text-base font-medium tracking-wide transition-colors duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass",
                       overDark
                         ? active
                           ? "text-ivory"
@@ -290,7 +290,7 @@ export function Header({
                     {item.label}
                     <svg
                       className={cn(
-                        "h-3.5 w-3.5 transition-transform duration-300",
+                        "h-4 w-4 transition-transform duration-300",
                         specOpen && "rotate-180",
                       )}
                       fill="none"
@@ -346,7 +346,7 @@ export function Header({
                 href={item.href}
                 aria-current={active ? "page" : undefined}
                 className={cn(
-                  "text-sm tracking-wide transition-colors duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass",
+                  "text-base font-medium tracking-wide transition-colors duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass",
                   overDark
                     ? active
                       ? "text-ivory"
@@ -369,7 +369,7 @@ export function Header({
             location="header"
             variant="primary"
             className={cn(
-              "px-5 py-2.5 transition-colors duration-500",
+              "px-6 py-3 text-base transition-colors duration-500",
               overDark && "bg-ivory/20 text-ivory backdrop-blur hover:bg-ivory/30",
             )}
           >
