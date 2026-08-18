@@ -18,7 +18,7 @@ const INCLUDED_PL_BASE = [
   "Piec saunowy dobrany do kubatury",
   "Komplet kamieni saunowych",
   "Oświetlenie nastrojowe LED",
-  "2 osikowe zagłówki",
+  "Osikowe zagłówki (2 szt.)",
   "Klepsydra saunowa",
   "Termometr",
   "Higrometr",
@@ -30,7 +30,7 @@ const INCLUDED_EN_BASE = [
   "Sauna heater matched to the cabin volume",
   "Full set of sauna stones",
   "Ambient LED lighting",
-  "2 aspen headrests",
+  "Aspen headrests (2 pcs.)",
   "Sauna hourglass",
   "Thermometer",
   "Hygrometer",
@@ -103,7 +103,7 @@ export const products: Product[] = [
           {
             title: "Idealna dla dwóch osób",
             description:
-              "Komfortowe miejsce dla dwóch osób z profilowanymi ławami z drewna osikowego premium i 2 zagłówkami zaprojektowanymi pod pełen relaks.",
+              "Komfortowe miejsce dla dwóch osób z profilowanymi ławami z drewna osikowego premium i osikowymi zagłówkami (2 szt.) zaprojektowanymi pod pełen relaks.",
           },
           {
             title: "Szybkie nagrzewanie",
@@ -183,7 +183,7 @@ export const products: Product[] = [
           {
             question: "Co dostaję w pakiecie powitalnym?",
             answer:
-              "W cenie Compact są 2 ręczniki premium, 2 zagłówki osikowe, cebrzyk, czerpak, termometr, higrometr i klepsydra. Piec i kamienie są częścią sauny, nie pakietu.",
+              "W cenie Compact są 2 ręczniki premium, osikowe zagłówki (2 szt.), cebrzyk, czerpak, termometr, higrometr i klepsydra. Piec i kamienie są częścią sauny, nie pakietu.",
             link: {
               label: "Zobacz pakiet powitalny",
               href: routeMap.welcomePackage.pl,
@@ -217,7 +217,7 @@ export const products: Product[] = [
           {
             title: "Perfect for two people",
             description:
-              "A comfortable space for two with contoured premium aspen-wood benches and 2 headrests designed for full relaxation.",
+              "A comfortable space for two with contoured premium aspen-wood benches and aspen headrests (2 pcs.) designed for full relaxation.",
           },
           {
             title: "Fast heat-up",
@@ -297,7 +297,7 @@ export const products: Product[] = [
           {
             question: "What's in the welcome package?",
             answer:
-              "Compact includes 2 premium towels, 2 aspen headrests, a bucket, ladle, thermometer, hygrometer and sand timer. The heater and stones come with the sauna, not the welcome package.",
+              "Compact includes 2 premium towels, aspen headrests (2 pcs.), a bucket, ladle, thermometer, hygrometer and sand timer. The heater and stones come with the sauna, not the welcome package.",
             link: {
               label: "See the welcome package",
               href: routeMap.welcomePackage.en,
@@ -355,7 +355,7 @@ export const products: Product[] = [
         shortDescription:
           "Środkowy, najbardziej uniwersalny model linii Regenerum. Przestrzeń dla rodziny przy zachowaniu zgrabnych proporcji.",
         longDescription:
-          "Comfort to model, który najczęściej polecamy – i nie bez powodu. Łączy komfortową przestrzeń dla czterech osób ze zgrabną bryłą, która dobrze odnajduje się w typowym ogrodzie. Wnętrze zaprojektowano z myślą o swobodnym seansie w gronie rodziny: szersze ławy z drewna osikowego premium, 2 wygodne zagłówki i przemyślana cyrkulacja ciepła. To sauna, wokół której zbiera się dom – na codzienny relaks i wieczory, które chce się przedłużać.",
+          "Comfort to model, który najczęściej polecamy – i nie bez powodu. Łączy komfortową przestrzeń dla czterech osób ze zgrabną bryłą, która dobrze odnajduje się w typowym ogrodzie. Wnętrze zaprojektowano z myślą o swobodnym seansie w gronie rodziny: szersze ławy z drewna osikowego premium, osikowe zagłówki (2 szt.) i przemyślana cyrkulacja ciepła. To sauna, wokół której zbiera się dom – na codzienny relaks i wieczory, które chce się przedłużać.",
         features: [
           {
             title: "Komfort dla rodziny",
@@ -469,7 +469,7 @@ export const products: Product[] = [
         shortDescription:
           "The middle, most versatile model in the Regenerum line. Room for the family while keeping neat proportions.",
         longDescription:
-          "Comfort is the model we recommend most often – and for good reason. It combines comfortable space for four people with a neat form that fits a typical garden well. The interior is designed for a relaxed session with family: wider premium aspen-wood benches, 2 comfortable headrests and well-considered heat circulation. It's a sauna the household gathers around – for daily relaxation and evenings you want to stretch out.",
+          "Comfort is the model we recommend most often – and for good reason. It combines comfortable space for four people with a neat form that fits a typical garden well. The interior is designed for a relaxed session with family: wider premium aspen-wood benches, aspen headrests (2 pcs.) and well-considered heat circulation. It's a sauna the household gathers around – for daily relaxation and evenings you want to stretch out.",
         features: [
           {
             title: "Comfort for the family",

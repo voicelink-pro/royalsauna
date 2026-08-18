@@ -28,7 +28,7 @@ export const generalFaq: Record<Locale, FaqItem[]> = {
     {
       question: "Co wchodzi w skład sauny w standardzie?",
       answer:
-        "Każda sauna Regenerum jest dostarczana z kompletnym wyposażeniem potrzebnym do komfortowego korzystania od pierwszego seansu. W standardzie otrzymujesz piec dobrany do kubatury sauny wraz z kamieniami, nastrojowe oświetlenie LED, 2 zagłówki oraz zestaw akcesoriów: termometr, higrometr, klepsydrę, drewniany cebrzyk i czerpak. Do zestawu dołączamy również ręczniki RoyalSauna – 2 dla modelu Compact, 4 dla modelu Comfort oraz 6 dla modelu Premium.",
+        "Każda sauna Regenerum jest dostarczana z kompletnym wyposażeniem potrzebnym do komfortowego korzystania od pierwszego seansu. W standardzie otrzymujesz piec dobrany do kubatury sauny wraz z kamieniami, nastrojowe oświetlenie LED, osikowe zagłówki (2 szt.) oraz zestaw akcesoriów: termometr, higrometr, klepsydrę, drewniany cebrzyk i czerpak. Do zestawu dołączamy również ręczniki RoyalSauna – 2 dla modelu Compact, 4 dla modelu Comfort oraz 6 dla modelu Premium.",
       link: {
         label: "Zobacz piece",
         href: routeMap.heaters.pl,
@@ -84,7 +84,7 @@ export const generalFaq: Record<Locale, FaqItem[]> = {
     {
       question: "What's included as standard?",
       answer:
-        "Every Regenerum sauna is delivered with the complete equipment you need for a comfortable first session. As standard you get a heater matched to the sauna's volume together with stones, ambient LED lighting, 2 headrests and an accessory set: a thermometer, hygrometer, sand timer, and a wooden bucket and ladle. We also include RoyalSauna towels – 2 for the Compact model, 4 for Comfort and 6 for Premium.",
+        "Every Regenerum sauna is delivered with the complete equipment you need for a comfortable first session. As standard you get a heater matched to the sauna's volume together with stones, ambient LED lighting, aspen headrests (2 pcs.) and an accessory set: a thermometer, hygrometer, sand timer, and a wooden bucket and ladle. We also include RoyalSauna towels – 2 for the Compact model, 4 for Comfort and 6 for Premium.",
       link: {
         label: "See the heaters",
         href: routeMap.heaters.en,

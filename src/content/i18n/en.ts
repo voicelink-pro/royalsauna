@@ -150,7 +150,7 @@ export const en: Dictionary = {
         "Sauna heater with Wi-Fi controller",
         "A full set of sauna stones",
         "Ambient LED lighting",
-        "2 aspen headrests – cool and pleasant to the touch",
+        "Aspen headrests (2 pcs.) – cool and pleasant to the touch",
         "Sauna sand timer",
         "Thermometer",
         "Hygrometer",
@@ -159,11 +159,11 @@ export const en: Dictionary = {
       ],
       groups: [
         {
-          title: "Benches, 2 aspen headrests & LED",
+          title: "Benches, aspen headrests (2 pcs.) & LED",
           description:
-            "Contoured premium aspen-wood benches and 2 ergonomic aspen headrests – wood that stays gentle on the skin even at high heat. Plus ambient LED lighting built into the structure.",
+            "Contoured premium aspen-wood benches and ergonomic aspen headrests (2 pcs.) – wood that stays gentle on the skin even at high heat. Plus ambient LED lighting built into the structure.",
           image: "/images/included-benches.jpg",
-          alt: "Contoured benches with LED lighting and 2 headrests",
+          alt: "Contoured benches with LED lighting and aspen headrests (2 pcs.)",
           shape: "wide" as const,
         },
         {
@@ -475,13 +475,13 @@ export const en: Dictionary = {
     meta: {
       title: "Wood built to last – materials of the Regenerum saunas",
       description:
-        "Discover the wood we build Regenerum saunas from – ThermoWood (thermally modified spruce) for the shell and floor, and aspen for the benches and 2 headrests.",
+        "Discover the wood we build Regenerum saunas from – ThermoWood (thermally modified spruce) for the shell and floor, and aspen for the benches and aspen headrests (2 pcs.).",
     },
     materialsSection: {
       eyebrow: "Materials",
       title: "Two woods, one sauna",
       description:
-        "We build the shell and floor from ThermoWood – thermally modified spruce of exceptional durability. Benches are premium aspen wood, with 2 aspen headrests – pleasant against the skin even at high temperatures.",
+        "We build the shell and floor from ThermoWood – thermally modified spruce of exceptional durability. Benches are premium aspen wood, with aspen headrests (2 pcs.) – pleasant against the skin even at high temperatures.",
       madeFrom: "Made from this wood",
     },
     thermoWoodSection: {
@@ -558,7 +558,7 @@ export const en: Dictionary = {
         benches: {
           label: "Benches",
           description:
-            "Premium aspen wood – smooth and cool to the touch, comfortable even at high sauna temperatures. 2 aspen headrests included as standard.",
+            "Premium aspen wood – smooth and cool to the touch, comfortable even at high sauna temperatures. Aspen headrests (2 pcs.) included as standard.",
         },
         floor: {
           label: "Floor",
@@ -717,7 +717,7 @@ export const en: Dictionary = {
       eyebrow: "Included as standard",
       title: "Everything you need for your first session",
       description:
-        "Every Regenerum sauna arrives ready for the ritual. We chose the details that shape a true spa atmosphere – from the 2 headrests to the softness of the towel. Nothing left to buy. Just step in, breathe, and feel that this is already your home ritual.",
+        "Every Regenerum sauna arrives ready for the ritual. We chose the details that shape a true spa atmosphere – from the aspen headrests (2 pcs.) to the softness of the towel. Nothing left to buy. Just step in, breathe, and feel that this is already your home ritual.",
       items: {
         towels: {
           title: "Towels",
@@ -746,12 +746,12 @@ export const en: Dictionary = {
           closing: "",
         },
         headrests: {
-          title: "2 headrests",
+          title: "Aspen headrests (2 pcs.)",
           paragraphs: [
-            "True sauna comfort is shaped by carefully refined details. That is why every RoyalSauna Regenerum sauna includes 2 ergonomic headrests made from natural aspen wood, designed to support the head and neck comfortably while you rest.",
+            "True sauna comfort is shaped by carefully refined details. That is why every RoyalSauna Regenerum sauna includes ergonomic aspen headrests (2 pcs.) made from natural wood, designed to support the head and neck comfortably while you rest.",
             "Aspen is especially valued in sauna interiors for its soft, smooth grain and low thermal conductivity. It does not heat up as intensely as many other woods and stays pleasant against the skin even in high temperatures. Its light, subtle colour also complements the elegant cabin, underlining a natural and harmonious look.",
             "The carefully contoured shape follows the natural position of the head and neck, helping muscles relax and letting you settle into a comfortable posture. The finely sanded surface feels exceptional to the touch and makes every moment of rest even more enjoyable.",
-            "As standard, every RoyalSauna model includes 2 aspen headrests, so recovery feels equally pleasant whether you are alone or sharing the session. It is the combination of natural material, ergonomic form and timeless aesthetics that lets you fully sink into the ritual of unwinding.",
+            "As standard, every RoyalSauna model includes aspen headrests (2 pcs.), so recovery feels equally pleasant whether you are alone or sharing the session. It is the combination of natural material, ergonomic form and timeless aesthetics that lets you fully sink into the ritual of unwinding.",
           ],
           listLabel: "",
           list: [],
@@ -788,7 +788,7 @@ export const en: Dictionary = {
         "What others often treat as a paid extra is, at RoyalSauna, a natural part of the experience – from day one.",
       items: [
         {
-          title: "2 aspen headrests",
+          title: "Aspen headrests (2 pcs.)",
           description: "Ergonomic support for head and neck, included as standard.",
         },
         {
@@ -828,7 +828,7 @@ export const en: Dictionary = {
         {
           question: "How should I care for the wooden accessories?",
           answer:
-            "After a session, simply dry the bucket, ladle, 2 headrests, sand timer and thermometer/hygrometer set, and keep them in a dry, airy place inside or near the sauna. Avoid prolonged soaking and harsh detergents – natural aspen responds best to gentle care.",
+            "After a session, simply dry the bucket, ladle, aspen headrests (2 pcs.), sand timer and thermometer/hygrometer set, and keep them in a dry, airy place inside or near the sauna. Avoid prolonged soaking and harsh detergents – natural aspen responds best to gentle care.",
           link: {
             label: "Discover aspen wood",
             href: routeMap.wood.en,
@@ -837,7 +837,7 @@ export const en: Dictionary = {
         {
           question: "Are the heater and stones part of the welcome package?",
           answer:
-            "No. The Harvia heater and stones come with the sauna – we match them to the volume of your chosen model. The welcome package is the session kit: towels, 2 headrests, bucket, ladle, thermometer, hygrometer and sand timer.",
+            "No. The Harvia heater and stones come with the sauna – we match them to the volume of your chosen model. The welcome package is the session kit: towels, aspen headrests (2 pcs.), bucket, ladle, thermometer, hygrometer and sand timer.",
           link: {
             label: "See the heaters",
             href: routeMap.heaters.en,
@@ -870,7 +870,7 @@ export const en: Dictionary = {
     welcomePackage: {
       metaTitle: "Welcome package – RoyalSauna",
       metaDescription:
-        "Discover the welcome package included with every Regenerum sauna – towels, 2 headrests, bucket and more.",
+        "Discover the welcome package included with every Regenerum sauna – towels, aspen headrests (2 pcs.), bucket and more.",
       eyebrow: "Included as standard",
       title: "Welcome package",
       description:
@@ -882,7 +882,7 @@ export const en: Dictionary = {
         bucketLadle:
           "Wooden bucket and ladle – ready for pouring water on the stones.",
         headrests:
-          "2 ergonomic aspen headrests – pleasant to the touch, they don't burn.",
+          "Aspen headrests (2 pcs.) – ergonomic, pleasant to the touch, they don't burn.",
         thermoHygro:
           "Aspen thermometer and hygrometer – climate control at the heart of the sauna.",
         timer: "5 / 10 / 15 min sand timer – a natural way to time your session.",

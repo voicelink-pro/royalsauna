@@ -8,7 +8,7 @@ export const welcomePackageItems = [
   {
     id: "headrests",
     image: "/images/pakiet/zaglowki.jpg",
-    alt: { pl: "2 zagłówki saunowe", en: "2 sauna headrests" },
+    alt: { pl: "Osikowe zagłówki saunowe (2 szt.)", en: "Aspen sauna headrests (2 pcs.)" },
     frame: "standard" as const,
   },
   {
