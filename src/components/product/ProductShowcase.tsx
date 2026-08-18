@@ -40,7 +40,7 @@ export function ProductShowcase({
         <div
           className={cn(
             "relative aspect-[4/5] overflow-hidden rounded-3xl shadow-soft sm:aspect-[4/3] lg:aspect-[4/5]",
-            imageZoom && "bg-white",
+            imageZoom && imageZoom < 1 && "bg-white",
           )}
         >
           <Image

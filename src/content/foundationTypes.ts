@@ -19,7 +19,7 @@ export const foundationTypes: FoundationType[] = [
       pl: {
         name: "Płyta betonowa",
         description:
-          "Najbardziej stabilne i trwałe rozwiązanie – jedna, zbrojona płyta pod całą saunę. Odporna na osiadanie i idealnie równa.",
+          "Jedna, zbrojona płyta pod całą saunę. Równa powierzchnia, odporna na osiadanie.",
         compare: {
           cost: "Wyższy",
           time: "5–7 dni + ok. 4 tyg. sezonowania",
@@ -30,7 +30,7 @@ export const foundationTypes: FoundationType[] = [
       en: {
         name: "Concrete slab",
         description:
-          "The most stable and durable option – one reinforced slab under the whole sauna. Resistant to settling and perfectly level.",
+          "One reinforced slab under the whole sauna. A level surface that resists settling.",
         compare: {
           cost: "Higher",
           time: "5–7 days + approx. 4 weeks curing",

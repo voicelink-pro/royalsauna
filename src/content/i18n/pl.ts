@@ -3,6 +3,7 @@
  * więc EN musi mieć identyczny kształt.
  */
 import type { Locale } from "@/types";
+import { routeMap } from "@/lib/site";
 
 export const pl = {
   meta: {
@@ -143,25 +144,26 @@ export const pl = {
       eyebrow: "Co zawiera sauna?",
       title: "Wszystko, czego potrzebujesz do pierwszego seansu.",
       description:
-        "Każdą saunę z linii Regenerum dostarczamy z przemyślanym zestawem powitalnym w standardzie. Znajdziesz w nim akcesoria potrzebne do pierwszego seansu, dzięki czemu od razu po zakończeniu montażu możesz cieszyć się pełnym doświadczeniem RoyalSauna. To, co inni często traktują jako dodatek, u nas jest naturalną częścią doświadczenia.",
+        "Każdą saunę z linii Regenerum dostarczamy z kompletnym wyposażeniem w standardzie. Od razu po zakończeniu montażu możesz cieszyć się pełnym doświadczeniem RoyalSauna. To, co inni często traktują jako dodatek, u nas jest naturalną częścią doświadczenia.",
       items: [
-        "Piec saunowy ze sterownikiem Wi-Fi",
         "Profilowane ławy z drewna osikowego premium",
-        "2 osikowe zagłówki – chłodne i przyjemne w dotyku",
-        "Cebrzyk i czerpak",
+        "Piec saunowy ze sterownikiem Wi-Fi",
         "Komplet kamieni saunowych",
         "Oświetlenie nastrojowe LED",
-        "Termometr i higrometr",
+        "2 osikowe zagłówki – chłodne i przyjemne w dotyku",
         "Klepsydra saunowa",
+        "Termometr",
+        "Higrometr",
+        "Cebrzyk i czerpak",
         "Ręczniki premium z logo RoyalSauna",
       ],
       groups: [
         {
-          title: "Ławy, 2 osikowe zagłówki i LED",
+          title: "Ławy, osikowe zagłówki i LED",
           description:
-            "Profilowane ławy z drewna osikowego premium oraz 2 ergonomiczne zagłówki z osiki – drewna, które nie parzy skóry nawet w wysokiej temperaturze. Do tego nastrojowe LED wbudowane w konstrukcję.",
+            "Profilowane ławy z drewna osikowego premium oraz ergonomiczne zagłówki z osiki – drewna, które nie parzy skóry nawet w wysokiej temperaturze. Do tego nastrojowe LED wbudowane w konstrukcję.",
           image: "/images/included-benches.jpg",
-          alt: "Profilowane ławy z podświetleniem LED i 2 zagłówkami",
+          alt: "Profilowane ławy z podświetleniem LED i osikowymi zagłówkami",
           shape: "wide" as const,
         },
         {
@@ -261,7 +263,7 @@ export const pl = {
     oneModel: {
       title: "Linia Regenerum – trzy modele",
       description:
-        "Linia Regenerum to trzy warianty jednej sauny. Różni je wielkość i pojemność – jakość materiałów, wykonanie i wyposażenie pozostają niezmiennie premium.",
+        "Regenerum dostępne jest w trzech wersjach dopasowanych do różnych potrzeb i przestrzeni. Niezależnie od wybranego wariantu otrzymujesz tę samą jakość skandynawskiego drewna, staranne wykonanie oraz pełny standard wyposażenia. Różnica dotyczy wyłącznie wielkości: Compact komfortowo mieści 2 osoby, Comfort 4 osoby, a Premium zapewnia przestrzeń dla maksymalnie 6 osób.",
     },
     comparison: {
       title: "Porównanie modeli",
@@ -279,16 +281,25 @@ export const pl = {
           title: "Compact",
           description:
             "Dla 2 osób. Kameralna przestrzeń na codzienny rytuał – idealna do mniejszych ogrodów.",
+          image: "/images/which-one-compact.png",
+          imageAlt: "RoyalSauna Regenerum Compact",
+          imageScale: 0.66,
         },
         {
           title: "Comfort",
           description:
             "Dla 4 osób. Najczęściej wybierany model – komfort dla rodziny i miejsce dla gości.",
+          image: "/images/which-one-comfort.png",
+          imageAlt: "RoyalSauna Regenerum Comfort",
+          imageScale: 0.84,
         },
         {
           title: "Premium",
           description:
             "Dla 6 osób. Przestronne spa na spotkania i większe grono.",
+          image: "/images/which-one-premium.png",
+          imageAlt: "RoyalSauna Regenerum Premium",
+          imageScale: 1,
         },
       ],
     },
@@ -411,26 +422,46 @@ export const pl = {
           question: "Jak działa sterowanie WiFi i aplikacja MyHarvia?",
           answer:
             "Każdy piec ma panel Harvia z modułem WiFi, dzięki czemu można nim sterować zdalnie z telefonu przez aplikację MyHarvia – włączysz ogrzewanie, zanim jeszcze dotrzesz do sauny, i sprawdzisz temperaturę na bieżąco.",
+          link: {
+            label: "Otrzymaj ofertę",
+            href: routeMap.contact.pl,
+          },
         },
         {
           question: "Czym różni się piec stojący od wiszącego (ściennego)?",
           answer:
-            "Piec stojący (Cilindro, Legend) ustawiany jest na podłodze i można go wkomponować w ławy sauny. Piec wiszący (Spirit) montowany jest na ścianie – zajmuje mniej miejsca na dole kabiny i ma bardziej nowoczesną, kompaktową formę.",
+            "Piec stojący (Cilindro, Legend) stoi na podłodze, zwykle przy ławach. Piec wiszący (Spirit) montowany jest na ścianie – zajmuje mniej miejsca na dole kabiny i ma bardziej nowoczesną, kompaktową formę.",
+          link: {
+            label: "Porównaj modele",
+            href: routeMap.saunas.pl,
+          },
         },
         {
           question: "Czy do każdego pieca potrzebna jest instalacja 400V?",
           answer:
             "Piece o mocy 9,0 kW (Cilindro, Spirit) wymagają zasilania 400V 3N~. Piec Legend można podłączyć elastyczniej – 230V, 230V 3~ lub 400V 3N~ – w zależności od dostępnej u Ciebie instalacji.",
+          link: {
+            label: "Napisz do nas",
+            href: routeMap.contact.pl,
+          },
         },
         {
           question: "Czy do wszystkich pieców trzeba dokupić licencję Control?",
           answer:
-            "Nie. Piec Cilindro obsługuje się przez MyHarvia WiFi bez dodatkowych opłat. Legend i Spirit mają w zestawie licencję MyHarvia Core, a pełne zdalne sterowanie przez MyHarvia Control wymaga dokupienia licencji w aplikacji.",
+            "Nie. Piec Cilindro obsługuje się przez MyHarvia WiFi bez dodatkowych opłat. Pełne zdalne sterowanie przez MyHarvia Control przy piecach Legend i Spirit wymaga dokupienia licencji w aplikacji.",
+          link: {
+            label: "Skonfiguruj ofertę",
+            href: routeMap.configurator.pl,
+          },
         },
         {
           question: "Jak często trzeba wymieniać kamienie w piecu?",
           answer:
             "Przy regularnym użytkowaniu warto wymieniać kamienie średnio raz na 1–2 lata. Z czasem pękają i tracą zdolność akumulowania ciepła, co wydłuża czas nagrzewania i osłabia jakość pary.",
+          link: {
+            label: "Otrzymaj ofertę",
+            href: routeMap.contact.pl,
+          },
         },
       ],
     },
@@ -578,12 +609,12 @@ export const pl = {
         {
           title: "Margines wokół obrysu",
           description:
-            "Zaplanuj podłoże większe od zewnętrznego obrysu sauny o min. 20 cm z każdej strony – to ułatwia montaż i późniejszą konserwację ścian.",
+            "Zaplanuj podłoże większe od zewnętrznego obrysu sauny o min. 10 cm z każdej strony – to ułatwia montaż i późniejszą konserwację ścian.",
         },
         {
           title: "Poziom bez odchyłek",
           description:
-            "Maksymalna odchyłka poziomu całej powierzchni to ok. 5 mm – większe różnice mogą powodować pracowanie drewnianej konstrukcji.",
+            "Maksymalna odchyłka poziomu całej powierzchni to ok. 10 mm – większe różnice mogą powodować pracowanie drewnianej konstrukcji.",
         },
         {
           title: "Dostęp dla transportu",
@@ -601,7 +632,7 @@ export const pl = {
       eyebrow: "Wymiary",
       title: "Wymiary podłoża dla każdego modelu",
       description:
-        "Podane wymiary to zewnętrzny obrys sauny oraz zalecany rozmiar podłoża, z zapasem 20 cm z każdej strony.",
+        "Podane wymiary to zewnętrzny obrys sauny oraz zalecany rozmiar podłoża, z zapasem 10 cm z każdej strony.",
       columns: {
         model: "Model",
         exterior: "Wymiary sauny",
@@ -612,7 +643,7 @@ export const pl = {
       eyebrow: "Porównanie",
       title: "Porównanie podłoży",
       description:
-        "Koszt, czas realizacji, poziom trudności i odprowadzanie wody – zestawione w jednym miejscu.",
+        "Płyta betonowa, bloczki i kostka brukowa – trzy warianty, które polecamy pod sauny Regenerum.",
       columns: {
         type: "Podłoże",
         cost: "Koszt",
@@ -627,22 +658,47 @@ export const pl = {
           question: "Czy mogę postawić saunę bezpośrednio na trawie lub gruncie?",
           answer:
             "Nie polecamy tego – bez odpowiedniego podłoża konstrukcja z czasem osiądzie nierównomiernie, drewno będzie wchłaniać wilgoć z ziemi, a sauna szybciej się zniszczy. Zawsze zalecamy jeden z trzech opisanych wariantów podłoża.",
+          link: {
+            label: "Porównaj modele",
+            href: routeMap.saunas.pl,
+          },
         },
         {
           question:
             "Jak długo trzeba czekać po wylaniu płyty betonowej, żeby zamontować saunę?",
           answer:
             "Beton potrzebuje ok. 3–4 tygodni, żeby uzyskać wystarczającą wytrzymałość. Montaż sauny na jeszcze niedostatecznie związanej płycie może prowadzić do jej uszkodzenia.",
+          link: {
+            label: "Otrzymaj ofertę",
+            href: routeMap.contact.pl,
+          },
         },
         {
           question: "Co jeśli mój teren jest nierówny albo na spadku?",
           answer:
             "W takich przypadkach konieczne jest wyrównanie terenu przed przygotowaniem podłoża – zazwyczaj przez dodatkowy wykop i nasyp ze żwiru, tak by finalna powierzchnia była idealnie pozioma niezależnie od ukształtowania działki.",
+          link: {
+            label: "Napisz do nas",
+            href: routeMap.contact.pl,
+          },
         },
         {
           question: "Czy podłoże musi mieć odprowadzenie wody lub kanalizację?",
           answer:
             "Sauna sucha nie wymaga podłączenia do kanalizacji – ważne jest tylko, by podłoże miało niewielki spadek (1–2%) odprowadzający wodę deszczową od budynku, co zapewniają wszystkie trzy opisane warianty.",
+          link: {
+            label: "Poznaj drewno ThermoWood",
+            href: routeMap.wood.pl,
+          },
+        },
+        {
+          question: "Jakie wymiary podłoża przygotować pod każdy model?",
+          answer:
+            "Podłoże powinno być o ok. 10 cm większe z każdej strony niż bryła sauny. Compact: 2,3 × 1,34 m, Comfort: 2,6 × 2,4 m, Premium: 3,2 × 2,6 m. Dokładne wytyczne przekazujemy przed dostawą.",
+          link: {
+            label: "Porównaj modele",
+            href: routeMap.saunas.pl,
+          },
         },
       ],
     },
@@ -732,20 +788,20 @@ export const pl = {
         "To, co u innych bywa dodatkiem płatnym osobno, w RoyalSauna jest naturalną częścią doświadczenia – od pierwszego dnia.",
       items: [
         {
-          title: "Ręczniki premium z logo RoyalSauna",
-          description: "2, 4 lub 6 sztuk – w zależności od wybranego modelu.",
-        },
-        {
-          title: "Cebrzyk i czerpak",
-          description: "Gotowe do polewania kamieni od pierwszego seansu.",
-        },
-        {
           title: "2 zagłówki osikowe",
           description: "Ergonomiczne podparcie głowy i karku w standardzie.",
         },
         {
           title: "Termometr, higrometr i klepsydra",
           description: "Pełna kontrola klimatu i czasu – bez elektroniki w kabinie.",
+        },
+        {
+          title: "Cebrzyk i czerpak",
+          description: "Gotowe do polewania kamieni od pierwszego seansu.",
+        },
+        {
+          title: "Ręczniki premium z logo RoyalSauna",
+          description: "2, 4 lub 6 sztuk – w zależności od wybranego modelu.",
         },
       ],
     },
@@ -755,16 +811,46 @@ export const pl = {
           question: "Ile ręczników otrzymam wraz z sauną?",
           answer:
             "Liczba ręczników zależy od modelu: Regenerum Compact – 2 szt., Comfort – 4 szt., Premium – 6 szt. Wszystkie są wykonane ze 100% bawełny i wykończone haftowanym logo RoyalSauna.",
+          link: {
+            label: "Porównaj modele",
+            href: routeMap.saunas.pl,
+          },
         },
         {
           question: "Czy mogę dokupić dodatkowe ręczniki lub akcesoria?",
           answer:
             "Tak. Jeśli chcesz uzupełnić zestaw – na przykład o dodatkowe ręczniki na gości – skontaktuj się z nami przy składaniu zamówienia lub później. Chętnie dobierzemy elementy spójne z Twoją sauną.",
+          link: {
+            label: "Napisz do nas",
+            href: routeMap.contact.pl,
+          },
         },
         {
           question: "Jak dbać o drewniane akcesoria z pakietu?",
           answer:
             "Cebrzyk, czerpak, 2 zagłówki, klepsydrę oraz zestaw termometr/higrometr wystarczy po seansie osuszyć i przechowywać w suchej, przewiewnej przestrzeni wewnątrz sauny lub w jej pobliżu. Unikaj moczenia na dłużej i agresywnych detergentów – naturalne drewno osikowe najlepiej znosi delikatną pielęgnację.",
+          link: {
+            label: "Poznaj drewno osikowe",
+            href: routeMap.wood.pl,
+          },
+        },
+        {
+          question: "Czy piec i kamienie są częścią pakietu powitalnego?",
+          answer:
+            "Nie. Piec Harvia z kamieniami jest częścią sauny – dobieramy go do kubatury wybranego modelu. Pakiet powitalny to akcesoria do seansu: ręczniki, 2 zagłówki, cebrzyk, czerpak, termometr, higrometr i klepsydra.",
+          link: {
+            label: "Zobacz piece",
+            href: routeMap.heaters.pl,
+          },
+        },
+        {
+          question: "Czy pakiet powitalny jest w cenie każdej sauny?",
+          answer:
+            "Tak. Każda sauna Regenerum – Compact, Comfort i Premium – przyjeżdża z kompletnym pakietem powitalnym. Różni się tylko liczba ręczników: 2, 4 lub 6 sztuk.",
+          link: {
+            label: "Otrzymaj ofertę",
+            href: routeMap.contact.pl,
+          },
         },
       ],
     },

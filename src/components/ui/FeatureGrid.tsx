@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 import { cn } from "@/lib/utils";
 
@@ -7,7 +8,14 @@ export function FeatureGrid({
   columns = 4,
   numbered = false,
 }: {
-  items: { title: string; description: string }[];
+  items: {
+    title: string;
+    description: string;
+    image?: string;
+    imageAlt?: string;
+    /** Optical scale of the product photo (1 = fill the frame). */
+    imageScale?: number;
+  }[];
   columns?: 1 | 2 | 3 | 4;
   numbered?: boolean;
 }) {
@@ -33,6 +41,30 @@ export function FeatureGrid({
             delay={index * 80}
             className={cn(isOrphan && "sm:col-span-full sm:text-center")}
           >
+            {item.image && (
+              <div
+                className={cn(
+                  "relative mb-5 aspect-square w-full max-w-[220px]",
+                  isOrphan && "sm:mx-auto",
+                )}
+              >
+                <Image
+                  src={item.image}
+                  alt={item.imageAlt ?? item.title}
+                  fill
+                  sizes="220px"
+                  className="object-contain object-bottom"
+                  style={
+                    item.imageScale
+                      ? {
+                          transform: `scale(${item.imageScale})`,
+                          transformOrigin: "center bottom",
+                        }
+                      : undefined
+                  }
+                />
+              </div>
+            )}
             {numbered && (
               <span
                 className={cn(

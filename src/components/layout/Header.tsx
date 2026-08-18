@@ -149,18 +149,18 @@ export function Header({
           : "bg-sand-100/95 shadow-[0_1px_0_rgba(90,70,50,0.08)] backdrop-blur",
       )}
     >
-      <Container className="flex h-28 items-center justify-between">
+      <Container className="relative flex h-40 items-center justify-between">
         <Link
           href={homeHref}
           aria-label={dict.brand.name}
-          className="relative block h-20 w-[280px] shrink-0 transition-opacity duration-500 hover:opacity-90 sm:h-24 sm:w-[336px]"
+          className="relative z-10 block h-32 w-[448px] shrink-0 transition-opacity duration-500 hover:opacity-90 sm:h-36 sm:w-[504px]"
         >
           <Image
             src="/logo.png"
             alt={dict.brand.name}
             fill
             priority
-            sizes="336px"
+            sizes="504px"
             className={cn(
               "object-contain object-left transition-all duration-500",
               overDark && "brightness-0 invert",
@@ -169,7 +169,7 @@ export function Header({
         </Link>
 
         <nav
-          className="hidden items-center gap-8 lg:flex"
+          className="absolute left-1/2 top-1/2 z-20 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-8 lg:flex"
           aria-label={dict.nav.menu}
         >
           {nav.map((item) => {
@@ -362,7 +362,7 @@ export function Header({
           })}
         </nav>
 
-        <div className="hidden items-center gap-5 lg:flex">
+        <div className="relative z-10 hidden items-center gap-5 lg:flex">
           <LanguageSwitcher current={locale} className={overDark ? "[&_a]:text-ivory/80 [&_a[aria-current]]:text-ivory [&_span]:text-ivory/40" : ""} />
           <CtaButton
             href={routeMap.contact[locale]}

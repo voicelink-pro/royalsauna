@@ -41,12 +41,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl" className={`${serif.variable} ${sans.variable}`}>
-      <head>
-        <CookiebotProvider />
-        <MetaPixelProvider />
-        <ClarityProvider />
-      </head>
+      {/*
+        Cookiebot + trackers must NOT sit in a manual <head>.
+        Next manages <head> itself; wrapping beforeInteractive Scripts in an
+        explicit <head> is a known Cookiebot/Next hydration mismatch.
+        beforeInteractive still hoists Cookiebot early from the root layout body.
+      */}
       <body className="min-h-screen antialiased">
+        <CookiebotProvider />
         {/* Google Tag Manager (noscript) — fallback for visitors with JS disabled */}
         <noscript>
           <iframe
@@ -58,6 +60,8 @@ export default function RootLayout({
           />
         </noscript>
         {children}
+        <MetaPixelProvider />
+        <ClarityProvider />
         <GoogleTagManager gtmId={GTM_ID} />
       </body>
     </html>

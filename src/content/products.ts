@@ -1,4 +1,5 @@
 import type { Product, ModelId } from "@/types";
+import { routeMap } from "@/lib/site";
 
 /**
  * Product data – Regenerum line. Structured so it can later be sourced
@@ -13,25 +14,27 @@ export const LINE_NAME = "Regenerum";
 
 /** Standardowe wyposażenie wspólne dla całej linii Regenerum (bez ręczników – ich liczba różni się per model). */
 const INCLUDED_PL_BASE = [
-  "Piec saunowy dobrany do kubatury",
   "Profilowane ławy z drewna osikowego premium",
-  "2 osikowe zagłówki",
-  "Cebrzyk i czerpak",
+  "Piec saunowy dobrany do kubatury",
   "Komplet kamieni saunowych",
   "Oświetlenie nastrojowe LED",
-  "Termometr i higrometr",
+  "2 osikowe zagłówki",
   "Klepsydra saunowa",
+  "Termometr",
+  "Higrometr",
+  "Cebrzyk i czerpak",
 ];
 
 const INCLUDED_EN_BASE = [
-  "Sauna heater matched to the cabin volume",
   "Contoured premium aspen-wood benches",
-  "2 aspen headrests",
-  "Wooden bucket and ladle",
+  "Sauna heater matched to the cabin volume",
   "Full set of sauna stones",
   "Ambient LED lighting",
-  "Thermometer and hygrometer",
+  "2 aspen headrests",
   "Sauna hourglass",
+  "Thermometer",
+  "Hygrometer",
+  "Wooden bucket and ladle",
 ];
 
 /** Liczba ręczników w zestawie powitalnym rośnie z pojemnością modelu. */
@@ -154,11 +157,46 @@ export const products: Product[] = [
             question: "Jakie przygotowanie podłoża jest potrzebne?",
             answer:
               "Wystarczy równe, stabilne i nośne podłoże – np. płyta betonowa, bloczki lub utwardzona nawierzchnia. Szczegółowe wytyczne przekazujemy przed dostawą.",
+            link: {
+              label: "Zobacz specyfikację podłoża",
+              href: routeMap.foundation.pl,
+            },
           },
           {
             question: "Który piec Harvia pasuje do Compact?",
             answer:
               "Do modelu Compact dobierzemy piec Harvia Cilindro, Legend lub Spirit – każdy z modułem WiFi i aplikacją MyHarvia. Pomożemy wybrać wariant najlepiej dopasowany do Twojej instalacji.",
+            link: {
+              label: "Zobacz piece",
+              href: routeMap.heaters.pl,
+            },
+          },
+          {
+            question: "Dla ilu osób jest Compact?",
+            answer:
+              "Compact jest zaprojektowany dla 2 osób. To kameralny model do codziennego rytuału – bez kompromisów w jakości drewna i wyposażenia.",
+            link: {
+              label: "Porównaj modele",
+              href: routeMap.saunas.pl,
+            },
+          },
+          {
+            question: "Co dostaję w pakiecie powitalnym?",
+            answer:
+              "W cenie Compact są 2 ręczniki premium, 2 zagłówki osikowe, cebrzyk, czerpak, termometr, higrometr i klepsydra. Piec i kamienie są częścią sauny, nie pakietu.",
+            link: {
+              label: "Zobacz pakiet powitalny",
+              href: routeMap.welcomePackage.pl,
+            },
+          },
+          {
+            question: "Czy dostawa i montaż są w cenie?",
+            answer:
+              "Tak. Transport i profesjonalny montaż są wliczone w cenę Compact. Od Ciebie potrzebujemy przygotowanego podłoża i przyłącza elektrycznego.",
+            link: {
+              label: "Otrzymaj ofertę",
+              href: routeMap.contact.pl,
+            },
           },
         ],
       },
@@ -233,11 +271,46 @@ export const products: Product[] = [
             question: "What ground preparation is needed?",
             answer:
               "A level, stable and load-bearing base is enough – e.g. a concrete slab, blocks or a paved surface. We provide detailed guidelines before delivery.",
+            link: {
+              label: "See the foundation specification",
+              href: routeMap.foundation.en,
+            },
           },
           {
             question: "Which Harvia heater suits Compact?",
             answer:
               "For Compact we offer the Harvia Cilindro, Legend or Spirit heater – each with WiFi and the MyHarvia app. We'll help you choose the option best suited to your installation.",
+            link: {
+              label: "See the heaters",
+              href: routeMap.heaters.en,
+            },
+          },
+          {
+            question: "How many people is Compact for?",
+            answer:
+              "Compact is designed for 2 people. It's an intimate model for a daily ritual – with no compromise on wood quality or equipment.",
+            link: {
+              label: "Compare models",
+              href: routeMap.saunas.en,
+            },
+          },
+          {
+            question: "What's in the welcome package?",
+            answer:
+              "Compact includes 2 premium towels, 2 aspen headrests, a bucket, ladle, thermometer, hygrometer and sand timer. The heater and stones come with the sauna, not the welcome package.",
+            link: {
+              label: "See the welcome package",
+              href: routeMap.welcomePackage.en,
+            },
+          },
+          {
+            question: "Are delivery and installation included?",
+            answer:
+              "Yes. Transport and professional installation are included in the Compact price. All we need from you is a prepared base and an electrical connection.",
+            link: {
+              label: "Get an offer",
+              href: routeMap.contact.en,
+            },
           },
         ],
       },
@@ -346,16 +419,46 @@ export const products: Product[] = [
             question: "Ile osób komfortowo zmieści się w Comfort?",
             answer:
               "Comfort komfortowo pomieści 4 osoby. To najbardziej uniwersalny model w linii – sprawdzi się zarówno dla rodziny, jak i dla spotkań w mniejszym gronie.",
+            link: {
+              label: "Porównaj modele",
+              href: routeMap.saunas.pl,
+            },
           },
           {
             question: "Czy sauna jest gotowa do użytku zaraz po montażu?",
             answer:
               "Tak. Dostarczamy i montujemy saunę w komplecie z wyposażeniem. Po podłączeniu pieca i pierwszym wygrzaniu możesz rozpocząć pierwszy seans.",
+            link: {
+              label: "Zobacz pakiet powitalny",
+              href: routeMap.welcomePackage.pl,
+            },
           },
           {
             question: "Jak wygląda serwis i gwarancja?",
             answer:
               "Każdą saunę obejmujemy gwarancją i wsparciem posprzedażowym. Szczegółowe warunki przekazujemy wraz z ofertą.",
+            link: {
+              label: "Otrzymaj ofertę",
+              href: routeMap.contact.pl,
+            },
+          },
+          {
+            question: "Jakiego podłoża wymaga Comfort?",
+            answer:
+              "Równego, stabilnego i nośnego – płyta betonowa, bloczki lub kostka. Podłoże powinno mieć ok. 2,6 × 2,4 m (ok. 10 cm zapasu z każdej strony).",
+            link: {
+              label: "Zobacz specyfikację podłoża",
+              href: routeMap.foundation.pl,
+            },
+          },
+          {
+            question: "Który piec pasuje do Comfort?",
+            answer:
+              "Do Comfort dobierzemy piec Harvia Cilindro, Legend lub Spirit – każdy z WiFi i aplikacją MyHarvia. Pomożemy wybrać wariant do Twojej instalacji.",
+            link: {
+              label: "Zobacz piece",
+              href: routeMap.heaters.pl,
+            },
           },
         ],
       },
@@ -430,16 +533,46 @@ export const products: Product[] = [
             question: "How many people fit comfortably in Comfort?",
             answer:
               "Comfort comfortably seats 4 people. It's the most versatile model in the line – great for a family as well as smaller gatherings.",
+            link: {
+              label: "Compare models",
+              href: routeMap.saunas.en,
+            },
           },
           {
             question: "Is the sauna ready to use right after installation?",
             answer:
               "Yes. We deliver and install the sauna complete with its equipment. Once the heater is connected and the first heat-up is done, you can begin your first session.",
+            link: {
+              label: "See the welcome package",
+              href: routeMap.welcomePackage.en,
+            },
           },
           {
             question: "What about service and warranty?",
             answer:
               "Every sauna comes with a warranty and after-sales support. We share the detailed terms together with the offer.",
+            link: {
+              label: "Get an offer",
+              href: routeMap.contact.en,
+            },
+          },
+          {
+            question: "What foundation does Comfort need?",
+            answer:
+              "A level, stable and load-bearing base – a concrete slab, blocks or paving. The base should be about 2.6 × 2.4 m (roughly 10 cm extra on each side).",
+            link: {
+              label: "See the foundation specification",
+              href: routeMap.foundation.en,
+            },
+          },
+          {
+            question: "Which heater suits Comfort?",
+            answer:
+              "For Comfort we offer the Harvia Cilindro, Legend or Spirit – each with WiFi and the MyHarvia app. We'll help you match the option to your installation.",
+            link: {
+              label: "See the heaters",
+              href: routeMap.heaters.en,
+            },
           },
         ],
       },
@@ -548,16 +681,46 @@ export const products: Product[] = [
             question: "Czy Premium potrzebuje instalacji 400V (siły)?",
             answer:
               "Piec Cilindro o mocy 9,0 kW wymaga przyłącza 400V. Jeśli nie masz dostępu do siły, doskonałą alternatywą jest piec Legend, który można podłączyć elastyczniej – 230V, 230V 3~ lub 400V 3N~.",
+            link: {
+              label: "Zobacz piece",
+              href: routeMap.heaters.pl,
+            },
           },
           {
             question: "Jak długo trwa realizacja zamówienia?",
             answer:
-              "Czas realizacji zależy od konfiguracji i bieżącego obłożenia produkcji. Dokładny termin potwierdzamy na etapie wyceny i przygotowania umowy.",
+              "Standardowy czas realizacji od zamówienia do dostawy i montażu wynosi 4–5 tygodni.",
+            link: {
+              label: "Skonfiguruj ofertę",
+              href: routeMap.configurator.pl,
+            },
           },
           {
             question: "Czy montaż jest po Twojej stronie?",
             answer:
               "Tak. Zajmujemy się dostawą i profesjonalnym montażem, tak aby sauna była gotowa do użytku. Od Ciebie potrzebujemy jedynie przygotowanego podłoża i przyłączy.",
+            link: {
+              label: "Otrzymaj ofertę",
+              href: routeMap.contact.pl,
+            },
+          },
+          {
+            question: "Dla ilu osób jest Premium?",
+            answer:
+              "Premium jest zaprojektowany dla 6 osób. To największy model linii Regenerum – na spotkania, rodzinne seanse i wieczory, które chce się przedłużać.",
+            link: {
+              label: "Porównaj modele",
+              href: routeMap.saunas.pl,
+            },
+          },
+          {
+            question: "Jakiego podłoża wymaga Premium?",
+            answer:
+              "Równego, stabilnego i nośnego. Podłoże powinno mieć ok. 3,2 × 2,6 m (ok. 10 cm zapasu z każdej strony). Szczegółowe wytyczne przekazujemy przed dostawą.",
+            link: {
+              label: "Zobacz specyfikację podłoża",
+              href: routeMap.foundation.pl,
+            },
           },
         ],
       },
@@ -632,16 +795,46 @@ export const products: Product[] = [
             question: "Does Premium need 3-phase (400V) power?",
             answer:
               "The 9.0 kW Cilindro heater requires a 400V connection. If you don't have 3-phase access, the Legend heater is an excellent alternative – it can be wired more flexibly at 230V, 230V 3-phase or 400V 3N.",
+            link: {
+              label: "See the heaters",
+              href: routeMap.heaters.en,
+            },
           },
           {
             question: "How long does an order take to complete?",
             answer:
-              "Lead time depends on the configuration and current production schedule. We confirm the exact date during the quote and contract stage.",
+              "The standard lead time from order to delivery and installation is 4–5 weeks.",
+            link: {
+              label: "Configure your offer",
+              href: routeMap.configurator.en,
+            },
           },
           {
             question: "Do you handle the installation?",
             answer:
               "Yes. We take care of delivery and professional installation so the sauna is ready to use. All we need from you is a prepared base and connections.",
+            link: {
+              label: "Get an offer",
+              href: routeMap.contact.en,
+            },
+          },
+          {
+            question: "How many people is Premium for?",
+            answer:
+              "Premium is designed for 6 people. It's the largest model in the Regenerum line – for gatherings, family sessions and evenings you want to stretch out.",
+            link: {
+              label: "Compare models",
+              href: routeMap.saunas.en,
+            },
+          },
+          {
+            question: "What foundation does Premium need?",
+            answer:
+              "A level, stable and load-bearing base. It should be about 3.2 × 2.6 m (roughly 10 cm extra on each side). We send exact guidelines before delivery.",
+            link: {
+              label: "See the foundation specification",
+              href: routeMap.foundation.en,
+            },
           },
         ],
       },

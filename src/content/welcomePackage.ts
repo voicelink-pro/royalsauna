@@ -6,22 +6,16 @@
  */
 export const welcomePackageItems = [
   {
-    id: "towels",
-    image: "/images/pakiet/recznik.jpg",
-    alt: { pl: "Ręczniki saunowe", en: "Sauna towels" },
-    frame: "tall" as const,
-  },
-  {
-    id: "bucketLadle",
-    image: "/images/pakiet/cebrzyk.jpg",
-    alt: { pl: "Cebrzyk i czerpak saunowy", en: "Sauna bucket and ladle" },
-    frame: "tall" as const,
-  },
-  {
     id: "headrests",
     image: "/images/pakiet/zaglowki.jpg",
     alt: { pl: "2 zagłówki saunowe", en: "2 sauna headrests" },
     frame: "standard" as const,
+  },
+  {
+    id: "timer",
+    image: "/images/pakiet/klepsydra.jpg",
+    alt: { pl: "Klepsydra saunowa", en: "Sauna sand timer" },
+    frame: "tall" as const,
   },
   {
     id: "thermoHygro",
@@ -33,9 +27,15 @@ export const welcomePackageItems = [
     frame: "standard" as const,
   },
   {
-    id: "timer",
-    image: "/images/pakiet/klepsydra.jpg",
-    alt: { pl: "Klepsydra saunowa", en: "Sauna sand timer" },
+    id: "bucketLadle",
+    image: "/images/pakiet/cebrzyk.jpg",
+    alt: { pl: "Cebrzyk i czerpak saunowy", en: "Sauna bucket and ladle" },
+    frame: "tall" as const,
+  },
+  {
+    id: "towels",
+    image: "/images/pakiet/recznik.jpg",
+    alt: { pl: "Ręczniki saunowe", en: "Sauna towels" },
     frame: "tall" as const,
   },
 ] as const;

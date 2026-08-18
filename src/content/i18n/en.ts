@@ -1,5 +1,6 @@
 import type { Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/types";
+import { routeMap } from "@/lib/site";
 
 /**
  * English copy. Must match the exact shape of `pl` (the `Dictionary` type).
@@ -145,14 +146,15 @@ export const en: Dictionary = {
       description:
         "Every RoyalSauna size ships with a thoughtful standard set. What others charge extra for is part of the experience here.",
       items: [
-        "Sauna heater with Wi-Fi controller",
         "Contoured premium aspen-wood benches",
-        "2 aspen headrests – cool and pleasant to the touch",
-        "Bucket and ladle",
+        "Sauna heater with Wi-Fi controller",
         "A full set of sauna stones",
         "Ambient LED lighting",
-        "Thermometer and hygrometer",
+        "2 aspen headrests – cool and pleasant to the touch",
         "Sauna sand timer",
+        "Thermometer",
+        "Hygrometer",
+        "Bucket and ladle",
         "Premium towels with the RoyalSauna logo",
       ],
       groups: [
@@ -279,16 +281,25 @@ export const en: Dictionary = {
           title: "Compact",
           description:
             "For 2 people. An intimate space for a daily ritual – ideal for smaller gardens.",
+          image: "/images/which-one-compact.png",
+          imageAlt: "RoyalSauna Regenerum Compact",
+          imageScale: 0.66,
         },
         {
           title: "Comfort",
           description:
             "For 4 people. The most popular model – comfort for the family and room for guests.",
+          image: "/images/which-one-comfort.png",
+          imageAlt: "RoyalSauna Regenerum Comfort",
+          imageScale: 0.84,
         },
         {
           title: "Premium",
           description:
             "For 6 people. A spacious spa for gatherings and larger groups.",
+          image: "/images/which-one-premium.png",
+          imageAlt: "RoyalSauna Regenerum Premium",
+          imageScale: 1,
         },
       ],
     },
@@ -411,26 +422,46 @@ export const en: Dictionary = {
           question: "How does WiFi control and the MyHarvia app work?",
           answer:
             "Every heater has a Harvia panel with a WiFi module, so you can control it remotely from your phone with the MyHarvia app – start heating before you even reach the sauna and check the temperature on the go.",
+          link: {
+            label: "Get an offer",
+            href: routeMap.contact.en,
+          },
         },
         {
           question: "What's the difference between a standing and a wall-hung heater?",
           answer:
-            "A standing heater (Cilindro, Legend) sits on the floor and can be built into the sauna benches. A wall-hung heater (Spirit) is mounted on the wall – it takes up less floor space and has a more modern, compact form.",
+            "A standing heater (Cilindro, Legend) stands on the floor, usually next to the benches. A wall-hung heater (Spirit) is mounted on the wall – it takes up less floor space and has a more modern, compact form.",
+          link: {
+            label: "Compare models",
+            href: routeMap.saunas.en,
+          },
         },
         {
           question: "Does every heater need a 400V connection?",
           answer:
             "The 9.0 kW heaters (Cilindro, Spirit) require a 400V 3N~ connection. The Legend can be wired more flexibly – 230V, 230V 3~ or 400V 3N~ – depending on the installation you have available.",
+          link: {
+            label: "Contact us",
+            href: routeMap.contact.en,
+          },
         },
         {
           question: "Do all heaters need a paid Control licence?",
           answer:
-            "No. The Cilindro works over MyHarvia WiFi with no extra cost. The Legend and Spirit come with a MyHarvia Core licence included, and full remote control via MyHarvia Control requires purchasing a licence in the app.",
+            "No. The Cilindro works over MyHarvia WiFi with no extra cost. Full remote control via MyHarvia Control on the Legend and Spirit requires purchasing a licence in the app.",
+          link: {
+            label: "Configure your offer",
+            href: routeMap.configurator.en,
+          },
         },
         {
           question: "How often do the sauna stones need replacing?",
           answer:
             "With regular use, it's worth replacing the stones roughly every 1–2 years. Over time they crack and lose their ability to hold heat, which lengthens heat-up time and weakens the quality of the steam.",
+          link: {
+            label: "Get an offer",
+            href: routeMap.contact.en,
+          },
         },
       ],
     },
@@ -578,12 +609,12 @@ export const en: Dictionary = {
         {
           title: "Margin around the footprint",
           description:
-            "Plan the foundation at least 20 cm larger than the sauna's exterior footprint on every side – it makes installation and later wall maintenance easier.",
+            "Plan the foundation at least 10 cm larger than the sauna's exterior footprint on every side – it makes installation and later wall maintenance easier.",
         },
         {
           title: "Level within tight tolerance",
           description:
-            "The maximum deviation across the whole surface is about 5 mm – bigger differences can cause the wooden structure to warp.",
+            "The maximum deviation across the whole surface is about 10 mm – bigger differences can cause the wooden structure to warp.",
         },
         {
           title: "Access for transport",
@@ -601,7 +632,7 @@ export const en: Dictionary = {
       eyebrow: "Dimensions",
       title: "Foundation size for every model",
       description:
-        "The figures below show the sauna's exterior footprint and the recommended foundation size, with a 20 cm margin on every side.",
+        "The figures below show the sauna's exterior footprint and the recommended foundation size, with a 10 cm margin on every side.",
       columns: {
         model: "Model",
         exterior: "Sauna size",
@@ -612,7 +643,7 @@ export const en: Dictionary = {
       eyebrow: "Comparison",
       title: "Comparing the foundations",
       description:
-        "Cost, build time, difficulty and drainage – gathered in one place.",
+        "A concrete slab, blocks and paving – the three bases we recommend under Regenerum saunas.",
       columns: {
         type: "Foundation",
         cost: "Cost",
@@ -627,22 +658,47 @@ export const en: Dictionary = {
           question: "Can I place the sauna directly on grass or bare ground?",
           answer:
             "We don't recommend it – without a proper foundation the structure settles unevenly over time, the wood absorbs moisture from the ground, and the sauna wears out faster. We always recommend one of the three foundation types described above.",
+          link: {
+            label: "Compare models",
+            href: routeMap.saunas.en,
+          },
         },
         {
           question:
             "How long do I need to wait after pouring a concrete slab before installing the sauna?",
           answer:
             "Concrete needs about 3–4 weeks to reach sufficient strength. Installing the sauna on a slab that hasn't cured enough can damage it.",
+          link: {
+            label: "Get an offer",
+            href: routeMap.contact.en,
+          },
         },
         {
           question: "What if my plot is uneven or sloped?",
           answer:
             "In that case the ground needs levelling before preparing the foundation – usually with extra excavation and a gravel fill, so the final surface is perfectly level regardless of the plot's shape.",
+          link: {
+            label: "Contact us",
+            href: routeMap.contact.en,
+          },
         },
         {
           question: "Does the foundation need drainage or a sewer connection?",
           answer:
             "A dry sauna doesn't need a sewer connection – it's only important that the foundation has a slight slope (1–2%) to drain rainwater away from the building, which all three foundation types provide.",
+          link: {
+            label: "Discover ThermoWood",
+            href: routeMap.wood.en,
+          },
+        },
+        {
+          question: "What foundation size do I need for each model?",
+          answer:
+            "The base should be about 10 cm larger on each side than the sauna. Compact: 2.3 × 1.34 m, Comfort: 2.6 × 2.4 m, Premium: 3.2 × 2.6 m. We send exact guidelines before delivery.",
+          link: {
+            label: "Compare models",
+            href: routeMap.saunas.en,
+          },
         },
       ],
     },
@@ -732,20 +788,20 @@ export const en: Dictionary = {
         "What others often treat as a paid extra is, at RoyalSauna, a natural part of the experience – from day one.",
       items: [
         {
-          title: "Premium towels with the RoyalSauna logo",
-          description: "2, 4 or 6 towels – depending on the model you choose.",
-        },
-        {
-          title: "Bucket and ladle",
-          description: "Ready for pouring water on the stones from the first session.",
-        },
-        {
           title: "2 aspen headrests",
           description: "Ergonomic support for head and neck, included as standard.",
         },
         {
           title: "Thermometer, hygrometer and sand timer",
           description: "Full control of climate and time – without gadgets in the cabin.",
+        },
+        {
+          title: "Bucket and ladle",
+          description: "Ready for pouring water on the stones from the first session.",
+        },
+        {
+          title: "Premium towels with the RoyalSauna logo",
+          description: "2, 4 or 6 towels – depending on the model you choose.",
         },
       ],
     },
@@ -755,16 +811,46 @@ export const en: Dictionary = {
           question: "How many towels will I receive with my sauna?",
           answer:
             "The number of towels depends on the model: Regenerum Compact – 2, Comfort – 4, Premium – 6. All are made from 100% cotton and finished with an embroidered RoyalSauna logo.",
+          link: {
+            label: "Compare models",
+            href: routeMap.saunas.en,
+          },
         },
         {
           question: "Can I buy extra towels or accessories?",
           answer:
             "Yes. If you'd like to expand the set – for example with extra towels for guests – get in touch when placing your order or later. We'll gladly match pieces that fit your sauna.",
+          link: {
+            label: "Contact us",
+            href: routeMap.contact.en,
+          },
         },
         {
           question: "How should I care for the wooden accessories?",
           answer:
             "After a session, simply dry the bucket, ladle, 2 headrests, sand timer and thermometer/hygrometer set, and keep them in a dry, airy place inside or near the sauna. Avoid prolonged soaking and harsh detergents – natural aspen responds best to gentle care.",
+          link: {
+            label: "Discover aspen wood",
+            href: routeMap.wood.en,
+          },
+        },
+        {
+          question: "Are the heater and stones part of the welcome package?",
+          answer:
+            "No. The Harvia heater and stones come with the sauna – we match them to the volume of your chosen model. The welcome package is the session kit: towels, 2 headrests, bucket, ladle, thermometer, hygrometer and sand timer.",
+          link: {
+            label: "See the heaters",
+            href: routeMap.heaters.en,
+          },
+        },
+        {
+          question: "Is the welcome package included in every sauna's price?",
+          answer:
+            "Yes. Every Regenerum sauna – Compact, Comfort and Premium – arrives with a complete welcome package. Only the number of towels changes: 2, 4 or 6.",
+          link: {
+            label: "Get an offer",
+            href: routeMap.contact.en,
+          },
         },
       ],
     },

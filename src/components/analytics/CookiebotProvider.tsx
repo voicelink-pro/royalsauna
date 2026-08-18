@@ -2,18 +2,15 @@ import Script from "next/script";
 
 /**
  * Cookiebot CMP + Google Consent Mode v2 defaults. Both scripts use
- * `beforeInteractive`, so they always execute before the GTM component
- * (`@next/third-parties`, `afterInteractive`) and MetaPixelProvider/
- * ClarityProvider in <head> — regardless of where those are placed in the
- * tree — so that:
+ * `beforeInteractive`, so Next hoists them before hydration and before
+ * afterInteractive trackers (GTM / Meta Pixel / Clarity):
  *  1. Google tags see a "denied" consent default the instant they load.
- *  2. Cookiebot's auto-blocking script is active before GTM/Pixel/Clarity
- *     inject their own third-party <script> tags, so it can intercept them.
+ *  2. Cookiebot's auto-blocking script is active before those trackers inject
+ *     third-party <script> tags, so it can intercept them.
  *
- * The default-consent snippet has no `src` and isn't a tracker Cookiebot's
- * auto-blocker recognises, so it always runs unblocked — no need (and, with
- * next/script's beforeInteractive bootstrap, no safe way) to mark it with a
- * custom `data-cookieconsent` attribute, which caused a hydration mismatch.
+ * Must be rendered from the root layout <body> (not a manual <head>) —
+ * Cookiebot's Next.js guide: wrapping beforeInteractive Scripts in an
+ * explicit <head> causes a hydration mismatch when Cookiebot rewrites tags.
  */
 export function CookiebotProvider() {
   const cbid = process.env.NEXT_PUBLIC_COOKIEBOT_ID;

@@ -45,7 +45,7 @@ To samo dla `cubus3-*` i `cubus5-*`.
 | `included-heater.jpg` | 4:5 lub kwadrat | min. **1600 × 2000** | Sekcja „Co zawiera sauna” — duży kafel: piec |
 | `included-benches.jpg` | 16:9 | min. **1600 × 900** | Sekcja „Co zawiera sauna” — ławy i zagłówki |
 | `included-lighting.jpg` | 4:3 lub kwadrat | min. **1200 × 1200** | Sekcja „Co zawiera sauna” — oświetlenie LED |
-| `included-accessories.jpg` | 4:3 lub kwadrat | min. **1200 × 1200** | Sekcja „Co zawiera sauna” — zestaw powitalny (ręczniki, czerpak, kamienie itd.) |
+| `included-accessories.jpg` | 4:3 lub kwadrat | min. **1200 × 1200** | Sekcja „Co zawiera sauna” — pakiet powitalny (ręczniki, czerpak, termometr itd.) |
 
 **Hero (wideo):** `public/videos/hero.mp4` + klatki w `public/hero-frames/` (generowane skryptem).
 

@@ -21,21 +21,17 @@ function renderBlock(block: BlogBlock, index: number) {
         >
           <span
             aria-hidden="true"
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brass/15 text-brass-dark"
+            className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brass/15"
           >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={1.75}
-              className="h-4 w-4"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 3v5M12 16v5M3 12h5M16 12h5M6 6l3.5 3.5M14.5 14.5 18 18M6 18l3.5-3.5M14.5 9.5 18 6"
+            <span className="relative h-6 w-6">
+              <Image
+                src="/logo-mark.png"
+                alt=""
+                fill
+                sizes="24px"
+                className="object-contain"
               />
-            </svg>
+            </span>
           </span>
           <span>{block.text}</span>
         </h2>

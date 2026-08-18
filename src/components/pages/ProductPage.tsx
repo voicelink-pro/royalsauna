@@ -43,12 +43,14 @@ export function ProductPage({
   // The cutout render's subject isn't perfectly centred in every source photo,
   // so the "Bryła i wyposażenie" showcase needs a per-model nudge/zoom.
   const cutoutImagePosition: Record<SaunaSize, string> = {
-    compact: "38% 50%",
-    comfort: "38% 50%",
+    compact: "50% 50%",
+    comfort: "50% 50%",
     premium: "50% 50%",
   };
   const cutoutImageZoom: Partial<Record<SaunaSize, number>> = {
-    premium: 0.88,
+    compact: 1.06,
+    comfort: 1.08,
+    premium: 1.36,
   };
   // Gallery shows everything except the technical drawing (it gets its own section).
   const galleryImages = product.images.filter((img) => img !== technicImg);

@@ -218,10 +218,9 @@ export function HeroVideoScroll({
         {/* Warm gradient overlay for legibility. */}
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-bark-900/75 via-bark-800/35 to-bark-900/35" />
 
-        {/* Day / night toggle — z-30 so it stays above the hero Container's
-            full-width hit area on mobile, where the two would otherwise tie
-            on z-index and the later-in-DOM Container would win hit-testing. */}
-        <div className="absolute right-5 top-24 z-30 sm:right-8">
+        {/* Day / night toggle — below the fixed header (h-40) so clicks aren't
+            swallowed by the header's full-width hit area (z-40 > z-30). */}
+        <div className="absolute right-5 top-[11.5rem] z-30 sm:right-8">
           <div className="flex items-center gap-2.5 rounded-full border border-ivory/25 bg-bark-900/40 px-3 py-2 backdrop-blur-sm">
             <SunIcon
               className={cn(

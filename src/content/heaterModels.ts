@@ -29,12 +29,12 @@ export const heaterModels: HeaterModel[] = [
       pl: {
         highlight: "Uniwersalny wybór do sauny 8–14 m³",
         description:
-          "Nowoczesny piec kolumnowy z dużą pojemnością kamieni, który daje łagodną, przyjemną parę. Uruchomisz go z telefonu przez aplikację MyHarvia, a czujnik drzwi zapewnia bezpieczne uruchamianie zdalne. Piec można też wkomponować w ławy sauny.",
+          "Nowoczesny piec kolumnowy z dużą pojemnością kamieni, który daje łagodną, przyjemną parę. Uruchomisz go z telefonu przez aplikację MyHarvia, a czujnik drzwi zapewnia bezpieczne uruchamianie zdalne. Piec stoi na podłodze, zwykle przy ławach.",
       },
       en: {
         highlight: "A versatile choice for an 8–14 m³ sauna",
         description:
-          "A modern column heater with a generous stone capacity that produces soft, pleasant steam. Start it from your phone with the MyHarvia app, with a door sensor ensuring safe remote start-up. The heater can also be built into the sauna benches.",
+          "A modern column heater with a generous stone capacity that produces soft, pleasant steam. Start it from your phone with the MyHarvia app, with a door sensor ensuring safe remote start-up. The heater stands on the floor, usually next to the benches.",
       },
     },
   },
