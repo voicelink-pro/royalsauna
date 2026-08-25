@@ -2185,7 +2185,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-12",
     readingTime: 9,
     cover: {
-      src: "/images/blog/estonski-swierk.jpg",
+      src: "/images/blog/skandynawski-swierk.jpg",
       alt: "Skandynawski las świerkowy",
     },
     i18n: {

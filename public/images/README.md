@@ -57,7 +57,7 @@ To samo dla `cubus3-*` i `cubus5-*`.
 
 | Plik | Wymiary (px) | Proporcje | Gdzie |
 |------|--------------|-----------|-------|
-| `estonski-swierk.jpg` | **2400 × 1350** | 16:9 | Wpis 1 — lista + nagłówek artykułu |
+| `skandynawski-swierk.jpg` | **2400 × 1350** | 16:9 | Wpis 1 — lista + nagłówek artykułu |
 | `jaki-rozmiar-sauny.jpg` | **2400 × 1350** | 16:9 | Wpis 2 |
 | `domowy-rytual-sauny.jpg` | **2400 × 1350** | 16:9 | Wpis 3 |
 | `twoj-nowy-wpis.jpg` | **2400 × 1350** | 16:9 | Każdy nowy wpis (nazwa = slug) |
@@ -105,7 +105,7 @@ public/images/
   cubus5-frontinterir.png
 
 public/images/blog/
-  estonski-swierk.jpg
+  skandynawski-swierk.jpg
   jaki-rozmiar-sauny.jpg
   domowy-rytual-sauny.jpg
 

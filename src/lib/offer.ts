@@ -29,6 +29,7 @@ export interface OfferData {
   };
   included: string[];
   preferences: { label: string; value: string }[];
+  sourceLabel?: string;
   brand: {
     name: string;
     tagline: string;
@@ -169,6 +170,7 @@ export function buildOfferData(payload: LeadPayload): OfferData {
     },
     included: dict.home.included.items,
     preferences,
+    sourceLabel: payload.sourceLabel?.trim() || undefined,
     brand: {
       name: dict.brand.name,
       tagline: dict.brand.tagline,

@@ -11,17 +11,18 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { NativeSelect } from "@/components/ui/select";
 
-type ModelValue = SaunaSize | "unknown";
+type ModelValue = SaunaSize;
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function LeadForm({
   locale,
   dict,
-  defaultModel = "unknown",
+  defaultModel = "comfort",
   formLocation = "lead_form",
   compact = false,
   attributionOverride,
+  sourceLabel,
 }: {
   locale: Locale;
   dict: Dictionary;
@@ -39,6 +40,8 @@ export function LeadForm({
       | "utm_term"
     >
   >;
+  /** Shown as "Źródło" on the office offer notification. */
+  sourceLabel?: string;
 }) {
   const getAttribution = useAttribution();
   const startedRef = useRef(false);
@@ -94,6 +97,7 @@ export function LeadForm({
       consent: form.consent,
       selected_model: form.preferredModel,
       locale,
+      sourceLabel,
       ...getAttribution(),
       ...attributionOverride,
     };
@@ -146,7 +150,6 @@ export function LeadForm({
     { value: "compact", label: dict.form.models.compact },
     { value: "comfort", label: dict.form.models.comfort },
     { value: "premium", label: dict.form.models.premium },
-    { value: "unknown", label: dict.form.models.unknown },
   ];
 
   return (

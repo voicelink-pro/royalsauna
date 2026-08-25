@@ -48,6 +48,7 @@ export const routeMap: Record<string, Record<Locale, string>> = {
  */
 export const qrRouteMap = {
   offer: { pl: "/ofertakodqr", en: "/en/qr-offer" },
+  offerCentrum: { pl: "/ofertakodqr/centrum", en: "/en/qr-offer/centrum" },
   welcomePackage: { pl: "/pakietkodqr", en: "/en/qr-welcome-package" },
 } as const;
 

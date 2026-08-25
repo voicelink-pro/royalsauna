@@ -454,15 +454,6 @@ export const en: Dictionary = {
             href: routeMap.configurator.en,
           },
         },
-        {
-          question: "How often do the sauna stones need replacing?",
-          answer:
-            "With regular use, it's worth replacing the stones roughly every 1–2 years. Over time they crack and lose their ability to hold heat, which lengthens heat-up time and weakens the quality of the steam.",
-          link: {
-            label: "Get an offer",
-            href: routeMap.contact.en,
-          },
-        },
       ],
     },
   },
@@ -857,13 +848,13 @@ export const en: Dictionary = {
   },
   qrPages: {
     offer: {
-      metaTitle: "Get an offer – RoyalSauna",
+      metaTitle: "Get the full offer – RoyalSauna",
       metaDescription:
         "You scanned the QR code on our display. Fill in a short form and we'll prepare a personalised Regenerum sauna quote.",
       eyebrow: "RoyalSauna display",
-      title: "Get an offer",
+      title: "Get the full offer",
       description:
-        "Thanks for stopping by our sauna. Leave your details – we'll get back with a quote and answers to your questions.",
+        "Thank you for your interest. Leave your details and you'll receive a document with the full offer in your inbox.",
       formTitle: "Offer form",
       packageLink: "See what's in the welcome package",
     },
@@ -1001,7 +992,6 @@ export const en: Dictionary = {
       compact: "Regenerum Compact",
       comfort: "Regenerum Comfort",
       premium: "Regenerum Premium",
-      unknown: "Not sure yet",
     },
     submit: "Send inquiry",
     submitting: "Sending…",
@@ -1024,7 +1014,7 @@ export const en: Dictionary = {
     },
     stepQuestions: {
       modelTitle: "Which variant are you interested in?",
-      modelDescription: "No problem if you're not sure yet – we'll help you choose.",
+      modelDescription: "Choose the model you'd like a quote for.",
       detailsTitle: "Tell us about your garden",
       detailsDescription: "This information helps us quote more accurately.",
       contactTitle: "How can we reach you?",

@@ -6,7 +6,13 @@ import { QrShell } from "@/components/layout/QrShell";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { ContactLink } from "@/components/ui/ContactLink";
 
-export function QrOfferPage({ locale }: { locale: Locale }) {
+export function QrOfferPage({
+  locale,
+  sourceLabel,
+}: {
+  locale: Locale;
+  sourceLabel?: string;
+}) {
   const dict = getDictionary(locale);
   const copy = dict.qrPages.offer;
 
@@ -41,13 +47,14 @@ export function QrOfferPage({ locale }: { locale: Locale }) {
           <LeadForm
             locale={locale}
             dict={dict}
-            formLocation="qr_garden_center"
+            formLocation={sourceLabel ? "qr_centrum_ostaszewo" : "qr_garden_center"}
             compact
+            sourceLabel={sourceLabel}
             attributionOverride={{
-              utm_source: "centrum-ogrodnicze",
+              utm_source: sourceLabel ? "centrum-ostaszewo" : "centrum-ogrodnicze",
               utm_medium: "qr",
               utm_campaign: "sauna-ekspozycja",
-              utm_content: "ofertakodqr",
+              utm_content: sourceLabel ? "ofertakodqr-centrum" : "ofertakodqr",
             }}
           />
         </div>

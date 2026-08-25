@@ -454,15 +454,6 @@ export const pl = {
             href: routeMap.configurator.pl,
           },
         },
-        {
-          question: "Jak często trzeba wymieniać kamienie w piecu?",
-          answer:
-            "Przy regularnym użytkowaniu warto wymieniać kamienie średnio raz na 1–2 lata. Z czasem pękają i tracą zdolność akumulowania ciepła, co wydłuża czas nagrzewania i osłabia jakość pary.",
-          link: {
-            label: "Otrzymaj ofertę",
-            href: routeMap.contact.pl,
-          },
-        },
       ],
     },
   },
@@ -857,13 +848,13 @@ export const pl = {
   },
   qrPages: {
     offer: {
-      metaTitle: "Otrzymaj ofertę – RoyalSauna",
+      metaTitle: "Otrzymaj pełną ofertę – RoyalSauna",
       metaDescription:
         "Zeskanowałeś kod QR na ekspozycji. Wypełnij krótki formularz, a przygotujemy spersonalizowaną ofertę sauny Regenerum.",
       eyebrow: "Ekspozycja RoyalSauna",
-      title: "Otrzymaj ofertę",
+      title: "Otrzymaj pełną ofertę",
       description:
-        "Dziękujemy, że jesteś przy naszej saunie. Zostaw dane – odezwiemy się z wyceną i odpowiedziami na Twoje pytania.",
+        "Dziękujemy za zainteresowanie. Zostaw swoje dane, a otrzymasz dokument z pełną ofertą na swojego maila.",
       formTitle: "Formularz oferty",
       packageLink: "Zobacz, co jest w pakiecie powitalnym",
     },
@@ -1001,7 +992,6 @@ export const pl = {
       compact: "Regenerum Compact",
       comfort: "Regenerum Comfort",
       premium: "Regenerum Premium",
-      unknown: "Jeszcze nie wiem",
     },
     submit: "Wyślij zapytanie",
     submitting: "Wysyłanie…",
@@ -1024,7 +1014,7 @@ export const pl = {
     },
     stepQuestions: {
       modelTitle: "Który wariant Cię interesuje?",
-      modelDescription: "Nie szkodzi, jeśli jeszcze nie wiesz – pomożemy wybrać.",
+      modelDescription: "Wybierz model, do którego chcesz otrzymać ofertę.",
       detailsTitle: "Opowiedz o swoim ogrodzie",
       detailsDescription: "Te informacje pomogą nam trafniej wycenić.",
       contactTitle: "Jak możemy się z Tobą skontaktować?",

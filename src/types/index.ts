@@ -198,7 +198,7 @@ export interface LeadPayload {
   name: string;
   email: string;
   phone?: string;
-  preferredModel: SaunaSize | "unknown";
+  preferredModel: SaunaSize;
   location: string;
   message?: string;
   consent: boolean;
@@ -218,4 +218,6 @@ export interface LeadPayload {
   referrer?: string;
   selected_model?: string;
   locale: Locale;
+  /** Human-readable lead source shown on the office notification, e.g. "Centrum Ostaszewo". */
+  sourceLabel?: string;
 }

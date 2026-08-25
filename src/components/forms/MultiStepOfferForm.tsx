@@ -8,14 +8,14 @@ import { useAttribution } from "@/lib/useAttribution";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
-type ModelValue = SaunaSize | "unknown";
+type ModelValue = SaunaSize;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const STEPS = ["model", "details", "contact"] as const;
 
 export function MultiStepOfferForm({
   locale,
   dict,
-  defaultModel = "unknown",
+  defaultModel = "comfort",
 }: {
   locale: Locale;
   dict: Dictionary;
@@ -144,7 +144,6 @@ export function MultiStepOfferForm({
     { value: "compact", label: dict.form.models.compact },
     { value: "comfort", label: dict.form.models.comfort },
     { value: "premium", label: dict.form.models.premium },
-    { value: "unknown", label: dict.form.models.unknown },
   ];
 
   const stepTitles = [

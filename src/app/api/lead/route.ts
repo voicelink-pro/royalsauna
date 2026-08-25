@@ -75,6 +75,7 @@ export async function POST(request: Request) {
       preferredModel: payload.preferredModel,
       location: payload.location,
       locale: payload.locale,
+      sourceLabel: payload.sourceLabel,
     });
 
     // Attach the pre-designed offer PDF and send via Resend.
