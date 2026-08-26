@@ -85,20 +85,27 @@ function escapeHtml(value: string) {
 function buildCustomerEmailHtml(data: OfferData): string {
   const L = data.labels;
   const isPl = data.locale === "pl";
+  const isCentrumOstaszewo = data.sourceLabel === "Centrum Ostaszewo";
   const greeting = isPl
     ? `Cześć ${escapeHtml(data.client.name.split(" ")[0])},`
     : `Hello ${escapeHtml(data.client.name.split(" ")[0])},`;
   const intro = isPl
     ? "Dziękujemy za zainteresowanie saunami RoyalSauna. W załączniku przesyłamy wstępną ofertę dopasowaną do Twoich preferencji."
     : "Thank you for your interest in RoyalSauna saunas. Attached is a preliminary offer tailored to your preferences.";
-  const summary = isPl
-    ? `<strong>${L.recommendedModel}:</strong> ${escapeHtml(data.model.line)} ${escapeHtml(data.model.name)}<br/><strong>${L.priceFrom}:</strong> ${escapeHtml(data.model.priceFormatted)} ${escapeHtml(data.model.currency)}`
-    : `<strong>${L.recommendedModel}:</strong> ${escapeHtml(data.model.line)} ${escapeHtml(data.model.name)}<br/><strong>${L.priceFrom}:</strong> ${escapeHtml(data.model.priceFormatted)} ${escapeHtml(data.model.currency)}`;
-  const heaterNote = isPl
-    ? "W załączonej ofercie znajdziesz pełną listę dostępnych pieców wraz z cenami dla tego modelu."
-    : "The attached offer includes the full heater line-up and pricing for this model.";
+  const summary =
+    isPl && isCentrumOstaszewo
+      ? `<strong>${L.recommendedModel}:</strong> ${escapeHtml(data.model.line)} ${escapeHtml(data.model.name)}<br/><strong>Cena brutto:</strong> 46 200 zł`
+      : isPl
+        ? `<strong>Model:</strong> ${escapeHtml(data.model.line)} ${escapeHtml(data.model.name)}<br/><strong>Cena od:</strong> ${escapeHtml(data.model.priceFormatted)} ${escapeHtml(data.model.currency)}`
+        : `<strong>${L.recommendedModel}:</strong> ${escapeHtml(data.model.line)} ${escapeHtml(data.model.name)}<br/><strong>${L.priceFrom}:</strong> ${escapeHtml(data.model.priceFormatted)} ${escapeHtml(data.model.currency)}`;
+  const heaterNote =
+    isPl && isCentrumOstaszewo
+      ? "W załączonej ofercie znajdziesz pełną listę dostępnych pieców wraz z cenami dla Sauny Regenerum Premium."
+      : isPl
+        ? "W załączonej ofercie znajdziesz pełną listę dostępnych pieców wraz z cenami dla tego modelu."
+        : "The attached offer includes the full heater line-up and pricing for this model.";
   const closing = isPl
-    ? "Skontaktujemy się wkrótce, aby omówić szczegóły. W razie pytań — odpisz na ten e-mail lub zadzwoń."
+    ? "Skontaktujemy się z Tobą wkrótce, aby omówić szczegóły. W razie pytań - odpisz na ten e-mail lub zadzwoń."
     : "We will reach out soon to discuss the details. If you have any questions, reply to this e-mail or give us a call.";
   const signoff = isPl ? "Pozdrawiamy," : "Best regards,";
 

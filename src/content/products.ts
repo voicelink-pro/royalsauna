@@ -643,7 +643,7 @@ export const products: Product[] = [
         specs: [
           { label: "Liczba osób", value: "6" },
           { label: "Wymiary zewnętrzne", value: "3,00 × 2,40 m" },
-          { label: "Wysokość", value: "2,60 m" },
+          { label: "Wysokość", value: "2,30 m" },
           { label: "Powierzchnia użytkowa", value: "7,2 m²" },
           { label: "Grubość ściany", value: "42 mm" },
           { label: "Materiał", value: "Drewno skandynawskie premium" },
@@ -757,7 +757,7 @@ export const products: Product[] = [
         specs: [
           { label: "People", value: "6" },
           { label: "Exterior dimensions", value: "3.00 × 2.40 m" },
-          { label: "Height", value: "2.60 m" },
+          { label: "Height", value: "2.30 m" },
           { label: "Usable floor area", value: "7.2 m²" },
           { label: "Wall thickness", value: "42 mm" },
           { label: "Material", value: "Premium Scandinavian wood" },

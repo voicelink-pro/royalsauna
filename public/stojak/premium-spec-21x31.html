@@ -25,10 +25,10 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* A4: 210 × 297 mm = 794 × 1123 px przy 96 dpi */
+    /* Stojak: 210 × 310 mm (21 × 31 cm) */
     .card {
       width: 210mm;
-      height: 297mm;
+      height: 310mm;
       margin: 12px auto;
       background: var(--ivory);
       overflow: hidden;
@@ -39,8 +39,8 @@
 
     .banner {
       position: relative;
-      height: 112mm;
-      flex: 0 0 112mm;
+      height: 118mm;
+      flex: 0 0 118mm;
       overflow: hidden;
     }
     .banner .photo {
@@ -237,7 +237,7 @@
     }
 
     @media print {
-      @page { size: A4 portrait; margin: 0; }
+      @page { size: 210mm 310mm; margin: 0; }
       html, body { background: #fff; }
       .card { margin: 0; box-shadow: none; }
     }
