@@ -40,13 +40,13 @@ export const heaterModels: HeaterModel[] = [
   },
   {
     id: "legend",
-    name: "Harvia Legend PO70FC WiFi Black",
-    productCode: "HPO704FC",
+    name: "Harvia Legend PO110FC WiFi Black",
+    productCode: "HPO1104FC",
     family: "Legend",
     mounting: "standing",
     color: "black",
-    powerKw: 6.8,
-    volumeM3: { min: 8, max: 14 },
+    powerKw: 10.8,
+    volumeM3: { min: 9, max: 18 },
     controller: "Harvia Fenix WiFi",
     wifiApp: "MyHarvia WiFi",
     requiresControlLicense: true,
@@ -54,7 +54,7 @@ export const heaterModels: HeaterModel[] = [
     dimensionsMm: { height: 1060, width: 325, depth: 325 },
     image: {
       src: "/images/heater-harvia-legend.jpg",
-      alt: "Piec Harvia Legend PO70FC WiFi Black",
+      alt: "Piec Harvia Legend PO110FC WiFi Black",
     },
     i18n: {
       pl: {

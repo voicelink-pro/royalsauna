@@ -397,7 +397,7 @@ export const en: Dictionary = {
       eyebrow: "Matched to your model",
       title: "Which heater fits which model",
       description:
-        "Every model in the Regenerum line has a matched set of heaters, ready to choose when you configure your offer.",
+        "Every model in the Regenerum line has a matched set of heaters. We confirm the specific heater when we prepare your offer.",
     },
     detailSection: {
       eyebrow: "Get to know the heaters",

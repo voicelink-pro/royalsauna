@@ -397,7 +397,7 @@ export const pl = {
       eyebrow: "Dopasowanie do modelu",
       title: "Który piec do którego modelu",
       description:
-        "Każdy model linii Regenerum ma dobrany zestaw pieców, gotowy do wyboru na etapie konfiguracji oferty.",
+        "Każdy model linii Regenerum ma dobrany zestaw pieców. Wybór konkretnego pieca potwierdzamy przy przygotowaniu oferty.",
     },
     detailSection: {
       eyebrow: "Poznaj piece",

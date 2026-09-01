@@ -88,8 +88,7 @@ Menu „Specyfikacja” w headerze używa też: `cubus5-interior.jpg`, `quality.
 
 ## PDF oferty
 
-Statyczny PDF do maili: `public/documents/oferta.pdf`  
-Gotowe oferty HTML: `public/oferty/` (osobny system, nie Next.js).
+Statyczny PDF do maili: `public/documents/oferta.pdf`
 
 ---
 

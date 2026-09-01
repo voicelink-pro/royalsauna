@@ -19,7 +19,7 @@ export const generalFaq: Record<Locale, FaqItem[]> = {
     {
       question: "Ile kosztuje RoyalSauna?",
       answer:
-        "Ceny zaczynają się od 37 300 zł za wariant Compact, 42 100 zł za Comfort i 49 300 zł za Premium. Finalna cena zależy od wyboru pieca. Po wypełnieniu formularza otrzymasz od nas dokument z pełną wyceną wybranego modelu w różnych konfiguracjach.",
+        "Ceny zaczynają się od 37 300 zł za wariant Compact, 42 100 zł za Comfort i 45 900 zł za Premium. Finalna cena zależy od wyboru pieca. Po wypełnieniu formularza otrzymasz od nas dokument z pełną wyceną wybranego modelu w różnych konfiguracjach.",
       link: {
         label: "Otrzymaj ofertę",
         href: routeMap.contact.pl,
@@ -75,7 +75,7 @@ export const generalFaq: Record<Locale, FaqItem[]> = {
     {
       question: "How much does a RoyalSauna cost?",
       answer:
-        "Prices start from PLN 37,300 for the Compact variant, PLN 42,100 for Comfort and PLN 49,300 for Premium. The final price depends on the choice of heater. Once you complete the form, you'll receive a document with a full quote for your chosen model in different configurations.",
+        "Prices start from PLN 37,300 for the Compact variant, PLN 42,100 for Comfort and PLN 45,900 for Premium. The final price depends on the choice of heater. Once you complete the form, you'll receive a document with a full quote for your chosen model in different configurations.",
       link: {
         label: "Get an offer",
         href: routeMap.contact.en,
