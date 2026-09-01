@@ -978,7 +978,7 @@ export const en: Dictionary = {
       namePlaceholder: "John Smith",
       email: "Email address",
       emailPlaceholder: "john@example.com",
-      phone: "Phone (optional)",
+      phone: "Phone",
       phonePlaceholder: "+48 600 000 000",
       preferredModel: "Preferred model",
       location: "Town or region",

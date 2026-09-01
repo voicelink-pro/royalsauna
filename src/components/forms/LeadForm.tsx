@@ -76,6 +76,7 @@ export function LeadForm({
     if (!form.name.trim()) next.name = dict.form.required;
     if (!form.email.trim()) next.email = dict.form.required;
     else if (!EMAIL_RE.test(form.email)) next.email = dict.form.invalidEmail;
+    if (!form.phone.trim()) next.phone = dict.form.required;
     if (!form.location.trim()) next.location = dict.form.required;
     if (!form.consent) next.consent = dict.form.consentRequired;
     setErrors(next);
@@ -90,7 +91,7 @@ export function LeadForm({
     const payload: LeadPayload = {
       name: form.name,
       email: form.email,
-      phone: form.phone || undefined,
+      phone: form.phone.trim(),
       preferredModel: form.preferredModel,
       location: form.location,
       message: form.message || undefined,
@@ -189,7 +190,12 @@ export function LeadForm({
           />
         </Field>
 
-        <Field id="lf-phone" label={dict.form.fields.phone}>
+        <Field
+          id="lf-phone"
+          label={dict.form.fields.phone}
+          error={errors.phone}
+          required
+        >
           <Input
             id="lf-phone"
             type="tel"
@@ -197,6 +203,7 @@ export function LeadForm({
             value={form.phone}
             onChange={(e) => update("phone", e.target.value)}
             placeholder={dict.form.fields.phonePlaceholder}
+            aria-invalid={!!errors.phone}
           />
         </Field>
 

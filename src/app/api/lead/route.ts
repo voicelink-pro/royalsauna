@@ -59,7 +59,7 @@ export async function POST(request: Request) {
   try {
     const data = (await request.json()) as Partial<LeadPayload>;
 
-    if (!data?.name || !data?.email || !data?.consent) {
+    if (!data?.name || !data?.email || !data?.phone?.trim() || !data?.consent) {
       return NextResponse.json(
         { ok: false, error: "Missing required fields" },
         { status: 400 },

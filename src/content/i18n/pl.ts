@@ -978,7 +978,7 @@ export const pl = {
       namePlaceholder: "Jan Kowalski",
       email: "Adres e-mail",
       emailPlaceholder: "jan@przyklad.pl",
-      phone: "Telefon (opcjonalnie)",
+      phone: "Telefon",
       phonePlaceholder: "+48 600 000 000",
       preferredModel: "Preferowany model",
       location: "Miejscowość lub województwo",

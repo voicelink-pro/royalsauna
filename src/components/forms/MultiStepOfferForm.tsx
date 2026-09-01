@@ -58,6 +58,7 @@ export function MultiStepOfferForm({
       if (!form.name.trim()) next.name = dict.form.required;
       if (!form.email.trim()) next.email = dict.form.required;
       else if (!EMAIL_RE.test(form.email)) next.email = dict.form.invalidEmail;
+      if (!form.phone.trim()) next.phone = dict.form.required;
       if (!form.consent) next.consent = dict.form.consentRequired;
     }
     setErrors(next);
@@ -83,7 +84,7 @@ export function MultiStepOfferForm({
     const payload: LeadPayload = {
       name: form.name,
       email: form.email,
-      phone: form.phone || undefined,
+      phone: form.phone.trim(),
       preferredModel: form.preferredModel,
       location: form.location,
       message: form.message || undefined,
@@ -320,6 +321,7 @@ export function MultiStepOfferForm({
                 className="mb-1.5 block text-sm font-medium text-bark-600"
               >
                 {dict.form.fields.phone}
+                <span className="ml-0.5 text-clay-500">*</span>
               </label>
               <input
                 id="ms-phone"
@@ -328,8 +330,12 @@ export function MultiStepOfferForm({
                 value={form.phone}
                 onChange={(e) => update("phone", e.target.value)}
                 placeholder={dict.form.fields.phonePlaceholder}
+                aria-invalid={!!errors.phone}
                 className={inputClass}
               />
+              {errors.phone && (
+                <p className="mt-1 text-sm text-red-700">{errors.phone}</p>
+              )}
             </div>
             <div>
               <label className="flex cursor-pointer items-start gap-3 text-sm text-bark-500">

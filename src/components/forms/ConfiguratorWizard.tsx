@@ -113,6 +113,7 @@ export function ConfiguratorWizard({
     if (!contact.email.trim()) next.email = dict.form.required;
     else if (!EMAIL_RE.test(contact.email))
       next.email = dict.form.invalidEmail;
+    if (!contact.phone.trim()) next.phone = dict.form.required;
     if (!contact.location.trim()) next.location = dict.form.required;
     if (!contact.consent) next.consent = dict.form.consentRequired;
     setErrors(next);
@@ -127,7 +128,7 @@ export function ConfiguratorWizard({
     const payload: LeadPayload = {
       name: contact.name,
       email: contact.email,
-      phone: contact.phone || undefined,
+      phone: contact.phone.trim(),
       preferredModel: rec.model,
       location: contact.location,
       message: contact.message || undefined,
@@ -351,6 +352,7 @@ export function ConfiguratorWizard({
                 className="mb-1.5 block text-sm font-medium text-bark-600"
               >
                 {dict.form.fields.phone}
+                <span className="ml-0.5 text-clay-500">*</span>
               </label>
               <input
                 id="cw-phone"
@@ -359,8 +361,12 @@ export function ConfiguratorWizard({
                 value={contact.phone}
                 onChange={(e) => update("phone", e.target.value)}
                 placeholder={dict.form.fields.phonePlaceholder}
+                aria-invalid={!!errors.phone}
                 className={inputClass}
               />
+              {errors.phone && (
+                <p className="mt-1 text-sm text-red-700">{errors.phone}</p>
+              )}
             </div>
             <div>
               <label
