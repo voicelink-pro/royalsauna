@@ -31,7 +31,13 @@ export const metadata: Metadata = {
   },
   description:
     "RoyalSauna – sauny ogrodowe premium z drewna skandynawskiego. Jeden model w trzech wariantach. Prywatne domowe spa w Twoim ogrodzie.",
-  icons: { icon: "/favicon.ico" },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
 };
 
 export default function RootLayout({
