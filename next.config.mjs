@@ -4,6 +4,7 @@ const nextConfig = {
   poweredByHeader: false,
   images: {
     formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 60 * 60 * 24 * 30,
   },
   async redirects() {
     return [
@@ -26,15 +27,26 @@ const nextConfig = {
     ];
   },
   async headers() {
-    return [
+    const security = [
+      { key: "X-Content-Type-Options", value: "nosniff" },
+      { key: "X-Frame-Options", value: "SAMEORIGIN" },
+      { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+    ];
+    const longCache = [
       {
-        source: "/(.*)",
-        headers: [
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "X-Frame-Options", value: "SAMEORIGIN" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-        ],
+        key: "Cache-Control",
+        value: "public, max-age=2592000, stale-while-revalidate=31536000",
       },
+    ];
+    return [
+      { source: "/(.*)", headers: security },
+      { source: "/hero-frames/:path*", headers: longCache },
+      { source: "/hero-frames-mobile-day/:path*", headers: longCache },
+      { source: "/hero-frames-night/:path*", headers: longCache },
+      { source: "/images/:path*", headers: longCache },
+      { source: "/videos/:path*", headers: longCache },
+      { source: "/logo.png", headers: longCache },
+      { source: "/logo.webp", headers: longCache },
     ];
   },
 };

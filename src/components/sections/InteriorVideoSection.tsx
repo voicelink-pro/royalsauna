@@ -1,12 +1,14 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/types";
 import type { Dictionary } from "@/lib/i18n";
 import { routeMap } from "@/lib/site";
 import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
+import { blurDark } from "@/lib/images";
 
 type PointId = "heater" | "benches" | "walls" | "floor";
 
@@ -72,15 +74,25 @@ export function InteriorVideoSection({
   const t = dict.home.interior;
   const videoRef = useRef<HTMLVideoElement>(null);
   const [started, setStarted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [ended, setEnded] = useState(false);
 
   const play = () => {
-    if (started) return;
+    if (started || loading) return;
     const video = videoRef.current;
     if (!video) return;
-    setStarted(true);
+    setLoading(true);
     trackEvent("interior_video_play", { source: "home" });
-    video.play().catch(() => setStarted(false));
+    video
+      .play()
+      .then(() => {
+        setStarted(true);
+        setLoading(false);
+      })
+      .catch(() => {
+        setStarted(false);
+        setLoading(false);
+      });
   };
 
   const specBase = { wood: routeMap.wood[locale], heaters: routeMap.heaters[locale] };
@@ -96,28 +108,33 @@ export function InteriorVideoSection({
         poster="/images/interior-poster.jpg"
         muted
         playsInline
-        preload="auto"
+        preload="none"
         onEnded={() => setEnded(true)}
         className="absolute inset-0 h-full w-full object-cover"
       />
 
       {/* Start still — shown before the clip is played. */}
       {!started && (
-        <img
+        <Image
           src="/images/interior-poster.jpg"
-          alt={t.title}
-          aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover"
+          alt=""
+          fill
+          sizes="100vw"
+          loading="lazy"
+          className="object-cover"
+          {...blurDark}
         />
       )}
 
       {/* Final still — replaces the frozen last frame once the clip ends. */}
       {ended && (
-        <img
-          src="/images/cubus5-frontinterir.png"
-          alt={t.title}
-          aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover"
+        <Image
+          src="/images/cubus5-frontinterir.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+          {...blurDark}
         />
       )}
 
@@ -135,14 +152,18 @@ export function InteriorVideoSection({
           className="group flex items-center gap-3 rounded-full border border-ivory/40 bg-ivory/10 px-7 py-4 text-ivory backdrop-blur-md transition-all duration-300 hover:border-ivory/80 hover:bg-ivory/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ivory"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-full border border-ivory/60 transition-transform duration-300 group-hover:scale-110">
-            <svg
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="ml-0.5 h-4 w-4"
-              aria-hidden="true"
-            >
-              <path d="M8 5v14l11-7z" />
-            </svg>
+            {loading ? (
+              <span className="h-4 w-4 animate-spin rounded-full border-2 border-ivory/30 border-t-ivory" />
+            ) : (
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="ml-0.5 h-4 w-4"
+                aria-hidden="true"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            )}
           </span>
           <span className="text-sm font-medium tracking-wide">{t.button}</span>
         </button>

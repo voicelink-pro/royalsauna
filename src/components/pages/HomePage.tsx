@@ -4,6 +4,7 @@ import { routeMap } from "@/lib/site";
 import { generalFaq } from "@/content/faq";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { HeroLcpHints } from "@/components/sections/HeroLcpHints";
 import { HeroVideoScroll } from "@/components/sections/HeroVideoScroll";
 import { ProductCards } from "@/components/sections/ProductCards";
 import { WhySection } from "@/components/sections/WhySection";
@@ -27,6 +28,7 @@ export function HomePage({ locale }: { locale: Locale }) {
 
   return (
     <>
+      <HeroLcpHints />
       <JsonLd data={organizationSchema()} />
       <JsonLd data={websiteSchema()} />
       <JsonLd data={faqSchema(faq)} />

@@ -24,10 +24,11 @@ export function CTASection({
   return (
     <section className="relative flex min-h-[560px] items-center overflow-hidden py-20 text-sand-100 lg:min-h-[56.25vw] lg:py-28">
       <Image
-        src="/images/form-back.png"
+        src="/images/form-back.jpg"
         alt=""
         fill
         sizes="100vw"
+        loading="lazy"
         className="animate-zoom-slow object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-bark-900/90 via-bark-900/55 to-bark-900/25" />

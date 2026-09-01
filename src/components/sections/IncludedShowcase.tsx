@@ -63,6 +63,7 @@ function Tile({ group, large = false }: { group: IncludedGroup; large?: boolean 
         alt={group.alt}
         fill
         sizes={large ? "(max-width: 640px) 100vw, 1200px" : "(max-width: 640px) 100vw, 420px"}
+        loading="lazy"
         className="object-cover transition-transform duration-700 ease-calm group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-bark-900/85 via-bark-900/10 to-transparent" />

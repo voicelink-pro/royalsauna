@@ -11,7 +11,7 @@
     "type-check": "tsc --noEmit",
     "hero:frames": "bash scripts/extract-hero-frames.sh",
     "hero:frames:night": "SRC=public/videos/hero-night.mp4 OUT=public/hero-frames-night bash scripts/extract-hero-frames.sh",
-    "hero:frames:mobile:day": "SRC=public/videos/hero-mobile-day.mp4 OUT=public/hero-frames-mobile-day WIDTH=720 bash scripts/extract-hero-frames.sh"
+    "hero:frames:mobile:day": "SRC=public/videos/hero-mobile-day.mp4 OUT=public/hero-frames-mobile-day WIDTH=720 FORMAT=jpg bash scripts/extract-hero-frames.sh"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.10",

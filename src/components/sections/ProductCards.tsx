@@ -20,7 +20,7 @@ export function ProductCards({
 
   return (
     <div className="grid gap-6 md:grid-cols-3">
-      {products.map((product, index) => {
+      {products.map((product) => {
         const copy = product.i18n[locale];
         const href = `${base}/${locale === "pl" ? product.slug : product.enSlug}`;
         return (
@@ -41,7 +41,7 @@ export function ProductCards({
                 alt={product.images[0].alt}
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
-                loading={index === 0 ? "eager" : "lazy"}
+                loading="lazy"
                 className="object-cover transition-transform duration-700 ease-calm group-hover:scale-105"
                 {...blurSand}
               />

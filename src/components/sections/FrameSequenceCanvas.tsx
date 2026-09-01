@@ -13,9 +13,12 @@ interface FrameSequenceCanvasProps {
   className?: string;
   /** Lerp factor (0..1) used to smooth between the current and target frame. */
   smoothing?: number;
-  /** Called once the first frame has decoded and painted. */
+  /** Called once a frame near the current progress has decoded and painted. */
   onFirstFrame?: () => void;
 }
+
+const LOOKAHEAD = 8;
+const CONCURRENCY = 4;
 
 /** Draws an image onto the canvas using a "cover" fit (CSS-pixel space). */
 function drawCover(
@@ -45,9 +48,10 @@ function drawCover(
  * canvas. This avoids the jank of seeking a <video> element's currentTime
  * (asynchronous decode, sparse keyframes) and stays buttery across browsers.
  *
- * Frames are preloaded into memory; a self-stopping rAF loop lerps the
- * displayed frame toward the scroll target so motion feels fluid even with a
- * modest frame count. Honors prefers-reduced-motion (snaps instantly).
+ * Only the first frame (and, once the visitor scrolls, a small lookahead
+ * window) is fetched — so Lighthouse / first paint never download the full
+ * sequence. A self-stopping rAF loop lerps toward the scroll target. Honors
+ * prefers-reduced-motion (snaps instantly).
  */
 export function FrameSequenceCanvas({
   frameCount,
@@ -58,7 +62,7 @@ export function FrameSequenceCanvas({
   onFirstFrame,
 }: FrameSequenceCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const imagesRef = useRef<HTMLImageElement[]>([]);
+  const imagesRef = useRef<(HTMLImageElement | undefined)[]>([]);
   const loadedRef = useRef<boolean[]>([]);
   const displayRef = useRef(0);
   const targetRef = useRef(0);
@@ -66,8 +70,14 @@ export function FrameSequenceCanvas({
   const rafRef = useRef(0);
   const reducedRef = useRef(false);
   const sizeRef = useRef({ w: 0, h: 0 });
+  const framePathRef = useRef(framePath);
+  const progressRef = useRef(progress);
+  const onFirstFrameRef = useRef(onFirstFrame);
+  const requestRangeRef = useRef<() => void>(() => {});
+  framePathRef.current = framePath;
+  progressRef.current = progress;
+  onFirstFrameRef.current = onFirstFrame;
 
-  // Find the nearest already-decoded frame so we never paint a blank canvas.
   const nearestLoaded = (index: number) => {
     const loaded = loadedRef.current;
     if (loaded[index]) return index;
@@ -120,40 +130,105 @@ export function FrameSequenceCanvas({
     if (!rafRef.current) rafRef.current = requestAnimationFrame(paint);
   };
 
-  // Preload all frames.
+  // Demand-load frames: first frame on mount, the rest as the user scrubs.
   useEffect(() => {
     reducedRef.current = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
 
-    const images: HTMLImageElement[] = [];
-    const loaded = new Array<boolean>(frameCount).fill(false);
+    imagesRef.current = new Array(frameCount);
+    loadedRef.current = new Array<boolean>(frameCount).fill(false);
+    drawnRef.current = -1;
+
+    const wanted = new Set<number>();
+    const started = new Set<number>();
+    let inflight = 0;
+    let cancelled = false;
     let firstDone = false;
 
-    for (let i = 0; i < frameCount; i++) {
+    const currentIndex = () =>
+      Math.max(
+        0,
+        Math.min(
+          frameCount - 1,
+          Math.round(Math.max(0, Math.min(1, progressRef.current)) * (frameCount - 1)),
+        ),
+      );
+
+    const markFirstIfReady = () => {
+      if (firstDone) return;
+      const current = currentIndex();
+      if (loadedRef.current[current] || nearestLoaded(current) !== -1) {
+        firstDone = true;
+        onFirstFrameRef.current?.();
+      }
+    };
+
+    const startLoad = (index: number) => {
+      if (cancelled || started.has(index) || index < 0 || index >= frameCount) {
+        return;
+      }
+      started.add(index);
+      inflight += 1;
+
       const img = new Image();
       img.decoding = "async";
-      const idx = i;
+      img.fetchPriority = index === currentIndex() ? "high" : "low";
       img.onload = () => {
-        loaded[idx] = true;
-        if (!firstDone && idx === 0) {
-          firstDone = true;
-          onFirstFrame?.();
-        }
+        inflight -= 1;
+        if (cancelled) return;
+        loadedRef.current[index] = true;
+        markFirstIfReady();
         requestPaint();
+        pump();
       };
-      img.src = framePath(i + 1);
-      images.push(img);
-    }
+      img.onerror = () => {
+        inflight -= 1;
+        if (!cancelled) pump();
+      };
+      img.src = framePathRef.current(index + 1);
+      imagesRef.current[index] = img;
+    };
 
-    imagesRef.current = images;
-    loadedRef.current = loaded;
+    const pump = () => {
+      if (cancelled) return;
+      const order = [...wanted].sort((a, b) => {
+        const c = currentIndex();
+        return Math.abs(a - c) - Math.abs(b - c);
+      });
+      for (const index of order) {
+        if (inflight >= CONCURRENCY) break;
+        if (!started.has(index)) startLoad(index);
+      }
+    };
+
+    const requestRange = () => {
+      const progress = progressRef.current;
+      const current = currentIndex();
+      wanted.add(current);
+      wanted.add(0);
+      if (progress <= 0.008) {
+        if (frameCount > 1) wanted.add(1);
+      } else {
+        const from = Math.max(0, current - 2);
+        const to = Math.min(frameCount - 1, current + LOOKAHEAD);
+        for (let i = from; i <= to; i++) wanted.add(i);
+      }
+      pump();
+    };
+
+    requestRangeRef.current = requestRange;
+    requestRange();
 
     return () => {
+      cancelled = true;
+      requestRangeRef.current = () => {};
       cancelAnimationFrame(rafRef.current);
       rafRef.current = 0;
-      images.forEach((im) => {
+      imagesRef.current.forEach((im) => {
+        if (!im) return;
         im.onload = null;
+        im.onerror = null;
       });
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -177,7 +252,7 @@ export function FrameSequenceCanvas({
       const ctx = canvas.getContext("2d");
       ctx?.setTransform(dpr, 0, 0, dpr, 0, 0);
       sizeRef.current = { w, h };
-      drawnRef.current = -1; // force redraw at new size
+      drawnRef.current = -1;
       requestPaint();
     };
 
@@ -188,11 +263,12 @@ export function FrameSequenceCanvas({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // React to scroll progress changes.
+  // React to scroll progress changes — paint and fetch the next slice of frames.
   useEffect(() => {
     targetRef.current =
       Math.max(0, Math.min(1, progress)) * (frameCount - 1);
     requestPaint();
+    requestRangeRef.current();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [progress, frameCount]);
 
