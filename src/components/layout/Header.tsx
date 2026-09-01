@@ -30,8 +30,6 @@ export function Header({
   const [open, setOpen] = useState(false);
   const [modelsOpen, setModelsOpen] = useState(false);
   const [specOpen, setSpecOpen] = useState(false);
-  const [modelsMounted, setModelsMounted] = useState(false);
-  const [specMounted, setSpecMounted] = useState(false);
   const pathname = usePathname();
   const dropdownRef = useRef<HTMLDivElement>(null);
   const specDropdownRef = useRef<HTMLDivElement>(null);
@@ -105,7 +103,6 @@ export function Header({
 
   const handleMouseEnter = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setModelsMounted(true);
     setModelsOpen(true);
   };
 
@@ -115,7 +112,6 @@ export function Header({
 
   const handleSpecEnter = () => {
     if (specTimeoutRef.current) clearTimeout(specTimeoutRef.current);
-    setSpecMounted(true);
     setSpecOpen(true);
   };
 
@@ -160,11 +156,10 @@ export function Header({
           className="relative z-10 block h-14 w-[min(15.5rem,calc(100%-3.5rem))] shrink-0 transition-opacity duration-500 hover:opacity-90 sm:h-20 sm:w-[min(20rem,calc(100%-3.5rem))] lg:h-32 lg:w-[448px] xl:h-36 xl:w-[504px]"
         >
           <Image
-            src="/logo.webp"
+            src="/logo.png"
             alt={dict.brand.name}
             fill
             sizes="(min-width: 1280px) 504px, (min-width: 1024px) 448px, 248px"
-            fetchPriority="low"
             className={cn(
               "object-contain object-left transition-all duration-500",
               overDark && "brightness-0 invert",
@@ -230,7 +225,7 @@ export function Header({
                   >
                     <div className="w-[320px] rounded-xl border border-sand-200 bg-sand-100 p-3 shadow-soft">
                       <div className="space-y-1">
-                        {modelsMounted && modelLinks.map((model) => (
+                        {modelLinks.map((model) => (
                           <Link
                             key={model.id}
                             href={model.href}
@@ -242,7 +237,6 @@ export function Header({
                                 alt={model.name}
                                 fill
                                 sizes="56px"
-                                loading="lazy"
                                 className="object-cover transition-transform duration-300 group-hover:scale-105"
                               />
                             </div>
@@ -318,7 +312,7 @@ export function Header({
                   >
                     <div className="w-[280px] rounded-xl border border-sand-200 bg-sand-100 p-3 shadow-soft">
                       <div className="space-y-1">
-                        {specMounted && specLinks.map((link) => (
+                        {specLinks.map((link) => (
                           <Link
                             key={link.key}
                             href={link.href}
@@ -330,7 +324,6 @@ export function Header({
                                 alt={link.label}
                                 fill
                                 sizes="56px"
-                                loading="lazy"
                                 className="object-cover transition-transform duration-300 group-hover:scale-105"
                               />
                             </div>
@@ -391,15 +384,7 @@ export function Header({
           )}
           aria-expanded={open}
           aria-label={open ? dict.nav.close : dict.nav.menu}
-          onClick={() =>
-            setOpen((v) => {
-              if (!v) {
-                setModelsMounted(true);
-                setSpecMounted(true);
-              }
-              return !v;
-            })
-          }
+          onClick={() => setOpen((v) => !v)}
         >
           <span className="relative block h-4 w-6">
             <span
@@ -440,7 +425,7 @@ export function Header({
               >
                 {item.label}
               </Link>
-              {item.key === "models" && modelsMounted && (
+              {item.key === "models" && (
                 <div className="ml-4 mb-2 space-y-1">
                   {modelLinks.map((model) => (
                     <Link
@@ -462,7 +447,7 @@ export function Header({
                   ))}
                 </div>
               )}
-              {item.key === "specification" && specMounted && (
+              {item.key === "specification" && (
                 <div className="ml-4 mb-2 space-y-1">
                   {specLinks.map((link) => (
                     <Link

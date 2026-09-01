@@ -27,7 +27,7 @@ export function QrShell({
             className="relative block h-10 w-[140px] sm:h-11 sm:w-[155px]"
           >
             <Image
-              src="/logo.webp"
+              src="/logo.png"
               alt={dict.brand.name}
               fill
               sizes="155px"

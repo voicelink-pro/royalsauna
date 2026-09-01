@@ -10,14 +10,24 @@ import { CtaButton } from "@/components/ui/CtaButton";
 import { Container } from "@/components/ui/Container";
 import { Switch } from "@/components/ui/switch";
 import { FrameSequenceCanvas } from "@/components/sections/FrameSequenceCanvas";
-import {
-  HERO_DESKTOP_FRAME_COUNT,
-  HERO_MOBILE_DAY_FRAME_COUNT,
-  HERO_NIGHT_FRAME_COUNT,
-  heroDesktopFrame,
-  heroMobileDayFrame,
-  heroNightFrame,
-} from "@/lib/heroFrames";
+
+/** Number of extracted frames in /public/hero-frames (see scripts/extract-hero-frames.sh). */
+const FRAME_COUNT = 72;
+const framePath = (index: number) =>
+  `/hero-frames/frame-${String(index).padStart(4, "0")}.jpg`;
+
+/** Portrait day sequence used on phones. */
+const MOBILE_DAY_FRAME_COUNT = 73;
+const mobileDayFramePath = (index: number) =>
+  `/hero-frames-mobile-day/frame-${String(index).padStart(4, "0")}.jpg`;
+
+/**
+ * Night variant of the same shot, for the day/night toggle. Generated the
+ * same way — see `npm run hero:frames:night` in scripts/extract-hero-frames.sh.
+ */
+const NIGHT_FRAME_COUNT = 73;
+const nightFramePath = (index: number) =>
+  `/hero-frames-night/frame-${String(index).padStart(4, "0")}.jpg`;
 
 function clamp(value: number, min = 0, max = 1) {
   return Math.min(max, Math.max(min, value));
@@ -153,15 +163,12 @@ export function HeroVideoScroll({
         <picture>
           <source
             media="(max-width: 639px)"
-            srcSet={heroMobileDayFrame(1)}
+            srcSet={mobileDayFramePath(1)}
           />
-          {/* eslint-disable-next-line @next/next/no-img-element -- raw img so the URL matches the LCP preload */}
           <img
-            src={heroDesktopFrame(1)}
+            src={framePath(1)}
             alt=""
             aria-hidden="true"
-            fetchPriority="high"
-            decoding="async"
             className={`absolute inset-0 z-0 h-full w-full object-cover transition-opacity duration-500 ${
               dayReady ? "opacity-0" : "opacity-100"
             }`}
@@ -178,10 +185,8 @@ export function HeroVideoScroll({
           {isMobile !== null && (
             <FrameSequenceCanvas
               key={isMobile ? "mobile-day" : "desktop-day"}
-              frameCount={
-                isMobile ? HERO_MOBILE_DAY_FRAME_COUNT : HERO_DESKTOP_FRAME_COUNT
-              }
-              framePath={isMobile ? heroMobileDayFrame : heroDesktopFrame}
+              frameCount={isMobile ? MOBILE_DAY_FRAME_COUNT : FRAME_COUNT}
+              framePath={isMobile ? mobileDayFramePath : framePath}
               progress={percentage}
               onFirstFrame={() => {
                 if (isMobile) setMobileDayReady(true);
@@ -201,8 +206,8 @@ export function HeroVideoScroll({
             )}
           >
             <FrameSequenceCanvas
-              frameCount={HERO_NIGHT_FRAME_COUNT}
-              framePath={heroNightFrame}
+              frameCount={NIGHT_FRAME_COUNT}
+              framePath={nightFramePath}
               progress={percentage}
               onFirstFrame={() => setNightReady(true)}
               className="h-full w-full"

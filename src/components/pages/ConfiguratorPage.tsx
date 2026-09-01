@@ -38,7 +38,7 @@ export function ConfiguratorPage({ locale }: { locale: Locale }) {
           >
             <span className="h-px w-12 bg-sand-300" />
             <Image
-              src="/logo.webp"
+              src="/logo.png"
               alt=""
               width={160}
               height={44}
