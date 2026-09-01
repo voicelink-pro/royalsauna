@@ -133,7 +133,7 @@ export function buildOfferData(payload: LeadPayload): OfferData {
       locale === "en"
         ? s.label.toLowerCase().includes("material")
         : s.label.toLowerCase().includes("materiał"),
-    )?.value ?? (locale === "en" ? "Premium Scandinavian wood" : "Drewno skandynawskie premium");
+    )?.value ?? (locale === "en" ? "ThermoWood (thermally modified Scandinavian spruce)" : "ThermoWood (termowany świerk skandynawski)");
 
   const v = PREF_VALUE_LABELS[locale];
   const preferences: { label: string; value: string }[] = [];

@@ -122,7 +122,7 @@ export const products: Product[] = [
           { label: "Wysokość", value: "2,06 m" },
           { label: "Powierzchnia użytkowa", value: "2,39 m²" },
           { label: "Grubość ściany", value: "42 mm" },
-          { label: "Materiał", value: "Drewno skandynawskie premium" },
+          { label: "Materiał", value: "ThermoWood (termowany świerk skandynawski)" },
           { label: "Piec", value: "Harvia Cilindro, Legend lub Spirit" },
           { label: "Moc pieca", value: "od 9 kW" },
           { label: "Przyłącze elektryczne", value: "Po stronie Klienta" },
@@ -140,11 +140,6 @@ export const products: Product[] = [
             title: "Wykończenie elewacji",
             description:
               "Naturalny olej, ciemny lakier lub elewacja w kolorze na życzenie.",
-          },
-          {
-            title: "Oświetlenie",
-            description:
-              "Sceny świetlne LED dopasowane do nastroju seansu.",
           },
           {
             title: "Strefa wypoczynku",
@@ -236,7 +231,7 @@ export const products: Product[] = [
           { label: "Height", value: "2.06 m" },
           { label: "Usable floor area", value: "2.39 m²" },
           { label: "Wall thickness", value: "42 mm" },
-          { label: "Material", value: "Premium Scandinavian wood" },
+          { label: "Material", value: "ThermoWood (thermally modified Scandinavian spruce)" },
           { label: "Heater", value: "Harvia Cilindro, Legend or Spirit" },
           { label: "Heater power", value: "from 9 kW" },
           { label: "Electrical connection", value: "Provided by the client" },
@@ -254,11 +249,6 @@ export const products: Product[] = [
             title: "Facade finish",
             description:
               "Natural oil, dark lacquer or a custom-coloured facade on request.",
-          },
-          {
-            title: "Lighting",
-            description:
-              "LED light scenes matched to the mood of the session.",
           },
           {
             title: "Relaxation zone",
@@ -375,7 +365,7 @@ export const products: Product[] = [
           {
             title: "Premium w detalu",
             description:
-              "Drewno skandynawskie, dopracowane okucia i panoramiczna szyba w standardzie.",
+              "Termowany świerk ThermoWood, dopracowane okucia i panoramiczna szyba w standardzie.",
           },
         ],
         specs: [
@@ -384,7 +374,7 @@ export const products: Product[] = [
           { label: "Wysokość", value: "2,26 m" },
           { label: "Powierzchnia użytkowa", value: "5,3 m²" },
           { label: "Grubość ściany", value: "42 mm" },
-          { label: "Materiał", value: "Drewno skandynawskie premium" },
+          { label: "Materiał", value: "ThermoWood (termowany świerk skandynawski)" },
           { label: "Piec", value: "Harvia Cilindro, Legend lub Spirit" },
           { label: "Moc pieca", value: "od 9 kW" },
           { label: "Przyłącze elektryczne", value: "Po stronie Klienta" },
@@ -402,11 +392,6 @@ export const products: Product[] = [
             title: "Wykończenie elewacji",
             description:
               "Naturalny olej, ciemny lakier lub elewacja w kolorze na życzenie.",
-          },
-          {
-            title: "Oświetlenie",
-            description:
-              "Sceny świetlne LED dopasowane do nastroju seansu.",
           },
           {
             title: "Strefa wypoczynku",
@@ -489,7 +474,7 @@ export const products: Product[] = [
           {
             title: "Premium in the detail",
             description:
-              "Scandinavian wood, refined fittings and a panoramic glass front as standard.",
+              "ThermoWood spruce, refined fittings and a panoramic glass front as standard.",
           },
         ],
         specs: [
@@ -498,7 +483,7 @@ export const products: Product[] = [
           { label: "Height", value: "2.26 m" },
           { label: "Usable floor area", value: "5.3 m²" },
           { label: "Wall thickness", value: "42 mm" },
-          { label: "Material", value: "Premium Scandinavian wood" },
+          { label: "Material", value: "ThermoWood (thermally modified Scandinavian spruce)" },
           { label: "Heater", value: "Harvia Cilindro, Legend or Spirit" },
           { label: "Heater power", value: "from 9 kW" },
           { label: "Electrical connection", value: "Provided by the client" },
@@ -516,11 +501,6 @@ export const products: Product[] = [
             title: "Facade finish",
             description:
               "Natural oil, dark lacquer or a custom-coloured facade on request.",
-          },
-          {
-            title: "Lighting",
-            description:
-              "LED light scenes matched to the mood of the session.",
           },
           {
             title: "Relaxation zone",
@@ -637,7 +617,7 @@ export const products: Product[] = [
           {
             title: "Najwyższa jakość wykonania",
             description:
-              "Drewno skandynawskie premium, solidna konstrukcja i dopracowany każdy detal.",
+              "Termowany świerk ThermoWood, solidna konstrukcja i dopracowany każdy detal.",
           },
         ],
         specs: [
@@ -646,7 +626,7 @@ export const products: Product[] = [
           { label: "Wysokość", value: "2,30 m" },
           { label: "Powierzchnia użytkowa", value: "7,2 m²" },
           { label: "Grubość ściany", value: "42 mm" },
-          { label: "Materiał", value: "Drewno skandynawskie premium" },
+          { label: "Materiał", value: "ThermoWood (termowany świerk skandynawski)" },
           { label: "Piec", value: "Harvia Cilindro lub Legend" },
           { label: "Moc pieca", value: "od 9 kW" },
           { label: "Przyłącze elektryczne", value: "Po stronie Klienta" },
@@ -664,11 +644,6 @@ export const products: Product[] = [
             title: "Wykończenie elewacji",
             description:
               "Naturalny olej, ciemny lakier lub elewacja w kolorze na życzenie.",
-          },
-          {
-            title: "Oświetlenie",
-            description:
-              "Sceny świetlne LED dopasowane do nastroju seansu.",
           },
           {
             title: "Strefa wypoczynku",
@@ -751,7 +726,7 @@ export const products: Product[] = [
           {
             title: "Top-tier craftsmanship",
             description:
-              "Premium Scandinavian wood, a solid structure and every detail refined.",
+              "ThermoWood spruce, a solid structure and every detail refined.",
           },
         ],
         specs: [
@@ -760,7 +735,7 @@ export const products: Product[] = [
           { label: "Height", value: "2.30 m" },
           { label: "Usable floor area", value: "7.2 m²" },
           { label: "Wall thickness", value: "42 mm" },
-          { label: "Material", value: "Premium Scandinavian wood" },
+          { label: "Material", value: "ThermoWood (thermally modified Scandinavian spruce)" },
           { label: "Heater", value: "Harvia Cilindro or Legend" },
           { label: "Heater power", value: "from 9 kW" },
           { label: "Electrical connection", value: "Provided by the client" },
@@ -778,11 +753,6 @@ export const products: Product[] = [
             title: "Facade finish",
             description:
               "Natural oil, dark lacquer or a custom-coloured facade on request.",
-          },
-          {
-            title: "Lighting",
-            description:
-              "LED light scenes matched to the mood of the session.",
           },
           {
             title: "Relaxation zone",

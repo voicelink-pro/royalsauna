@@ -70,7 +70,7 @@ export const en: Dictionary = {
       eyebrow: "Premium garden saunas",
       h1: "RoyalSauna – your private home spa in the garden",
       subtitle:
-        "We craft luxury garden saunas from Scandinavian wood. One refined model in three variants – ready to become the heart of your home wellness ritual.",
+        "We craft luxury garden saunas from thermally modified ThermoWood spruce. One refined model in three variants – ready to become the heart of your home wellness ritual.",
       ctaPrimary: "Get your offer",
       ctaSecondary: "See the variants",
       videoCaption: "Placeholder reserved for the RoyalSauna feature film",
@@ -91,9 +91,9 @@ export const en: Dictionary = {
       lead: "For us, luxury isn't an ornament – it's the consequence of quality. We design and craft every sauna to delight in the detail and to serve for decades – an investment you feel from the first touch of the wood.",
       items: [
         {
-          title: "Scandinavian wood",
+          title: "ThermoWood spruce",
           description:
-            "We choose wood from northern forests – dense, stable and ageing beautifully. The foundation of durability and a true sauna scent.",
+            "The shell is thermally modified Scandinavian spruce – the same northern timber, heat-treated for moisture resistance, density and stability. The foundation of a true sauna.",
         },
         {
           title: "Refined craftsmanship",
@@ -131,12 +131,12 @@ export const en: Dictionary = {
         walls: {
           title: "Solid-wood walls",
           description:
-            "Scandinavian wood – stable, beautifully scented and moisture-resistant.",
+            "Solid walls of thermally modified ThermoWood spruce – stable, moisture-resistant and made for the sauna climate.",
         },
         floor: {
           title: "Floor & finish",
           description:
-            "Carefully selected materials that withstand high temperatures.",
+            "The floor is the same thermally modified ThermoWood spruce – pleasant underfoot and built for heat and humidity.",
         },
       },
     },
@@ -209,7 +209,7 @@ export const en: Dictionary = {
         {
           title: "Production & preparation",
           description:
-            "We build your sauna from Scandinavian wood and assemble all the equipment.",
+            "We build your sauna from thermally modified ThermoWood spruce and assemble all the equipment.",
         },
         {
           title: "Delivery & installation",
@@ -258,12 +258,12 @@ export const en: Dictionary = {
       eyebrow: "The Regenerum line",
       h1: "Garden saunas – the Regenerum line",
       description:
-        "Three variants – Compact, Comfort and Premium – differing in size and capacity. All built from premium Scandinavian wood, with complete standard equipment.",
+        "Three variants – Compact, Comfort and Premium – differing in size and capacity. All built from thermally modified ThermoWood spruce, with complete standard equipment – including ambient LED.",
     },
     oneModel: {
       title: "The Regenerum line – three models",
       description:
-        "The Regenerum line comes in three variants. They differ in size and capacity – the material quality, craftsmanship and equipment stay consistently premium.",
+        "The Regenerum line comes in three variants. They differ in size and capacity – the thermally modified ThermoWood spruce, craftsmanship and standard equipment, including LED lighting, stay the same. Compact comfortably seats 2, Comfort 4, and Premium up to 6.",
     },
     comparison: {
       title: "Model comparison",
@@ -319,7 +319,7 @@ export const en: Dictionary = {
         {
           title: "Configuration options",
           description:
-            "Glazing, a terrace and lighting all influence the final quote.",
+            "Facade finish, a covered porch or terrace are priced individually. LED lighting is always included as standard.",
         },
       ],
     },
@@ -327,18 +327,18 @@ export const en: Dictionary = {
   quality: {
     hero: {
       eyebrow: "Quality & materials",
-      h1: "Scandinavian spruce and an obsession with detail",
+      h1: "ThermoWood spruce and an obsession with detail",
       description:
-        "We believe luxury starts with the material. That's why we build RoyalSauna from wood that ages beautifully and serves for decades.",
+        "We believe luxury starts with the material. That's why we build the shell and floor from thermally modified Scandinavian spruce – timber made to last for decades.",
     },
     sections: [
       {
-        title: "Why Scandinavian spruce",
-        body: "Wood from a cool, northern climate grows more slowly, making it denser and more stable. It warps less, handles temperature and humidity changes better, smells wonderful and deepens in colour over time.",
+        title: "Why thermally modified Scandinavian spruce",
+        body: "Wood from a cool, northern climate grows more slowly, making it denser and more stable. We then give it the ThermoWood heat treatment – steam only, no chemicals – so it handles moisture, temperature and time even better.",
       },
       {
         title: "Selection and processing",
-        body: "We select and process each board with attention to grain, smoothness and an even tone. We profile elements so skin contact is always comfortable while the structure breathes and works evenly.",
+        body: "We select and process each board with attention to grain, smoothness and an even tone. Thermal modification removes resin and stabilises the timber, and we profile the elements so the structure breathes and works evenly.",
       },
       {
         title: "Built to last",
@@ -1026,7 +1026,7 @@ export const en: Dictionary = {
     description: "We've gathered answers to the questions we hear most often.",
   },
   footer: {
-    tagline: "Premium garden saunas crafted from Scandinavian wood.",
+    tagline: "Premium garden saunas crafted from thermally modified ThermoWood spruce.",
     explore: "Site",
     products: "Saunas",
     company: "Information",

@@ -10,7 +10,7 @@ export const generalFaq: Record<Locale, FaqItem[]> = {
     {
       question: "Czym różnią się warianty Compact, Comfort i Premium?",
       answer:
-        "To ten sam, dopracowany model dostępny w trzech rozmiarach. Każdy wariant oferuje tę samą jakość drewna skandynawskiego, wykonania oraz wyposażenia w standardzie. Różnią się jedynie wielkością i liczbą osób, dla których zostały zaprojektowane: Compact dla 2 osób, Comfort dla 4 osób, a największy Regenerum Premium dla 6 osób.",
+        "To ten sam, dopracowany model dostępny w trzech rozmiarach. Każdy wariant oferuje ten sam termowany świerk ThermoWood, to samo wykonanie oraz wyposażenie w standardzie – w tym oświetlenie LED. Różnią się jedynie wielkością i liczbą osób, dla których zostały zaprojektowane: Compact dla 2 osób, Comfort dla 4 osób, a największy Regenerum Premium dla 6 osób.",
       link: {
         label: "Porównaj modele",
         href: routeMap.saunas.pl,
@@ -66,7 +66,7 @@ export const generalFaq: Record<Locale, FaqItem[]> = {
     {
       question: "How do the Compact, Comfort and Premium variants differ?",
       answer:
-        "It's the same refined model available in three sizes. Every variant offers the same Scandinavian wood quality, craftsmanship and standard equipment. They differ only in size and the number of people they were designed for: Compact for 2 people, Comfort for 4, and the largest Regenerum Premium for 6 people.",
+        "It's the same refined model available in three sizes. Every variant offers the same thermally modified ThermoWood spruce, craftsmanship and standard equipment – including LED lighting. They differ only in size and the number of people they were designed for: Compact for 2 people, Comfort for 4, and the largest Regenerum Premium for 6 people.",
       link: {
         label: "Compare models",
         href: routeMap.saunas.en,

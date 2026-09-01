@@ -23,7 +23,7 @@ export function organizationSchema(): Record<string, unknown> {
     url: getSiteUrl(),
     logo: `${getSiteUrl()}/logo.png`,
     description:
-      "Sauny ogrodowe premium z drewna skandynawskiego. Jeden model w trzech wariantach.",
+      "Sauny ogrodowe premium z termowanego świerku ThermoWood. Jeden model w trzech wariantach.",
     sameAs: [],
     address: {
       "@type": "PostalAddress",

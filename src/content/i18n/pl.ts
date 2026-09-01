@@ -70,7 +70,7 @@ export const pl = {
       eyebrow: "Sauny ogrodowe premium",
       h1: "RoyalSauna – prywatne domowe spa w Twoim ogrodzie",
       subtitle:
-        "Luksusowe sauny ogrodowe z drewna skandynawskiego. Jeden dopracowany model w trzech wariantach – gotowy, by stać się sercem Twojego domowego rytuału wellness.",
+        "Luksusowe sauny ogrodowe z termowanego świerku ThermoWood. Jeden dopracowany model w trzech wariantach – gotowy, by stać się sercem Twojego domowego rytuału wellness.",
       ctaPrimary: "Otrzymaj ofertę",
       ctaSecondary: "Zobacz warianty",
       videoCaption: "Zarezerwowane miejsce na film prezentujący RoyalSauna",
@@ -91,9 +91,9 @@ export const pl = {
       lead: "Dla nas luksus to nie ozdobnik, lecz konsekwencja jakości. Każdą saunę projektujemy i wykonujemy tak, by zachwycała detalem i służyła przez dekady. RoyalSauna to inwestycja, którą czuć od pierwszego dotyku drewna.",
       items: [
         {
-          title: "Drewno skandynawskie",
+          title: "Termowany świerk ThermoWood",
           description:
-            "Bryła naszej sauny stworzona jest z wysokiej jakości drewna skandynawskiego. Drewno pozyskiwane jest z północnych lasów, dzięki czemu jest gęste i stabilne. To podstawa trwałości i zapachu prawdziwej sauny. ",
+            "Bryłę budujemy z termowanego świerku skandynawskiego ThermoWood. To ten sam północny świerk, poddany obróbce cieplnej – gęsty, stabilny i odporny na wilgoć. To podstawa trwałości i charakteru prawdziwej sauny.",
         },
         {
           title: "Dopracowane wykonanie",
@@ -131,12 +131,12 @@ export const pl = {
         walls: {
           title: "Ściany z litego drewna",
           description:
-            "Lite drewno skandynawskie starannie wyselekcjonowane pod kątem trwałości i estetyki. Naturalna struktura drewna tworzy ciepłe, eleganckie wnętrze i wyjątkowy klimat sauny.",
+            "Lite ściany z termowanego świerku ThermoWood – odporne na wilgoć i wahania temperatury. Naturalna struktura drewna tworzy ciepłe, eleganckie wnętrze i wyjątkowy klimat sauny.",
         },
         floor: {
           title: "Podłoga i wykończenie",
           description:
-            "Podłoga wykonana z wysokiej jakości drewna Thermowood. Przyjemna dla bosych stóp, odporna na wysoką temperaturę i wilgoć, a przy tym doskonale komponuje się z wnętrzem sauny.",
+            "Podłoga z tego samego termowanego świerku ThermoWood. Przyjemna dla bosych stóp, odporna na wysoką temperaturę i wilgoć, a przy tym spójna z resztą kabiny.",
         },
       },
     },
@@ -258,12 +258,12 @@ export const pl = {
       eyebrow: "Linia Regenerum",
       h1: "Sauny ogrodowe – linia Regenerum",
       description:
-        "Trzy warianty – Compact, Comfort i Premium – różniące się wielkością i pojemnością. Wszystkie zbudowane z drewna skandynawskiego premium, z kompletnym wyposażeniem w standardzie.",
+        "Trzy warianty – Compact, Comfort i Premium – różniące się wielkością i pojemnością. Wszystkie zbudowane z termowanego świerku ThermoWood, z kompletnym wyposażeniem w standardzie – w tym nastrojowym LED.",
     },
     oneModel: {
       title: "Linia Regenerum – trzy modele",
       description:
-        "Regenerum dostępne jest w trzech wersjach dopasowanych do różnych potrzeb i przestrzeni. Niezależnie od wybranego wariantu otrzymujesz tę samą jakość skandynawskiego drewna, staranne wykonanie oraz pełny standard wyposażenia. Różnica dotyczy wyłącznie wielkości: Compact komfortowo mieści 2 osoby, Comfort 4 osoby, a Premium zapewnia przestrzeń dla maksymalnie 6 osób.",
+        "Regenerum dostępne jest w trzech wersjach dopasowanych do różnych potrzeb i przestrzeni. Niezależnie od wybranego wariantu otrzymujesz ten sam termowany świerk ThermoWood, staranne wykonanie oraz pełny standard wyposażenia – w tym oświetlenie LED. Różnica dotyczy wyłącznie wielkości: Compact komfortowo mieści 2 osoby, Comfort 4 osoby, a Premium zapewnia przestrzeń dla maksymalnie 6 osób.",
     },
     comparison: {
       title: "Porównanie modeli",
@@ -319,7 +319,7 @@ export const pl = {
         {
           title: "Opcje konfiguracji",
           description:
-            "Przeszklenia, taras i oświetlenie wpływają na ostateczną wycenę.",
+            "Wykończenie elewacji, zadaszony przedsionek lub taras – to opcje, które wyceniamy indywidualnie. Oświetlenie LED jest zawsze w standardzie.",
         },
       ],
     },
@@ -327,18 +327,18 @@ export const pl = {
   quality: {
     hero: {
       eyebrow: "Jakość i materiały",
-      h1: "Świerk skandynawski i obsesja na punkcie detalu",
+      h1: "Termowany świerk ThermoWood i obsesja na punkcie detalu",
       description:
-        "Wierzymy, że luksus zaczyna się od materiału. Dlatego budujemy RoyalSauna z drewna, które starzeje się pięknie i służy przez dekady.",
+        "Wierzymy, że luksus zaczyna się od materiału. Dlatego bryłę i podłogę budujemy z termowanego świerku skandynawskiego – drewna, które służy przez dekady.",
     },
     sections: [
       {
-        title: "Dlaczego świerk skandynawski",
-        body: "Drewno z chłodnego, północnego klimatu rośnie wolniej, dzięki czemu jest gęstsze i bardziej stabilne. Mniej się odkształca, lepiej znosi zmiany temperatury i wilgotności, a do tego pięknie pachnie i z czasem nabiera głębszego koloru.",
+        title: "Dlaczego termowany świerk skandynawski",
+        body: "Drewno z chłodnego, północnego klimatu rośnie wolniej, dzięki czemu jest gęstsze i bardziej stabilne. Następnie poddajemy je obróbce termicznej ThermoWood – bez chemii, wyłącznie z parą wodną – żeby jeszcze lepiej znosiło wilgoć, temperaturę i czas.",
       },
       {
         title: "Selekcja i obróbka",
-        body: "Każdą deskę wybieramy i obrabiamy z dbałością o słoje, gładkość i jednolity ton. Profilujemy elementy tak, aby kontakt ze skórą był zawsze komfortowy, a konstrukcja oddychała i pracowała równomiernie.",
+        body: "Każdą deskę wybieramy i obrabiamy z dbałością o słoje, gładkość i jednolity ton. Termowanie usuwa żywicę i ustabilizowuje drewno, a my profilujemy elementy tak, aby konstrukcja oddychała i pracowała równomiernie.",
       },
       {
         title: "Konstrukcja na lata",
@@ -1026,7 +1026,7 @@ export const pl = {
     description: "Zebraliśmy odpowiedzi na pytania, które słyszymy najczęściej.",
   },
   footer: {
-    tagline: "Sauny ogrodowe premium z drewna skandynawskiego.",
+    tagline: "Sauny ogrodowe premium z termowanego świerku ThermoWood.",
     explore: "Strona",
     products: "Sauny",
     company: "Informacje",
