@@ -20,6 +20,8 @@ export const en: Dictionary = {
     email: "biuro@royalsauna.pl",
     emailHref: "mailto:biuro@royalsauna.pl",
     address: "RoyalSauna Polska, 87-148 Łysomice, Poland",
+    instagramUrl: "https://www.instagram.com/royalsauna.pl/",
+    facebookUrl: "https://www.facebook.com/profile.php?id=61594425992076",
   },
   nav: {
     home: "Home",
@@ -1039,6 +1041,9 @@ export const en: Dictionary = {
     privacy: "Privacy policy",
     cookies: "Cookie policy",
     rights: "All rights reserved.",
+    follow: "Follow us",
+    instagram: "Instagram",
+    facebook: "Facebook",
   },
   widgets: {
     chatLabel: "Chat with us",

@@ -9,6 +9,7 @@ import type { Dictionary } from "@/lib/i18n";
 import { routeMap } from "@/lib/site";
 import { products } from "@/content/products";
 import { CtaButton } from "@/components/ui/CtaButton";
+import { FacebookIcon, InstagramIcon } from "@/components/ui/SocialIcons";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
@@ -17,6 +18,75 @@ interface NavLink {
   key: string;
   label: string;
   href: string;
+}
+
+function HeaderSocialLinks({
+  dict,
+  overDark,
+  compact = false,
+}: {
+  dict: Dictionary;
+  overDark: boolean;
+  compact?: boolean;
+}) {
+  const itemClass = cn(
+    "flex items-center justify-center rounded-full border transition-colors duration-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass",
+    compact ? "h-9 w-9 sm:h-10 sm:w-10" : "h-9 w-9",
+    overDark
+      ? "border-ivory/35 text-ivory hover:border-ivory hover:bg-ivory/10"
+      : "border-bark-500/20 text-bark-600 hover:border-clay-500 hover:text-clay-600",
+  );
+
+  return (
+    <div
+      className={cn(
+        "flex items-center gap-2",
+        !compact && "border-l pl-3",
+        !compact && (overDark ? "border-ivory/30" : "border-bark-500/20"),
+      )}
+    >
+      <a
+        href={dict.brand.instagramUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={dict.footer.instagram}
+        className={itemClass}
+      >
+        <InstagramIcon />
+      </a>
+      <a
+        href={dict.brand.facebookUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={dict.footer.facebook}
+        className={itemClass}
+      >
+        <FacebookIcon />
+      </a>
+    </div>
+  );
+}
+
+function HeaderSocialPill({
+  href,
+  label,
+  children,
+}: {
+  href: string;
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 rounded-full border border-bark-500/15 px-4 py-2 text-sm text-bark-700 transition-colors hover:border-clay-500 hover:text-clay-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass"
+    >
+      {children}
+      {label}
+    </a>
+  );
 }
 
 export function Header({
@@ -149,17 +219,17 @@ export function Header({
           : "bg-sand-100/95 shadow-[0_1px_0_rgba(90,70,50,0.08)] backdrop-blur",
       )}
     >
-      <Container className="relative flex h-20 items-center justify-between sm:h-24 lg:h-40">
+      <Container className="relative flex h-20 items-center justify-between gap-4 sm:h-24 lg:h-40 lg:justify-start lg:gap-6">
         <Link
           href={homeHref}
           aria-label={dict.brand.name}
-          className="relative z-10 block h-14 w-[min(15.5rem,calc(100%-3.5rem))] shrink-0 transition-opacity duration-500 hover:opacity-90 sm:h-20 sm:w-[min(20rem,calc(100%-3.5rem))] lg:h-32 lg:w-[448px] xl:h-36 xl:w-[504px]"
+          className="relative z-10 block h-14 w-14 shrink-0 transition-opacity duration-500 hover:opacity-90 sm:h-20 sm:w-20 lg:h-32 lg:w-32 xl:h-36 xl:w-36"
         >
           <Image
             src="/logo.png"
             alt={dict.brand.name}
             fill
-            sizes="(min-width: 1280px) 504px, (min-width: 1024px) 448px, 248px"
+            sizes="(min-width: 1280px) 144px, (min-width: 1024px) 128px, 80px"
             className={cn(
               "object-contain object-left transition-all duration-500",
               overDark && "brightness-0 invert",
@@ -168,7 +238,7 @@ export function Header({
         </Link>
 
         <nav
-          className="absolute left-1/2 top-1/2 z-20 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-9 lg:flex"
+          className="z-20 hidden min-w-0 flex-1 items-center justify-center gap-3 xl:gap-8 lg:flex"
           aria-label={dict.nav.menu}
         >
           {nav.map((item) => {
@@ -361,19 +431,24 @@ export function Header({
           })}
         </nav>
 
-        <div className="relative z-10 hidden items-center gap-5 lg:flex">
+        <div className="relative z-10 hidden shrink-0 items-center gap-2 xl:gap-4 lg:flex">
           <LanguageSwitcher current={locale} className={overDark ? "[&_a]:text-ivory/80 [&_a[aria-current]]:text-ivory [&_span]:text-ivory/40" : ""} />
           <CtaButton
             href={routeMap.contact[locale]}
             location="header"
             variant="primary"
-            className={cn(
-              "px-6 py-3 text-base transition-colors duration-500",
-              overDark && "bg-ivory/20 text-ivory backdrop-blur hover:bg-ivory/30",
-            )}
+              className={cn(
+                "px-4 py-3 text-base transition-colors duration-500 xl:px-6",
+                overDark && "bg-ivory/20 text-ivory backdrop-blur hover:bg-ivory/30",
+              )}
           >
             {dict.nav.requestOffer}
           </CtaButton>
+          <HeaderSocialLinks dict={dict} overDark={overDark} />
+        </div>
+
+        <div className="relative z-20 ml-auto flex items-center gap-1 lg:hidden">
+          <HeaderSocialLinks dict={dict} overDark={overDark} compact />
         </div>
 
         <button
@@ -471,7 +546,21 @@ export function Header({
               )}
             </div>
           ))}
-          <div className="mt-4 flex items-center justify-between border-t border-sand-200 pt-5">
+          <div className="mt-4 flex flex-wrap gap-2 border-t border-sand-200 pt-5">
+            <HeaderSocialPill
+              href={dict.brand.instagramUrl}
+              label={dict.footer.instagram}
+            >
+              <InstagramIcon />
+            </HeaderSocialPill>
+            <HeaderSocialPill
+              href={dict.brand.facebookUrl}
+              label={dict.footer.facebook}
+            >
+              <FacebookIcon />
+            </HeaderSocialPill>
+          </div>
+          <div className="mt-4 flex items-center justify-between">
             <LanguageSwitcher current={locale} />
             <CtaButton
               href={routeMap.contact[locale]}
