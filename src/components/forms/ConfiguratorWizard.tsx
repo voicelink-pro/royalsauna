@@ -196,21 +196,7 @@ export function ConfiguratorWizard({
   const W = dict.configurator.wizard;
   const getAttribution = useAttribution();
   const startedRef = useRef(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
   const rootRef = useRef<HTMLDivElement>(null);
-
-  function playClick() {
-    try {
-      if (!audioRef.current) {
-        audioRef.current = new Audio("/sounds/button.mp3");
-        audioRef.current.volume = 0.4;
-      }
-      audioRef.current.currentTime = 0;
-      audioRef.current.play().catch(() => {});
-    } catch {
-      /* sound is non-essential */
-    }
-  }
 
   const [phase, setPhase] = useState<Phase>("questions");
   const [stepIndex, setStepIndex] = useState(0);
@@ -288,7 +274,6 @@ export function ConfiguratorWizard({
 
   function selectTile(key: TileKey, value: string) {
     start();
-    playClick();
     const nextAnswers = { ...answers, [key]: value } as Partial<ConfiguratorAnswers>;
     setAnswers(nextAnswers);
     advance(nextAnswers, 280);
@@ -296,7 +281,6 @@ export function ConfiguratorWizard({
 
   function selectPreparation(key: "foundation" | "power", value: string) {
     start();
-    playClick();
     setAnswers((a) => ({ ...a, [key]: value }) as Partial<ConfiguratorAnswers>);
   }
 
@@ -464,11 +448,9 @@ export function ConfiguratorWizard({
           checks={checks}
           status={projStatus}
           onSelectModel={(m) => {
-            playClick();
             setChosenModel(m === rec.model ? null : m);
           }}
           onSelectHeater={(h) => {
-            playClick();
             setHeaterChoice(h);
           }}
           onEditAnswers={() => {
@@ -676,7 +658,6 @@ export function ConfiguratorWizard({
               data-guide="config-space-unknown"
               checked={spaceDraft.unknown}
               onChange={(e) => {
-                playClick();
                 setSpaceDraft((d) => ({ ...d, unknown: e.target.checked }));
               }}
               className="mt-0.5 h-4 w-4 shrink-0 rounded border-sand-400 text-bark-700 focus:ring-clay-500"
