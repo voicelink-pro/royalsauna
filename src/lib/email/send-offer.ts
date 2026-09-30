@@ -98,6 +98,9 @@ function buildCustomerEmailHtml(data: OfferData): string {
       : isPl
         ? `<strong>Model:</strong> ${escapeHtml(data.model.line)} ${escapeHtml(data.model.name)}<br/><strong>Cena od:</strong> ${escapeHtml(data.model.priceFormatted)} ${escapeHtml(data.model.currency)}`
         : `<strong>${L.recommendedModel}:</strong> ${escapeHtml(data.model.line)} ${escapeHtml(data.model.name)}<br/><strong>${L.priceFrom}:</strong> ${escapeHtml(data.model.priceFormatted)} ${escapeHtml(data.model.currency)}`;
+  const heaterLine = data.heater
+    ? `<br/><strong>${L.heater}:</strong> ${escapeHtml(data.heater)}`
+    : "";
   const heaterNote =
     isPl && isCentrumOstaszewo
       ? "W załączonej ofercie znajdziesz pełną listę dostępnych pieców wraz z cenami dla Sauny Regenerum Premium."
@@ -124,7 +127,7 @@ function buildCustomerEmailHtml(data: OfferData): string {
     <p style="margin:0 0 16px;font-size:15px;line-height:1.6;">${greeting}</p>
     <p style="margin:0 0 20px;font-size:14px;line-height:1.6;color:#5A4632;">${intro}</p>
     <div style="background:#F1E9D9;border-radius:8px;padding:16px 20px;margin:0 0 20px;">
-      <p style="margin:0;font-size:13px;line-height:1.7;">${summary}</p>
+      <p style="margin:0;font-size:13px;line-height:1.7;">${summary}${heaterLine}</p>
     </div>
     <p style="margin:0 0 20px;font-size:13px;line-height:1.6;color:#5A4632;">${heaterNote}</p>
     <p style="margin:0 0 20px;font-size:14px;line-height:1.6;color:#5A4632;">${closing}</p>

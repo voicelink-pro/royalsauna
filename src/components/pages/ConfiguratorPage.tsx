@@ -23,14 +23,14 @@ export function ConfiguratorPage({ locale }: { locale: Locale }) {
       </Container>
 
       <Container className="pt-8">
-        <SectionReveal className="mx-auto max-w-3xl">
+        <SectionReveal className="mx-auto max-w-5xl">
           <SectionHeading
             as="h1"
             eyebrow={dict.configurator.hero.eyebrow}
             title={dict.configurator.hero.h1}
             description={dict.configurator.hero.description}
             align="center"
-            className="mb-8"
+            className="mx-auto mb-8 max-w-3xl"
           />
           <div
             className="mb-8 flex items-center justify-center gap-4"

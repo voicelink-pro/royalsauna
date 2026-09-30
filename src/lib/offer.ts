@@ -2,6 +2,8 @@ import type { LeadPayload, Locale, ModelId } from "@/types";
 import { getProduct } from "@/content/products";
 import { getDictionary } from "@/lib/i18n";
 import { formatPrice } from "@/lib/utils";
+import { getHeaterModel } from "@/content/heaterModels";
+import { buildLeadRows } from "@/lib/configurator-summary";
 
 /**
  * Normalised, locale-aware view of a lead that the PDF / email layers consume.
@@ -28,6 +30,9 @@ export interface OfferData {
     material: string;
   };
   included: string[];
+  /** Heater picked in the configurator, if any. */
+  heater?: string;
+  /** Configurator answers as label/value rows for the office notification (PL). */
   preferences: { label: string; value: string }[];
   sourceLabel?: string;
   brand: {
@@ -47,6 +52,7 @@ function offerLabels(locale: Locale) {
     preparedFor: "Przygotowano dla",
     date: "Data",
     recommendedModel: "Rekomendowany model",
+    heater: "Piec",
     capacity: "Liczba osób",
     material: "Materiał",
     priceFrom: "Cena od",
@@ -68,6 +74,7 @@ function offerLabels(locale: Locale) {
     preparedFor: "Prepared for",
     date: "Date",
     recommendedModel: "Recommended model",
+    heater: "Heater",
     capacity: "People",
     material: "Material",
     priceFrom: "Price from",
@@ -86,31 +93,6 @@ function offerLabels(locale: Locale) {
   };
   return locale === "en" ? en : pl;
 }
-
-const PREF_VALUE_LABELS: Record<Locale, Record<string, string>> = {
-  pl: {
-    "2": "2 osoby",
-    "4": "4 osoby",
-    "6": "6 osób",
-    small: "Niewiele miejsca",
-    medium: "Średnio miejsca",
-    large: "Dużo miejsca",
-    occasional: "Okazjonalnie",
-    regular: "Regularnie",
-    daily: "Codziennie",
-  },
-  en: {
-    "2": "2 people",
-    "4": "4 people",
-    "6": "6 people",
-    small: "Little space",
-    medium: "Medium space",
-    large: "Plenty of space",
-    occasional: "Occasionally",
-    regular: "Regularly",
-    daily: "Daily",
-  },
-};
 
 function resolveModelId(value: LeadPayload["preferredModel"]): ModelId {
   if (value === "compact" || value === "comfort" || value === "premium") {
@@ -135,11 +117,15 @@ export function buildOfferData(payload: LeadPayload): OfferData {
         : s.label.toLowerCase().includes("materiał"),
     )?.value ?? (locale === "en" ? "ThermoWood (thermally modified Scandinavian spruce)" : "ThermoWood (termowany świerk skandynawski)");
 
-  const v = PREF_VALUE_LABELS[locale];
-  const preferences: { label: string; value: string }[] = [];
-  if (payload.peopleCount) preferences.push({ label: labels.people, value: v[payload.peopleCount] ?? payload.peopleCount });
-  if (payload.gardenSpace) preferences.push({ label: labels.garden, value: v[payload.gardenSpace] ?? payload.gardenSpace });
-  if (payload.frequency) preferences.push({ label: labels.frequency, value: v[payload.frequency] ?? payload.frequency });
+  // Office notification is always in Polish, whatever the form's locale.
+  const preferences = payload.configurator
+    ? buildLeadRows(payload.configurator, "pl", getDictionary("pl").configurator.wizard).map(
+        ({ label, value }) => ({ label, value }),
+      )
+    : [];
+  const heater = payload.configurator
+    ? getHeaterModel(payload.configurator.heater)?.name
+    : undefined;
 
   const dateFormatter = new Intl.DateTimeFormat(locale === "en" ? "en-GB" : "pl-PL", {
     day: "numeric",
@@ -169,6 +155,7 @@ export function buildOfferData(payload: LeadPayload): OfferData {
       material,
     },
     included: dict.home.included.items,
+    heater,
     preferences,
     sourceLabel: payload.sourceLabel?.trim() || undefined,
     brand: {

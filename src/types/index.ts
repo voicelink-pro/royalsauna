@@ -193,6 +193,47 @@ export interface HeaterModel {
   >;
 }
 
+export type UsageAnswer = "couple" | "family" | "friends" | "solo";
+export type PeopleAnswer = "1-2" | "3-4" | "5-6";
+export type ComfortAnswer = "smallest" | "space" | "lounge";
+export type FoundationAnswer = "ready" | "todo" | "unknown";
+export type PowerAnswer = "ready" | "check" | "unknown";
+export type ClimateAnswer = "soft" | "strong" | "design" | "advise";
+export type TimingAnswer = "asap" | "months" | "planning";
+
+/** Space the client can dedicate to the sauna, in metres. */
+export interface SpaceAnswer {
+  width: number | null;
+  depth: number | null;
+  unknown: boolean;
+}
+
+export interface ConfiguratorAnswers {
+  usage: UsageAnswer;
+  people: PeopleAnswer;
+  comfort: ComfortAnswer;
+  space: SpaceAnswer;
+  foundation: FoundationAnswer;
+  power: PowerAnswer;
+  climate: ClimateAnswer;
+  timing?: TimingAnswer;
+}
+
+/** Things that must be verified on site before installation. */
+export type SiteCheck = "space" | "foundation" | "power" | "access";
+
+export interface ConfiguratorLeadData {
+  answers: Partial<ConfiguratorAnswers>;
+  /** Model proposed by the engine; null when the answers were contradictory. */
+  recommendedModel: ModelId | null;
+  selectedModel: ModelId;
+  heater: HeaterModelId;
+  status: "ready" | "toConfirm";
+  checks: SiteCheck[];
+  /** Which CTA the client used on the result screen. */
+  intent: "project" | "installation";
+}
+
 /** Lead payload shared by every form on the site. */
 export interface LeadPayload {
   name: string;
@@ -202,10 +243,8 @@ export interface LeadPayload {
   location: string;
   message?: string;
   consent: boolean;
-  // Configurator answers (optional — only present from the guided flow).
-  peopleCount?: string;
-  gardenSpace?: string;
-  frequency?: string;
+  /** Full configurator project (only present from the guided flow). */
+  configurator?: ConfiguratorLeadData;
   // Tracking / attribution context (hidden fields).
   utm_source?: string;
   utm_medium?: string;

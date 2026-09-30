@@ -17,6 +17,7 @@ export type TrackEventName =
   | "offer_form_start"
   | "offer_form_submit"
   | "configurator_result"
+  | "configurator_cta"
   | "interior_video_play"
   | "interior_point_click"
   | "hero_theme_toggle"
