@@ -1206,6 +1206,8 @@ export const en: Dictionary = {
       preferredModel: "Preferred model",
       location: "Town or region",
       locationPlaceholder: "e.g. Kraków / Małopolska",
+      postalCode: "Postal code",
+      postalCodePlaceholder: "00-000",
       message: "Message",
       messagePlaceholder: "Tell us about your garden and expectations…",
       consent:
@@ -1225,6 +1227,7 @@ export const en: Dictionary = {
       "Something went wrong. Please try again or contact us directly.",
     required: "This field is required",
     invalidEmail: "Please enter a valid email address",
+    invalidPostalCode: "Enter a postal code in the 00-000 format",
     consentRequired: "Consent is required to prepare an offer",
     steps: {
       model: "Variant",

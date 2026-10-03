@@ -5,7 +5,7 @@ import type { Locale, SaunaSize, LeadPayload } from "@/types";
 import type { Dictionary } from "@/lib/i18n";
 import { trackEvent } from "@/lib/analytics";
 import { useAttribution } from "@/lib/useAttribution";
-import { cn } from "@/lib/utils";
+import { cn, normalizePostalCode } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -55,6 +55,7 @@ export function LeadForm({
     phone: "",
     preferredModel: defaultModel,
     location: "",
+    postalCode: "",
     message: "",
     consent: false,
   });
@@ -78,6 +79,8 @@ export function LeadForm({
     else if (!EMAIL_RE.test(form.email)) next.email = dict.form.invalidEmail;
     if (!form.phone.trim()) next.phone = dict.form.required;
     if (!form.location.trim()) next.location = dict.form.required;
+    if (!form.postalCode.trim()) next.postalCode = dict.form.required;
+    else if (!normalizePostalCode(form.postalCode)) next.postalCode = dict.form.invalidPostalCode;
     if (!form.consent) next.consent = dict.form.consentRequired;
     setErrors(next);
     return Object.keys(next).length === 0;
@@ -94,6 +97,7 @@ export function LeadForm({
       phone: form.phone.trim(),
       preferredModel: form.preferredModel,
       location: form.location,
+      postalCode: normalizePostalCode(form.postalCode)!,
       message: form.message || undefined,
       consent: form.consent,
       selected_model: form.preferredModel,
@@ -220,6 +224,26 @@ export function LeadForm({
             onChange={(e) => update("location", e.target.value)}
             placeholder={dict.form.fields.locationPlaceholder}
             aria-invalid={!!errors.location}
+          />
+        </Field>
+
+        <Field
+          id="lf-postal-code"
+          label={dict.form.fields.postalCode}
+          error={errors.postalCode}
+          required
+        >
+          <Input
+            id="lf-postal-code"
+            data-guide="field-postalCode"
+            type="text"
+            inputMode="numeric"
+            autoComplete="postal-code"
+            maxLength={6}
+            value={form.postalCode}
+            onChange={(e) => update("postalCode", e.target.value)}
+            placeholder={dict.form.fields.postalCodePlaceholder}
+            aria-invalid={!!errors.postalCode}
           />
         </Field>
       </div>

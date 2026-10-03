@@ -152,6 +152,7 @@ function buildNotifyEmailHtml(data: OfferData): string {
     ["E-mail", data.client.email],
     ["Telefon", data.client.phone || "—"],
     ["Lokalizacja / ogród", data.client.location || "—"],
+    ["Kod pocztowy", data.client.postalCode || "—"],
     ["Model", `${data.model.line} ${data.model.name}`],
     ["Cena od", `${data.model.priceFormatted} ${data.model.currency}`],
     ["Język formularza", data.locale.toUpperCase()],

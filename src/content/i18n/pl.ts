@@ -1206,6 +1206,8 @@ export const pl = {
       preferredModel: "Preferowany model",
       location: "Miejscowość lub województwo",
       locationPlaceholder: "np. Kraków / małopolskie",
+      postalCode: "Kod pocztowy",
+      postalCodePlaceholder: "00-000",
       message: "Wiadomość",
       messagePlaceholder: "Opowiedz nam o swoim ogrodzie i oczekiwaniach…",
       consent:
@@ -1225,6 +1227,7 @@ export const pl = {
       "Coś poszło nie tak. Spróbuj ponownie lub napisz do nas bezpośrednio.",
     required: "To pole jest wymagane",
     invalidEmail: "Podaj poprawny adres e-mail",
+    invalidPostalCode: "Podaj kod pocztowy w formacie 00-000",
     consentRequired: "Zgoda jest niezbędna do przygotowania oferty",
     steps: {
       model: "Wariant",

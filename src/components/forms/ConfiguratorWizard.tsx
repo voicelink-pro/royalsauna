@@ -21,14 +21,13 @@ import { heaterModelsByProduct } from "@/content/heaterModels";
 import { buildAnswerRows, type SummaryStep } from "@/lib/configurator-summary";
 import { trackEvent } from "@/lib/analytics";
 import { useAttribution } from "@/lib/useAttribution";
-import { cn } from "@/lib/utils";
+import { cn, normalizePostalCode } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { SpacePlanner } from "@/components/configurator/SpacePlanner";
 import { ConflictPanel, ProjectResult } from "@/components/configurator/ProjectResult";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const STEP_KEYS = [
-  "usage",
   "people",
   "comfort",
   "space",
@@ -37,7 +36,7 @@ const STEP_KEYS = [
   "timing",
 ] as const satisfies readonly SummaryStep[];
 type StepKey = (typeof STEP_KEYS)[number];
-type TileKey = "usage" | "people" | "comfort" | "climate" | "timing";
+type TileKey = "people" | "comfort" | "climate" | "timing";
 type Phase = "questions" | "result" | "contact" | "success";
 type Intent = ConfiguratorLeadData["intent"];
 
@@ -213,6 +212,7 @@ export function ConfiguratorWizard({
     email: "",
     phone: "",
     location: "",
+    postalCode: "",
     message: "",
     consent: false,
   });
@@ -348,6 +348,8 @@ export function ConfiguratorWizard({
     else if (!EMAIL_RE.test(contact.email)) next.email = dict.form.invalidEmail;
     if (!contact.phone.trim()) next.phone = dict.form.required;
     if (!contact.location.trim()) next.location = dict.form.required;
+    if (!contact.postalCode.trim()) next.postalCode = dict.form.required;
+    else if (!normalizePostalCode(contact.postalCode)) next.postalCode = dict.form.invalidPostalCode;
     if (!contact.consent) next.consent = dict.form.consentRequired;
     setErrors(next);
     return Object.keys(next).length === 0;
@@ -364,6 +366,7 @@ export function ConfiguratorWizard({
       phone: contact.phone.trim(),
       preferredModel: leadModel,
       location: contact.location,
+      postalCode: normalizePostalCode(contact.postalCode)!,
       message: contact.message || undefined,
       consent: contact.consent,
       configurator: {
@@ -521,6 +524,7 @@ export function ConfiguratorWizard({
                 { key: "email", type: "email", autoComplete: "email" },
                 { key: "phone", type: "tel", autoComplete: "tel" },
                 { key: "location", type: "text", autoComplete: "address-level2" },
+                { key: "postalCode", type: "text", autoComplete: "postal-code", inputMode: "numeric", maxLength: 6 },
               ] as const
             ).map((f) => (
               <div key={f.key}>
@@ -533,6 +537,8 @@ export function ConfiguratorWizard({
                   data-guide={`field-${f.key}`}
                   type={f.type}
                   autoComplete={f.autoComplete}
+                  inputMode={"inputMode" in f ? f.inputMode : undefined}
+                  maxLength={"maxLength" in f ? f.maxLength : undefined}
                   value={contact[f.key]}
                   onChange={(e) => update(f.key, e.target.value)}
                   placeholder={dict.form.fields[`${f.key}Placeholder`]}

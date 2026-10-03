@@ -28,7 +28,7 @@ export const legalContent: Record<
         },
         {
           heading: "Zakres i cel przetwarzania",
-          body: "Przetwarzamy dane podane w formularzach (imię, e-mail, telefon, lokalizacja, treść wiadomości) wyłącznie w celu przygotowania i przedstawienia oferty oraz kontaktu w tej sprawie. Dane analityczne przetwarzamy w celu ulepszania strony.",
+          body: "Przetwarzamy dane podane w formularzach (imię, e-mail, telefon, lokalizacja, kod pocztowy, treść wiadomości) wyłącznie w celu przygotowania i przedstawienia oferty oraz kontaktu w tej sprawie. Dane analityczne przetwarzamy w celu ulepszania strony.",
         },
         {
           heading: "Podstawa prawna",
@@ -56,7 +56,7 @@ export const legalContent: Record<
         },
         {
           heading: "Scope and purpose of processing",
-          body: "We process data provided in forms (name, email, phone, location, message) solely to prepare and present an offer and to contact you about it. We process analytics data to improve the website.",
+          body: "We process data provided in forms (name, email, phone, location, postal code, message) solely to prepare and present an offer and to contact you about it. We process analytics data to improve the website.",
         },
         {
           heading: "Legal basis",

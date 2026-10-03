@@ -5,7 +5,7 @@ import type { Locale, SaunaSize, LeadPayload } from "@/types";
 import type { Dictionary } from "@/lib/i18n";
 import { trackEvent } from "@/lib/analytics";
 import { useAttribution } from "@/lib/useAttribution";
-import { cn } from "@/lib/utils";
+import { cn, normalizePostalCode } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 type ModelValue = SaunaSize;
@@ -31,6 +31,7 @@ export function MultiStepOfferForm({
   const [form, setForm] = useState({
     preferredModel: defaultModel as ModelValue,
     location: "",
+    postalCode: "",
     message: "",
     name: "",
     email: "",
@@ -54,6 +55,10 @@ export function MultiStepOfferForm({
     const next: Record<string, string> = {};
     if (index === 1 && !form.location.trim())
       next.location = dict.form.required;
+    if (index === 1 && !form.postalCode.trim())
+      next.postalCode = dict.form.required;
+    else if (index === 1 && !normalizePostalCode(form.postalCode))
+      next.postalCode = dict.form.invalidPostalCode;
     if (index === 2) {
       if (!form.name.trim()) next.name = dict.form.required;
       if (!form.email.trim()) next.email = dict.form.required;
@@ -87,6 +92,7 @@ export function MultiStepOfferForm({
       phone: form.phone.trim(),
       preferredModel: form.preferredModel,
       location: form.location,
+      postalCode: normalizePostalCode(form.postalCode)!,
       message: form.message || undefined,
       consent: form.consent,
       selected_model: form.preferredModel,
@@ -246,6 +252,30 @@ export function MultiStepOfferForm({
               />
               {errors.location && (
                 <p className="mt-1 text-sm text-red-700">{errors.location}</p>
+              )}
+            </div>
+            <div>
+              <label
+                htmlFor="ms-postal-code"
+                className="mb-1.5 block text-sm font-medium text-bark-600"
+              >
+                {dict.form.fields.postalCode}
+                <span className="ml-0.5 text-clay-500">*</span>
+              </label>
+              <input
+                id="ms-postal-code"
+                type="text"
+                inputMode="numeric"
+                autoComplete="postal-code"
+                maxLength={6}
+                value={form.postalCode}
+                onChange={(e) => update("postalCode", e.target.value)}
+                placeholder={dict.form.fields.postalCodePlaceholder}
+                aria-invalid={!!errors.postalCode}
+                className={inputClass}
+              />
+              {errors.postalCode && (
+                <p className="mt-1 text-sm text-red-700">{errors.postalCode}</p>
               )}
             </div>
             <div>

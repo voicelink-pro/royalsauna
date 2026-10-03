@@ -16,6 +16,7 @@ export interface OfferData {
     email: string;
     phone?: string;
     location: string;
+    postalCode: string;
     message?: string;
   };
   model: {
@@ -141,6 +142,7 @@ export function buildOfferData(payload: LeadPayload): OfferData {
       email: payload.email,
       phone: payload.phone,
       location: payload.location,
+      postalCode: payload.postalCode,
       message: payload.message,
     },
     model: {

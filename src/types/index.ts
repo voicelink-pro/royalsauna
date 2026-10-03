@@ -241,6 +241,7 @@ export interface LeadPayload {
   phone?: string;
   preferredModel: SaunaSize;
   location: string;
+  postalCode: string;
   message?: string;
   consent: boolean;
   /** Full configurator project (only present from the guided flow). */

@@ -56,7 +56,6 @@ export function seatsWord(n: number, locale: Locale, W: Wizard): string {
 }
 
 export type SummaryStep =
-  | "usage"
   | "people"
   | "comfort"
   | "space"
@@ -89,7 +88,6 @@ export function buildAnswerRows(
   return [
     { key: "model", label: S.model, value: product ? `${LINE_NAME} ${product.name}` : empty, step: "result" },
     { key: "heater", label: S.heater, value: getHeaterModel(heater)?.name ?? empty, step: "result" },
-    { key: "usage", label: S.usage, value: optionLabel(steps.usage.options, answers.usage) ?? empty, step: "usage" },
     { key: "people", label: S.people, value: optionLabel(steps.people.options, answers.people) ?? empty, step: "people" },
     { key: "comfort", label: S.comfort, value: optionLabel(steps.comfort.options, answers.comfort) ?? empty, step: "comfort" },
     { key: "space", label: S.space, value: formatSpace(answers.space, locale, W), step: "space" },

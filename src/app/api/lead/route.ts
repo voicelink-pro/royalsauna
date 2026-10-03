@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import type { LeadPayload, ModelId } from "@/types";
 import { buildOfferData } from "@/lib/offer";
 import { sendOfferEmail } from "@/lib/email/send-offer";
+import { normalizePostalCode } from "@/lib/utils";
+import { sendLeadSms } from "@/lib/sms/notify-lead";
 
 /**
  * Default path (relative to `public/`) of the model-specific offer PDF.
@@ -59,14 +61,17 @@ export async function POST(request: Request) {
   try {
     const data = (await request.json()) as Partial<LeadPayload>;
 
-    if (!data?.name || !data?.email || !data?.phone?.trim() || !data?.consent) {
+    const postalCode =
+      typeof data?.postalCode === "string" ? normalizePostalCode(data.postalCode) : null;
+
+    if (!data?.name || !data?.email || !data?.phone?.trim() || !postalCode || !data?.consent) {
       return NextResponse.json(
         { ok: false, error: "Missing required fields" },
         { status: 400 },
       );
     }
 
-    const payload = data as LeadPayload;
+    const payload = { ...data, postalCode } as LeadPayload;
 
     // eslint-disable-next-line no-console
     console.info("[lead] received", {
@@ -74,9 +79,22 @@ export async function POST(request: Request) {
       email: payload.email,
       preferredModel: payload.preferredModel,
       location: payload.location,
+      postalCode: payload.postalCode,
       locale: payload.locale,
       sourceLabel: payload.sourceLabel,
     });
+
+    const sms = sendLeadSms()
+      .then((result) => {
+        if (!result) return;
+        const failed = result.queuedMessages?.filter((m) => m.errorDescription) ?? [];
+        // eslint-disable-next-line no-console
+        console.info("[lead] sms alert sent", { status: result.status, failed });
+      })
+      .catch((smsErr) => {
+        // eslint-disable-next-line no-console
+        console.error("[lead] sms alert failed", smsErr);
+      });
 
     // Attach the pre-designed offer PDF and send via Resend.
     if (process.env.RESEND_API_KEY) {
@@ -103,6 +121,7 @@ export async function POST(request: Request) {
       }
     }
 
+    await sms;
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json(

@@ -207,13 +207,11 @@ export function ProjectResult({
 
   // Headline sentence
   const fitKey = evaluation.fit === "tooSmall" ? "unknown" : evaluation.fit;
-  const usageText = answers.usage ? R.usagePhrase[answers.usage] : "";
-  const peopleText = optionLabel(W.steps.people.options, answers.people);
   const because =
     manual && recommendedProduct
       ? fill(R.manualBecause, { recommended: recommendedProduct.name })
       : fill(R.because, {
-          usage: usageText && peopleText ? `${usageText} (${peopleText})` : usageText,
+          usage: answers.people ? R.peoplePhrase[answers.people] : "",
           spaceClause: R.spaceClause[fitKey],
         });
 
