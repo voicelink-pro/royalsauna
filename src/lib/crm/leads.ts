@@ -79,14 +79,14 @@ function buildConfiguration(payload: LeadPayload) {
   const answers = configurator.answers;
   return compact({
     contact_purpose:
-      configurator.intent === "project" ? "send_project" : "installation_consultation",
+      configurator.intent === "project" ? "send_project" : "consultation",
     model_code: configurator.selectedModel,
     heater_code: configurator.heater,
     usage_type: answers.usage ?? "private",
     number_of_people: peopleCount(answers.people),
     garden_space: gardenSpace(payload),
     ground_readiness: answers.foundation === "todo" ? "needs_check" : answers.foundation,
-    power_readiness: answers.power,
+    power_readiness: answers.power === "check" ? "needs_check" : answers.power,
     timing_preference: answers.timing,
     preferred_date: null,
   });
@@ -97,12 +97,7 @@ function buildAttribution(payload: LeadPayload) {
     utm_source: payload.utm_source,
     utm_medium: payload.utm_medium,
     utm_campaign: payload.utm_campaign,
-    utm_content: payload.utm_content,
-    utm_term: payload.utm_term,
     gclid: payload.gclid,
-    fbclid: payload.fbclid,
-    landing_page: payload.landing_page,
-    referrer: payload.referrer,
   });
 }
 
@@ -189,6 +184,13 @@ export async function createCrmLead(
       consent: payload.consent,
       selected_model: payload.selected_model || payload.preferredModel,
       configurator: payload.configurator ?? null,
+      tracking: compact({
+        utm_content: payload.utm_content,
+        utm_term: payload.utm_term,
+        fbclid: payload.fbclid,
+        landing_page: payload.landing_page,
+        referrer: payload.referrer,
+      }),
     },
   };
 
