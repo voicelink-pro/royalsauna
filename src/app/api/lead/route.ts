@@ -4,6 +4,7 @@ import { buildOfferData } from "@/lib/offer";
 import { sendOfferEmail } from "@/lib/email/send-offer";
 import { normalizePostalCode } from "@/lib/utils";
 import { sendLeadSms } from "@/lib/sms/notify-lead";
+import { createCrmLead, sendCrmOfferEvent } from "@/lib/crm/leads";
 
 /**
  * Default path (relative to `public/`) of the model-specific offer PDF.
@@ -84,6 +85,24 @@ export async function POST(request: Request) {
       sourceLabel: payload.sourceLabel,
     });
 
+    let crmLead: Awaited<ReturnType<typeof createCrmLead>>;
+    try {
+      crmLead = await createCrmLead(payload);
+      // eslint-disable-next-line no-console
+      console.info("[lead] saved in CRM", {
+        externalSubmissionId: crmLead.externalSubmissionId,
+        inquiryId: crmLead.inquiryId,
+      });
+    } catch (crmErr) {
+      // Do not report success to the form when its primary CRM record was not saved.
+      // eslint-disable-next-line no-console
+      console.error("[lead] CRM save failed", crmErr);
+      return NextResponse.json(
+        { ok: false, error: "CRM temporarily unavailable" },
+        { status: 502 },
+      );
+    }
+
     const sms = sendLeadSms()
       .then((result) => {
         if (!result) return;
@@ -107,6 +126,7 @@ export async function POST(request: Request) {
           pdfBuffer,
           data: offerData,
         });
+        const sentAt = new Date().toISOString();
 
         // eslint-disable-next-line no-console
         console.info("[lead] offer email sent", {
@@ -114,10 +134,38 @@ export async function POST(request: Request) {
           model: offerData.model.id,
           id: result?.data?.id,
         });
+
+        try {
+          await sendCrmOfferEvent({
+            externalSubmissionId: crmLead.externalSubmissionId,
+            externalOfferId:
+              result?.data?.id || `web-offer-${crmLead.externalSubmissionId}`,
+            status: "sent",
+            occurredAt: sentAt,
+            sentAt,
+          });
+        } catch (eventErr) {
+          // The lead is already safe in CRM; a missing offer event must not
+          // cause the customer form to submit the same lead again.
+          // eslint-disable-next-line no-console
+          console.error("[lead] CRM offer event failed", eventErr);
+        }
       } catch (emailErr) {
         // Log but don't fail the lead submission if email sending fails.
         // eslint-disable-next-line no-console
         console.error("[lead] email send failed", emailErr);
+
+        try {
+          await sendCrmOfferEvent({
+            externalSubmissionId: crmLead.externalSubmissionId,
+            externalOfferId: `web-offer-${crmLead.externalSubmissionId}`,
+            status: "failed",
+            occurredAt: new Date().toISOString(),
+          });
+        } catch (eventErr) {
+          // eslint-disable-next-line no-console
+          console.error("[lead] CRM failed-offer event failed", eventErr);
+        }
       }
     }
 

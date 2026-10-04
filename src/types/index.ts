@@ -236,6 +236,8 @@ export interface ConfiguratorLeadData {
 
 /** Lead payload shared by every form on the site. */
 export interface LeadPayload {
+  /** Stable browser-generated id used to prevent duplicate CRM submissions on retries. */
+  submissionId?: string;
   name: string;
   email: string;
   phone?: string;
