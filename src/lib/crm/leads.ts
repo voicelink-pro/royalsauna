@@ -145,12 +145,22 @@ async function postToCrm(
     }
 
     const responseBody = await response.text().catch(() => "");
-    throw new Error(
+    throw new CrmRequestError(
+      response.status,
       `CRM request failed: ${response.status}${responseBody ? ` ${responseBody.slice(0, 500)}` : ""}`,
     );
   }
 
   throw new Error("CRM request failed after retries");
+}
+
+class CrmRequestError extends Error {
+  constructor(
+    readonly status: number,
+    message: string,
+  ) {
+    super(message);
+  }
 }
 
 export async function createCrmLead(
@@ -194,11 +204,24 @@ export async function createCrmLead(
     },
   };
 
-  const response = (await postToCrm(
-    "/api/v1/integrations/leads",
-    externalSubmissionId,
-    body,
-  )) as { inquiry_id?: string } | null;
+  let response: { inquiry_id?: string } | null;
+  try {
+    response = (await postToCrm(
+      "/api/v1/integrations/leads",
+      externalSubmissionId,
+      body,
+    )) as { inquiry_id?: string } | null;
+  } catch (err) {
+    if (!(err instanceof CrmRequestError) || err.status !== 422) throw err;
+    // eslint-disable-next-line no-console
+    console.warn("[crm] lead rejected, retrying without structured configuration", err);
+    // A rejected request is not stored, so a fresh key with the same submission id is safe.
+    response = (await postToCrm(
+      "/api/v1/integrations/leads",
+      `${externalSubmissionId}-basic`,
+      { ...body, configuration: undefined, attribution: undefined },
+    )) as { inquiry_id?: string } | null;
+  }
 
   return {
     externalSubmissionId,
