@@ -87,7 +87,7 @@ function buildConfiguration(payload: LeadPayload) {
     garden_space: gardenSpace(payload),
     ground_readiness: answers.foundation === "todo" ? "needs_check" : answers.foundation,
     power_readiness: answers.power === "check" ? "needs_check" : answers.power,
-    timing_preference: answers.timing,
+    timing_preference: answers.timing === "months" ? "few_months" : answers.timing,
     preferred_date: null,
   });
 }
