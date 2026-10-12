@@ -2,8 +2,8 @@ import { NextResponse } from "next/server";
 import type { LeadPayload, ModelId } from "@/types";
 import { buildOfferData } from "@/lib/offer";
 import { sendOfferEmail } from "@/lib/email/send-offer";
-import { normalizePostalCode } from "@/lib/utils";
-import { sendLeadSms } from "@/lib/sms/notify-lead";
+import { normalizePhone, normalizePostalCode } from "@/lib/utils";
+import { scheduleOfferSms } from "@/lib/sms/notify-lead";
 import { createCrmLead, sendCrmOfferEvent } from "@/lib/crm/leads";
 
 /**
@@ -64,15 +64,16 @@ export async function POST(request: Request) {
 
     const postalCode =
       typeof data?.postalCode === "string" ? normalizePostalCode(data.postalCode) : null;
+    const phone = typeof data?.phone === "string" ? normalizePhone(data.phone) : null;
 
-    if (!data?.name || !data?.email || !data?.phone?.trim() || !postalCode || !data?.consent) {
+    if (!data?.name || !data?.email || !phone || !postalCode || !data?.consent) {
       return NextResponse.json(
         { ok: false, error: "Missing required fields" },
         { status: 400 },
       );
     }
 
-    const payload = { ...data, postalCode } as LeadPayload;
+    const payload = { ...data, postalCode, phone } as LeadPayload;
 
     // eslint-disable-next-line no-console
     console.info("[lead] received", {
@@ -85,8 +86,9 @@ export async function POST(request: Request) {
       sourceLabel: payload.sourceLabel,
     });
 
-    // CRM, e-mail and SMS run independently; a failure in one must never
-    // block the others or the customer's form submission.
+    // CRM and e-mail run independently; a failure in one must never
+    // block the other or the customer's form submission. The follow-up SMS
+    // is queued only after the offer e-mail actually goes out.
     const crm = createCrmLead(payload)
       .then((crmLead) => {
         // eslint-disable-next-line no-console
@@ -100,18 +102,6 @@ export async function POST(request: Request) {
         // eslint-disable-next-line no-console
         console.error("[lead] CRM save failed", crmErr);
         return null;
-      });
-
-    const sms = sendLeadSms()
-      .then((result) => {
-        if (!result) return;
-        const failed = result.queuedMessages?.filter((m) => m.errorDescription) ?? [];
-        // eslint-disable-next-line no-console
-        console.info("[lead] sms alert sent", { status: result.status, failed });
-      })
-      .catch((smsErr) => {
-        // eslint-disable-next-line no-console
-        console.error("[lead] sms alert failed", smsErr);
       });
 
     // Attach the pre-designed offer PDF and send via Resend.
@@ -141,7 +131,31 @@ export async function POST(request: Request) {
       }
     })();
 
-    const [crmLead, emailResult] = await Promise.all([crm, email, sms]);
+    const [crmLead, emailResult] = await Promise.all([crm, email]);
+
+    if (emailResult?.status === "sent") {
+      try {
+        const modelName = buildOfferData(payload).model.name;
+        const sms = await scheduleOfferSms({
+          phone,
+          name: payload.name,
+          modelName,
+        });
+        if (sms) {
+          const failed = sms.queuedMessages?.filter((m) => m.errorDescription) ?? [];
+          // eslint-disable-next-line no-console
+          console.info("[lead] offer sms scheduled", {
+            status: sms.status,
+            sendTime: sms.sendTime,
+            model: modelName,
+            failed,
+          });
+        }
+      } catch (smsErr) {
+        // eslint-disable-next-line no-console
+        console.error("[lead] offer sms failed", smsErr);
+      }
+    }
 
     if (crmLead && emailResult) {
       try {
