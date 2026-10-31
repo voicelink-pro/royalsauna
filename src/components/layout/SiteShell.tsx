@@ -3,11 +3,10 @@ import { getDictionary } from "@/lib/i18n";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileStickyCTA } from "@/components/layout/MobileStickyCTA";
-import { ChatWidgetPlaceholder } from "@/components/widgets/ChatWidgetPlaceholder";
 import { VoiceAgentPlaceholder } from "@/components/widgets/VoiceAgentPlaceholder";
 
 /**
- * Shared site chrome (header, footer, sticky CTA, future AI widgets) wrapped
+ * Shared site chrome (header, footer, sticky CTA, voice agent) wrapped
  * around every page for a given locale.
  */
 export function SiteShell({
@@ -28,7 +27,6 @@ export function SiteShell({
       <main id="main">{children}</main>
       <Footer locale={locale} dict={dict} />
       <MobileStickyCTA locale={locale} dict={dict} />
-      <ChatWidgetPlaceholder dict={dict} />
       <VoiceAgentPlaceholder dict={dict} />
     </>
   );

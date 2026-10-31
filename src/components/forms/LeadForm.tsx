@@ -1,11 +1,18 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Locale, SaunaSize, LeadPayload } from "@/types";
 import type { Dictionary } from "@/lib/i18n";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackMetaLead } from "@/lib/analytics";
 import { useAttribution } from "@/lib/useAttribution";
-import { cn, normalizePostalCode } from "@/lib/utils";
+import {
+  FILL_FIELD_EVENT,
+  mapLeadFieldName,
+  parseConsent,
+  parseModel,
+  registerLeadForm,
+} from "@/lib/voice/form-bridge";
+import { cn, normalizePhone, normalizePostalCode } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -45,6 +52,8 @@ export function LeadForm({
 }) {
   const getAttribution = useAttribution();
   const startedRef = useRef(false);
+  const submissionIdRef = useRef<string | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">(
     "idle",
   );
@@ -59,6 +68,54 @@ export function LeadForm({
     message: "",
     consent: false,
   });
+
+  const formStateRef = useRef(form);
+  formStateRef.current = form;
+
+  useEffect(() => {
+    function applyFill(field: string, value: unknown) {
+      const mapped = mapLeadFieldName(field);
+      if (!mapped) return;
+      if (!startedRef.current) {
+        startedRef.current = true;
+        trackEvent("offer_form_start", { form_location: formLocation });
+      }
+      if (mapped === "consent") {
+        setForm((current) => ({ ...current, consent: parseConsent(value) }));
+        return;
+      }
+      if (mapped === "preferredModel") {
+        const model = parseModel(value);
+        if (!model) return;
+        setForm((current) => ({ ...current, preferredModel: model }));
+        return;
+      }
+      setForm((current) => ({ ...current, [mapped]: String(value) }));
+    }
+
+    const unregister = registerLeadForm({
+      getValues: () => formStateRef.current,
+      fill: (field, value) => applyFill(field, value),
+      getElement: () => formRef.current,
+    });
+
+    function onFillEvent(event: Event) {
+      const detail = (event as CustomEvent<{
+        formId?: string;
+        field?: string;
+        value?: unknown;
+      }>).detail;
+      if (!detail?.field) return;
+      if (detail.formId && detail.formId !== "contact") return;
+      applyFill(detail.field, detail.value);
+    }
+
+    window.addEventListener(FILL_FIELD_EVENT, onFillEvent);
+    return () => {
+      unregister();
+      window.removeEventListener(FILL_FIELD_EVENT, onFillEvent);
+    };
+  }, [formLocation]);
 
   function onFirstInteraction() {
     if (!startedRef.current) {
@@ -78,6 +135,7 @@ export function LeadForm({
     if (!form.email.trim()) next.email = dict.form.required;
     else if (!EMAIL_RE.test(form.email)) next.email = dict.form.invalidEmail;
     if (!form.phone.trim()) next.phone = dict.form.required;
+    else if (!normalizePhone(form.phone)) next.phone = dict.form.invalidPhone;
     if (!form.location.trim()) next.location = dict.form.required;
     if (!form.postalCode.trim()) next.postalCode = dict.form.required;
     else if (!normalizePostalCode(form.postalCode)) next.postalCode = dict.form.invalidPostalCode;
@@ -91,10 +149,12 @@ export function LeadForm({
     if (!validate()) return;
     setStatus("submitting");
 
+    submissionIdRef.current ??= `web-${crypto.randomUUID()}`;
     const payload: LeadPayload = {
+      submissionId: submissionIdRef.current,
       name: form.name,
       email: form.email,
-      phone: form.phone.trim(),
+      phone: normalizePhone(form.phone)!,
       preferredModel: form.preferredModel,
       location: form.location,
       postalCode: normalizePostalCode(form.postalCode)!,
@@ -118,6 +178,7 @@ export function LeadForm({
         form_location: formLocation,
         preferred_model: form.preferredModel,
       });
+      trackMetaLead();
       setStatus("success");
     } catch {
       setStatus("error");
@@ -158,7 +219,14 @@ export function LeadForm({
   ];
 
   return (
-    <form onSubmit={onSubmit} noValidate className="space-y-4">
+    <form
+      ref={formRef}
+      onSubmit={onSubmit}
+      noValidate
+      data-guide="form-contact"
+      data-form-id="contact"
+      className="space-y-4"
+    >
       <div className={cn("grid gap-4", !compact && "sm:grid-cols-2")}>
         <Field
           id="lf-name"
@@ -168,6 +236,7 @@ export function LeadForm({
         >
           <Input
             id="lf-name"
+            data-guide="field-name"
             type="text"
             autoComplete="name"
             value={form.name}
@@ -185,6 +254,7 @@ export function LeadForm({
         >
           <Input
             id="lf-email"
+            data-guide="field-email"
             type="email"
             autoComplete="email"
             value={form.email}
@@ -202,6 +272,7 @@ export function LeadForm({
         >
           <Input
             id="lf-phone"
+            data-guide="field-phone"
             type="tel"
             autoComplete="tel"
             value={form.phone}
@@ -219,6 +290,7 @@ export function LeadForm({
         >
           <Input
             id="lf-location"
+            data-guide="field-location"
             type="text"
             value={form.location}
             onChange={(e) => update("location", e.target.value)}
@@ -251,6 +323,7 @@ export function LeadForm({
       <Field id="lf-model" label={dict.form.fields.preferredModel}>
         <NativeSelect
           id="lf-model"
+          data-guide="field-model"
           value={form.preferredModel}
           onChange={(e) =>
             update("preferredModel", e.target.value as ModelValue)
@@ -267,6 +340,7 @@ export function LeadForm({
       <Field id="lf-message" label={dict.form.fields.message}>
         <Textarea
           id="lf-message"
+          data-guide="field-message"
           rows={3}
           value={form.message}
           onChange={(e) => update("message", e.target.value)}
@@ -278,6 +352,8 @@ export function LeadForm({
       <div>
         <label className="flex cursor-pointer items-start gap-2.5 text-sm text-bark-500">
           <input
+            id="lf-consent"
+            data-guide="field-consent"
             type="checkbox"
             checked={form.consent}
             onChange={(e) => update("consent", e.target.checked)}
@@ -299,6 +375,7 @@ export function LeadForm({
 
       <Button
         type="submit"
+        data-guide="form-submit"
         disabled={status === "submitting"}
         className="w-full sm:w-auto"
       >

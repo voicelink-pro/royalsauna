@@ -63,7 +63,7 @@ export function HeatersPage({ locale }: { locale: Locale }) {
       </Section>
 
       {/* Which heaters fit which model */}
-      <Section tone="ivory" id="dopasowanie" className="scroll-mt-28">
+      <Section tone="ivory" id="dopasowanie" dataGuide="dopasowanie" className="scroll-mt-28">
         <SectionHeading
           eyebrow={h.matchSection.eyebrow}
           title={h.matchSection.title}
@@ -117,7 +117,7 @@ export function HeatersPage({ locale }: { locale: Locale }) {
       </Section>
 
       {/* Comparison table */}
-      <Section tone="sand" id="porownanie" className="scroll-mt-28">
+      <Section tone="sand" id="porownanie" dataGuide="porownanie" className="scroll-mt-28">
         <SectionHeading
           eyebrow={h.compareSection.eyebrow}
           title={h.compareSection.title}
@@ -133,6 +133,7 @@ export function HeatersPage({ locale }: { locale: Locale }) {
       <Section
         tone="sand"
         id="piece"
+        dataGuide="piece"
         className="scroll-mt-28"
         ariaLabel={h.detailSection.title}
       >
@@ -193,6 +194,7 @@ export function HeatersPage({ locale }: { locale: Locale }) {
       <Section
         tone="ivory"
         id="faq"
+        dataGuide="faq"
         className="scroll-mt-28"
         ariaLabel={dict.faq.title}
       >

@@ -34,7 +34,12 @@ export function HomePage({ locale }: { locale: Locale }) {
       <HeroVideoScroll locale={locale} dict={dict} />
 
       {/* One sauna, three sizes */}
-      <Section tone="ivory" ariaLabel={dict.home.sizes.title}>
+      <Section
+        tone="ivory"
+        id="oferty"
+        dataGuide="oferty"
+        ariaLabel={dict.home.sizes.title}
+      >
         <SectionHeading
           eyebrow={dict.home.sizes.eyebrow}
           title={dict.home.sizes.title}
@@ -42,7 +47,9 @@ export function HomePage({ locale }: { locale: Locale }) {
           align="center"
           className="mb-14"
         />
-        <ProductCards locale={locale} dict={dict} />
+        <div id="modele" data-guide="modele">
+          <ProductCards locale={locale} dict={dict} />
+        </div>
       </Section>
 
       {/* Why RoyalSauna — luxury / quality */}
@@ -76,7 +83,12 @@ export function HomePage({ locale }: { locale: Locale }) {
       </Section>
 
       {/* Process */}
-      <Section tone="ivory" ariaLabel={dict.home.process.title}>
+      <Section
+        tone="ivory"
+        id="process"
+        dataGuide="process"
+        ariaLabel={dict.home.process.title}
+      >
         <SectionHeading
           eyebrow={dict.home.process.eyebrow}
           title={dict.home.process.title}
@@ -87,7 +99,13 @@ export function HomePage({ locale }: { locale: Locale }) {
       </Section>
 
       {/* FAQ */}
-      <Section tone="sand" ariaLabel={dict.faq.title} className="relative overflow-hidden">
+      <Section
+        tone="sand"
+        id="faq"
+        dataGuide="faq"
+        ariaLabel={dict.faq.title}
+        className="relative overflow-hidden"
+      >
         <div className="relative grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <div className="relative">
             <SectionHeading

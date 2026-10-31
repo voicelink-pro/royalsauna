@@ -2180,37 +2180,37 @@ export const blogPosts: BlogPost[] = [
     },
   },
   {
-    slug: "swierk-skandynawski-dlaczego-najlepszy",
-    enSlug: "scandinavian-spruce-why-the-best",
+    slug: "thermowood-dlaczego-najlepsze-drewno",
+    enSlug: "thermowood-why-the-best-wood",
     date: "2026-05-12",
     readingTime: 9,
     cover: {
       src: "/images/blog/skandynawski-swierk.jpg",
-      alt: "Skandynawski las świerkowy",
+      alt: "Drewno termowane do budowy saun",
     },
     i18n: {
       pl: {
-        title: "Świerk skandynawski – dlaczego to najlepsze drewno na saunę?",
+        title: "Drewno termowane – dlaczego to najlepszy materiał na saunę?",
         excerpt:
-          "Sprawdzamy, dlaczego termowany świerk skandynawski ThermoWood to jeden z najlepszych materiałów na saunę – i dlaczego budujemy z niego całą linię Regenerum.",
+          "Sprawdzamy, dlaczego ThermoWood to jeden z najlepszych materiałów na saunę – i dlaczego budujemy z niego całą linię Regenerum.",
         category: "Jakość",
         body: [
           {
             type: "p",
-            text: "Wybór odpowiedniego drewna jest jednym z najważniejszych elementów wpływających na jakość, trwałość oraz komfort korzystania z sauny. Nawet najlepszy projekt i nowoczesne wyposażenie nie zapewnią odpowiednich warunków, jeśli konstrukcja zostanie wykonana z materiału o słabych właściwościach. Z tego powodu w RoyalSauna stawiamy na drewno, które od lat uznawane jest za jeden z najlepszych surowców do budowy saun: świerk skandynawski poddany obróbce termicznej ThermoWood.",
+            text: "Wybór odpowiedniego drewna jest jednym z najważniejszych elementów wpływających na jakość, trwałość oraz komfort korzystania z sauny. Nawet najlepszy projekt i nowoczesne wyposażenie nie zapewnią odpowiednich warunków, jeśli konstrukcja zostanie wykonana z materiału o słabych właściwościach. Z tego powodu w RoyalSauna stawiamy na surowiec, który od lat uznawany jest za jeden z najlepszych do budowy saun: drewno termowane.",
           },
           {
             type: "p",
-            text: "To właśnie z termowanego świerku ThermoWood powstaje bryła i podłoga modeli Compact, Comfort oraz Premium. Ławy i zagłówki wykonujemy z osiki – drewna, które nie parzy skóry. Nie jest to przypadek. Za tym wyborem stoją zarówno właściwości techniczne materiałów, jak i wieloletnie doświadczenie producentów saun z Europy Północnej.",
+            text: "To właśnie z Thermowood powstaje bryła i podłoga modeli Compact, Comfort oraz Premium. Ławy i zagłówki wykonujemy z osiki – drewna, które nie parzy skóry. Nie jest to przypadek. Za tym wyborem stoją zarówno właściwości techniczne materiałów, jak i wieloletnie doświadczenie producentów saun z Europy Północnej.",
           },
-          { type: "h2", text: "Dlaczego właśnie świerk skandynawski?" },
+          { type: "h2", text: "Dlaczego właśnie ThermoWood?" },
           {
             type: "p",
-            text: "Skandynawia od lat słynie z doskonałych warunków do wzrostu drzew iglastych. Chłodny klimat, krótkie okresy wegetacyjne oraz powolny wzrost sprawiają, że drewno osiąga wyjątkową gęstość i stabilność.",
+            text: "Proces modyfikacji termicznej polega na obróbce starannie wyselekcjonowanego drewna w wysokiej temperaturze (180–230°C) przy użyciu wyłącznie pary wodnej i ciepła – bez jakichkolwiek środków chemicznych. Dzięki temu drewno osiąga wyjątkową gęstość, trwałość i stabilność.",
           },
           {
             type: "p",
-            text: "Słoje roczne są znacznie ciaśniejsze niż w przypadku drzew rosnących w cieplejszych regionach Europy. To właśnie dzięki temu świerk skandynawski charakteryzuje się bardzo dobrą wytrzymałością mechaniczną oraz wysoką odpornością na odkształcenia.",
+            text: "Zmieniona pod wpływem temperatury struktura komórkowa ogranicza chłonność wilgoci i usuwa żywicę. To właśnie dzięki temu drewno termowane charakteryzuje się bardzo dobrą wytrzymałością mechaniczną oraz wysoką odpornością na odkształcenia i czynniki atmosferyczne.",
           },
           {
             type: "p",
@@ -2219,11 +2219,11 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "Stabilność nawet przy bardzo wysokiej temperaturze" },
           {
             type: "p",
-            text: "W saunie drewno codziennie pracuje w wyjątkowo wymagających warunkach. Temperatura może przekraczać 100 stopni Celsjusza, a wilgotność zmienia się w bardzo krótkim czasie. Nie każdy gatunek drewna radzi sobie z takimi warunkami.",
+            text: "W saunie drewno codziennie pracuje w wyjątkowo wymagających warunkach. Temperatura może przekraczać 100 stopni Celsjusza, a wilgotność zmienia się w bardzo krótkim czasie. Nie każdy materiał drewniany radzi sobie z takimi warunkami.",
           },
           {
             type: "p",
-            text: "Świerk skandynawski wyróżnia się bardzo dobrą stabilnością wymiarową. Oznacza to, że znacznie mniej pracuje pod wpływem zmian temperatury i wilgotności. Dzięki temu ograniczone zostaje ryzyko powstawania szczelin, wypaczeń czy deformacji elementów konstrukcyjnych.",
+            text: "ThermoWood wyróżnia się bardzo dobrą stabilnością wymiarową. Oznacza to, że znacznie mniej pracuje pod wpływem zmian temperatury i wilgotności. Dzięki temu ograniczone zostaje ryzyko powstawania szczelin, wypaczeń czy deformacji elementów konstrukcyjnych.",
           },
           {
             type: "p",
@@ -2232,7 +2232,7 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "Doskonała izolacja cieplna" },
           {
             type: "p",
-            text: "Naturalne właściwości świerku – wzmocnione obróbką termiczną – sprawiają, że drewno bardzo dobrze izoluje ciepło. Ściany z ThermoWood skutecznie zatrzymują temperaturę wewnątrz kabiny, dzięki czemu sauna szybciej osiąga odpowiednie warunki i dłużej utrzymuje nagromadzone ciepło.",
+            text: "Właściwości drewna wzmocnione obróbką termiczną sprawiają, że materiał bardzo dobrze izoluje ciepło. Ściany z ThermoWood skutecznie zatrzymują temperaturę wewnątrz kabiny, dzięki czemu sauna szybciej osiąga odpowiednie warunki i dłużej utrzymuje nagromadzone ciepło.",
           },
           {
             type: "p",
@@ -2241,11 +2241,11 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "Piękny wygląd przez wiele lat" },
           {
             type: "p",
-            text: "Naturalny wygląd drewna jest jednym z powodów, dla których wiele osób wybiera właśnie świerk skandynawski. Po obróbce termicznej ThermoWood nabiera ciepłego, szlachetnego odcienia, a subtelny rysunek słojów tworzy spokojną i elegancką przestrzeń sprzyjającą relaksowi.",
+            text: "Naturalny wygląd jest jednym z powodów, dla których tak cenione jest drewno termowane. Po obróbce termicznej materiał nabiera ciepłego, szlachetnego odcienia w całym przekroju, a subtelny rysunek słojów tworzy spokojną i elegancką przestrzeń sprzyjającą relaksowi.",
           },
           {
             type: "p",
-            text: "Każdy element zachowuje swój unikalny charakter, dzięki czemu każda sauna jest nieco inna. Dodatkową zaletą jest fakt, że wysokiej jakości świerk posiada niewielką liczbę sęków oraz bardzo jednolitą strukturę drewna, co znacząco wpływa na estetykę całej konstrukcji.",
+            text: "Każdy element zachowuje swój unikalny charakter, dzięki czemu każda sauna jest nieco inna. Dodatkową zaletą jest fakt, że wysokiej jakości drewno termowane posiada jednolitą strukturę i jest pozbawione wycieków żywicy, co znacząco wpływa na estetykę całej konstrukcji.",
           },
           { type: "h2", text: "Komfort podczas codziennego użytkowania" },
           {
@@ -2259,16 +2259,16 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "Trwałość potwierdzona wieloletnią tradycją" },
           {
             type: "p",
-            text: "Kraje północnej Europy od dziesięcioleci należą do światowych liderów w budowie saun. To właśnie tam świerk wykorzystywany jest jako podstawowy materiał konstrukcyjny.",
+            text: "Kraje północnej Europy od dziesięcioleci należą do światowych liderów w budowie saun. To właśnie tam technologia ThermoWood zyskała status złotego standardu zastępującego tradycyjne, nieobrobione drewno konstrukcyjne.",
           },
           {
             type: "p",
-            text: "Wieloletnie doświadczenia producentów pokazują, że odpowiednio wyselekcjonowane drewno skandynawskie doskonale sprawdza się nawet po wielu latach intensywnego użytkowania. Nie bez powodu materiał ten wybierają producenci stawiający na najwyższą jakość wykonania.",
+            text: "Wieloletnie doświadczenia producentów pokazują, że odpowiednio wyselekcjonowane drewno termowane doskonale sprawdza się nawet po wielu latach intensywnego użytkowania na zewnątrz. Nie bez powodu materiał ten wybierają producenci stawiający na najwyższą jakość wykonania.",
           },
           { type: "h2", text: "Drewno przyjazne środowisku" },
           {
             type: "p",
-            text: "Świerk skandynawski pochodzi z odpowiedzialnie zarządzanych lasów, w których gospodarka leśna prowadzona jest z poszanowaniem natury.",
+            text: "Drewno wykorzystywane w procesie ThermoWood pochodzi z odpowiedzialnie zarządzanych lasów, w których gospodarka leśna prowadzona jest z poszanowaniem natury, a sama obróbka wykorzystuje wyłącznie ciepło i parę wodną.",
           },
           {
             type: "p",
@@ -2276,16 +2276,16 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "p",
-            text: "Wybierając saunę wykonaną z wysokiej jakości drewna, inwestujemy nie tylko w trwałość produktu, ale również w rozwiązanie bardziej przyjazne środowisku.",
+            text: "Wybierając saunę wykonaną z wysokiej jakości drewna termowanego, inwestujemy nie tylko w trwałość produktu, ale również w rozwiązanie bardziej przyjazne środowisku.",
           },
-          { type: "h2", text: "Dlaczego RoyalSauna wybrała świerk skandynawski?" },
+          { type: "h2", text: "Dlaczego RoyalSauna wybrała ThermoWood?" },
           {
             type: "p",
             text: "W RoyalSauna każdy materiał przechodzi bardzo dokładną selekcję. Naszym celem jest tworzenie saun, które będą służyły przez długie lata, zachowując swój wygląd, trwałość oraz najwyższy komfort użytkowania.",
           },
           {
             type: "p",
-            text: "Dlatego bryłę i podłogę modeli Compact, Comfort oraz Premium wykonujemy z termowanego świerku ThermoWood. To drewno łączy wyjątkową estetykę, wysoką stabilność konstrukcyjną, doskonałe właściwości izolacyjne oraz odporność na wymagające warunki panujące wewnątrz sauny.",
+            text: "Dlatego bryłę i podłogę modeli Compact, Comfort oraz Premium wykonujemy z drewna termowanego. To materiał, który łączy wyjątkową estetykę, wysoką stabilność konstrukcyjną, doskonałe właściwości izolacyjne oraz odporność na wymagające warunki panujące wewnątrz sauny.",
           },
           {
             type: "p",
@@ -2294,11 +2294,11 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "Podsumowanie" },
           {
             type: "p",
-            text: "Świerk skandynawski od wielu lat uznawany jest za jeden z najlepszych materiałów do budowy saun. Powolny wzrost drzew w chłodnym klimacie zapewnia wysoką gęstość drewna, doskonałą stabilność oraz wyjątkową trwałość. Materiał skutecznie izoluje ciepło, zachwyca naturalnym wyglądem i doskonale sprawdza się w wymagających warunkach wysokiej temperatury oraz zmiennej wilgotności.",
+            text: "ThermoWood od wielu lat uznawany jest za jeden z najlepszych materiałów do budowy saun. Modyfikacja termiczna z udziałem pary wodnej zapewnia wysoką stabilność wymiarową, niską nasiąkliwość oraz wyjątkową trwałość bez użycia chemii. Materiał skutecznie izoluje ciepło, zachwyca szlachetnym wyglądem i doskonale sprawdza się w wymagających warunkach wysokiej temperatury oraz zmiennej wilgotności.",
           },
           {
             type: "p",
-            text: "To właśnie dlatego w RoyalSauna wykorzystujemy termowany świerk ThermoWood w modelach Compact, Comfort oraz Premium. Jest to świadomy wybór oparty na jakości i doświadczeniu.",
+            text: "To właśnie dlatego w RoyalSauna wykorzystujemy drewno termowane w modelach Compact, Comfort oraz Premium. Jest to świadomy wybór oparty na jakości i doświadczeniu.",
           },
           {
             type: "quote",
@@ -2307,27 +2307,27 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       en: {
-        title: "Scandinavian spruce – why it's the best wood for a sauna",
+        title: "ThermoWood – why it's the best wood for a sauna",
         excerpt:
-          "A closer look at why thermally modified Scandinavian spruce (ThermoWood) is one of the best materials for a sauna – and why we build the entire Regenerum line from it.",
+          "A closer look at why ThermoWood is one of the best materials for a sauna – and why we build the entire Regenerum line from it.",
         category: "Quality",
         body: [
           {
             type: "p",
-            text: "Choosing the right wood is one of the most important factors behind a sauna's quality, durability and comfort. Even the best design and modern fittings can't make up for a structure built from a material with poor properties. That's why at RoyalSauna we rely on wood that has been regarded for years as one of the finest materials for sauna building: Scandinavian spruce, thermally modified as ThermoWood.",
+            text: "Choosing the right wood is one of the most important factors behind a sauna's quality, durability and comfort. Even the best design and modern fittings can't make up for a structure built from a material with poor properties. That's why at RoyalSauna we rely on timber that has been regarded for years as one of the finest materials for sauna building: ThermoWood.",
           },
           {
             type: "p",
-            text: "It's this thermally modified ThermoWood spruce that the shell and floor of our Compact, Comfort and Premium models are built from. Benches and headrests are aspen – a wood that stays gentle on the skin. That's no accident – the choice is backed by both the technical properties of the materials and decades of experience among Northern European sauna makers.",
+            text: "It's this thermally modified wood that the shell and floor of our Compact, Comfort and Premium models are built from. Benches and headrests are aspen – a wood that stays gentle on the skin. That's no accident – the choice is backed by both the technical properties of the materials and decades of experience among Northern European sauna makers.",
           },
-          { type: "h2", text: "Why Scandinavian spruce?" },
+          { type: "h2", text: "Why ThermoWood?" },
           {
             type: "p",
-            text: "Scandinavia has long been known for excellent growing conditions for conifers. A cool climate, short growing seasons and slow growth give the wood exceptional density and stability.",
+            text: "The thermal modification process treats carefully selected timber at high temperatures (180–230°C) using only heat and steam – with no chemicals whatsoever. This gives the wood exceptional durability and stability.",
           },
           {
             type: "p",
-            text: "Its growth rings are noticeably tighter than those of trees grown in warmer parts of Europe. That's exactly why Scandinavian spruce offers very good mechanical strength and high resistance to warping.",
+            text: "The heat-altered cellular structure reduces moisture absorption and removes resin from the wood. That's exactly why ThermoWood offers very good mechanical strength and high resistance to warping and weather conditions.",
           },
           {
             type: "p",
@@ -2336,11 +2336,11 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "Stability even at very high temperatures" },
           {
             type: "p",
-            text: "Inside a sauna, wood works every day under exceptionally demanding conditions. Temperatures can exceed 100°C, and humidity changes within a very short time. Not every wood species can handle that.",
+            text: "Inside a sauna, wood works every day under exceptionally demanding conditions. Temperatures can exceed 100°C, and humidity changes within a very short time. Not every timber can handle that.",
           },
           {
             type: "p",
-            text: "Scandinavian spruce stands out for its very good dimensional stability. It moves far less under changes in temperature and humidity, which limits the risk of gaps, warping or deformation in structural elements.",
+            text: "ThermoWood stands out for its very good dimensional stability. It moves far less under changes in temperature and humidity, which limits the risk of gaps, warping or deformation in structural elements.",
           },
           {
             type: "p",
@@ -2349,7 +2349,7 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "Excellent thermal insulation" },
           {
             type: "p",
-            text: "The natural properties of spruce – strengthened by thermal modification – make it a very good heat insulator. ThermoWood walls keep heat inside the cabin, so the sauna reaches the right temperature faster and holds it for longer.",
+            text: "The natural properties of wood – strengthened by thermal modification – make it a very good heat insulator. ThermoWood walls keep heat inside the cabin, so the sauna reaches the right temperature faster and holds it for longer.",
           },
           {
             type: "p",
@@ -2358,11 +2358,11 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "A beautiful look for years to come" },
           {
             type: "p",
-            text: "The natural appearance of the wood is one of the reasons so many people choose Scandinavian spruce. After the ThermoWood heat treatment it takes on a warm, refined tone, and the subtle grain creates a calm, elegant space that invites relaxation.",
+            text: "The natural appearance of the wood is one of the reasons so many people choose ThermoWood. After the heat treatment it takes on a warm, refined tone throughout, and the subtle grain creates a calm, elegant space that invites relaxation.",
           },
           {
             type: "p",
-            text: "Every element keeps its own unique character, so no two saunas are quite alike. High-quality spruce also has few knots and a very even structure, which noticeably improves the look of the whole build.",
+            text: "Every element keeps its own unique character, so no two saunas are quite alike. High-quality thermally modified wood is also resin-free and has a very even structure, which noticeably improves the look of the whole build.",
           },
           { type: "h2", text: "Comfort in everyday use" },
           {
@@ -2376,16 +2376,16 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "Durability proven by decades of tradition" },
           {
             type: "p",
-            text: "Northern European countries have been world leaders in sauna building for decades, and it's there that spruce is used as the primary building material.",
+            text: "Northern European countries have been world leaders in sauna building for decades, and it's there that ThermoWood technology was developed as the premier material for sauna construction.",
           },
           {
             type: "p",
-            text: "Years of experience among manufacturers show that well-selected Scandinavian wood performs beautifully even after many years of heavy use – which is exactly why producers focused on the highest build quality choose this material.",
+            text: "Years of experience among manufacturers show that well-selected thermally modified wood performs beautifully even after many years of heavy outdoor use – which is exactly why producers focused on the highest build quality choose this material.",
           },
           { type: "h2", text: "Wood that's kind to the environment" },
           {
             type: "p",
-            text: "Scandinavian spruce comes from responsibly managed forests where forestry is carried out with respect for nature.",
+            text: "ThermoWood comes from responsibly managed forests where forestry is carried out with respect for nature, and the modification process itself uses only heat and steam.",
           },
           {
             type: "p",
@@ -2393,16 +2393,16 @@ export const blogPosts: BlogPost[] = [
           },
           {
             type: "p",
-            text: "Choosing a sauna built from high-quality wood means investing not only in the product's durability, but also in a more environmentally friendly solution.",
+            text: "Choosing a sauna built from high-quality thermally modified wood means investing not only in the product's durability, but also in a more environmentally friendly solution.",
           },
-          { type: "h2", text: "Why did RoyalSauna choose Scandinavian spruce?" },
+          { type: "h2", text: "Why did RoyalSauna choose ThermoWood?" },
           {
             type: "p",
             text: "At RoyalSauna, every material goes through very careful selection. Our goal is to build saunas that last for years, keeping their looks, durability and top level of comfort.",
           },
           {
             type: "p",
-            text: "That's why we build the shell and floor of our Compact, Comfort and Premium models from thermally modified ThermoWood spruce. This wood combines outstanding looks, high structural stability, excellent insulating properties and resistance to the demanding conditions inside a sauna.",
+            text: "That's why we build the shell and floor of our Compact, Comfort and Premium models from ThermoWood. This wood combines outstanding looks, high structural stability, excellent insulating properties and resistance to the demanding conditions inside a sauna.",
           },
           {
             type: "p",
@@ -2411,11 +2411,11 @@ export const blogPosts: BlogPost[] = [
           { type: "h2", text: "Summary" },
           {
             type: "p",
-            text: "Scandinavian spruce has been regarded for years as one of the best materials for sauna building. The slow growth of trees in a cool climate gives the wood high density, excellent stability and outstanding durability. It insulates heat effectively, delights with its natural look, and performs beautifully under the demanding conditions of high temperature and changing humidity.",
+            text: "ThermoWood has been regarded for years as one of the best materials for sauna building. Heat and steam treatment gives the wood high dimensional stability, low moisture absorption and outstanding durability without chemicals. It insulates heat effectively, delights with its natural look, and performs beautifully under the demanding conditions of high temperature and changing humidity.",
           },
           {
             type: "p",
-            text: "That's exactly why RoyalSauna uses thermally modified ThermoWood spruce in the Compact, Comfort and Premium models. It's a deliberate choice built on quality and experience.",
+            text: "That's exactly why RoyalSauna uses thermally modified wood in the Compact, Comfort and Premium models. It's a deliberate choice built on quality and experience.",
           },
           {
             type: "quote",

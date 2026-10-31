@@ -5,6 +5,7 @@ import "./globals.css";
 import { MetaPixelProvider } from "@/components/analytics/MetaPixelProvider";
 import { ClarityProvider } from "@/components/analytics/ClarityProvider";
 import { CookiebotProvider } from "@/components/analytics/CookiebotProvider";
+import { VoiceAgentProvider } from "@/components/voice/VoiceAgentProvider";
 import { getSiteUrl } from "@/lib/site";
 
 /** GTM-KMWKNDBD — GA4 is configured inside the GTM container, not hardcoded here. */
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s · RoyalSauna",
   },
   description:
-    "RoyalSauna – sauny ogrodowe premium z drewna skandynawskiego. Jeden model w trzech wariantach. Prywatne domowe spa w Twoim ogrodzie.",
+    "RoyalSauna – sauny ogrodowe premium z drewna termowanego. Jeden model w trzech wariantach. Prywatne domowe spa w Twoim ogrodzie.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
@@ -65,7 +66,7 @@ export default function RootLayout({
             title="gtm"
           />
         </noscript>
-        {children}
+        <VoiceAgentProvider>{children}</VoiceAgentProvider>
         <MetaPixelProvider />
         <ClarityProvider />
         <GoogleTagManager gtmId={GTM_ID} />

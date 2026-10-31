@@ -51,7 +51,7 @@ export function PodlozePage({ locale }: { locale: Locale }) {
         />
       </Container>
 
-      <Section tone="ivory" id="rodzaje" className="pt-10 scroll-mt-28">
+      <Section tone="ivory" id="rodzaje" dataGuide="rodzaje" className="pt-10 scroll-mt-28">
         <SectionHeading
           eyebrow={p.typesSection.eyebrow}
           title={p.typesSection.title}
@@ -153,7 +153,7 @@ export function PodlozePage({ locale }: { locale: Locale }) {
       </Section>
 
       {/* General requirements */}
-      <Section tone="sand" id="wymagania" className="scroll-mt-28">
+      <Section tone="sand" id="wymagania" dataGuide="wymagania" className="scroll-mt-28">
         <SectionHeading
           eyebrow={p.requirementsSection.eyebrow}
           title={p.requirementsSection.title}
@@ -167,6 +167,7 @@ export function PodlozePage({ locale }: { locale: Locale }) {
       <Section
         tone="ivory"
         id="wymiary"
+        dataGuide="wymiary"
         className="scroll-mt-28"
         ariaLabel={p.dimensionsSection.title}
       >
@@ -242,6 +243,7 @@ export function PodlozePage({ locale }: { locale: Locale }) {
       <Section
         tone="sand"
         id="porownanie"
+        dataGuide="porownanie"
         className="scroll-mt-28"
         ariaLabel={p.compareSection.title}
       >
@@ -285,6 +287,7 @@ export function PodlozePage({ locale }: { locale: Locale }) {
       <Section
         tone="ivory"
         id="faq"
+        dataGuide="faq"
         className="scroll-mt-28"
         ariaLabel={dict.faq.title}
       >

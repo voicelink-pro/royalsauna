@@ -43,8 +43,8 @@ export const en: Dictionary = {
   },
   common: {
     priceFrom: "From",
-    currency: "PLN",
-    priceNote: "Final price depends on the choice of heater",
+    currency: "PLN gross",
+    priceNote: "Gross prices. The final price depends on the choice of heater",
     learnMore: "Learn more",
     seeModel: "View model",
     backToBlog: "Back to blog",
@@ -72,7 +72,7 @@ export const en: Dictionary = {
       eyebrow: "Premium garden saunas",
       h1: "RoyalSauna – your private home spa in the garden",
       subtitle:
-        "We craft luxury garden saunas from thermally modified ThermoWood spruce. One refined model in three variants – ready to become the heart of your home wellness ritual.",
+        "We craft luxury garden saunas from thermally modified wood. One refined model in three variants – ready to become the heart of your home wellness ritual.",
       ctaPrimary: "Get your offer",
       ctaSecondary: "See the variants",
       videoCaption: "Placeholder reserved for the RoyalSauna feature film",
@@ -93,9 +93,9 @@ export const en: Dictionary = {
       lead: "For us, luxury isn't an ornament – it's the consequence of quality. We design and craft every sauna to delight in the detail and to serve for decades – an investment you feel from the first touch of the wood.",
       items: [
         {
-          title: "ThermoWood spruce",
+          title: "ThermoWood",
           description:
-            "The shell is thermally modified Scandinavian spruce – the same northern timber, heat-treated for moisture resistance, density and stability. The foundation of a true sauna.",
+            "The shell is built from thermally modified wood – carefully selected timber, heat-treated for moisture resistance, density and dimensional stability. The foundation of a true sauna.",
         },
         {
           title: "Refined craftsmanship",
@@ -133,12 +133,12 @@ export const en: Dictionary = {
         walls: {
           title: "Solid-wood walls",
           description:
-            "Solid walls of thermally modified ThermoWood spruce – stable, moisture-resistant and made for the sauna climate.",
+            "Solid walls of ThermoWood – stable, moisture-resistant and made for the sauna climate.",
         },
         floor: {
           title: "Floor & finish",
           description:
-            "The floor is the same thermally modified ThermoWood spruce – pleasant underfoot and built for heat and humidity.",
+            "The floor is the same thermally modified wood – pleasant underfoot and built for heat and humidity.",
         },
       },
     },
@@ -211,7 +211,7 @@ export const en: Dictionary = {
         {
           title: "Production & preparation",
           description:
-            "We build your sauna from thermally modified ThermoWood spruce and assemble all the equipment.",
+            "We build your sauna from ThermoWood and assemble all the equipment.",
         },
         {
           title: "Delivery & installation",
@@ -260,12 +260,12 @@ export const en: Dictionary = {
       eyebrow: "The Regenerum line",
       h1: "Garden saunas – the Regenerum line",
       description:
-        "Three variants – Compact, Comfort and Premium – differing in size and capacity. All built from thermally modified ThermoWood spruce, with complete standard equipment – including ambient LED.",
+        "Three variants – Compact, Comfort and Premium – differing in size and capacity. All built from thermally modified wood, with complete standard equipment – including ambient LED.",
     },
     oneModel: {
       title: "The Regenerum line – three models",
       description:
-        "The Regenerum line comes in three variants. They differ in size and capacity – the thermally modified ThermoWood spruce, craftsmanship and standard equipment, including LED lighting, stay the same. Compact comfortably seats 2, Comfort 4, and Premium up to 6.",
+        "The Regenerum line comes in three variants. They differ in size and capacity – the ThermoWood, craftsmanship and standard equipment, including LED lighting, stay the same. Compact comfortably seats 2, Comfort 4, and Premium up to 6.",
     },
     comparison: {
       title: "Model comparison",
@@ -273,7 +273,7 @@ export const en: Dictionary = {
       capacityLabel: "People",
       dimensionsLabel: "Exterior dimensions",
       heaterLabel: "Heater",
-      priceLabel: "From",
+      priceLabel: "From (gross)",
       ctaLabel: "Details",
     },
     whichSize: {
@@ -319,9 +319,9 @@ export const en: Dictionary = {
             "Harvia Cilindro, Legend or Spirit – they differ in installation, power and the session experience.",
         },
         {
-          title: "Configuration options",
+          title: "What's included",
           description:
-            "Facade finish, a covered porch or terrace are priced individually. LED lighting is always included as standard.",
+            "All prices on the website are gross. Transport, professional installation and LED lighting are included. The final amount depends on the chosen model and heater.",
         },
       ],
     },
@@ -329,14 +329,14 @@ export const en: Dictionary = {
   quality: {
     hero: {
       eyebrow: "Quality & materials",
-      h1: "ThermoWood spruce and an obsession with detail",
+      h1: "ThermoWood and an obsession with detail",
       description:
-        "We believe luxury starts with the material. That's why we build the shell and floor from thermally modified Scandinavian spruce – timber made to last for decades.",
+        "We believe luxury starts with the material. That's why we build the shell and floor from thermally modified wood – timber made to last for decades.",
     },
     sections: [
       {
-        title: "Why thermally modified Scandinavian spruce",
-        body: "Wood from a cool, northern climate grows more slowly, making it denser and more stable. We then give it the ThermoWood heat treatment – steam only, no chemicals – so it handles moisture, temperature and time even better.",
+        title: "Why thermally modified wood",
+        body: "Carefully selected timber undergoes heat treatment at high temperatures – using steam only, with no chemicals – making it denser, more dimensionally stable and even better at handling moisture, temperature and time.",
       },
       {
         title: "Selection and processing",
@@ -468,20 +468,20 @@ export const en: Dictionary = {
     meta: {
       title: "Wood built to last – materials of the Regenerum saunas",
       description:
-        "Discover the wood we build Regenerum saunas from – ThermoWood (thermally modified spruce) for the shell and floor, and aspen for the benches and aspen headrests (2 pcs.).",
+        "Discover the wood we build Regenerum saunas from – ThermoWood for the shell and floor, and aspen for the benches and aspen headrests (2 pcs.).",
     },
     materialsSection: {
       eyebrow: "Materials",
       title: "Two woods, one sauna",
       description:
-        "We build the shell and floor from ThermoWood – thermally modified spruce of exceptional durability. Benches are premium aspen wood, with aspen headrests (2 pcs.) – pleasant against the skin even at high temperatures.",
+        "We build the shell and floor from ThermoWood of exceptional durability. Benches are premium aspen wood, with aspen headrests (2 pcs.) – pleasant against the skin even at high temperatures.",
       madeFrom: "Made from this wood",
     },
     thermoWoodSection: {
       eyebrow: "ThermoWood",
-      title: "ThermoWood – thermally modified spruce made for premium saunas",
+      title: "ThermoWood – material made for premium saunas",
       lead:
-        "In RoyalSauna Regenerum saunas we use the highest-quality ThermoWood – spruce refined through advanced thermal modification. It combines the natural beauty of spruce with exceptional durability. Treatment uses only high temperature (180–230°C) and steam – with no chemicals whatsoever. The result is a material with far better performance, ideally suited to the demanding conditions inside a sauna.",
+        "In RoyalSauna Regenerum saunas we use the highest-quality ThermoWood – timber refined through advanced thermal modification. It combines the natural beauty of wood with exceptional durability. Treatment uses only high temperature (180–230°C) and steam – with no chemicals whatsoever. The result is a material with far better performance, ideally suited to the demanding conditions inside a sauna.",
       beautyTitle: "Natural beauty and outstanding durability",
       beautyBody:
         "The ThermoWood process significantly increases resistance to moisture, temperature swings and the elements. With reduced absorbency the material stays stable for years, resists warping and is far less prone to cracking or twisting. High heat also removes resin, so the surface stays attractive and comfortable in use.",
@@ -541,12 +541,12 @@ export const en: Dictionary = {
         shell: {
           label: "Sauna shell",
           description:
-            "ThermoWood (thermally modified spruce) – bent, multi-layer arches that give the sauna its signature rounded shape.",
+            "ThermoWood – bent, multi-layer arches that give the sauna its signature rounded shape.",
         },
         walls: {
           label: "Walls",
           description:
-            "ThermoWood (thermally modified spruce) – solid walls with enhanced resistance to moisture and temperature swings.",
+            "ThermoWood – solid walls with enhanced resistance to moisture and temperature swings.",
         },
         benches: {
           label: "Benches",
@@ -556,7 +556,7 @@ export const en: Dictionary = {
         floor: {
           label: "Floor",
           description:
-            "ThermoWood (thermally modified spruce) – flooring timber that won't burn your feet.",
+            "ThermoWood – flooring timber that won't burn your feet.",
         },
       },
     },
@@ -1227,6 +1227,7 @@ export const en: Dictionary = {
       "Something went wrong. Please try again or contact us directly.",
     required: "This field is required",
     invalidEmail: "Please enter a valid email address",
+    invalidPhone: "Enter a phone number: 9 digits or with a prefix, e.g. +48 600 000 000",
     invalidPostalCode: "Enter a postal code in the 00-000 format",
     consentRequired: "Consent is required to prepare an offer",
     steps: {
@@ -1252,7 +1253,7 @@ export const en: Dictionary = {
     description: "We've gathered answers to the questions we hear most often.",
   },
   footer: {
-    tagline: "Premium garden saunas crafted from thermally modified ThermoWood spruce.",
+    tagline: "Premium garden saunas crafted from thermally modified wood.",
     explore: "Site",
     products: "Saunas",
     company: "Information",
@@ -1272,12 +1273,29 @@ export const en: Dictionary = {
   widgets: {
     chatLabel: "Chat with us",
     chatTitle: "RoyalSauna chat",
-    chatPlaceholder:
-      "Chat will be available soon. In the meantime, write to us via the contact form.",
+    chatPlaceholder: "Type a message…",
+    chatChoice: "Chat",
+    chatChoiceHint: "Write to the assistant",
+    talkChoice: "Talk",
+    talkChoiceHint: "Speak with us",
+    pickerLead: "How would you like to talk?",
+    switchToTalk: "Talk",
+    switchToType: "Type",
+    send: "Send",
     voiceLabel: "Voice assistant",
-    voiceTitle: "RoyalSauna voice assistant",
-    voicePlaceholder:
-      "The voice assistant is in preparation. It will answer your questions soon.",
+    voiceTitle: "RoyalSauna virtual assistant",
+    voiceListening: "Listening",
+    voiceSpeaking: "Speaking",
+    voiceConnecting: "Connecting…",
+    voiceEnd: "End",
+    voiceError: "Connection error",
+    voiceEnded: "Conversation ended",
+    launcherTitle: "Talk to our virtual assistant",
+    launcherTalk: "Talk",
+    launcherChat: "Chat",
+    sessionOpen: "Conversation in progress",
+    sessionExpand: "Open",
+    closePanel: "Close",
   },
   legal: {
     privacyTitle: "Privacy policy",

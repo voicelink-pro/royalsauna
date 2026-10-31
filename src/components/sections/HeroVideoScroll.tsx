@@ -154,6 +154,8 @@ export function HeroVideoScroll({
   return (
     <section
       ref={sectionRef}
+      id="hero"
+      data-guide="hero"
       className="relative bg-bark-900"
       style={{ height: `${scrollHeightVh}vh` }}
       aria-label={dict.home.hero.h1}

@@ -16,6 +16,7 @@ export function ThermoWoodSection({
     <Section
       tone="sand"
       id="thermowood"
+      dataGuide="thermowood"
       className="scroll-mt-28"
       ariaLabel={copy.title}
     >

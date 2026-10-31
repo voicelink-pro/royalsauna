@@ -11,7 +11,7 @@ export function FAQSection({ items }: { items: FaqItem[] }) {
   const baseId = useId();
 
   return (
-    <div className="space-y-3">
+    <div id="faq" data-guide="faq" className="space-y-3">
       {items.map((item, index) => {
         const isOpen = open === index;
         const btnId = `${baseId}-q-${index}`;
@@ -19,6 +19,8 @@ export function FAQSection({ items }: { items: FaqItem[] }) {
         return (
           <div
             key={item.question}
+            id={`faq-${index}`}
+            data-guide={`faq-${index}`}
             className={cn(
               "rounded-2xl border bg-ivory/70 px-5 transition-all duration-300 ease-calm sm:px-7",
               isOpen

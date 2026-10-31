@@ -96,7 +96,7 @@ function buildCustomerEmailHtml(data: OfferData): string {
     isPl && isCentrumOstaszewo
       ? `<strong>${L.recommendedModel}:</strong> ${escapeHtml(data.model.line)} ${escapeHtml(data.model.name)}<br/><strong>Cena brutto:</strong> 46 200 zł`
       : isPl
-        ? `<strong>Model:</strong> ${escapeHtml(data.model.line)} ${escapeHtml(data.model.name)}<br/><strong>Cena od:</strong> ${escapeHtml(data.model.priceFormatted)} ${escapeHtml(data.model.currency)}`
+        ? `<strong>Model:</strong> ${escapeHtml(data.model.line)} ${escapeHtml(data.model.name)}<br/><strong>Cena od (brutto):</strong> ${escapeHtml(data.model.priceFormatted)} ${escapeHtml(data.model.currency)}`
         : `<strong>${L.recommendedModel}:</strong> ${escapeHtml(data.model.line)} ${escapeHtml(data.model.name)}<br/><strong>${L.priceFrom}:</strong> ${escapeHtml(data.model.priceFormatted)} ${escapeHtml(data.model.currency)}`;
   const heaterLine = data.heater
     ? `<br/><strong>${L.heater}:</strong> ${escapeHtml(data.heater)}`
@@ -154,7 +154,7 @@ function buildNotifyEmailHtml(data: OfferData): string {
     ["Lokalizacja / ogród", data.client.location || "—"],
     ["Kod pocztowy", data.client.postalCode || "—"],
     ["Model", `${data.model.line} ${data.model.name}`],
-    ["Cena od", `${data.model.priceFormatted} ${data.model.currency}`],
+    ["Cena od (brutto)", `${data.model.priceFormatted} ${data.model.currency}`],
     ["Język formularza", data.locale.toUpperCase()],
     ["Data", data.generatedAt],
   ];

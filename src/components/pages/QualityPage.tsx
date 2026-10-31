@@ -25,7 +25,7 @@ export function QualityPage({ locale }: { locale: Locale }) {
         />
       </Container>
 
-      <Section tone="ivory" className="pt-10">
+      <Section tone="ivory" id="hero" dataGuide="hero" className="pt-10">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <SectionHeading
             as="h1"
@@ -38,8 +38,8 @@ export function QualityPage({ locale }: { locale: Locale }) {
               src="/images/spec/spec-hero.jpg"
               alt={
                 locale === "pl"
-                  ? "Skandynawski las świerkowy"
-                  : "Scandinavian spruce forest"
+                  ? "Drewno termowane – jakość i materiały RoyalSauna"
+                  : "ThermoWood – RoyalSauna quality and materials"
               }
               fill
               priority

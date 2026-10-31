@@ -22,7 +22,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
         />
       </Container>
 
-      <Section tone="ivory" className="pt-10">
+      <Section tone="ivory" id="kontakt" dataGuide="kontakt" className="pt-10">
         <SectionHeading
           as="h1"
           eyebrow={dict.contact.hero.eyebrow}

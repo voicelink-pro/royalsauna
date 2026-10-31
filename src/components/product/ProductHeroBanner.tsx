@@ -17,7 +17,11 @@ export function ProductHeroBanner({
   const copy = product.i18n[locale];
 
   return (
-    <section className="relative isolate flex h-screen w-full items-center justify-center overflow-hidden text-center">
+    <section
+      id="hero"
+      data-guide="hero"
+      className="relative isolate flex h-screen w-full items-center justify-center overflow-hidden text-center"
+    >
       <HeroBannerImages
         image={product.bannerImage.src}
         mobileImage={product.bannerImage.mobileSrc}

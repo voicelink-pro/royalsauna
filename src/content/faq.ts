@@ -10,7 +10,7 @@ export const generalFaq: Record<Locale, FaqItem[]> = {
     {
       question: "Czym różnią się warianty Compact, Comfort i Premium?",
       answer:
-        "To ten sam, dopracowany model dostępny w trzech rozmiarach. Każdy wariant oferuje ten sam termowany świerk ThermoWood, to samo wykonanie oraz wyposażenie w standardzie – w tym oświetlenie LED. Różnią się jedynie wielkością i liczbą osób, dla których zostały zaprojektowane: Compact dla 2 osób, Comfort dla 4 osób, a największy Regenerum Premium dla 6 osób.",
+        "To ten sam, dopracowany model dostępny w trzech rozmiarach. Każdy wariant oferuje ten sam material, to samo wykonanie oraz wyposażenie w standardzie – w tym oświetlenie LED. Różnią się jedynie wielkością i liczbą osób, dla których zostały zaprojektowane: Compact dla 2 osób, Comfort dla 4 osób, a największy Regenerum Premium dla 6 osób.",
       link: {
         label: "Porównaj modele",
         href: routeMap.saunas.pl,
@@ -19,7 +19,7 @@ export const generalFaq: Record<Locale, FaqItem[]> = {
     {
       question: "Ile kosztuje RoyalSauna?",
       answer:
-        "Ceny zaczynają się od 37 300 zł za wariant Compact, 42 100 zł za Comfort i 45 900 zł za Premium. Finalna cena zależy od wyboru pieca. Po wypełnieniu formularza otrzymasz od nas dokument z pełną wyceną wybranego modelu w różnych konfiguracjach.",
+        "Ceny brutto zaczynają się od 37 300 zł za wariant Compact, 42 100 zł za Comfort i 45 900 zł za Premium. Finalna cena zależy od wyboru pieca. Po wypełnieniu formularza otrzymasz od nas dokument z pełną wyceną wybranego modelu w różnych konfiguracjach.",
       link: {
         label: "Otrzymaj ofertę",
         href: routeMap.contact.pl,
@@ -66,7 +66,7 @@ export const generalFaq: Record<Locale, FaqItem[]> = {
     {
       question: "How do the Compact, Comfort and Premium variants differ?",
       answer:
-        "It's the same refined model available in three sizes. Every variant offers the same thermally modified ThermoWood spruce, craftsmanship and standard equipment – including LED lighting. They differ only in size and the number of people they were designed for: Compact for 2 people, Comfort for 4, and the largest Regenerum Premium for 6 people.",
+        "It's the same refined model available in three sizes. Every variant offers the same ThermoWood, craftsmanship and standard equipment – including LED lighting. They differ only in size and the number of people they were designed for: Compact for 2 people, Comfort for 4, and the largest Regenerum Premium for 6 people.",
       link: {
         label: "Compare models",
         href: routeMap.saunas.en,
@@ -75,7 +75,7 @@ export const generalFaq: Record<Locale, FaqItem[]> = {
     {
       question: "How much does a RoyalSauna cost?",
       answer:
-        "Prices start from PLN 37,300 for the Compact variant, PLN 42,100 for Comfort and PLN 45,900 for Premium. The final price depends on the choice of heater. Once you complete the form, you'll receive a document with a full quote for your chosen model in different configurations.",
+        "Gross prices start from PLN 37,300 for the Compact variant, PLN 42,100 for Comfort and PLN 45,900 for Premium. The final price depends on the choice of heater. Once you complete the form, you'll receive a document with a full quote for your chosen model in different configurations.",
       link: {
         label: "Get an offer",
         href: routeMap.contact.en,

@@ -69,7 +69,7 @@ export const products: Product[] = [
       },
       {
         src: "/images/cubus2-interior.jpg",
-        alt: "Wnętrze sauny Compact z drewna skandynawskiego",
+        alt: "Wnętrze sauny Compact z drewna termowanego",
       },
       {
         src: "/images/cubus2-cutout.jpg",
@@ -89,16 +89,16 @@ export const products: Product[] = [
       pl: {
         tagline: "Kameralna sauna dla dwóch osób",
         audience:
-          "Dla osób, które cenią prywatność, oraz mniejszych ogrodów, tarasów i działek, gdzie liczy się każdy metr. Compact to intymny rytuał regeneracji dla dwóch osób – bez kompromisów w jakości.",
+          "Dla osób, które cenią prywatność, oraz mniejszych ogrodów i działek, gdzie liczy się każdy metr. Compact to intymny rytuał regeneracji dla dwóch osób – bez kompromisów w jakości.",
         shortDescription:
           "Najbardziej kompaktowy model linii Regenerum. Pełnowartościowa sauna dla dwóch osób, która zmieści się nawet w niewielkim ogrodzie.",
         longDescription:
-          "Compact to dowód na to, że luksus nie potrzebuje wielu metrów. W zwartej, designerskiej bryle z drewna skandynawskiego mieści się wszystko, czego potrzebujesz do prawdziwego seansu: dopracowana komora cieplna, panoramiczna szyba otwierająca wnętrze na ogród i piec dobrany do kubatury, który szybko osiąga temperaturę. To sauna, która staje się Twoim prywatnym zakątkiem regeneracji – kameralnym, ciepłym i gotowym na codzienny rytuał.",
+          "Compact to dowód na to, że luksus nie potrzebuje wielu metrów. W zwartej, designerskiej bryle z drewna termowanego mieści się wszystko, czego potrzebujesz do prawdziwego seansu: dopracowana komora cieplna, panoramiczna szyba otwierająca wnętrze na ogród i piec dobrany do kubatury, który szybko osiąga temperaturę. To sauna, która staje się Twoim prywatnym zakątkiem regeneracji – kameralnym, ciepłym i gotowym na codzienny rytuał.",
         features: [
           {
             title: "Kompaktowa, dopracowana bryła",
             description:
-              "Minimalistyczna forma sześcianu, która elegancko wpisuje się nawet w niewielki ogród czy taras.",
+              "Minimalistyczna forma sześcianu, która elegancko wpisuje się nawet w niewielki ogród.",
           },
           {
             title: "Idealna dla dwóch osób",
@@ -122,7 +122,7 @@ export const products: Product[] = [
           { label: "Wysokość", value: "2,06 m" },
           { label: "Powierzchnia użytkowa", value: "2,39 m²" },
           { label: "Grubość ściany", value: "42 mm" },
-          { label: "Materiał", value: "ThermoWood (termowany świerk skandynawski)" },
+          { label: "Materiał", value: "ThermoWood" },
           { label: "Piec", value: "Harvia Cilindro, Legend lub Spirit" },
           { label: "Moc pieca", value: "od 9 kW" },
           { label: "Przyłącze elektryczne", value: "Po stronie Klienta" },
@@ -135,16 +135,6 @@ export const products: Product[] = [
             title: "Wybór pieca",
             description:
               "Piec Harvia Cilindro, Legend lub Spirit – dobierzemy model najlepiej dopasowany do Twojej sauny.",
-          },
-          {
-            title: "Wykończenie elewacji",
-            description:
-              "Naturalny olej, ciemny lakier lub elewacja w kolorze na życzenie.",
-          },
-          {
-            title: "Strefa wypoczynku",
-            description:
-              "Możliwość rozbudowy o zadaszony przedsionek lub taras.",
           },
         ],
         faq: [
@@ -198,16 +188,16 @@ export const products: Product[] = [
       en: {
         tagline: "An intimate sauna for two",
         audience:
-          "For those who value privacy, and for smaller gardens, terraces and plots where every square metre counts. Compact is an intimate recovery ritual for two people – with no compromise on quality.",
+          "For those who value privacy, and for smaller gardens and plots where every square metre counts. Compact is an intimate recovery ritual for two people – with no compromise on quality.",
         shortDescription:
           "The most compact model in the Regenerum line. A full-value sauna for two that fits even a small garden.",
         longDescription:
-          "Compact proves that luxury doesn't need a lot of space. Its compact, design-led cube of Scandinavian wood holds everything you need for a true session: a refined heat chamber, a panoramic glass front that opens the interior to the garden, and a heater matched to the volume that reaches temperature quickly. It's a sauna that becomes your private corner of recovery – intimate, warm and ready for a daily ritual.",
+          "Compact proves that luxury doesn't need a lot of space. Its compact, design-led cube of ThermoWood holds everything you need for a true session: a refined heat chamber, a panoramic glass front that opens the interior to the garden, and a heater matched to the volume that reaches temperature quickly. It's a sauna that becomes your private corner of recovery – intimate, warm and ready for a daily ritual.",
         features: [
           {
             title: "Compact, refined form",
             description:
-              "A minimalist cube that sits elegantly even in a small garden or on a terrace.",
+              "A minimalist cube that sits elegantly even in a small garden.",
           },
           {
             title: "Perfect for two people",
@@ -231,7 +221,7 @@ export const products: Product[] = [
           { label: "Height", value: "2.06 m" },
           { label: "Usable floor area", value: "2.39 m²" },
           { label: "Wall thickness", value: "42 mm" },
-          { label: "Material", value: "ThermoWood (thermally modified Scandinavian spruce)" },
+          { label: "Material", value: "ThermoWood" },
           { label: "Heater", value: "Harvia Cilindro, Legend or Spirit" },
           { label: "Heater power", value: "from 9 kW" },
           { label: "Electrical connection", value: "Provided by the client" },
@@ -244,16 +234,6 @@ export const products: Product[] = [
             title: "Heater choice",
             description:
               "Harvia Cilindro, Legend or Spirit – we'll match the model best suited to your sauna.",
-          },
-          {
-            title: "Facade finish",
-            description:
-              "Natural oil, dark lacquer or a custom-coloured facade on request.",
-          },
-          {
-            title: "Relaxation zone",
-            description:
-              "Option to extend with a covered porch or terrace.",
           },
         ],
         faq: [
@@ -365,7 +345,7 @@ export const products: Product[] = [
           {
             title: "Premium w detalu",
             description:
-              "Termowany świerk ThermoWood, dopracowane okucia i panoramiczna szyba w standardzie.",
+              "ThermoWood, dopracowane okucia i panoramiczna szyba w standardzie.",
           },
         ],
         specs: [
@@ -374,7 +354,7 @@ export const products: Product[] = [
           { label: "Wysokość", value: "2,26 m" },
           { label: "Powierzchnia użytkowa", value: "5,3 m²" },
           { label: "Grubość ściany", value: "42 mm" },
-          { label: "Materiał", value: "ThermoWood (termowany świerk skandynawski)" },
+          { label: "Materiał", value: "ThermoWood" },
           { label: "Piec", value: "Harvia Cilindro, Legend lub Spirit" },
           { label: "Moc pieca", value: "od 9 kW" },
           { label: "Przyłącze elektryczne", value: "Po stronie Klienta" },
@@ -387,16 +367,6 @@ export const products: Product[] = [
             title: "Wybór pieca",
             description:
               "Piec Harvia Cilindro, Legend lub Spirit – dobierzemy model najlepiej dopasowany do Twojej sauny.",
-          },
-          {
-            title: "Wykończenie elewacji",
-            description:
-              "Naturalny olej, ciemny lakier lub elewacja w kolorze na życzenie.",
-          },
-          {
-            title: "Strefa wypoczynku",
-            description:
-              "Zadaszony przedsionek, taras lub strefa schłodzenia na życzenie.",
           },
         ],
         faq: [
@@ -474,7 +444,7 @@ export const products: Product[] = [
           {
             title: "Premium in the detail",
             description:
-              "ThermoWood spruce, refined fittings and a panoramic glass front as standard.",
+              "ThermoWood, refined fittings and a panoramic glass front as standard.",
           },
         ],
         specs: [
@@ -483,7 +453,7 @@ export const products: Product[] = [
           { label: "Height", value: "2.26 m" },
           { label: "Usable floor area", value: "5.3 m²" },
           { label: "Wall thickness", value: "42 mm" },
-          { label: "Material", value: "ThermoWood (thermally modified Scandinavian spruce)" },
+          { label: "Material", value: "ThermoWood" },
           { label: "Heater", value: "Harvia Cilindro, Legend or Spirit" },
           { label: "Heater power", value: "from 9 kW" },
           { label: "Electrical connection", value: "Provided by the client" },
@@ -496,16 +466,6 @@ export const products: Product[] = [
             title: "Heater choice",
             description:
               "Harvia Cilindro, Legend or Spirit – we'll match the model best suited to your sauna.",
-          },
-          {
-            title: "Facade finish",
-            description:
-              "Natural oil, dark lacquer or a custom-coloured facade on request.",
-          },
-          {
-            title: "Relaxation zone",
-            description:
-              "A covered porch, terrace or cool-down zone on request.",
           },
         ],
         faq: [
@@ -597,7 +557,7 @@ export const products: Product[] = [
         shortDescription:
           "Najbardziej przestronny model linii Regenerum. Przestronne wnętrze dla sześciu osób i pełne doświadczenie domowego spa.",
         longDescription:
-          "Premium to nasza najbardziej okazała sauna – przestrzeń, w której rytuał staje się wydarzeniem. Wielopoziomowe ławy pozwalają wybrać intensywność seansu, a przestronne wnętrze z drewna skandynawskiego komfortowo mieści sześć osób. Duże przeszklenie i nastrojowe światło budują atmosferę prawdziwego, prywatnego spa. To model dla tych, którzy lubią dzielić ciepło – z rodziną i przyjaciółmi, w wieczory, które zostają w pamięci.",
+          "Premium to nasza najbardziej okazała sauna – przestrzeń, w której rytuał staje się wydarzeniem. Wielopoziomowe ławy pozwalają wybrać intensywność seansu, a przestronne wnętrze z drewna termowanego komfortowo mieści sześć osób. Duże przeszklenie i nastrojowe światło budują atmosferę prawdziwego, prywatnego spa. To model dla tych, którzy lubią dzielić ciepło – z rodziną i przyjaciółmi, w wieczory, które zostają w pamięci.",
         features: [
           {
             title: "Maksimum przestrzeni",
@@ -617,7 +577,7 @@ export const products: Product[] = [
           {
             title: "Najwyższa jakość wykonania",
             description:
-              "Termowany świerk ThermoWood, solidna konstrukcja i dopracowany każdy detal.",
+              "ThermoWood, solidna konstrukcja i dopracowany każdy detal.",
           },
         ],
         specs: [
@@ -626,7 +586,7 @@ export const products: Product[] = [
           { label: "Wysokość", value: "2,30 m" },
           { label: "Powierzchnia użytkowa", value: "7,2 m²" },
           { label: "Grubość ściany", value: "42 mm" },
-          { label: "Materiał", value: "ThermoWood (termowany świerk skandynawski)" },
+          { label: "Materiał", value: "ThermoWood" },
           { label: "Piec", value: "Harvia Cilindro lub Legend" },
           { label: "Moc pieca", value: "od 9 kW" },
           { label: "Przyłącze elektryczne", value: "Po stronie Klienta" },
@@ -639,16 +599,6 @@ export const products: Product[] = [
             title: "Wybór pieca",
             description:
               "Piec Harvia Cilindro lub Legend – dobierzemy model najlepiej dopasowany do Twojej sauny.",
-          },
-          {
-            title: "Wykończenie elewacji",
-            description:
-              "Naturalny olej, ciemny lakier lub elewacja w kolorze na życzenie.",
-          },
-          {
-            title: "Strefa wypoczynku",
-            description:
-              "Zadaszony przedsionek, taras lub pełna strefa schłodzenia z prysznicem.",
           },
         ],
         faq: [
@@ -706,7 +656,7 @@ export const products: Product[] = [
         shortDescription:
           "The largest model in the Regenerum line. A spacious interior for six and a complete home-spa experience.",
         longDescription:
-          "Premium is our most generous sauna – a space where the ritual becomes an occasion. Multi-level benches let you choose the intensity of your session, while the spacious Scandinavian-wood interior comfortably seats six. A large glazed front and ambient lighting build the atmosphere of a true, private spa. It's the model for those who love to share warmth – with family and friends, on evenings worth remembering.",
+          "Premium is our most generous sauna – a space where the ritual becomes an occasion. Multi-level benches let you choose the intensity of your session, while the spacious ThermoWood interior comfortably seats six. A large glazed front and ambient lighting build the atmosphere of a true, private spa. It's the model for those who love to share warmth – with family and friends, on evenings worth remembering.",
         features: [
           {
             title: "Maximum space",
@@ -726,7 +676,7 @@ export const products: Product[] = [
           {
             title: "Top-tier craftsmanship",
             description:
-              "ThermoWood spruce, a solid structure and every detail refined.",
+              "ThermoWood, a solid structure and every detail refined.",
           },
         ],
         specs: [
@@ -735,7 +685,7 @@ export const products: Product[] = [
           { label: "Height", value: "2.30 m" },
           { label: "Usable floor area", value: "7.2 m²" },
           { label: "Wall thickness", value: "42 mm" },
-          { label: "Material", value: "ThermoWood (thermally modified Scandinavian spruce)" },
+          { label: "Material", value: "ThermoWood" },
           { label: "Heater", value: "Harvia Cilindro or Legend" },
           { label: "Heater power", value: "from 9 kW" },
           { label: "Electrical connection", value: "Provided by the client" },
@@ -748,16 +698,6 @@ export const products: Product[] = [
             title: "Heater choice",
             description:
               "Harvia Cilindro or Legend – we'll match the model best suited to your sauna.",
-          },
-          {
-            title: "Facade finish",
-            description:
-              "Natural oil, dark lacquer or a custom-coloured facade on request.",
-          },
-          {
-            title: "Relaxation zone",
-            description:
-              "A covered porch, terrace or a full cool-down zone with a shower.",
           },
         ],
         faq: [

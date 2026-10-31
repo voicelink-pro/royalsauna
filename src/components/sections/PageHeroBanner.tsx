@@ -20,7 +20,11 @@ export function PageHeroBanner({
   caption: string;
 }) {
   return (
-    <section className="relative isolate flex h-screen w-full items-center justify-center overflow-hidden text-center">
+    <section
+      id="hero"
+      data-guide="hero"
+      className="relative isolate flex h-screen w-full items-center justify-center overflow-hidden text-center"
+    >
       <HeroBannerImages
         image={image}
         mobileImage={mobileImage}

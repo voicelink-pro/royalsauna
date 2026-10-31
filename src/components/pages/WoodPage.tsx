@@ -41,7 +41,8 @@ export function WoodPage({ locale }: { locale: Locale }) {
         />
       </Container>
 
-      <Section tone="ivory" id="materialy" className="scroll-mt-28 pt-10">
+      <Section tone="ivory" id="drewno" dataGuide="drewno" className="scroll-mt-28 pt-10">
+        <div id="materialy" data-guide="materialy">
         <SectionHeading
           eyebrow={w.materialsSection.eyebrow}
           title={w.materialsSection.title}
@@ -95,6 +96,7 @@ export function WoodPage({ locale }: { locale: Locale }) {
             );
           })}
         </div>
+        </div>
       </Section>
 
       <ThermoWoodSection copy={w.thermoWoodSection} />
@@ -102,6 +104,7 @@ export function WoodPage({ locale }: { locale: Locale }) {
       <Section
         tone="ivory"
         id="konstrukcja"
+        dataGuide="konstrukcja"
         className="scroll-mt-28"
       >
         <SectionHeading

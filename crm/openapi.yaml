@@ -1,0 +1,302 @@
+openapi: 3.0.3
+info:
+  title: RoyalSauna CRM Integration API
+  version: 1.0.0
+  description: |
+    Przyjmowanie zgłoszeń ze strony i konfiguratora. Klucz to `public_key_id.secret`
+    w nagłówku `Authorization: Bearer`. Sekret nie może trafić do publicznego JavaScriptu.
+servers:
+  - url: http://127.0.0.1:3000
+paths:
+  /api/v1/integrations/leads:
+    post:
+      operationId: ingestLead
+      security:
+        - integrationKey: []
+      parameters:
+        - $ref: "#/components/parameters/IdempotencyKey"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Lead"
+            example:
+              schema_version: 1
+              external_submission_id: web-20261003-example-001
+              source: configurator
+              submitted_at: "2026-10-03T13:00:00+02:00"
+              contact:
+                first_name: Jan
+                last_name: Przykladowy
+                email: jan@example.com
+                phone: "+48500100200"
+                city: Torun
+                postal_code: "87-100"
+                country_code: PL
+                language: pl
+              message: Prosze o projekt i kontakt w sprawie dostawy.
+              configuration:
+                contact_purpose: send_project
+                model_code: comfort
+                heater_code: null
+                usage_type: private
+                number_of_people: 4
+                garden_space: Miejsce przy tarasie, szczegoly do ustalenia
+                ground_readiness: needs_check
+                power_readiness: unknown
+                timing_preference: few_months
+                preferred_date: null
+      responses:
+        "201":
+          description: Utworzono zgłoszenie powiązane z klientem.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LeadResult"
+        "200":
+          description: Bezpieczne powtórzenie identycznego żądania.
+        "202":
+          description: Zgłoszenie zapisane jako wymagające sprawdzenia.
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "422":
+          $ref: "#/components/responses/Invalid"
+        "429":
+          $ref: "#/components/responses/Limited"
+  /api/v1/integrations/offer-events:
+    post:
+      operationId: ingestOfferEvent
+      security:
+        - integrationKey: []
+      parameters:
+        - $ref: "#/components/parameters/IdempotencyKey"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OfferEvent"
+      responses:
+        "200":
+          description: Zdarzenie zapisane. Status waiting_for_inquiry oznacza, że lead jeszcze nie dotarł.
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "422":
+          $ref: "#/components/responses/Invalid"
+  /api/v1/integrations/documents/init:
+    post:
+      operationId: initDocument
+      security:
+        - integrationKey: []
+      parameters:
+        - $ref: "#/components/parameters/IdempotencyKey"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DocumentInit"
+      responses:
+        "201":
+          description: Zwraca ścieżkę i jednorazowy upload podpisany przez Storage.
+        "404":
+          description: Brak zgłoszenia o podanym external_submission_id.
+  /api/v1/integrations/documents/complete:
+    post:
+      operationId: completeDocument
+      security:
+        - integrationKey: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [storage_object_id]
+              properties:
+                storage_object_id:
+                  type: string
+                  format: uuid
+      responses:
+        "200":
+          description: Plik sprawdzony po metadanych Storage i oznaczony jako gotowy.
+  /api/v1/integrations/submissions/{external_submission_id}:
+    get:
+      operationId: submissionStatus
+      security:
+        - integrationKey: []
+      parameters:
+        - name: external_submission_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Minimalny status własnego zgłoszenia.
+        "404":
+          description: Nie znaleziono zgłoszenia tej integracji.
+components:
+  securitySchemes:
+    integrationKey:
+      type: http
+      scheme: bearer
+      description: Wartość to public_key_id.secret. Limit 256 KiB JSON i 60 żądań na minutę, o ile ustawienia organizacji nie mówią inaczej.
+  parameters:
+    IdempotencyKey:
+      name: Idempotency-Key
+      in: header
+      required: true
+      schema:
+        type: string
+        minLength: 8
+        maxLength: 200
+  responses:
+    Unauthorized:
+      description: Brak, zły albo odwołany klucz.
+    Conflict:
+      description: Ten sam klucz idempotencji albo external_submission_id ma inną treść.
+    Invalid:
+      description: Payload nie spełnia kontraktu.
+    Limited:
+      description: Przekroczony limit. Nagłówek Retry-After podaje sekundy.
+  schemas:
+    Lead:
+      type: object
+      additionalProperties: false
+      required: [schema_version, external_submission_id, source, submitted_at, contact]
+      properties:
+        schema_version:
+          type: integer
+          enum: [1]
+        external_submission_id:
+          type: string
+          maxLength: 160
+        source:
+          type: string
+          enum: [website_form, configurator]
+        submitted_at:
+          type: string
+          format: date-time
+        contact:
+          type: object
+          additionalProperties: false
+          required: [first_name]
+          properties:
+            first_name:
+              type: string
+              maxLength: 100
+            last_name:
+              type: string
+              nullable: true
+            email:
+              type: string
+              nullable: true
+            phone:
+              type: string
+              nullable: true
+            city:
+              type: string
+              nullable: true
+            postal_code:
+              type: string
+              nullable: true
+            country_code:
+              type: string
+              nullable: true
+            language:
+              type: string
+              nullable: true
+        message:
+          type: string
+          maxLength: 10000
+          nullable: true
+        configuration:
+          type: object
+          additionalProperties: false
+        offer:
+          type: object
+          additionalProperties: false
+        attribution:
+          type: object
+          additionalProperties: false
+        metadata:
+          type: object
+          additionalProperties: true
+    OfferEvent:
+      type: object
+      additionalProperties: false
+      required: [external_event_id, external_submission_id, external_offer_id, occurred_at, status]
+      properties:
+        external_event_id:
+          type: string
+        external_submission_id:
+          type: string
+        external_offer_id:
+          type: string
+        occurred_at:
+          type: string
+          format: date-time
+        revision:
+          type: string
+          nullable: true
+        status:
+          type: string
+          enum: [unknown, pending, sent, failed]
+        sent_at:
+          type: string
+          format: date-time
+          nullable: true
+    DocumentInit:
+      type: object
+      additionalProperties: false
+      required: [external_submission_id, filename, mime_type, category]
+      properties:
+        external_submission_id:
+          type: string
+        filename:
+          type: string
+        mime_type:
+          type: string
+          enum:
+            - application/pdf
+            - image/jpeg
+            - image/png
+            - image/webp
+            - application/vnd.openxmlformats-officedocument.wordprocessingml.document
+            - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+        title:
+          type: string
+        category:
+          type: string
+          enum: [oferta_projekt, umowa, faktura, dostawa_protokol, zdjecia, ogolne, inne]
+    LeadResult:
+      type: object
+      required: [request_id, external_submission_id, inquiry_id, status, replayed]
+      properties:
+        request_id:
+          type: string
+        external_submission_id:
+          type: string
+        inquiry_id:
+          type: string
+          format: uuid
+        client_id:
+          type: string
+          format: uuid
+          nullable: true
+        opportunity_id:
+          type: string
+          format: uuid
+          nullable: true
+        status:
+          type: string
+          enum: [created, needs_review]
+        replayed:
+          type: boolean

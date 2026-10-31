@@ -84,6 +84,20 @@ export function trackEvent(
   }
 }
 
+/** Track a successful contact form submission as a standard Meta lead. */
+export function trackMetaLead(): void {
+  if (typeof window === "undefined" || typeof window.fbq !== "function") return;
+
+  try {
+    window.fbq("track", "Lead", {
+      content_name: "Formularz kontaktowy",
+      page_path: window.location.pathname,
+    });
+  } catch {
+    /* no-op: pixel not ready */
+  }
+}
+
 /** Read all attribution params from the current URL + document. */
 export function readAttribution(): Record<string, string> {
   if (typeof window === "undefined") return {};

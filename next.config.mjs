@@ -23,6 +23,9 @@ const nextConfig = {
       { source: "/en/saunas/cubus-5", destination: "/en/saunas/premium", permanent: true },
       // Specification page renamed: jakosc → specyfikacja; heaters split into own page.
       { source: "/jakosc", destination: "/specyfikacja", permanent: true },
+      // Blog post renamed: swierk-skandynawski → thermowood
+      { source: "/blog/swierk-skandynawski-dlaczego-najlepszy", destination: "/blog/thermowood-dlaczego-najlepsze-drewno", permanent: true },
+      { source: "/en/blog/scandinavian-spruce-why-the-best", destination: "/en/blog/thermowood-why-the-best-wood", permanent: true },
     ];
   },
   async headers() {

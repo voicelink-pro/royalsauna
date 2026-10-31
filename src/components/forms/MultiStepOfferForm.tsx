@@ -5,7 +5,7 @@ import type { Locale, SaunaSize, LeadPayload } from "@/types";
 import type { Dictionary } from "@/lib/i18n";
 import { trackEvent } from "@/lib/analytics";
 import { useAttribution } from "@/lib/useAttribution";
-import { cn, normalizePostalCode } from "@/lib/utils";
+import { cn, normalizePhone, normalizePostalCode } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 type ModelValue = SaunaSize;
@@ -23,6 +23,7 @@ export function MultiStepOfferForm({
 }) {
   const getAttribution = useAttribution();
   const startedRef = useRef(false);
+  const submissionIdRef = useRef<string | null>(null);
   const [step, setStep] = useState(0);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">(
     "idle",
@@ -64,6 +65,7 @@ export function MultiStepOfferForm({
       if (!form.email.trim()) next.email = dict.form.required;
       else if (!EMAIL_RE.test(form.email)) next.email = dict.form.invalidEmail;
       if (!form.phone.trim()) next.phone = dict.form.required;
+      else if (!normalizePhone(form.phone)) next.phone = dict.form.invalidPhone;
       if (!form.consent) next.consent = dict.form.consentRequired;
     }
     setErrors(next);
@@ -86,10 +88,12 @@ export function MultiStepOfferForm({
     if (!validateStep(2)) return;
     setStatus("submitting");
 
+    submissionIdRef.current ??= `web-${crypto.randomUUID()}`;
     const payload: LeadPayload = {
+      submissionId: submissionIdRef.current,
       name: form.name,
       email: form.email,
-      phone: form.phone.trim(),
+      phone: normalizePhone(form.phone)!,
       preferredModel: form.preferredModel,
       location: form.location,
       postalCode: normalizePostalCode(form.postalCode)!,

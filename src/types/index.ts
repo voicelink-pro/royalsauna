@@ -42,7 +42,7 @@ export interface Product {
   enSlug: string;
   /** Display name, identical across locales. */
   name: string;
-  /** Price floor in PLN. Final price depends on configuration. */
+  /** Gross price floor in PLN. Final price depends on heater choice. */
   priceFrom: number;
   /** Ordering / capacity used for the comparison table. */
   capacity: number;

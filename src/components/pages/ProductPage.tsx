@@ -90,7 +90,7 @@ export function ProductPage({
       </Section>
 
       {/* Exterior / equipment editorial */}
-      <Section tone="sand" id="design" className="scroll-mt-28">
+      <Section tone="sand" id="design" dataGuide="design" className="scroll-mt-28">
         <ProductShowcase
           image={cutoutImg}
           eyebrow={dict.common.exteriorEyebrow}
@@ -113,7 +113,7 @@ export function ProductPage({
       </Section>
 
       {/* Interior editorial */}
-      <Section tone="ivory" id="wnetrze" className="scroll-mt-28">
+      <Section tone="ivory" id="wnetrze" dataGuide="wnetrze" className="scroll-mt-28">
         <ProductShowcase
           image={interiorImg}
           eyebrow={dict.common.interiorEyebrow}
@@ -134,6 +134,7 @@ export function ProductPage({
       <Section
         tone="sand"
         id="wymiary"
+        dataGuide="wymiary"
         className="scroll-mt-28"
         ariaLabel={dict.common.dimensionsTitle}
       >
@@ -152,6 +153,7 @@ export function ProductPage({
       <Section
         tone="ivory"
         id="faq"
+        dataGuide="faq"
         className="scroll-mt-28"
         ariaLabel={dict.faq.title}
       >
@@ -160,7 +162,7 @@ export function ProductPage({
       </Section>
 
       {/* Offer form for this model */}
-      <Section tone="sand" id="oferta" className="scroll-mt-28">
+      <Section tone="sand" id="oferta" dataGuide="oferta" className="scroll-mt-28">
         <div className="mx-auto max-w-3xl">
           <SectionHeading
             title={dict.common.requestOfferFor}

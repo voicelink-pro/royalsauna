@@ -17,6 +17,7 @@ export function Section({
   className,
   containerClassName,
   id,
+  dataGuide,
   ariaLabel,
   animate = true,
 }: {
@@ -25,6 +26,8 @@ export function Section({
   className?: string;
   containerClassName?: string;
   id?: string;
+  /** Stable hook for the voice agent (`data-guide`). */
+  dataGuide?: string;
   ariaLabel?: string;
   /** Subtle fade-up reveal as the section scrolls into view. */
   animate?: boolean;
@@ -32,6 +35,7 @@ export function Section({
   return (
     <section
       id={id}
+      data-guide={dataGuide}
       aria-label={ariaLabel}
       className={cn("py-20 lg:py-28", tones[tone], className)}
     >

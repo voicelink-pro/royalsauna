@@ -48,6 +48,7 @@ export function WelcomePackagePage({ locale }: { locale: Locale }) {
       <Section
         tone="transparent"
         id="zawartosc"
+        dataGuide="zawartosc"
         className="scroll-mt-28 bg-gradient-to-b from-sand-100 via-ivory to-sand-100 pt-10"
         ariaLabel={w.showcase.title}
       >
@@ -66,6 +67,7 @@ export function WelcomePackagePage({ locale }: { locale: Locale }) {
       <Section
         tone="sand"
         id="w-cenie"
+        dataGuide="w-cenie"
         className="scroll-mt-28"
         ariaLabel={w.includedValue.title}
       >
@@ -116,6 +118,7 @@ export function WelcomePackagePage({ locale }: { locale: Locale }) {
       <Section
         tone="ivory"
         id="faq"
+        dataGuide="faq"
         className="scroll-mt-28"
         ariaLabel={dict.faq.title}
       >

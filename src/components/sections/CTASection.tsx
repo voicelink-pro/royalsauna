@@ -22,7 +22,11 @@ export function CTASection({
   location?: string;
 }) {
   return (
-    <section className="relative flex min-h-[560px] items-center overflow-hidden py-20 text-sand-100 lg:min-h-[56.25vw] lg:py-28">
+    <section
+      id="oferta"
+      data-guide="oferta"
+      className="relative flex min-h-[560px] items-center overflow-hidden py-20 text-sand-100 lg:min-h-[56.25vw] lg:py-28"
+    >
       <Image
         src="/images/form-back.png"
         alt=""

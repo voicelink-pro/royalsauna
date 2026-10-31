@@ -6,7 +6,7 @@ import { CtaButton } from "@/components/ui/CtaButton";
 import { Reveal } from "@/components/ui/Reveal";
 
 /**
- * Home "Scandinavian spruce & quality" highlight: image + copy + link to /specyfikacja.
+ * Home "ThermoWood & quality" highlight: image + copy + link to /specyfikacja.
  */
 export function QualitySection({
   locale,
@@ -24,8 +24,8 @@ export function QualitySection({
           src="/images/spec/spec-detail.jpg"
           alt={
             locale === "pl"
-              ? "Detal drewna świerku skandynawskiego"
-              : "Detail of Scandinavian spruce wood"
+              ? "Detal drewna termowanego"
+              : "Detail of ThermoWood"
           }
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"

@@ -56,18 +56,15 @@ function offerLabels(locale: Locale) {
     heater: "Piec",
     capacity: "Liczba osób",
     material: "Materiał",
-    priceFrom: "Cena od",
+    priceFrom: "Cena od (brutto)",
     included: "W cenie zestawu",
     yourPreferences: "Twoje preferencje",
     nextSteps: "Kolejne kroki",
     nextStepsBody:
       "Skontaktujemy się z Tobą, aby potwierdzić szczegóły konfiguracji, termin dostawy i montażu oraz przygotować ostateczną wycenę.",
     priceDisclaimer:
-      "Podana cena ma charakter orientacyjny i nie stanowi oferty w rozumieniu Kodeksu cywilnego. Ostateczna wycena zależy od wybranej konfiguracji, miejsca montażu i opcji dodatkowych.",
+      "Podana cena jest kwotą brutto, ma charakter orientacyjny i nie stanowi oferty w rozumieniu Kodeksu cywilnego. Ostateczna wycena zależy od wybranego pieca i miejsca montażu.",
     contact: "Kontakt",
-    people: "Liczba osób",
-    garden: "Miejsce w ogrodzie",
-    frequency: "Częstotliwość",
     none: "—",
   };
   const en = {
@@ -78,18 +75,15 @@ function offerLabels(locale: Locale) {
     heater: "Heater",
     capacity: "People",
     material: "Material",
-    priceFrom: "Price from",
+    priceFrom: "Price from (gross)",
     included: "Included in the set",
     yourPreferences: "Your preferences",
     nextSteps: "Next steps",
     nextStepsBody:
       "We will contact you to confirm configuration details, delivery and installation dates, and to prepare the final quote.",
     priceDisclaimer:
-      "The price shown is indicative and does not constitute a binding offer. The final quote depends on the chosen configuration, installation site and additional options.",
+      "The price shown is a gross amount, is indicative and does not constitute a binding offer. The final quote depends on the chosen heater and installation site.",
     contact: "Contact",
-    people: "People",
-    garden: "Garden space",
-    frequency: "Frequency",
     none: "—",
   };
   return locale === "en" ? en : pl;
@@ -116,7 +110,7 @@ export function buildOfferData(payload: LeadPayload): OfferData {
       locale === "en"
         ? s.label.toLowerCase().includes("material")
         : s.label.toLowerCase().includes("materiał"),
-    )?.value ?? (locale === "en" ? "ThermoWood (thermally modified Scandinavian spruce)" : "ThermoWood (termowany świerk skandynawski)");
+    )?.value ?? "ThermoWood";
 
   // Office notification is always in Polish, whatever the form's locale.
   const preferences = payload.configurator

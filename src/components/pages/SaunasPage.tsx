@@ -34,7 +34,7 @@ export function SaunasPage({ locale }: { locale: Locale }) {
         />
       </Container>
 
-      <Section tone="ivory" className="pt-10">
+      <Section tone="ivory" id="oferty" dataGuide="oferty" className="pt-10">
         <SectionHeading
           as="h1"
           eyebrow={s.hero.eyebrow}
@@ -42,7 +42,9 @@ export function SaunasPage({ locale }: { locale: Locale }) {
           description={s.hero.description}
           className="mb-14 max-w-3xl"
         />
-        <ProductCards locale={locale} dict={dict} />
+        <div id="modele" data-guide="modele">
+          <ProductCards locale={locale} dict={dict} />
+        </div>
       </Section>
 
       <Section tone="sand">

@@ -43,8 +43,8 @@ export const pl = {
   },
   common: {
     priceFrom: "Cena od",
-    currency: "zł",
-    priceNote: "Finalna cena zależy od wyboru pieca",
+    currency: "zł brutto",
+    priceNote: "Ceny brutto. Finalna cena zależy od wyboru pieca",
     learnMore: "Dowiedz się więcej",
     seeModel: "Zobacz model",
     backToBlog: "Wróć do bloga",
@@ -72,7 +72,7 @@ export const pl = {
       eyebrow: "Sauny ogrodowe premium",
       h1: "RoyalSauna – prywatne domowe spa w Twoim ogrodzie",
       subtitle:
-        "Luksusowe sauny ogrodowe z termowanego świerku ThermoWood. Jeden dopracowany model w trzech wariantach – gotowy, by stać się sercem Twojego domowego rytuału wellness.",
+        "Luksusowe sauny ogrodowe z drewna termowanego. Jeden dopracowany model w trzech wariantach – gotowy, by stać się sercem Twojego domowego rytuału wellness.",
       ctaPrimary: "Otrzymaj ofertę",
       ctaSecondary: "Zobacz warianty",
       videoCaption: "Zarezerwowane miejsce na film prezentujący RoyalSauna",
@@ -93,9 +93,9 @@ export const pl = {
       lead: "Dla nas luksus to nie ozdobnik, lecz konsekwencja jakości. Każdą saunę projektujemy i wykonujemy tak, by zachwycała detalem i służyła przez dekady. RoyalSauna to inwestycja, którą czuć od pierwszego dotyku drewna.",
       items: [
         {
-          title: "Termowany świerk ThermoWood",
+          title: "Drewno termowane",
           description:
-            "Bryłę budujemy z termowanego świerku skandynawskiego ThermoWood. To ten sam północny świerk, poddany obróbce cieplnej – gęsty, stabilny i odporny na wilgoć. To podstawa trwałości i charakteru prawdziwej sauny.",
+            "Bryłę budujemy z ThermoWood. To wyselekcjonowane drewno poddane obróbce cieplnej – gęste, stabilne i odporne na wilgoć. To podstawa trwałości i charakteru prawdziwej sauny.",
         },
         {
           title: "Dopracowane wykonanie",
@@ -133,12 +133,12 @@ export const pl = {
         walls: {
           title: "Ściany z litego drewna",
           description:
-            "Lite ściany z termowanego świerku ThermoWood – odporne na wilgoć i wahania temperatury. Naturalna struktura drewna tworzy ciepłe, eleganckie wnętrze i wyjątkowy klimat sauny.",
+            "Lite ściany z drewna termowanego – odporne na wilgoć i wahania temperatury. Naturalna struktura drewna tworzy ciepłe, eleganckie wnętrze i wyjątkowy klimat sauny.",
         },
         floor: {
           title: "Podłoga i wykończenie",
           description:
-            "Podłoga z tego samego termowanego świerku ThermoWood. Przyjemna dla bosych stóp, odporna na wysoką temperaturę i wilgoć, a przy tym spójna z resztą kabiny.",
+            "Podłoga z tego samego drewna termowanego. Przyjemna dla bosych stóp, odporna na wysoką temperaturę i wilgoć, a przy tym spójna z resztą kabiny.",
         },
       },
     },
@@ -260,12 +260,12 @@ export const pl = {
       eyebrow: "Linia Regenerum",
       h1: "Sauny ogrodowe – linia Regenerum",
       description:
-        "Trzy warianty – Compact, Comfort i Premium – różniące się wielkością i pojemnością. Wszystkie zbudowane z termowanego świerku ThermoWood, z kompletnym wyposażeniem w standardzie – w tym nastrojowym LED.",
+        "Trzy warianty – Compact, Comfort i Premium – różniące się wielkością i pojemnością. Wszystkie zbudowane z drewna termowanego, z kompletnym wyposażeniem w standardzie – w tym nastrojowym LED.",
     },
     oneModel: {
       title: "Linia Regenerum – trzy modele",
       description:
-        "Regenerum dostępne jest w trzech wersjach dopasowanych do różnych potrzeb i przestrzeni. Niezależnie od wybranego wariantu otrzymujesz ten sam termowany świerk ThermoWood, staranne wykonanie oraz pełny standard wyposażenia – w tym oświetlenie LED. Różnica dotyczy wyłącznie wielkości: Compact komfortowo mieści 2 osoby, Comfort 4 osoby, a Premium zapewnia przestrzeń dla maksymalnie 6 osób.",
+        "Regenerum dostępne jest w trzech wersjach dopasowanych do różnych potrzeb i przestrzeni. Niezależnie od wybranego wariantu otrzymujesz to samo drewno termowane, staranne wykonanie oraz pełny standard wyposażenia – w tym oświetlenie LED. Różnica dotyczy wyłącznie wielkości: Compact komfortowo mieści 2 osoby, Comfort 4 osoby, a Premium zapewnia przestrzeń dla maksymalnie 6 osób.",
     },
     comparison: {
       title: "Porównanie modeli",
@@ -273,7 +273,7 @@ export const pl = {
       capacityLabel: "Liczba osób",
       dimensionsLabel: "Wymiary zewnętrzne",
       heaterLabel: "Piec",
-      priceLabel: "Cena od",
+      priceLabel: "Cena od (brutto)",
       ctaLabel: "Szczegóły",
     },
     whichSize: {
@@ -319,9 +319,9 @@ export const pl = {
             "Harvia Cilindro, Legend lub Spirit – różnią się instalacją, mocą i doświadczeniem seansu.",
         },
         {
-          title: "Opcje konfiguracji",
+          title: "Co jest w cenie",
           description:
-            "Wykończenie elewacji, zadaszony przedsionek lub taras – to opcje, które wyceniamy indywidualnie. Oświetlenie LED jest zawsze w standardzie.",
+            "Wszystkie ceny na stronie są brutto. Transport, profesjonalny montaż i oświetlenie LED są wliczone. Finalna kwota zależy od wybranego modelu i pieca.",
         },
       ],
     },
@@ -329,14 +329,14 @@ export const pl = {
   quality: {
     hero: {
       eyebrow: "Jakość i materiały",
-      h1: "Termowany świerk ThermoWood i obsesja na punkcie detalu",
+      h1: "ThermoWood i obsesja na punkcie detalu",
       description:
-        "Wierzymy, że luksus zaczyna się od materiału. Dlatego bryłę i podłogę budujemy z termowanego świerku skandynawskiego – drewna, które służy przez dekady.",
+        "Wierzymy, że luksus zaczyna się od materiału. Dlatego bryłę i podłogę budujemy z drewna termowanego – surowca, który służy przez dekady.",
     },
     sections: [
       {
-        title: "Dlaczego termowany świerk skandynawski",
-        body: "Drewno z chłodnego, północnego klimatu rośnie wolniej, dzięki czemu jest gęstsze i bardziej stabilne. Następnie poddajemy je obróbce termicznej ThermoWood – bez chemii, wyłącznie z parą wodną – żeby jeszcze lepiej znosiło wilgoć, temperaturę i czas.",
+        title: "Dlaczego drewno termowane",
+        body: "Wyselekcjonowane drewno poddajemy obróbce termicznej w wysokiej temperaturze – bez chemii, wyłącznie z użyciem pary wodnej – dzięki czemu staje się gęstsze, bardziej stabilne wymiarowo i doskonale znosi wilgoć, temperaturę oraz upływ czasu.",
       },
       {
         title: "Selekcja i obróbka",
@@ -468,20 +468,20 @@ export const pl = {
     meta: {
       title: "Drewno służące na lata – materiały saun Regenerum",
       description:
-        "Poznaj drewno, z którego budujemy sauny Regenerum – ThermoWood (termowany świerk) na bryłę i podłogę oraz osikę na ławy i osikowe zagłówki (2 szt.).",
+        "Poznaj drewno, z którego budujemy sauny Regenerum – ThermoWood na bryłę i podłogę oraz osikę na ławy i osikowe zagłówki (2 szt.).",
     },
     materialsSection: {
       eyebrow: "Materiały",
       title: "Dwa drewna, jedna sauna",
       description:
-        "Bryłę i podłogę wykonujemy z ThermoWood – termowanego świerku o wyjątkowej trwałości. Ławy z drewna osikowego premium i osikowe zagłówki (2 szt.) – przyjemne w kontakcie ze skórą nawet w wysokiej temperaturze.",
+        "Bryłę i podłogę wykonujemy z ThermoWood o wyjątkowej trwałości. Ławy z drewna osikowego premium i osikowe zagłówki (2 szt.) – przyjemne w kontakcie ze skórą nawet w wysokiej temperaturze.",
       madeFrom: "Wykonane z tego drewna",
     },
     thermoWoodSection: {
       eyebrow: "ThermoWood",
-      title: "ThermoWood – termowany świerk stworzony z myślą o saunach premium",
+      title: "ThermoWood – materiał stworzony z myślą o saunach premium",
       lead:
-        "W saunach RoyalSauna Regenerum wykorzystujemy najwyższej jakości ThermoWood – czyli świerk poddany zaawansowanej modyfikacji termicznej. Dzięki temu łączy naturalne piękno świerku z wyjątkową trwałością. Obróbka odbywa się wyłącznie z wykorzystaniem wysokiej temperatury (180–230°C) oraz pary wodnej – bez użycia jakichkolwiek środków chemicznych. Efektem jest materiał o znacznie lepszych właściwościach użytkowych, idealnie przystosowany do wymagających warunków panujących w saunie.",
+        "W saunach RoyalSauna Regenerum wykorzystujemy najwyższej jakości ThermoWood – czyli drewno poddane zaawansowanej modyfikacji termicznej. Dzięki temu łączy naturalne piękno drewna z wyjątkową trwałością. Obróbka odbywa się wyłącznie z wykorzystaniem wysokiej temperatury (180–230°C) oraz pary wodnej – bez użycia jakichkolwiek środków chemicznych. Efektem jest materiał o znacznie lepszych właściwościach użytkowych, idealnie przystosowany do wymagających warunków panujących w saunie.",
       beautyTitle: "Naturalne piękno i najwyższa trwałość",
       beautyBody:
         "Proces ThermoWood znacząco zwiększa odporność drewna na wilgoć, zmiany temperatury oraz działanie czynników atmosferycznych. Dzięki ograniczonej nasiąkliwości materiał zachowuje stabilność przez długie lata, nie ulega łatwym odkształceniom i jest znacznie mniej podatny na pęknięcia czy skręcanie. Jednocześnie wysoka temperatura usuwa z drewna żywicę, dzięki czemu jego powierzchnia pozostaje estetyczna i komfortowa w użytkowaniu.",
@@ -541,12 +541,12 @@ export const pl = {
         shell: {
           label: "Bryła sauny",
           description:
-            "ThermoWood (termowany świerk) – gięte, wielowarstwowe łuki nadające saunie charakterystyczny, zaokrąglony kształt.",
+            "ThermoWood – gięte, wielowarstwowe łuki nadające saunie charakterystyczny, zaokrąglony kształt.",
         },
         walls: {
           label: "Ściany",
           description:
-            "ThermoWood (termowany świerk) – lite ściany o podwyższonej odporności na wilgoć i wahania temperatury.",
+            "ThermoWood – lite ściany o podwyższonej odporności na wilgoć i wahania temperatury.",
         },
         benches: {
           label: "Ławy",
@@ -556,7 +556,7 @@ export const pl = {
         floor: {
           label: "Podłoga",
           description:
-            "ThermoWood (termowany świerk) – drewno podłogowe, które nie parzy stóp.",
+            "ThermoWood – drewno podłogowe, które nie parzy stóp.",
         },
       },
     },
@@ -680,7 +680,7 @@ export const pl = {
           answer:
             "Sauna sucha nie wymaga podłączenia do kanalizacji – ważne jest tylko, by podłoże miało niewielki spadek (1–2%) odprowadzający wodę deszczową od budynku, co zapewniają wszystkie trzy opisane warianty.",
           link: {
-            label: "Poznaj drewno ThermoWood",
+            label: "Poznaj ThermoWood",
             href: routeMap.wood.pl,
           },
         },
@@ -1227,6 +1227,7 @@ export const pl = {
       "Coś poszło nie tak. Spróbuj ponownie lub napisz do nas bezpośrednio.",
     required: "To pole jest wymagane",
     invalidEmail: "Podaj poprawny adres e-mail",
+    invalidPhone: "Podaj numer telefonu: 9 cyfr albo z prefiksem, np. +48 600 000 000",
     invalidPostalCode: "Podaj kod pocztowy w formacie 00-000",
     consentRequired: "Zgoda jest niezbędna do przygotowania oferty",
     steps: {
@@ -1252,7 +1253,7 @@ export const pl = {
     description: "Zebraliśmy odpowiedzi na pytania, które słyszymy najczęściej.",
   },
   footer: {
-    tagline: "Sauny ogrodowe premium z termowanego świerku ThermoWood.",
+    tagline: "Sauny ogrodowe premium z drewna termowanego.",
     explore: "Strona",
     products: "Sauny",
     company: "Informacje",
@@ -1273,12 +1274,29 @@ export const pl = {
   widgets: {
     chatLabel: "Napisz do nas",
     chatTitle: "Czat RoyalSauna",
-    chatPlaceholder:
-      "Czat będzie dostępny wkrótce. Tymczasem napisz przez formularz kontaktowy.",
-    voiceLabel: "Asystent głosowy",
-    voiceTitle: "Asystent głosowy RoyalSauna",
-    voicePlaceholder:
-      "Asystent głosowy jest w przygotowaniu. Wkrótce odpowie na Twoje pytania.",
+    chatPlaceholder: "Napisz wiadomość…",
+    chatChoice: "Czat",
+    chatChoiceHint: "Pisz z asystentką",
+    talkChoice: "Rozmawiaj",
+    talkChoiceHint: "Rozmowa na głos",
+    pickerLead: "Jak chcesz porozmawiać?",
+    switchToTalk: "Rozmawiaj",
+    switchToType: "Pisz",
+    send: "Wyślij",
+    voiceLabel: "Asystentka głosowa",
+    voiceTitle: "Wirtualna asystentka RoyalSauna",
+    voiceListening: "Słucham",
+    voiceSpeaking: "Mówię",
+    voiceConnecting: "Łączenie…",
+    voiceEnd: "Zakończ",
+    voiceError: "Błąd połączenia",
+    voiceEnded: "Rozmowa zakończona",
+    launcherTitle: "Porozmawiaj z naszą wirtualną asystentką",
+    launcherTalk: "Rozmawiaj",
+    launcherChat: "Czat",
+    sessionOpen: "Rozmowa w toku",
+    sessionExpand: "Rozwiń",
+    closePanel: "Zamknij",
   },
   legal: {
     privacyTitle: "Polityka prywatności",

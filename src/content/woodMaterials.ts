@@ -10,7 +10,7 @@ export const woodMaterials: WoodMaterial[] = [
     id: "thermowood",
     image: {
       src: "/images/swierk-quality.jpg",
-      alt: "Bryła sauny wykonana z termowanego świerku ThermoWood",
+      alt: "Bryła sauny wykonana z ThermoWood",
     },
     elements: [
       {
@@ -39,13 +39,13 @@ export const woodMaterials: WoodMaterial[] = [
         name: "ThermoWood",
         usageTag: "Bryła i podłoga",
         description:
-          "Z ThermoWood, czyli termowanego świerku budujemy bryłę sauny oraz podłogę. To ten sam szlachetny świerk, poddany obróbce termicznej w temperaturze 180–230°C z użyciem wyłącznie pary wodnej, bez chemii. Dzięki temu jest wyjątkowo odporny na wilgoć, stabilny wymiarowo i gotowy na wymagające warunki sauny przez długie lata.",
+          "Z ThermoWood, czyli drewna termowanego, budujemy bryłę sauny oraz podłogę. To szlachetne drewno poddane obróbce termicznej w temperaturze 180–230°C z użyciem wyłącznie pary wodnej, bez chemii. Dzięki temu jest wyjątkowo odporne na wilgoć, stabilne wymiarowo i gotowe na wymagające warunki sauny przez długie lata.",
       },
       en: {
         name: "ThermoWood",
         usageTag: "Shell & floor",
         description:
-          "We build the sauna shell and floor from ThermoWood – thermally modified spruce. It is the same fine spruce, heat-treated at 180–230°C using only steam, with no chemicals. The result is outstanding moisture resistance, dimensional stability and a material made for the demanding conditions inside a sauna for many years.",
+          "We build the sauna shell and floor from ThermoWood – thermally modified wood. It is fine timber, heat-treated at 180–230°C using only steam, with no chemicals. The result is outstanding moisture resistance, dimensional stability and a material made for the demanding conditions inside a sauna for many years.",
       },
     },
   },

@@ -21,7 +21,13 @@ import { heaterModelsByProduct } from "@/content/heaterModels";
 import { buildAnswerRows, type SummaryStep } from "@/lib/configurator-summary";
 import { trackEvent } from "@/lib/analytics";
 import { useAttribution } from "@/lib/useAttribution";
-import { cn, normalizePostalCode } from "@/lib/utils";
+import {
+  FILL_FIELD_EVENT,
+  mapConfiguratorFieldName,
+  parseConsent,
+  registerConfigurator,
+} from "@/lib/voice/form-bridge";
+import { cn, normalizePhone, normalizePostalCode } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { SpacePlanner } from "@/components/configurator/SpacePlanner";
 import { ConflictPanel, ProjectResult } from "@/components/configurator/ProjectResult";
@@ -195,6 +201,7 @@ export function ConfiguratorWizard({
   const W = dict.configurator.wizard;
   const getAttribution = useAttribution();
   const startedRef = useRef(false);
+  const submissionIdRef = useRef<string | null>(null);
   const rootRef = useRef<HTMLDivElement>(null);
 
   const [phase, setPhase] = useState<Phase>("questions");
@@ -334,7 +341,66 @@ export function ConfiguratorWizard({
     setPhase("contact");
   }
 
+  // ---- Voice assistant bridge ---------------------------------------------
   const formRef = useRef<HTMLFormElement>(null);
+  const stateRef = useRef({
+    phase,
+    stepIndex,
+    answers,
+    rec,
+    model,
+    heater,
+    contact,
+  });
+  stateRef.current = { phase, stepIndex, answers, rec, model, heater, contact };
+
+  useEffect(() => {
+    function applyFill(field: string, value: unknown) {
+      const mapped = mapConfiguratorFieldName(field);
+      if (!mapped) return;
+      if (mapped === "consent") {
+        setContact((current) => ({ ...current, consent: parseConsent(value) }));
+        return;
+      }
+      setContact((current) => ({ ...current, [mapped]: String(value) }));
+    }
+
+    const unregister = registerConfigurator({
+      getState: () => {
+        const s = stateRef.current;
+        return {
+          phase: s.phase,
+          qIndex: s.stepIndex,
+          step: STEP_KEYS[s.stepIndex],
+          answers: s.answers,
+          recommendedModel: s.rec.model,
+          selectedModel: s.model,
+          heater: s.heater,
+          conflict: s.model === null && !!s.rec.conflict,
+          contact: s.contact,
+        };
+      },
+      fillContact: (field, value) => applyFill(field, value),
+      getFormElement: () => formRef.current,
+    });
+
+    function onFillEvent(event: Event) {
+      const detail = (event as CustomEvent<{
+        formId?: string;
+        field?: string;
+        value?: unknown;
+      }>).detail;
+      if (!detail?.field) return;
+      if (detail.formId && detail.formId !== "configurator") return;
+      applyFill(detail.field, detail.value);
+    }
+
+    window.addEventListener(FILL_FIELD_EVENT, onFillEvent);
+    return () => {
+      unregister();
+      window.removeEventListener(FILL_FIELD_EVENT, onFillEvent);
+    };
+  }, []);
 
   // ---- Contact form ---------------------------------------------------------
   function update<K extends keyof typeof contact>(key: K, value: (typeof contact)[K]) {
@@ -347,6 +413,7 @@ export function ConfiguratorWizard({
     if (!contact.email.trim()) next.email = dict.form.required;
     else if (!EMAIL_RE.test(contact.email)) next.email = dict.form.invalidEmail;
     if (!contact.phone.trim()) next.phone = dict.form.required;
+    else if (!normalizePhone(contact.phone)) next.phone = dict.form.invalidPhone;
     if (!contact.location.trim()) next.location = dict.form.required;
     if (!contact.postalCode.trim()) next.postalCode = dict.form.required;
     else if (!normalizePostalCode(contact.postalCode)) next.postalCode = dict.form.invalidPostalCode;
@@ -360,10 +427,12 @@ export function ConfiguratorWizard({
     if (!validateContact()) return;
     setStatus("submitting");
 
+    submissionIdRef.current ??= `web-${crypto.randomUUID()}`;
     const payload: LeadPayload = {
+      submissionId: submissionIdRef.current,
       name: contact.name,
       email: contact.email,
-      phone: contact.phone.trim(),
+      phone: normalizePhone(contact.phone)!,
       preferredModel: leadModel,
       location: contact.location,
       postalCode: normalizePostalCode(contact.postalCode)!,

@@ -55,4 +55,17 @@
   .skip-link:focus {
     @apply not-sr-only fixed left-4 top-4 z-50 rounded-full bg-bark-700 px-5 py-2.5 text-sm text-ivory;
   }
+
+  /* Voice-agent targets: land below the sticky header. */
+  [data-guide] {
+    scroll-margin-top: 7rem;
+  }
+
+  /* Voice-agent highlight target (data-guide). */
+  .voice-guide-highlight {
+    outline: 2px solid theme("colors.brass.DEFAULT");
+    outline-offset: 4px;
+    box-shadow: 0 0 0 6px rgb(201 162 75 / 0.28);
+    border-radius: 12px;
+  }
 }

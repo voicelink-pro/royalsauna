@@ -12,7 +12,11 @@ export function ConfiguratorPage({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
 
   return (
-    <section className="bg-sand-100 pb-24">
+    <section
+      id="konfigurator"
+      data-guide="konfigurator"
+      className="bg-sand-100 pb-24"
+    >
       <Container className="pt-28">
         <Breadcrumbs
           items={[
