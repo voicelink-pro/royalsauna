@@ -33,7 +33,9 @@ export async function sendOfferEmail({
       : `Twoja oferta RoyalSauna — ${data.model.line} ${data.model.name}`;
 
   const fileName =
-    data.locale === "en" ? "RoyalSauna-Offer.pdf" : "RoyalSauna-Oferta.pdf";
+    data.locale === "en"
+      ? `RoyalSauna-Offer-${data.model.name}.pdf`
+      : `RoyalSauna-Oferta-${data.model.name}.pdf`;
 
   const result = await getResend().emails.send({
     from,

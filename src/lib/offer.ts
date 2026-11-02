@@ -89,9 +89,19 @@ function offerLabels(locale: Locale) {
   return locale === "en" ? en : pl;
 }
 
-function resolveModelId(value: LeadPayload["preferredModel"]): ModelId {
-  if (value === "compact" || value === "comfort" || value === "premium") {
-    return value;
+function resolveModelId(payload: Pick<LeadPayload, "preferredModel" | "selected_model" | "configurator">): ModelId {
+  const candidates = [
+    payload.preferredModel,
+    payload.selected_model,
+    payload.configurator?.selectedModel,
+    payload.configurator?.recommendedModel,
+  ];
+  for (const raw of candidates) {
+    if (typeof raw !== "string") continue;
+    const normalized = raw.trim().toLowerCase();
+    if (normalized === "compact" || normalized === "comfort" || normalized === "premium") {
+      return normalized;
+    }
   }
   return "comfort";
 }
@@ -101,7 +111,7 @@ export function buildOfferData(payload: LeadPayload): OfferData {
   const dict = getDictionary(locale);
   const labels = offerLabels(locale);
 
-  const modelId = resolveModelId(payload.preferredModel);
+  const modelId = resolveModelId(payload);
   const product = getProduct(modelId)!;
   const copy = product.i18n[locale];
 

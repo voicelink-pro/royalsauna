@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { NextResponse } from "next/server";
 import type { LeadPayload, ModelId } from "@/types";
 import { buildOfferData } from "@/lib/offer";
@@ -26,18 +28,25 @@ function getOfferPdfPath(modelId: ModelId): string {
 }
 
 /**
- * Fetches a PDF over HTTP from the site's own `public/` folder instead of
- * reading it from disk. Serverless functions on Vercel don't bundle the full
- * `public/` directory into their filesystem, but it's always reachable via
- * the CDN — so this works identically in local dev and in every deployment
- * (preview, production, custom domain) without any extra build configuration.
+ * Reads a PDF from `public/` on disk first (fast and reliable in local dev and
+ * Node servers), falling back to an HTTP fetch from the site's CDN (needed on
+ * serverless platforms that don't bundle `public/` into the function filesystem).
  */
 async function fetchPdfFromPublic(request: Request, relativePath: string): Promise<Buffer> {
-  const publicPath = relativePath.replace(/^\.?\/?public\//, "");
+  const normalizedPath = relativePath.replace(/^\.?\//, "");
+  const diskPath = path.join(process.cwd(), normalizedPath);
+
+  try {
+    return await readFile(diskPath);
+  } catch {
+    // Fall back to HTTP fetch from the deployment's public URL.
+  }
+
+  const publicPath = normalizedPath.replace(/^public\//, "");
   const { protocol, host } = new URL(request.url);
   const pdfUrl = `${protocol}//${host}/${publicPath}`;
 
-  const res = await fetch(pdfUrl);
+  const res = await fetch(pdfUrl, { cache: "no-store" });
   if (!res.ok) {
     throw new Error(`Failed to fetch offer PDF from ${pdfUrl}: ${res.status}`);
   }
