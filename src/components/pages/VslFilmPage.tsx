@@ -63,7 +63,7 @@ export function VslFilmPage({ locale }: { locale: Locale }) {
           style={{ animationDelay: "320ms" }}
         >
           <VslPlayer
-            src="/documents/vsl-video.mp4"
+            src="/documents/vsl-video.mp4?v=2"
             playLabel={t.playLabel}
             durationLabel={t.durationLabel}
             replayLabel={t.replayLabel}
