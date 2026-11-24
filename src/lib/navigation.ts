@@ -53,6 +53,11 @@ export function getAlternatePath(
     if (entry.en === path) return entry[targetLocale];
   }
 
+  // Dedicated welcome VSL page (kept out of sitemap/routeMap).
+  if (path === "/film" || path === "/en/film") {
+    return targetLocale === "pl" ? "/film" : "/en/film";
+  }
+
   // Product detail pages.
   for (const p of products) {
     if (path === `/sauny/${p.slug}` || path === `/en/saunas/${p.enSlug}`) {

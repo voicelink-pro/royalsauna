@@ -1,71 +1,9 @@
-import { readFile } from "node:fs/promises";
-import path from "node:path";
 import { NextResponse } from "next/server";
-import type { LeadPayload, ModelId } from "@/types";
+import type { LeadPayload } from "@/types";
 import { buildOfferData } from "@/lib/offer";
-import { sendOfferEmail } from "@/lib/email/send-offer";
+import { sendWelcomeEmail } from "@/lib/email/send-offer";
 import { normalizePhone, normalizePostalCode } from "@/lib/utils";
-import { scheduleOfferSms } from "@/lib/sms/notify-lead";
-import { createCrmLead, sendCrmOfferEvent } from "@/lib/crm/leads";
-
-/**
- * Default path (relative to `public/`) of the model-specific offer PDF.
- * Override per model with `OFFER_PDF_PATH_COMPACT` / `_COMFORT` / `_PREMIUM`.
- */
-const DEFAULT_OFFER_PDF_PATHS: Record<ModelId, string> = {
-  compact: "public/documents/oferta-compact.pdf",
-  comfort: "public/documents/oferta-comfort.pdf",
-  premium: "public/documents/oferta-premium.pdf",
-};
-
-/** Legacy single-file fallback, used if a model-specific PDF isn't uploaded yet. */
-const FALLBACK_OFFER_PDF_PATH =
-  process.env.OFFER_PDF_PATH || "public/documents/oferta.pdf";
-
-function getOfferPdfPath(modelId: ModelId): string {
-  const envVar = `OFFER_PDF_PATH_${modelId.toUpperCase()}`;
-  return process.env[envVar] || DEFAULT_OFFER_PDF_PATHS[modelId];
-}
-
-/**
- * Reads a PDF from `public/` on disk first (fast and reliable in local dev and
- * Node servers), falling back to an HTTP fetch from the site's CDN (needed on
- * serverless platforms that don't bundle `public/` into the function filesystem).
- */
-async function fetchPdfFromPublic(request: Request, relativePath: string): Promise<Buffer> {
-  const normalizedPath = relativePath.replace(/^\.?\//, "");
-  const diskPath = path.join(process.cwd(), normalizedPath);
-
-  try {
-    return await readFile(diskPath);
-  } catch {
-    // Fall back to HTTP fetch from the deployment's public URL.
-  }
-
-  const publicPath = normalizedPath.replace(/^public\//, "");
-  const { protocol, host } = new URL(request.url);
-  const pdfUrl = `${protocol}//${host}/${publicPath}`;
-
-  const res = await fetch(pdfUrl, { cache: "no-store" });
-  if (!res.ok) {
-    throw new Error(`Failed to fetch offer PDF from ${pdfUrl}: ${res.status}`);
-  }
-  return Buffer.from(await res.arrayBuffer());
-}
-
-/** Fetches the offer PDF matching the recommended model, falling back to the legacy single file. */
-async function fetchOfferPdf(request: Request, modelId: ModelId): Promise<Buffer> {
-  try {
-    return await fetchPdfFromPublic(request, getOfferPdfPath(modelId));
-  } catch (err) {
-    // eslint-disable-next-line no-console
-    console.warn(
-      `[lead] offer PDF for model "${modelId}" not found, falling back to ${FALLBACK_OFFER_PDF_PATH}`,
-      err,
-    );
-    return fetchPdfFromPublic(request, FALLBACK_OFFER_PDF_PATH);
-  }
-}
+import { createCrmLead } from "@/lib/crm/leads";
 
 export async function POST(request: Request) {
   try {
@@ -95,9 +33,8 @@ export async function POST(request: Request) {
       sourceLabel: payload.sourceLabel,
     });
 
-    // CRM and e-mail run independently; a failure in one must never
-    // block the other or the customer's form submission. The follow-up SMS
-    // is queued only after the offer e-mail actually goes out.
+    // CRM and welcome e-mail run independently; a failure in one must never
+    // block the other or the customer's form submission.
     const crm = createCrmLead(payload)
       .then((crmLead) => {
         // eslint-disable-next-line no-console
@@ -113,83 +50,28 @@ export async function POST(request: Request) {
         return null;
       });
 
-    // Attach the pre-designed offer PDF and send via Resend.
-    const email = (async (): Promise<
-      { status: "sent"; id?: string; sentAt: string } | { status: "failed" } | null
-    > => {
-      if (!process.env.RESEND_API_KEY) return null;
+    // Send the welcome e-mail with the VSL link (no offer PDF) via Resend.
+    const email = (async () => {
+      if (!process.env.RESEND_API_KEY) return;
       try {
         const offerData = buildOfferData(payload);
-        const pdfBuffer = await fetchOfferPdf(request, offerData.model.id);
-        const result = await sendOfferEmail({
+        const result = await sendWelcomeEmail({
           to: payload.email,
-          pdfBuffer,
           data: offerData,
         });
         // eslint-disable-next-line no-console
-        console.info("[lead] offer email sent", {
+        console.info("[lead] welcome email sent", {
           to: payload.email,
           model: offerData.model.id,
           id: result?.data?.id,
         });
-        return { status: "sent", id: result?.data?.id, sentAt: new Date().toISOString() };
       } catch (emailErr) {
         // eslint-disable-next-line no-console
         console.error("[lead] email send failed", emailErr);
-        return { status: "failed" };
       }
     })();
 
-    const [crmLead, emailResult] = await Promise.all([crm, email]);
-
-    if (emailResult?.status === "sent") {
-      try {
-        const modelName = buildOfferData(payload).model.name;
-        const sms = await scheduleOfferSms({
-          phone,
-          name: payload.name,
-          modelName,
-        });
-        if (sms) {
-          const failed = sms.queuedMessages?.filter((m) => m.errorDescription) ?? [];
-          // eslint-disable-next-line no-console
-          console.info("[lead] offer sms scheduled", {
-            status: sms.status,
-            sendTime: sms.sendTime,
-            model: modelName,
-            failed,
-          });
-        }
-      } catch (smsErr) {
-        // eslint-disable-next-line no-console
-        console.error("[lead] offer sms failed", smsErr);
-      }
-    }
-
-    if (crmLead && emailResult) {
-      try {
-        await sendCrmOfferEvent(
-          emailResult.status === "sent"
-            ? {
-                externalSubmissionId: crmLead.externalSubmissionId,
-                externalOfferId:
-                  emailResult.id || `web-offer-${crmLead.externalSubmissionId}`,
-                status: "sent",
-                occurredAt: emailResult.sentAt,
-                sentAt: emailResult.sentAt,
-              }
-            : {
-                externalSubmissionId: crmLead.externalSubmissionId,
-                externalOfferId: `web-offer-${crmLead.externalSubmissionId}`,
-                status: "failed",
-                occurredAt: new Date().toISOString(),
-              },
-        );
-      } catch (eventErr) {
-        // eslint-disable-next-line no-console
-        console.error("[lead] CRM offer event failed", eventErr);
-      }
-    }
+    await Promise.all([crm, email]);
 
     return NextResponse.json({ ok: true });
   } catch {

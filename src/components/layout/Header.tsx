@@ -200,6 +200,7 @@ export function Header({
   const isWoodPage = pathname === routeMap.wood[locale];
   const isFoundationPage = pathname === routeMap.foundation[locale];
   const isWelcomePackagePage = pathname === routeMap.welcomePackage[locale];
+  const isFilmPage = pathname === "/film" || pathname === "/en/film";
   const hasTransparentHero =
     isHomePage ||
     isSaunasPage ||
@@ -207,7 +208,8 @@ export function Header({
     isHeatersPage ||
     isWoodPage ||
     isFoundationPage ||
-    isWelcomePackagePage;
+    isWelcomePackagePage ||
+    isFilmPage;
   const overDark = hasTransparentHero && !pastHero && !open;
 
   return (
